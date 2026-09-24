@@ -1,0 +1,9 @@
+[
+  {"accion": "anadir_contacto", "nombre": "Agraferm", "sustituir": true,
+   "contacto": {"nombre": "Stephan Schulte", "email": "s.schulte@bta-international.de"}},
+  {"accion": "anadir_contacto", "nombre": "Naturgy", "sustituir": true,
+   "contacto": {"nombre": "Kenia Hurtado", "puesto": "Canal de proveedores de Naturgy (servicio externo de IBM)"}},
+  {"accion": "anadir_contacto", "nombre": "Biovic Consulting",
+   "contacto": {"nombre": "Enrique Jordá", "puesto": "Desarrollo", "telefono": "", "email": "enrique.jorda@biovic.es",
+                "slot": "otros", "confirmado_feria": false, "interes": true}}
+]
