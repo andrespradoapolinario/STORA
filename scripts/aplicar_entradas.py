@@ -104,7 +104,8 @@ def op_anadir_contacto(datos, op, cambios):
     if not isinstance(c, dict) or not c.get('nombre'):
         raise ErrorParche('«anadir_contacto» necesita un «contacto» con «nombre».')
     if c.get('slot', 'otros') not in SLOTS:
-        raise ErrorParche(f"slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).")
+        pista = ' Para un interlocutor, use «interlocutor»: true.' if c.get('slot') == 'directo' else ''
+        raise ErrorParche(f"slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).{pista}")
     existente = next((x for x in org['contactos'] if x['nombre'].casefold() == c['nombre'].casefold()), None)
     if existente:
         resto = {k: v for k, v in c.items() if k != 'nombre'}

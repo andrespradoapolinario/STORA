@@ -19,9 +19,10 @@ GRUPOS = {
     'E': 'Cooperativas y asociaciones',
 }
 ESTADOS = ('Terminado', 'En construcción', 'En desarrollo y planificación', '')
-# Filas de CONTACTO de la ficha, en orden de impresión.
+# Huecos de CONTACTO de la ficha, en orden de impresión. Los interlocutores
+# con asistencia confirmada van antes, en la fila «Contacto directo».
+FILA_INTERLOCUTOR = 'Contacto directo'
 SLOTS = {
-    'directo': 'Contacto directo',
     'compras': 'Responsable de Compras',
     'tecnico': 'Director Técnico',
     'otros': 'Otros',
@@ -38,7 +39,7 @@ CAMPOS_ORGANIZACION = (
 )
 CAMPOS_CONTACTO = (
     'nombre', 'puesto', 'telefono', 'email', 'slot', 'confirmado_feria',
-    'interes', 'departamento', 'nota',
+    'interes', 'interlocutor', 'departamento', 'nota',
 )
 CAMPOS_PROYECTO = ('nombre', 'ubicacion', 'anio', 'estado')
 
@@ -50,7 +51,7 @@ VALORES_POR_DEFECTO = {
 }
 CONTACTO_POR_DEFECTO = {
     'puesto': '', 'telefono': '', 'email': '', 'slot': 'otros',
-    'confirmado_feria': False, 'interes': True, 'departamento': False, 'nota': '',
+    'confirmado_feria': False, 'interes': True, 'interlocutor': False, 'departamento': False, 'nota': '',
 }
 PROYECTO_POR_DEFECTO = {'ubicacion': '', 'anio': '', 'estado': ''}
 

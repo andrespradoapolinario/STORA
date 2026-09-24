@@ -20,9 +20,10 @@
           "puesto": "Subcontractor Manager",
           "telefono": "+34 657 325 239",
           "email": "",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -34,6 +35,7 @@
           "slot": "compras",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -45,6 +47,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -56,6 +59,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -67,6 +71,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -155,6 +160,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mar. 29/09, 16:25"
         },
@@ -166,6 +172,7 @@
           "slot": "compras",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -216,6 +223,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "presentado vía Abante"
         },
@@ -227,6 +235,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -289,6 +298,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -345,6 +355,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": true,
           "nota": "respondió el 23/09"
         },
@@ -356,6 +367,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -367,6 +379,7 @@
           "slot": "compras",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -429,6 +442,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mar. 29/09, 16:25"
         },
@@ -440,6 +454,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -451,6 +466,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -495,6 +511,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -506,6 +523,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -517,6 +535,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -579,6 +598,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mar. 29/09, 16:25"
         }
@@ -641,6 +661,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -685,6 +706,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -696,6 +718,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -784,6 +807,7 @@
           "slot": "tecnico",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 09:30–10:30"
         },
@@ -795,6 +819,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Stand 214"
         }
@@ -906,9 +931,10 @@
           "puesto": "Canal de proveedores, IBM",
           "telefono": "912 100 100",
           "email": "canalproveedor@naturgy.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -920,6 +946,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -982,6 +1009,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mar. 29/09, 16:25"
         }
@@ -1010,9 +1038,10 @@
           "puesto": "Cap d'Àrea de Construcció",
           "telefono": "93 506 92 23 · 679 962 836",
           "email": "jhuguet@catalanadebiogas.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -1057,6 +1086,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1107,6 +1137,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1151,6 +1182,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1195,6 +1227,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1230,9 +1263,10 @@
           "puesto": "",
           "telefono": "683 140 817",
           "email": "l.ledesma@biomargas.es",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -1244,6 +1278,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1306,6 +1341,7 @@
           "slot": "tecnico",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 12:15–13:15"
         }
@@ -1344,6 +1380,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -1355,6 +1392,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1386,6 +1424,7 @@
           "slot": "tecnico",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 12:15–13:15"
         },
@@ -1397,6 +1436,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 12:15–13:15"
         },
@@ -1408,6 +1448,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 12:15–13:15"
         },
@@ -1419,6 +1460,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1463,6 +1505,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 12:40–13:40"
         },
@@ -1474,6 +1517,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1533,9 +1577,10 @@
           "puesto": "Senior Mechanical Engineer",
           "telefono": "+34 682 515 212",
           "email": "Carlos.Ruiz@idenergy.group",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -1547,6 +1592,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 12:15–13:15"
         },
@@ -1558,6 +1604,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -1569,6 +1616,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -1580,6 +1628,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1627,9 +1676,10 @@
           "puesto": "Responsable Comercial y de Desarrollo de Negocio",
           "telefono": "+34 608 807 602",
           "email": "k.florencio@tonelloenergy.es",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 17:30–18:45"
         },
@@ -1641,6 +1691,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "asiste a la reunión"
         },
@@ -1652,6 +1703,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "asiste a la reunión"
         },
@@ -1663,6 +1715,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "asiste a la reunión"
         }
@@ -1719,6 +1772,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -1730,6 +1784,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1768,6 +1823,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1830,6 +1886,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -1841,6 +1898,7 @@
           "slot": "compras",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1900,9 +1958,10 @@
           "puesto": "EnviTec Biogás Ibérica",
           "telefono": "+49 172 42 62 485 · Tel. +49 25 74 88 88 542",
           "email": "C.Ernst@envitec-biogas.de",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -1950,9 +2009,10 @@
           "puesto": "Sales Iberia",
           "telefono": "+34 677 624 762",
           "email": "G.Marquardt@planet-biogas.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -1964,6 +2024,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "en la reunión"
         },
@@ -1975,6 +2036,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "en la reunión"
         },
@@ -1986,6 +2048,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "en la reunión"
         }
@@ -2036,6 +2099,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2047,6 +2111,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2109,6 +2174,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mié. 30/09, 09:30–10:30"
         }
@@ -2137,9 +2203,10 @@
           "puesto": "Global Industry Leader, Waste to Energy y Biogas",
           "telefono": "+33 6 62 30 03 52",
           "email": "marie.esteve@nijhuisindustries.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -2190,6 +2257,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2201,6 +2269,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2257,6 +2326,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2326,6 +2396,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2337,6 +2408,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2368,6 +2440,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2412,6 +2485,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2450,6 +2524,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2461,6 +2536,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2492,6 +2568,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2575,6 +2652,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 15:30–16:20"
         },
@@ -2586,6 +2664,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2597,6 +2676,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2641,6 +2721,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2723,6 +2804,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 15:30–16:20"
         },
@@ -2734,6 +2816,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2745,6 +2828,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2783,6 +2867,7 @@
           "slot": "tecnico",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 15:30–16:20"
         },
@@ -2794,6 +2879,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2876,6 +2962,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2926,6 +3013,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -2937,6 +3025,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -2981,6 +3070,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3025,6 +3115,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 12:40–13:40"
         },
@@ -3036,6 +3127,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3071,9 +3163,10 @@
           "puesto": "Gerente de Compras Estratégicas, Agua",
           "telefono": "",
           "email": "alberto.lopez.esteban@acciona.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -3085,6 +3178,7 @@
           "slot": "compras",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3096,6 +3190,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3107,6 +3202,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3142,9 +3238,10 @@
           "puesto": "FCC Infraestructuras",
           "telefono": "",
           "email": "minerva.pomeda@fcc.es",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -3156,6 +3253,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3167,6 +3265,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3214,9 +3313,10 @@
           "puesto": "",
           "telefono": "924 011 668",
           "email": "g.horcajo@agfprocesos.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -3273,6 +3373,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3329,6 +3430,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3364,9 +3466,10 @@
           "puesto": "Responsable de Compras",
           "telefono": "+34 662 924 071",
           "email": "maviles@sitra.es",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         },
@@ -3378,6 +3481,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3389,6 +3493,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3439,6 +3544,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 12:40–13:40"
         },
@@ -3450,6 +3556,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3506,6 +3613,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3517,6 +3625,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3579,6 +3688,7 @@
           "slot": "tecnico",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 12:40–13:40"
         }
@@ -3610,6 +3720,7 @@
           "slot": "compras",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3621,6 +3732,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3652,6 +3764,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3705,9 +3818,10 @@
           "puesto": "Gerente",
           "telefono": "629 171 448",
           "email": "Bartomeu@biovec.net",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -3770,6 +3884,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3781,6 +3896,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -3828,9 +3944,10 @@
           "puesto": "",
           "telefono": "985 175 950",
           "email": "mjalvarez@inbiogas.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": ""
         }
@@ -3866,9 +3983,10 @@
           "puesto": "Industrial Engineer",
           "telefono": "+34 676 086 679 · Tel. +34 931 592 996",
           "email": "dayala@ambisort.com",
-          "slot": "directo",
+          "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": true,
           "departamento": false,
           "nota": "En copia: amorte@ambisort.com y ayasells@ambisort.com"
         }
@@ -3900,6 +4018,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -3911,6 +4030,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -4026,6 +4146,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Modera la mesa redonda mar. 29/09, 16:25–17:25"
         }
@@ -4057,6 +4178,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Modera la mesa redonda mar. 29/09, 11:40–12:40"
         },
@@ -4068,6 +4190,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "mié. 30/09, 10:35–11:05"
         }
@@ -4099,6 +4222,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 10:25–11:35"
         },
@@ -4110,6 +4234,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mié. 30/09, 11:10–12:10"
         }
@@ -4141,6 +4266,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Ponente mar. 29/09, 09:50–10:20"
         }
@@ -4217,6 +4343,7 @@
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": "Modera la mesa redonda mié. 30/09, 11:10–12:10"
         }
@@ -4248,6 +4375,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -4286,6 +4414,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         },
@@ -4297,6 +4426,7 @@
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }

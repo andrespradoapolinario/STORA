@@ -51,8 +51,8 @@ Cada organización:
   "nota_stand": "Pabellón 2",
   "perfil": "Texto breve y verificado.",
   "contactos": [
-    {"nombre": "", "puesto": "", "telefono": "", "email": "", "slot": "directo|compras|tecnico|otros",
-     "confirmado_feria": true, "interes": true, "departamento": false, "nota": ""}
+    {"nombre": "", "puesto": "", "telefono": "", "email": "", "slot": "compras|tecnico|otros",
+     "confirmado_feria": true, "interes": true, "interlocutor": false, "departamento": false, "nota": ""}
   ],
   "telefono_empresa": "",           // centralita; se imprime como «Tel. empresa:» («Tel. organización:» en asociaciones, organismos públicos y centros de investigación)
   "proyectos": [{"nombre": "", "ubicacion": "", "anio": "", "estado": "Terminado|En construcción|En desarrollo y planificación|"}],
@@ -66,7 +66,7 @@ Cada organización:
 }
 ```
 
-- `slot: "directo"`: la persona con la que ya hemos hablado. Va en la fila «Contacto directo» de la ficha y primera y subrayada en el índice.
+- `interlocutor: true`: la persona con la que ya hemos hablado. En el índice va primera y subrayada; en la ficha, según la regla 4.
 - `nota` del contacto: dato breve que se imprime en la ficha tras el correo y el teléfono (por ejemplo, «Ponente mar. 29/09, 12:40–13:40» o «respondió el 23/09»).
 - `departamento: true`: buzón o departamento, no una persona (por ejemplo, «Compras de biometano (Dpto.)»). Va en la ficha aunque no tenga asistencia confirmada, solo con el nombre y el correo; en el índice, en gris y con su teléfono.
 - `cita`: si empieza por día, fecha y hora («Miércoles 30/09, 13:00 · …»), el índice muestra además «Cita mié. 30/09, 13:00».
@@ -76,7 +76,7 @@ Cada organización:
 1. **No inventar nunca**: datos técnicos, precios, plazos, certificaciones, contactos, teléfonos, proyectos, stands, fechas ni compromisos. Lo que no conste se deja vacío.
 2. **Vacío es vacío**: nunca escribir «no localizado», «no encontrado», «sin verificar», «N/D» ni marcadores similares.
 3. **Correos**: se prefieren los personales. Los generales y los de departamento se mantienen hasta disponer de un correo personal de esa organización; entonces se sustituyen. **Teléfonos**: se admiten los personales y los de empresa.
-4. **Contactos de la ficha**: solo personas confirmadas en la feria (programa oficial, cita cerrada o dato de Andrés). Las demás personas de interés van solo al índice, en gris.
+4. **Contactos de la ficha**: solo personas confirmadas en la feria (programa oficial, cita cerrada o dato de Andrés). Excepción: los interlocutores (`interlocutor: true`, personas con las que ya hemos hablado) aparecen siempre; con asistencia confirmada, en la fila «Contacto directo»; sin ella, en «Otros» con «Interlocutor:» delante del nombre. Las demás personas de interés van solo al índice, en gris.
 5. **Proyectos**: máximo 5 por ficha, formato «Nombre — Ubicación · Año · Estado». Estados admitidos: Terminado, En construcción, En desarrollo y planificación (o vacío).
 6. **USO DE GFS**: «No» solo si está verificado que usan otro material; si no, casillas en blanco.
 7. **Cifras internas** (costes, márgenes, condiciones con Stora) nunca en documentos para terceros sin instrucción expresa.

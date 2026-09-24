@@ -11,7 +11,7 @@ import re
 import zipfile
 from xml.sax.saxutils import escape
 
-from comun import GRUPOS, PLANTILLA_BLOC, SLOTS, etiqueta_grupo, num_proyectos
+from comun import FILA_INTERLOCUTOR, GRUPOS, PLANTILLA_BLOC, SLOTS, etiqueta_grupo, num_proyectos
 
 N_OTRO_CONTACTO = 2
 TEXTO_NO_ACUDE = '(No acude al congreso)'
@@ -164,8 +164,8 @@ B_DESTACADO = (NEGRO_8, None, NEGRO_8, None)
 # --- Textos derivados de los datos -------------------------------------------
 
 def orden_prioridad(contactos):
-    """Interlocutor directo primero, después asistencia confirmada y el resto."""
-    return sorted(contactos, key=lambda c: (c.get('slot') != 'directo', not c.get('confirmado_feria')))
+    """Interlocutores primero, después asistencia confirmada y el resto."""
+    return sorted(contactos, key=lambda c: (not c.get('interlocutor'), not c.get('confirmado_feria')))
 
 
 def linea_contacto_indice(c):
@@ -248,7 +248,7 @@ def lineas_indice(org):
         negrita = bool(c.get('confirmado_feria'))
         lineas.append((linea_contacto_indice(c),
                        rpr(16, b=negrita, color='000000' if negrita else '555555',
-                           u=c.get('slot') == 'directo')))
+                           u=bool(c.get('interlocutor')))))
     tel = linea_telefono_empresa(org)
     if tel:
         lineas.append((tel, rpr(16, color='000000')))
@@ -325,21 +325,32 @@ def lineas_en_blanco(n=2):
 
 
 def en_ficha(c):
-    """Regla 4: en la ficha, solo personas con asistencia confirmada (y los departamentos, que no son personas)."""
-    return bool(c.get('confirmado_feria') or c.get('departamento'))
+    """Regla 4: en la ficha, personas con asistencia confirmada, interlocutores y departamentos."""
+    return bool(c.get('confirmado_feria') or c.get('interlocutor') or c.get('departamento'))
+
+
+def hueco_ficha(c):
+    """Fila de CONTACTO en la que va el contacto."""
+    if c.get('interlocutor'):
+        return 'interlocutor' if c.get('confirmado_feria') else 'otros'
+    return c.get('slot', 'otros')
 
 
 def tabla_contactos(org):
     contactos = [c for c in orden_prioridad(org.get('contactos') or []) if en_ficha(c)]
     filas = []
-    for slot, etiqueta in SLOTS.items():
-        del_slot = [c for c in contactos if c.get('slot', 'otros') == slot]
-        if slot == 'directo' and not del_slot:
+    for slot, etiqueta in [('interlocutor', FILA_INTERLOCUTOR), *SLOTS.items()]:
+        del_slot = [c for c in contactos if hueco_ficha(c) == slot]
+        if slot == 'interlocutor' and not del_slot:
             continue
         parrafos = []
         for c in del_slot:
-            props = rpr(18, b=True, color='000000', u=True, bcs_primero=True) if slot == 'directo' else R18N
-            parrafos.append(parrafo(run(linea_contacto_ficha(c), props)))
+            if slot == 'interlocutor':
+                parrafos.append(parrafo(run(linea_contacto_ficha(c),
+                                            rpr(18, b=True, color='000000', u=True, bcs_primero=True))))
+            else:
+                prefijo = 'Interlocutor: ' if c.get('interlocutor') else ''
+                parrafos.append(parrafo(run(prefijo + linea_contacto_ficha(c), R18N)))
         if slot == 'otros' and linea_telefono_empresa(org):
             parrafos.append(parrafo(run(linea_telefono_empresa(org), R18N)))
         if not parrafos:

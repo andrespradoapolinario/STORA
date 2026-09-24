@@ -121,8 +121,9 @@ def validar(datos):
             if not c.get('nombre'):
                 e(f'contacto {i} sin nombre.')
             if c.get('slot') not in SLOTS:
-                e(f"{rc}: slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).")
-            for campo in ('confirmado_feria', 'interes', 'departamento'):
+                pista = ' Para un interlocutor, use «interlocutor»: true.' if c.get('slot') == 'directo' else ''
+                e(f"{rc}: slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).{pista}")
+            for campo in ('confirmado_feria', 'interes', 'interlocutor', 'departamento'):
                 if not isinstance(c.get(campo, False), bool):
                     e(f'{rc}: «{campo}» debe ser true o false.')
             for campo in c:
