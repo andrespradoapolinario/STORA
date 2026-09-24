@@ -179,6 +179,9 @@ def linea_contacto_indice(c):
 
 def linea_contacto_ficha(c):
     t = c['nombre']
+    if c.get('departamento'):
+        # Buzón o departamento: en la ficha, solo el nombre y el correo.
+        return t + (f" · {c['email']}" if c.get('email') else '')
     if c.get('puesto'):
         t += f" — {c['puesto']}"
     for campo in ('email', 'telefono', 'nota'):
@@ -250,7 +253,7 @@ def lineas_indice(org):
     if tel:
         lineas.append((tel, rpr(16, color='000000')))
     if org.get('no_acude'):
-        lineas.append((TEXTO_NO_ACUDE, rpr(16, color='000000')))
+        lineas.append((TEXTO_NO_ACUDE, rpr(16, b=True, color='000000')))
     cita = cita_indice(org.get('cita')) if org.get('visita') else ''
     if cita:
         lineas.append((cita, rpr(16, b=True, color='000000')))
@@ -321,8 +324,13 @@ def lineas_en_blanco(n=2):
     return P_GDOCS + tabla([7906], filas) + P_VACIO
 
 
+def en_ficha(c):
+    """Regla 4: en la ficha, solo personas con asistencia confirmada (y los departamentos, que no son personas)."""
+    return bool(c.get('confirmado_feria') or c.get('departamento'))
+
+
 def tabla_contactos(org):
-    contactos = orden_prioridad(org.get('contactos') or [])
+    contactos = [c for c in orden_prioridad(org.get('contactos') or []) if en_ficha(c)]
     filas = []
     for slot, etiqueta in SLOTS.items():
         del_slot = [c for c in contactos if c.get('slot', 'otros') == slot]

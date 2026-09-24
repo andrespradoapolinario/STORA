@@ -38,7 +38,7 @@ CAMPOS_ORGANIZACION = (
 )
 CAMPOS_CONTACTO = (
     'nombre', 'puesto', 'telefono', 'email', 'slot', 'confirmado_feria',
-    'interes', 'nota',
+    'interes', 'departamento', 'nota',
 )
 CAMPOS_PROYECTO = ('nombre', 'ubicacion', 'anio', 'estado')
 
@@ -50,7 +50,7 @@ VALORES_POR_DEFECTO = {
 }
 CONTACTO_POR_DEFECTO = {
     'puesto': '', 'telefono': '', 'email': '', 'slot': 'otros',
-    'confirmado_feria': False, 'interes': True, 'nota': '',
+    'confirmado_feria': False, 'interes': True, 'departamento': False, 'nota': '',
 }
 PROYECTO_POR_DEFECTO = {'ubicacion': '', 'anio': '', 'estado': ''}
 

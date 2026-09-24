@@ -15,11 +15,12 @@ from comun import (CAMPOS_CONTACTO, CAMPOS_ORGANIZACION, CAMPOS_PROYECTO, DATOS,
                    MAX_PROYECTOS, SLOTS, USO_GFS, cargar)
 
 # Apartado 8: términos prohibidos en cualquier texto.
-PROHIBIDOS = re.compile(r'no localizad|no encontrad|sin verificar|fuente:|info@|contact@|web@|hablamos@'
-                        r'|comercial@|sales@|service@', re.IGNORECASE)
+PROHIBIDOS = re.compile(r'no localizad|no encontrad|sin verificar|fuente:', re.IGNORECASE)
 # Apartado 4.2 y nombre de la marca.
 MARCADORES = re.compile(r'\bN/D\b|Omerastore', re.IGNORECASE)
-# Apartado 4.3: otros buzones genéricos («y equivalentes»). Solo avisan.
+# Regla 3: correos generales o de departamento. Se mantienen hasta tener uno
+# personal de esa organización, así que solo avisan.
+GENERALES = re.compile(r'info@|contact@|web@|hablamos@|comercial@|sales@|service@', re.IGNORECASE)
 GENERICOS = re.compile(r'^(info|informacion|contacto|contact|ventas|compras|comercial|admin|administracion'
                        r'|oficina|office|hola|hello|atencion|clientes|soporte|support|canalproveedor'
                        r'|proveedores|marketing|prensa|rrhh|general)([._-].*)?$', re.IGNORECASE)
@@ -47,7 +48,7 @@ def textos(org):
 def es_generico(email):
     local, _, dominio = email.partition('@')
     etiqueta = dominio.split('.')[0].lower()
-    return bool(GENERICOS.match(local)) or local.lower() == etiqueta
+    return bool(GENERALES.search(email) or GENERICOS.match(local)) or local.lower() == etiqueta
 
 
 def validar(datos):
@@ -59,7 +60,6 @@ def validar(datos):
             errores.append(f'evento: falta «{campo}».')
     orgs = datos['organizaciones']
     ids, nombres = {}, {}
-    sin_confirmar = []
     for n, org in enumerate(orgs, 1):
         ref = f"{n:02d} {org.get('nombre') or org.get('id') or '(sin nombre)'}"
 
@@ -96,10 +96,12 @@ def validar(datos):
             a('tiene cita pero «visita» es false.')
         if org.get('visita') and not org.get('cita'):
             a('«visita» es true pero no hay cita.')
-        if org.get('telefono_empresa'):
-            a(f"teléfono de empresa ({org['telefono_empresa']}): la regla 3 admite solo teléfonos personales.")
         # Textos
+        generales = []
         for ruta, texto in textos(org):
+            for correo in EMAIL.finditer(texto):
+                if es_generico(correo.group(0)) and correo.group(0) not in generales:
+                    generales.append(correo.group(0))
             m = PROHIBIDOS.search(texto)
             if m:
                 e(f'«{m.group(0)}» en {ruta}: «{texto}».')
@@ -120,7 +122,7 @@ def validar(datos):
                 e(f'contacto {i} sin nombre.')
             if c.get('slot') not in SLOTS:
                 e(f"{rc}: slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).")
-            for campo in ('confirmado_feria', 'interes'):
+            for campo in ('confirmado_feria', 'interes', 'departamento'):
                 if not isinstance(c.get(campo, False), bool):
                     e(f'{rc}: «{campo}» debe ser true o false.')
             for campo in c:
@@ -132,15 +134,13 @@ def validar(datos):
             email = c.get('email', '')
             if email and not EMAIL.fullmatch(email):
                 a(f'{rc}: correo con formato no válido «{email}».')
-            if email and EMAIL.fullmatch(email) and es_generico(email) and not PROHIBIDOS.search(email):
-                a(f'{rc}: correo genérico «{email}» (regla 3).')
             if '@' in c.get('telefono', ''):
                 a(f"{rc}: el teléfono contiene un correo («{c['telefono']}»).")
-            for correo in EMAIL.finditer(c.get('nota', '')):
-                if es_generico(correo.group(0)):
-                    a(f'{rc}: correo genérico en la nota «{correo.group(0)}» (regla 3).')
-            if not c.get('confirmado_feria'):
-                sin_confirmar.append(ref)
+        for correo in generales:
+            quien = next((c['nombre'] for c in org.get('contactos') or []
+                          if correo in (c.get('email', ''), c.get('nota', ''))), '')
+            a(f"correo general o de departamento{f' de {quien}' if quien else ''}: «{correo}». "
+              'Se mantiene hasta disponer de uno personal (regla 3).')
         # Proyectos
         proyectos = org.get('proyectos') or []
         if len(proyectos) > MAX_PROYECTOS:
@@ -161,10 +161,6 @@ def validar(datos):
                 e('«proyectos_conocidos» debe ser un número entero o null.')
             elif conocidos < len(proyectos):
                 e(f'«proyectos_conocidos» ({conocidos}) es menor que los proyectos listados ({len(proyectos)}).')
-    if sin_confirmar:
-        orgs_sc = sorted(set(sin_confirmar))
-        avisos.append(f'Regla 4: {len(sin_confirmar)} contactos sin asistencia confirmada figuran también en la '
-                      f'ficha ({len(orgs_sc)} organizaciones). El bloc actual los muestra en índice y ficha.')
     return errores, avisos
 
 

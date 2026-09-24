@@ -52,7 +52,7 @@ Cada organización:
   "perfil": "Texto breve y verificado.",
   "contactos": [
     {"nombre": "", "puesto": "", "telefono": "", "email": "", "slot": "directo|compras|tecnico|otros",
-     "confirmado_feria": true, "interes": true, "nota": ""}
+     "confirmado_feria": true, "interes": true, "departamento": false, "nota": ""}
   ],
   "telefono_empresa": "",           // centralita; se imprime como «Tel. empresa:» («Tel. organización:» en asociaciones, organismos públicos y centros de investigación)
   "proyectos": [{"nombre": "", "ubicacion": "", "anio": "", "estado": "Terminado|En construcción|En desarrollo y planificación|"}],
@@ -68,13 +68,14 @@ Cada organización:
 
 - `slot: "directo"`: la persona con la que ya hemos hablado. Va en la fila «Contacto directo» de la ficha y primera y subrayada en el índice.
 - `nota` del contacto: dato breve que se imprime en la ficha tras el correo y el teléfono (por ejemplo, «Ponente mar. 29/09, 12:40–13:40» o «respondió el 23/09»).
+- `departamento: true`: buzón o departamento, no una persona (por ejemplo, «Compras de biometano (Dpto.)»). Va en la ficha aunque no tenga asistencia confirmada, solo con el nombre y el correo; en el índice, en gris y con su teléfono.
 - `cita`: si empieza por día, fecha y hora («Miércoles 30/09, 13:00 · …»), el índice muestra además «Cita mié. 30/09, 13:00».
 
 ## 4. Reglas de contenido (obligatorias)
 
 1. **No inventar nunca**: datos técnicos, precios, plazos, certificaciones, contactos, teléfonos, proyectos, stands, fechas ni compromisos. Lo que no conste se deja vacío.
 2. **Vacío es vacío**: nunca escribir «no localizado», «no encontrado», «sin verificar», «N/D» ni marcadores similares.
-3. **Ningún correo genérico** (info@, contact@, comercial@, sales@, service@, hablamos@, web@ y equivalentes). Solo correos y teléfonos personales de interlocutores concretos.
+3. **Correos**: se prefieren los personales. Los generales y los de departamento se mantienen hasta disponer de un correo personal de esa organización; entonces se sustituyen. **Teléfonos**: se admiten los personales y los de empresa.
 4. **Contactos de la ficha**: solo personas confirmadas en la feria (programa oficial, cita cerrada o dato de Andrés). Las demás personas de interés van solo al índice, en gris.
 5. **Proyectos**: máximo 5 por ficha, formato «Nombre — Ubicación · Año · Estado». Estados admitidos: Terminado, En construcción, En desarrollo y planificación (o vacío).
 6. **USO DE GFS**: «No» solo si está verificado que usan otro material; si no, casillas en blanco.
@@ -92,7 +93,7 @@ Cada organización:
 ### Bloc de notas de feria (formato aprobado)
 
 - Portada (STORA, «Bloc de notas», nombre del evento), página CONTENIDO (grupo y número de fichas) e «Índice por prioridad».
-- Índice: columnas VISITA (estrecha, a la izquierda; «VISITA» si hay reunión cerrada) · N.º · ORGANIZACIÓN · STAND · PERSONA DE INTERÉS. En la última columna: nombre (puesto) · teléfono si existe · «– N PROYECTOS» (solo el número de proyectos conocidos). Negrita = asistencia confirmada; gris = otros contactos; rojo «(No acude al congreso)» cuando proceda.
+- Índice: columnas VISITA (estrecha, a la izquierda; «VISITA» si hay reunión cerrada) · N.º · ORGANIZACIÓN · STAND · PERSONA DE INTERÉS. En la última columna: nombre (puesto) · teléfono si existe · «– N PROYECTOS» (solo el número de proyectos conocidos). Negrita = asistencia confirmada; gris = otros contactos; «(No acude al congreso)» en negrita negra cuando proceda (el bloc se imprime en blanco y negro).
 - Una ficha por página: PERFIL, STAND arriba a la derecha, CONTACTO (Responsable de Compras, Director Técnico, Otros; líneas en blanco si no hay persona confirmada), PROYECTOS, USO DE GFS, CITA y AVISO destacados, NOTAS con líneas hasta el final de la página.
 - Etiqueta de grupo en la ficha: «Grupo A · Promotora», «Grupo B · EPC», etc.
 
@@ -121,7 +122,8 @@ Cada operación identifica la organización por `id` o, si Cowork no lo conoce, 
 
 ## 8. Validación (validar.py debe pasar antes de generar)
 
-- Ningún texto contiene los términos prohibidos del apartado 4 (expresión regular: `no localizad|no encontrad|sin verificar|fuente:|info@|contact@|web@|hablamos@|comercial@|sales@|service@`).
+- Ningún texto contiene los términos prohibidos del apartado 4 (expresión regular: `no localizad|no encontrad|sin verificar|fuente:`).
+- Los correos generales o de departamento (`info@|contact@|web@|hablamos@|comercial@|sales@|service@` y equivalentes) se señalan como aviso en cada ejecución, sin detener la generación (regla 3).
 - Estados de proyecto dentro de la lista admitida; como máximo 5 proyectos por organización.
 - `id` y `nombre` únicos; grupo entre A y E.
 - Tras generar: una ficha por página (comprobar en el PDF y en el Word convertido) y ninguna ficha desbordada.
