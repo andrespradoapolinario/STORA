@@ -68,8 +68,30 @@ RPR_INICIAL = ('<w:rPr><w:rFonts w:ascii="Arial" w:cs="Arial" w:eastAsia="Arial"
                '<w:shd w:fill="auto" w:val="clear"/><w:vertAlign w:val="baseline"/></w:rPr>')
 P_GDOCS = '<w:p>' + PPR_GDOCS.format(rpr='') + '</w:p>'
 P_VACIO = '<w:p><w:pPr/></w:p>'
-P_SALTO = ('<w:p><w:pPr><w:pageBreakBefore w:val="1"/>'
-           '<w:spacing w:after="0" w:before="0" w:line="20" w:lineRule="auto"/></w:pPr></w:p>')
+
+# Las fichas usan interlineado exacto para que Word y LibreOffice midan lo
+# mismo: la altura de cada línea es la sencilla de Calibri (1,2207 veces el
+# tamaño de letra), fijada en twips.
+FACTOR_LINEA = 1.2207
+SALTO = '<w:pageBreakBefore w:val="1"/>'
+
+
+def linea(sz):
+    """Altura exacta (twips) de una línea con letra de sz medios puntos."""
+    return round(sz / 2 * FACTOR_LINEA * 20)
+
+
+def esp_exacto(sz=18, after=0, alto=None):
+    return f'<w:spacing w:before="0" w:after="{after}" w:line="{alto or linea(sz)}" w:lineRule="exact"/>'
+
+
+# Párrafo que Word exige después de cada tabla: 1 pt de letra e interlineado
+# exacto de 1 pt, sin espaciado, para que no ocupe sitio ni salte de página.
+P_MINIMO = ('<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="20" w:lineRule="exact"/>'
+            '<w:rPr><w:sz w:val="2"/><w:szCs w:val="2"/></w:rPr></w:pPr></w:p>')
+# Párrafo previo a una tabla anidada (1,15 líneas de 9 pt) y párrafo vacío de 9 pt.
+P_ANTES_ANIDADA = '<w:p><w:pPr>' + esp_exacto(alto=253) + '</w:pPr></w:p>'
+P_VACIO_EXACTO = '<w:p><w:pPr>' + esp_exacto() + '</w:pPr></w:p>'
 
 
 def p_espacio(after=None, before=None):
@@ -135,12 +157,17 @@ def celda(contenido, bordes=(None, None, None, None), mar=(50, 100, 50, 100), re
     return f'<w:tc><w:tcPr>{tcpr}</w:tcPr>{contenido}</w:tc>'
 
 
-def fila(celdas, alto=None, cabecera=False):
-    trpr = '<w:cantSplit w:val="0"/>'
+def fila(celdas, alto=None, cabecera=False, exacta=False, sin_partir=False):
+    trpr = f'<w:cantSplit w:val="{1 if sin_partir else 0}"/>'
     if alto:
-        trpr += f'<w:trHeight w:val="{alto}" w:hRule="atLeast"/>'
+        trpr += f'<w:trHeight w:val="{alto}" w:hRule="{"exact" if exacta else "atLeast"}"/>'
     trpr += f'<w:tblHeader w:val="{1 if cabecera else 0}"/>'
     return f'<w:tr><w:trPr>{trpr}</w:trPr>{"".join(celdas)}</w:tr>'
+
+
+# Márgenes de celda por defecto de cada tabla, explícitos (los mismos del estilo).
+MARGENES_TABLA = ''.join(f'<w:{lado} w:w="{v}" w:type="dxa"/>'
+                         for lado, v in (('top', 0), ('left', 115), ('bottom', 0), ('right', 115)))
 
 
 def tabla(columnas, filas):
@@ -150,7 +177,7 @@ def tabla(columnas, filas):
                      for l in ('top', 'left', 'bottom', 'right', 'insideH', 'insideV'))
     return (f'<w:tbl><w:tblPr><w:tblStyle w:val="@TABLA@"/><w:tblW w:w="{ancho}.0" w:type="dxa"/>'
             f'<w:jc w:val="left"/><w:tblBorders>{bordes}</w:tblBorders><w:tblLayout w:type="fixed"/>'
-            f'<w:tblLook w:val="0000"/></w:tblPr><w:tblGrid>{grid}<w:tblGridChange w:id="0">'
+            f'<w:tblCellMar>{MARGENES_TABLA}</w:tblCellMar><w:tblLook w:val="0000"/></w:tblPr><w:tblGrid>{grid}<w:tblGridChange w:id="0">'
             f'<w:tblGrid>{grid}</w:tblGrid></w:tblGridChange></w:tblGrid>{"".join(filas)}</w:tbl>')
 
 
