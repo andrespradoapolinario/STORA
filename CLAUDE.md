@@ -25,6 +25,22 @@ Un solo comando regenera todo: `python scripts/generar.py bloc` (o el que se doc
 
 ## 3. Esquema de una organización (organizaciones.json)
 
+El archivo tiene dos claves: `evento` (datos del evento para la portada, el pie de página y la leyenda del índice) y `organizaciones` (lista ordenada por grupo y, dentro de cada grupo, por prioridad).
+
+```json
+{
+  "evento": {
+    "nombre": "6.º Salón del Gas Renovable y 19.º Congreso Internacional de Bioenergía",   // portada
+    "pie": "Salón del Gas Renovable y 19.º Congreso Internacional de Bioenergía · Valladolid, 29 y 30/09/2026",
+    "leyenda_indice": "En negrita: asistencia confirmada al Salón o al Congreso. ...",
+    "archivo_bloc": "Bloc_Notas_Salon_Gas_Renovable"   // nombre de archivo, sin la fecha
+  },
+  "organizaciones": [ ... ]
+}
+```
+
+Cada organización:
+
 ```json
 {
   "id": "tonello-energy-spain",
@@ -35,10 +51,12 @@ Un solo comando regenera todo: `python scripts/generar.py bloc` (o el que se doc
   "nota_stand": "Pabellón 2",
   "perfil": "Texto breve y verificado.",
   "contactos": [
-    {"nombre": "", "puesto": "", "telefono": "", "email": "", "slot": "compras|tecnico|otros",
-     "confirmado_feria": true, "interes": true}
+    {"nombre": "", "puesto": "", "telefono": "", "email": "", "slot": "directo|compras|tecnico|otros",
+     "confirmado_feria": true, "interes": true, "nota": ""}
   ],
+  "telefono_empresa": "",           // centralita; se imprime como «Tel. empresa:» («Tel. organización:» en asociaciones, organismos públicos y centros de investigación)
   "proyectos": [{"nombre": "", "ubicacion": "", "anio": "", "estado": "Terminado|En construcción|En desarrollo y planificación|"}],
+  "proyectos_conocidos": 4,         // el «– N PROYECTOS» del índice; puede superar los 5 listados (null si no se conoce)
   "uso_gfs": "Sí|No|null",
   "visita": true,                   // reunión cerrada en la feria
   "cita": "Miércoles 30/09, 13:00 · Stand 294 · ...",
@@ -47,6 +65,10 @@ Un solo comando regenera todo: `python scripts/generar.py bloc` (o el que se doc
   "fuente_interna": "Correo 23/09; programa oficial 19.º CIB"   // nunca se imprime en el bloc
 }
 ```
+
+- `slot: "directo"`: la persona con la que ya hemos hablado. Va en la fila «Contacto directo» de la ficha y primera y subrayada en el índice.
+- `nota` del contacto: dato breve que se imprime en la ficha tras el correo y el teléfono (por ejemplo, «Ponente mar. 29/09, 12:40–13:40» o «respondió el 23/09»).
+- `cita`: si empieza por día, fecha y hora («Miércoles 30/09, 13:00 · …»), el índice muestra además «Cita mié. 30/09, 13:00».
 
 ## 4. Reglas de contenido (obligatorias)
 

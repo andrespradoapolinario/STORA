@@ -1,0 +1,4198 @@
+{
+  "evento": {
+    "nombre": "6.º Salón del Gas Renovable y 19.º Congreso Internacional de Bioenergía",
+    "pie": "Salón del Gas Renovable y 19.º Congreso Internacional de Bioenergía · Valladolid, 29 y 30/09/2026",
+    "leyenda_indice": "En negrita: asistencia confirmada al Salón o al Congreso.  Subrayado y primero: la persona con la que ya hemos hablado.  VISITA: reunión o visita ya acordada en la feria.  «– N PROYECTOS»: proyectos que conocemos de cada empresa.",
+    "archivo_bloc": "Bloc_Notas_Salon_Gas_Renovable"
+  },
+  "organizaciones": [
+    {
+      "id": "biorig",
+      "nombre": "Biorig (grupo Solarig)",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor de plantas de biometano (Biorig Energy, grupo Solarig), con cartera en León, Zamora y Soria y más de 26 instalaciones en desarrollo.",
+      "contactos": [
+        {
+          "nombre": "David González Vázquez",
+          "puesto": "Subcontractor Manager",
+          "telefono": "+34 657 325 239",
+          "email": "",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Antonio Conde",
+          "puesto": "Compras",
+          "telefono": "",
+          "email": "",
+          "slot": "compras",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Carlos Aguilar Aguirre",
+          "puesto": "Renewable Gases Director, Solarig",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Valeria Arpuzzo Ortega",
+          "puesto": "Project Manager de biometano",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Juan José Bodega",
+          "puesto": "Responsable de departamento, Solarig",
+          "telefono": "",
+          "email": "jjbodega@solarig.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "San Millán de los Caballeros",
+          "ubicacion": "León",
+          "anio": "2027",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Coscurita",
+          "ubicacion": "Soria",
+          "anio": "2028",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Cubo de Tierra del Vino",
+          "ubicacion": "Zamora",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "San Cebrián de Castro",
+          "ubicacion": "Zamora",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 26,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "David González Vázquez (Subcontractor Manager) se comprometió por correo a contactar a Stora para los proyectos actuales.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "cobirgy",
+      "nombre": "Cobirgy (CIP y Connect Bioenergy)",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor de biometano participado por Copenhagen Infrastructure Partners (CIP) y Connect Bioenergy.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "La Sentiu de Sió",
+          "ubicacion": "Lleida",
+          "anio": "2026",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Linyola",
+          "ubicacion": "Lleida",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "enagas-renovable",
+      "nombre": "Enagás Renovable",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "273",
+      "nota_stand": "",
+      "perfil": "Promotor y proveedor de infraestructura de biometano. Socio de PreZero en Colmenar Viejo (tecnología Weltec) y de Genia Bioenergy en The Green Vector.",
+      "contactos": [
+        {
+          "nombre": "Antonio Illescas",
+          "puesto": "Director de Desarrollo de Negocio de Biometano",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Mesa redonda mar. 29/09, 16:25"
+        },
+        {
+          "nombre": "José Luis Martínez",
+          "puesto": "Head of Procurement",
+          "telefono": "",
+          "email": "",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Colmenar Viejo (con PreZero)",
+          "ubicacion": "Madrid",
+          "anio": "2026",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Vencillón (The Green Vector, con Genia)",
+          "ubicacion": "Huesca",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Castro de Rei (con Genia y Agroamb)",
+          "ubicacion": "Lugo",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "iam-carbonzero",
+      "nombre": "IAM Carbonzero",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Desarrollador técnico integral del fondo Bioenergy Agro Iberia FCR (gestora: Abante; promotor: Mapfre). Diecinueve plantas del primer fondo entran en producción en 2027 y hay 20 proyectos adicionales identificados.",
+      "contactos": [
+        {
+          "nombre": "Ciro García",
+          "puesto": "IAM Carbonzero",
+          "telefono": "",
+          "email": "ciro.garcia@iamcarbonzero.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "presentado vía Abante"
+        },
+        {
+          "nombre": "Diego Ruiz",
+          "puesto": "",
+          "telefono": "",
+          "email": "hablamos@iamcarbonzero.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Ágreda (Cerro de los Molineros)",
+          "ubicacion": "Soria",
+          "anio": "2028",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "San Esteban de Gormaz",
+          "ubicacion": "Soria",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Olmedo",
+          "ubicacion": "Valladolid",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Villa del Prado",
+          "ubicacion": "Madrid",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Monterrubio de la Serena",
+          "ubicacion": "Badajoz",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 39,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Reunión solicitada por Vicente a través de Abante para el 05/10 o el 08/10, pendiente de confirmar.",
+      "no_acude": true,
+      "fuente_interna": ""
+    },
+    {
+      "id": "naturmet",
+      "nombre": "Naturmet (Biomet Dos Hermanas)",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor de biometano del grupo Oleofat. Financiación de 60 M€ para tres nuevas plantas en Andalucía y Extremadura (junio de 2026).",
+      "contactos": [
+        {
+          "nombre": "Darío Pérez",
+          "puesto": "",
+          "telefono": "+34 945 134 917",
+          "email": "naturmet@naturmet.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Biolvegas",
+          "ubicacion": "Ólvega, Soria",
+          "anio": "2023",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Valtierra",
+          "ubicacion": "Navarra",
+          "anio": "",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Biomet Dos Hermanas",
+          "ubicacion": "Puerto de Sevilla",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Almendralejo",
+          "ubicacion": "Badajoz",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "nortegas-renovables",
+      "nombre": "Nortegas Renovables",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "Patrocinador Premium",
+      "perfil": "Promotor de biometano (Norbiogás), con cartera de unos 1 TWh/año. Patrocinador Premium del Salón.",
+      "contactos": [
+        {
+          "nombre": "Dpto. Compras de biometano",
+          "puesto": "",
+          "telefono": "+34 946 140 020",
+          "email": "compras.biometano@nortegas.es",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "respondió el 23/09"
+        },
+        {
+          "nombre": "Luis Navedo",
+          "puesto": "Head of Business Development; presidente de AEBIG",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Felipe Requejo Sigüenza",
+          "puesto": "Compras",
+          "telefono": "900 902 933",
+          "email": "compras@nortegas.es",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "CMG-2 (con GHK y FCC)",
+          "ubicacion": "Zubieta, Gipuzkoa",
+          "anio": "2026",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Norbiogás Biometano I",
+          "ubicacion": "Curtis, A Coruña",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Planta con tecnología Anaergia",
+          "ubicacion": "Andalucía",
+          "anio": "2025",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Cistérniga",
+          "ubicacion": "Valladolid",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Plasencia",
+          "ubicacion": "Cáceres",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 10,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "prezero",
+      "nombre": "PreZero",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "254",
+      "nota_stand": "Patrocinador",
+      "perfil": "Gestor de residuos y promotor de biometanización. Patrocinador del Salón.",
+      "contactos": [
+        {
+          "nombre": "Ruth Rivero",
+          "puesto": "Jefa de Estrategia y Proyectos de Biometano",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Mesa redonda mar. 29/09, 16:25"
+        },
+        {
+          "nombre": "Borja Martín Zorita",
+          "puesto": "Director de Negocio Público Norte",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Andrea Rico Ripoll",
+          "puesto": "",
+          "telefono": "638 909 749",
+          "email": "andrea.rico@prezero.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Colmenar Viejo (con Enagás Renovable)",
+          "ubicacion": "Madrid",
+          "anio": "2026",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Can Barba (UTE con Constructora de Calaf)",
+          "ubicacion": "Terrassa, Barcelona",
+          "anio": "2027",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "cycle0",
+      "nombre": "CycleØ",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "241A",
+      "nota_stand": "",
+      "perfil": "Promotor, propietario y operador de biometano: 20 plantas en España, plan de inversión de 200 M€ y hasta 30 plantas.",
+      "contactos": [
+        {
+          "nombre": "Andrés García-Lastra",
+          "puesto": "Director de Desarrollo de Proyectos",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Adrià Belmonte",
+          "puesto": "Head of Markets",
+          "telefono": "+44 203 961 9951",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Jessica Orchard",
+          "puesto": "sustituye a Andrea de Asco",
+          "telefono": "",
+          "email": "jessica.orchard@cycle0.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Manlleu",
+          "ubicacion": "Barcelona",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Artajona",
+          "ubicacion": "Navarra",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Ecogalia (con Toysal)",
+          "ubicacion": "O Porriño, Pontevedra",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Vallfogona de Balaguer",
+          "ubicacion": "Lleida",
+          "anio": "2023",
+          "estado": ""
+        },
+        {
+          "nombre": "GARYC",
+          "ubicacion": "Albarreal del Tajo, Toledo",
+          "anio": "2027",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 20,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "ence-biogas",
+      "nombre": "Ence Biogás",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "284",
+      "nota_stand": "",
+      "perfil": "Promotor y operador de biometano; cartera de 28 proyectos y objetivo de 1.000 GWh/año en 2030.",
+      "contactos": [
+        {
+          "nombre": "Antonio Casal",
+          "puesto": "Director General de ENCE Biogás",
+          "telefono": "+34 91 337 85 00",
+          "email": "info@ence.es",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Mesa redonda mar. 29/09, 16:25"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "La Galera",
+          "ubicacion": "Tarragona",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Laguna de Negrillos",
+          "ubicacion": "León",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Barbastro",
+          "ubicacion": "Huesca",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Zuera",
+          "ubicacion": "Zaragoza",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "San Esteban de Litera",
+          "ubicacion": "Huesca",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 28,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "kambio",
+      "nombre": "KamBIO",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor de una red de 20 plantas de biometano en nueve comunidades autónomas (Valoriza, del grupo Sacyr, y Kira Ventures); inversión de 400 M€.",
+      "contactos": [
+        {
+          "nombre": "Carlos Rubio",
+          "puesto": "",
+          "telefono": "",
+          "email": "info@kambioenergia.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Calamocha",
+          "ubicacion": "Teruel",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Fase 1 de la red (20 plantas)",
+          "ubicacion": "Nueve comunidades autónomas",
+          "anio": "2028",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 20,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "axpo-iberia",
+      "nombre": "Axpo Iberia",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "262B",
+      "nota_stand": "",
+      "perfil": "Filial española del grupo suizo Axpo. Promotor, copropietario y operador de plantas de biometano, además de comprador.",
+      "contactos": [
+        {
+          "nombre": "Jacobo Canseco",
+          "puesto": "Head of Green Energy",
+          "telefono": "900 101 311",
+          "email": "ventas@axpoiberia.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Gabriel Aguiló",
+          "puesto": "Head Renewables & Energy Management",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Torre Santamaría",
+          "ubicacion": "Vallfogona de Balaguer, Lleida",
+          "anio": "2022",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Ampliación de Torre Santamaría",
+          "ubicacion": "Vallfogona de Balaguer, Lleida",
+          "anio": "2027",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Coreses (Axpo Biometano ES1)",
+          "ubicacion": "Zamora",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "grupo-ham",
+      "nombre": "Grupo HAM",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "283B",
+      "nota_stand": "",
+      "perfil": "Grupo de Barcelona especializado en bio-GNL, licuefacción y estaciones de gas para movilidad.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Vilanant (Mas Jonquer)",
+          "ubicacion": "Girona",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Ñuble (con Lipigas y CycleØ)",
+          "ubicacion": "Chile",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Faenza (con Caviro)",
+          "ubicacion": "Italia",
+          "anio": "2021",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "verdalia-bioenergy",
+      "nombre": "Verdalia Bioenergy",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "214",
+      "nota_stand": "",
+      "perfil": "Promotor de biometano con sede en Madrid y oficinas en Londres, Milán y Verona.",
+      "contactos": [
+        {
+          "nombre": "Santiago Pacheco-Ruiz",
+          "puesto": "Chief Technology & Operations Officer",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 09:30–10:30"
+        },
+        {
+          "nombre": "David García de Herreros",
+          "puesto": "Director de Desarrollo de Proyectos",
+          "telefono": "",
+          "email": "info@verdaliabio.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Stand 214"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Villaluenga de la Sagra",
+          "ubicacion": "Toledo",
+          "anio": "2026",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Hazas de Cesto",
+          "ubicacion": "Cantabria",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "indox-renovables",
+      "nombre": "Indox Renovables",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "261A",
+      "nota_stand": "Compartido con Indox Energy Systems y Umoe",
+      "perfil": "División vinculada a Indox Energy Systems (Lleida), fabricante de equipos de transporte y almacenamiento de carburantes y gases licuados (cisternas y tanques criogénicos para GLP y GNL); actividad orientada a hidrógeno y fotovoltaica.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "italmetan",
+      "nombre": "Italmetan",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "327",
+      "nota_stand": "",
+      "perfil": "",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "verdemobil-biogaz",
+      "nombre": "Verdemobil Biogaz",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "337",
+      "nota_stand": "Compartido con E-Flox",
+      "perfil": "Empresa francesa (Montaigu-Vendée) que diseña, fabrica, opera y mantiene unidades de valorización de biogás: upgrading a biometano, licuefacción de bio-CO₂ y bio-GNL y estaciones de biometano carburante.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "TRIFYL, primera estación de biometano carburante de Francia",
+          "ubicacion": "Tarn, Francia",
+          "anio": "2010",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Méthabraye",
+          "ubicacion": "Loir-et-Cher, Francia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "naturgy",
+      "nombre": "Naturgy",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor, operador y comprador de biometano. Su distribuidora Nedgia conecta las plantas a la red: 14 plantas inyectando y 98 proyectos con contrato de conexión (febrero de 2026). Alianzas con ID Energy Group (al menos 20 plantas) e Hispania Silva.",
+      "contactos": [
+        {
+          "nombre": "Kenia Hurtado",
+          "puesto": "Canal de proveedores, IBM",
+          "telefono": "912 100 100",
+          "email": "canalproveedor@naturgy.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Vicente Gramuntell",
+          "puesto": "Director de Desarrollo de Negocio y Transformación, Nedgia",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta Elena (upgrading de biogás de vertedero)",
+          "ubicacion": "Cerdanyola del Vallès, Barcelona",
+          "anio": "2021",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Vila-sana (granja Porgaporcs)",
+          "ubicacion": "Lleida",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "EDAR Butarque (Nedgia)",
+          "ubicacion": "Madrid",
+          "anio": "2019",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Utrera (con Kepler)",
+          "ubicacion": "Sevilla",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Utiel",
+          "ubicacion": "Valencia",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 98,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "El canal de proveedores de Naturgy ha pedido el catálogo de Stora.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "engie",
+      "nombre": "ENGIE",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "Patrocinador",
+      "perfil": "Construye, opera y mantiene plantas de biogás y biometano; comercializa biometano y garantías de origen y firma contratos de compra a largo plazo. Patrocinador del Salón.",
+      "contactos": [
+        {
+          "nombre": "María del Campo",
+          "puesto": "Head of BD Renewable Gases Spain",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Mesa redonda mar. 29/09, 16:25"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "catalana-de-biogas-iberia",
+      "nombre": "Catalana de Biogás Iberia",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor que desarrolla, construye y opera plantas de biometano a partir de residuos orgánicos. Fundada en 2022 y financiada por Sinia Renovables (Banco Sabadell).",
+      "contactos": [
+        {
+          "nombre": "Jordi Huguet",
+          "puesto": "Cap d'Àrea de Construcció",
+          "telefono": "93 506 92 23 · 679 962 836",
+          "email": "jhuguet@catalanadebiogas.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Polígono El Bruguer (unas 120.000 t/año)",
+          "ubicacion": "Vic, Barcelona",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Loporzano (95.000 t/año)",
+          "ubicacion": "Huesca",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Oportunidad abierta: Jordi Huguet (Cap d'Àrea de Construcció) pidió evaluar tres tanques (dos digestores de Ø30 × 8 m y un postdigestor de Ø35 × 8 m) para una planta en Cataluña; obra civil de CERTIS; el tecnólogo tiene reservas sobre el acero vitrificado. Videollamada propuesta para el jue. 01/10, 10:30, sin cerrar.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "agr-biogas",
+      "nombre": "AGR Biogás",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor y operador andaluz de biometano, fundado en 2018, con 30 proyectos en cartera (diciembre de 2025). Director general: David Piñero.",
+      "contactos": [
+        {
+          "nombre": "David Piñero",
+          "puesto": "Director General",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "955 25 28 33",
+      "proyectos": [
+        {
+          "nombre": "La Calahorra (58 GWh/año, 25 M€)",
+          "ubicacion": "Granada",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Benacazón",
+          "ubicacion": "Sevilla",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Arróniz",
+          "ubicacion": "Navarra",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 30,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "hispania-silva",
+      "nombre": "Hispania Silva",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor castellonense de biometano (SB Green Energy, Casan Solar y Enraíza Corporate). En la alianza con Naturgy (20 a 30 plantas antes de 2030) asume desarrollo, tramitación y construcción; Naturgy opera.",
+      "contactos": [
+        {
+          "nombre": "Pablo García Castillo",
+          "puesto": "Ingeniero de desarrollo",
+          "telefono": "",
+          "email": "contacto@hispaniasilva.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Platea",
+          "ubicacion": "Teruel",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Caspe",
+          "ubicacion": "Zaragoza",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 20,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "grupo-grino",
+      "nombre": "Grupo Griñó",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Grupo de gestión de residuos con sede en Lleida. Participa al 50 % en Nova Tracjusa con la cooperativa GAP y explota la planta de biogás de Zaidín.",
+      "contactos": [
+        {
+          "nombre": "Juan Griñó",
+          "puesto": "Director General",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "973 279 056",
+      "proyectos": [
+        {
+          "nombre": "Nova Tracjusa (biometano y gasificación)",
+          "ubicacion": "Juneda, Lleida",
+          "anio": "2027",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Planta de biogás de Zaidín (205.000 t/año)",
+          "ubicacion": "Zaidín, Huesca",
+          "anio": "2024",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "grupo-montagut",
+      "nombre": "Grupo Montagut",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Gestor de residuos orgánicos y fabricante de abonos orgánicos (Abonos Orgánicos Montagut, fundada en 2003). Explota la planta de biogás, biometano y biofertilizantes de Llutxent.",
+      "contactos": [
+        {
+          "nombre": "Gabriel Montagut",
+          "puesto": "Director",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "962 294 270",
+      "proyectos": [
+        {
+          "nombre": "Llutxent (129.000 t/año)",
+          "ubicacion": "Valencia",
+          "anio": "2024",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "biomargas",
+      "nombre": "Biomargas",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Gestor de residuos con sede en Madrid que promueve plantas de biometano en Andalucía y Castilla-La Mancha. Necesidad declarada a Stora: un tanque de purines y cuatro digestores.",
+      "contactos": [
+        {
+          "nombre": "Luis Ledesma",
+          "puesto": "",
+          "telefono": "683 140 817",
+          "email": "l.ledesma@biomargas.es",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Luis del Barrio",
+          "puesto": "",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Linares (más de 100 GWh/año)",
+          "ubicacion": "Jaén",
+          "anio": "2028",
+          "estado": ""
+        },
+        {
+          "nombre": "Cabra",
+          "ubicacion": "Córdoba",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Castro del Río",
+          "ubicacion": "Córdoba",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Alameda de la Sagra",
+          "ubicacion": "Toledo",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Villarrobledo",
+          "ubicacion": "Albacete",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "grupo-valora",
+      "nombre": "Grupo Valora",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Gestor y valorizador de residuos, lodos de EDAR y subproductos agroalimentarios, incluido el digestato para uso agrícola (El Puerto de Santa María, Cádiz).",
+      "contactos": [
+        {
+          "nombre": "Carlos Esteban Malagón",
+          "puesto": "Director Técnico",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 12:15–13:15"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Jabalquinto (con Enagás Renovable y Genia; 140.000 t/año)",
+          "ubicacion": "Jaén",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "agua-y-naturaleza",
+      "nombre": "Agua y Naturaleza",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "281A",
+      "nota_stand": "",
+      "perfil": "Desarrollo de plantas de biogás.",
+      "contactos": [
+        {
+          "nombre": "Bernabé Noya",
+          "puesto": "Infraestructuras y desarrollo comercial",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Aleix Martínez",
+          "puesto": "Especialista en desarrollo de plantas de biogás",
+          "telefono": "666 297 968",
+          "email": "a.martinez@aguaynaturaleza.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "bondalti-water-y-bondalti-biogas",
+      "nombre": "Bondalti Water y Bondalti Biogas",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "225",
+      "nota_stand": "Patrocinador Premium",
+      "perfil": "Tratamiento de agua y biogás. Patrocinador Premium del Salón.",
+      "contactos": [
+        {
+          "nombre": "José Benito Carbajo",
+          "puesto": "Dirección Técnica de Biogás",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 12:15–13:15"
+        },
+        {
+          "nombre": "Esperanza Hernández",
+          "puesto": "Directora Comercial",
+          "telefono": "",
+          "email": "ehernandez@bondaltiwater.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 12:15–13:15"
+        },
+        {
+          "nombre": "Rosángela Borges",
+          "puesto": "Responsable Comercial de Biogás",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 12:15–13:15"
+        },
+        {
+          "nombre": "Miguel De Valenzuela",
+          "puesto": "Delegado comercial Centro-Norte",
+          "telefono": "910 761 899",
+          "email": "miguel@bondaltiwater.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta anaerobia de un grupo agroalimentario (contrato de gestión)",
+          "ubicacion": "Navarra",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Life Multi-AD (Bodegas AGE)",
+          "ubicacion": "Fuenmayor, La Rioja",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "genia-bioenergy",
+      "nombre": "Genia Bioenergy",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "244",
+      "nota_stand": "",
+      "perfil": "Promotor, EPC y tecnólogo de biometano (Valencia); Repsol participa con el 40 %. Diecinueve plantas en desarrollo (enero de 2026).",
+      "contactos": [
+        {
+          "nombre": "Vicente Ros Garro",
+          "puesto": "Calidad y Certificación Ambiental",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 12:40–13:40"
+        },
+        {
+          "nombre": "Bernat Chuliá",
+          "puesto": "Director de Proyectos y Desarrollo",
+          "telefono": "963 636 147",
+          "email": "info@geniabioenergy.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Campredó (93 GWh/año)",
+          "ubicacion": "Tortosa, Tarragona",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Cantaracillo y Machacón",
+          "ubicacion": "Salamanca",
+          "anio": "2027",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Vilches",
+          "ubicacion": "Jaén",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Planta de biogás de COVAP (7 MW)",
+          "ubicacion": "Pozoblanco, Córdoba",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Cabezón de Pisuerga (con SOMACYL)",
+          "ubicacion": "Valladolid",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 19,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "id-energy-group",
+      "nombre": "ID Energy Group",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotor y EPC de biometano (Ciudad Real). Alianza con Naturgy para al menos 20 plantas y 1.600 GWh/año.",
+      "contactos": [
+        {
+          "nombre": "Carlos Ruiz",
+          "puesto": "Senior Mechanical Engineer",
+          "telefono": "+34 682 515 212",
+          "email": "Carlos.Ruiz@idenergy.group",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Buenaventura Gómez Cañada",
+          "puesto": "Energy Transition Director",
+          "telefono": "+34 682 108 372",
+          "email": "buenaventura.gomez@idenergy.group",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 12:15–13:15"
+        },
+        {
+          "nombre": "Jovanny Mojica",
+          "puesto": "Manager de Ingeniería",
+          "telefono": "",
+          "email": "Jovanny.Mojica@idenergy.group",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Ángel de Prada",
+          "puesto": "Director",
+          "telefono": "",
+          "email": "Angel.dePrada@idenergy.group",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Jesús Mayoralas",
+          "puesto": "",
+          "telefono": "",
+          "email": "Jesus.Mayoralas@idenergy.group",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Alianza con Naturgy (al menos 20 plantas)",
+          "ubicacion": "Castilla-La Mancha",
+          "anio": "2026–2028",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Caracuel de Calatrava (Artinita)",
+          "ubicacion": "Ciudad Real",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Utiel",
+          "ubicacion": "Valencia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 20,
+      "uso_gfs": null,
+      "visita": true,
+      "cita": "Miércoles 30/09, 12:30–13:00 · Carlos Ruiz, Ángel de Prada y Jesús Mayoralas (convocatoria enviada por ID Energy). Invitados el CEO y el Director Técnico de Stora.",
+      "aviso": "Buenaventura Gómez derivó a Jovanny Mojica (Manager de Ingeniería) y a Ángel de Prada (nuevo Director).",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "tonello-energy-spain",
+      "nombre": "Tonello Energy Spain",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "294",
+      "nota_stand": "Pabellón 2",
+      "perfil": "Filial española (Madrid) de Tonello Energie (Italia), EPC de plantas de biogás, upgrading e inyección de biometano.",
+      "contactos": [
+        {
+          "nombre": "Karin Florencio Pérez",
+          "puesto": "Responsable Comercial y de Desarrollo de Negocio",
+          "telefono": "+34 608 807 602",
+          "email": "k.florencio@tonelloenergy.es",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 17:30–18:45"
+        },
+        {
+          "nombre": "L. Nardelli",
+          "puesto": "Tonello Energie, Italia",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "asiste a la reunión"
+        },
+        {
+          "nombre": "J. Fracaro",
+          "puesto": "Tonello Energie, Italia",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "asiste a la reunión"
+        },
+        {
+          "nombre": "P. Murro",
+          "puesto": "Tonello Energie, Italia",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "asiste a la reunión"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Castiglione Torinese (SMAT)",
+          "ubicacion": "Turín, Italia",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Anzio",
+          "ubicacion": "Roma, Italia",
+          "anio": "2019",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Aprilia y Velletri",
+          "ubicacion": "Latina y Roma, Italia",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Montespertoli (Casa Sartori)",
+          "ubicacion": "Florencia, Italia",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": null,
+      "visita": true,
+      "cita": "Miércoles 30/09, 13:00 · Stand 294 · Karin Florencio Pérez y equipo técnico italiano",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "vinci-energies-spain-y-methalac",
+      "nombre": "Vinci Energies Spain y Méthalac",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "200",
+      "nota_stand": "Compartido con Méthalac",
+      "perfil": "VINCI Energies Spain (línea de ingeniería Inove) y Méthalac, que diseña y construye digestores; Méthalac suma más de 65 plantas de biogás ejecutadas.",
+      "contactos": [
+        {
+          "nombre": "Ines Hédan",
+          "puesto": "Export Development Manager España y Portugal, Méthalac",
+          "telefono": "+34 634 217 387",
+          "email": "info.methalac@methalac.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Ignacio Martínez Mayoral",
+          "puesto": "Inove Ingeniería",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Metha4Agri",
+          "ubicacion": "Pressins, Isère, Francia",
+          "anio": "2024",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Méthalac ya está en contacto con Stora. Acordar el enfoque con Adam Callan antes de escribirle. Vinci Energies Spain se aborda directamente en el Salón.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "agraferm",
+      "nombre": "Agraferm",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "318E",
+      "nota_stand": "",
+      "perfil": "Empresa alemana de tecnología de digestión anaerobia; propietaria única de BTA International desde 2017.",
+      "contactos": [
+        {
+          "nombre": "Stephan Schulte",
+          "puesto": "apoderado, BTA International",
+          "telefono": "+49 151 64922812",
+          "email": "service@agraferm.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Ampliación de Granollers (100.000 t/año)",
+          "ubicacion": "Barcelona",
+          "anio": "2027",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Ecoparc I",
+          "ubicacion": "Barcelona",
+          "anio": "2009",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Burgos",
+          "ubicacion": "Burgos",
+          "anio": "2011",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Gijón y Maresme",
+          "ubicacion": "Asturias y Barcelona",
+          "anio": "2013",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Mepal",
+          "ubicacion": "Reino Unido",
+          "anio": "2016",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Empresa alemana: coordinar con Adam Callan antes de cualquier acercamiento.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "biogest",
+      "nombre": "Biogest",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "324B",
+      "nota_stand": "",
+      "perfil": "Empresa austriaca de plantas de biogás y biometano (PowerRing), con responsable comercial para España.",
+      "contactos": [
+        {
+          "nombre": "José Zapata",
+          "puesto": "Area Sales Manager España",
+          "telefono": "611 833 739",
+          "email": "jose.zapata@biogest.at",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Daniel Bauer",
+          "puesto": "Head of Sales & Purchase",
+          "telefono": "",
+          "email": "",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Horse Close",
+          "ubicacion": "Reino Unido",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Homefarm",
+          "ubicacion": "Reino Unido",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Benevento",
+          "ubicacion": "Italia",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Collarmele",
+          "ubicacion": "Italia",
+          "anio": "2023",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Benavente (PowerRing)",
+          "ubicacion": "Portugal",
+          "anio": "2025",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "envitec-biogas",
+      "nombre": "EnviTec Biogas",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "210",
+      "nota_stand": "",
+      "perfil": "Empresa alemana de plantas de biogás y biometano; EnviTec Biogás Iberia, con base en Bilbao.",
+      "contactos": [
+        {
+          "nombre": "Christian Ernst",
+          "puesto": "EnviTec Biogás Ibérica",
+          "telefono": "+49 172 42 62 485 · Tel. +49 25 74 88 88 542",
+          "email": "C.Ernst@envitec-biogas.de",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Primer proyecto en España (sin nombre publicado)",
+          "ubicacion": "España",
+          "anio": "",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Daldur (tres plantas de 500 kW)",
+          "ubicacion": "Castilla y León",
+          "anio": "2011",
+          "estado": ""
+        },
+        {
+          "nombre": "Avogadri",
+          "ubicacion": "Cremona, Italia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": "No",
+      "visita": true,
+      "cita": "Martes 29 o miércoles 30/09 · Stand 210 · Christian Ernst (Area Sales Manager) · +49 172 42 62 485 · «Always welcome on our booth».",
+      "aviso": "Christian Ernst respondió el 24/09: «you are always welcome on our booth». Visita confirmada al stand 210 (mar. 29 o mié. 30/09).",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "planet-biogas-europe",
+      "nombre": "PlanET Biogas Europe",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "242",
+      "nota_stand": "",
+      "perfil": "Empresa alemana de plantas de biogás y biometano: más de 870 plantas de biogás y más de 150 de biometano; sin filial en España.",
+      "contactos": [
+        {
+          "nombre": "Gunnar Marquardt",
+          "puesto": "Sales Iberia",
+          "telefono": "+34 677 624 762",
+          "email": "G.Marquardt@planet-biogas.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Christof Boge",
+          "puesto": "PlanET",
+          "telefono": "",
+          "email": "C.Boge@planet-biogas.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "en la reunión"
+        },
+        {
+          "nombre": "Christof Langguth",
+          "puesto": "PlanET",
+          "telefono": "",
+          "email": "C.Langguth@planet-biogas.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "en la reunión"
+        },
+        {
+          "nombre": "C. Steentjes",
+          "puesto": "PlanET",
+          "telefono": "",
+          "email": "C.Steentjes@planet-biogas.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "en la reunión"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Tres plantas agrícolas (y tres en desarrollo)",
+          "ubicacion": "Reino Unido",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Planta de biogás comprimido",
+          "ubicacion": "Palnadu, Andhra Pradesh, India",
+          "anio": "2026",
+          "estado": ""
+        },
+        {
+          "nombre": "Biogap'Energie, Bio Math, Plaines de France Énergie y Agri Energies 80",
+          "ubicacion": "Francia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": true,
+      "cita": "Martes 29/09, 14:30 · Stand 242 · Gunnar Marquardt",
+      "aviso": "Coordinar con Adam Callan antes de cualquier otro acercamiento: la matriz de Stora lleva el contacto directo con las empresas alemanas.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "bioconstruct",
+      "nombre": "Bioconstruct",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "228A",
+      "nota_stand": "",
+      "perfil": "Empresa alemana de plantas de biogás y biometano, con actividad en Alemania, Reino Unido y Francia.",
+      "contactos": [
+        {
+          "nombre": "Andreas Bröcker",
+          "puesto": "contacto internacional y Reino Unido",
+          "telefono": "",
+          "email": "a.broecker@bioconstruct.de",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Martin Aumüller",
+          "puesto": "sede de Alemania",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "NDEnergie Bohmte",
+          "ubicacion": "Alemania",
+          "anio": "2026",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Imperial Park",
+          "ubicacion": "Middlesbrough, Reino Unido",
+          "anio": "2017",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Chichester",
+          "ubicacion": "West Sussex, Reino Unido",
+          "anio": "2017",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Saumur",
+          "ubicacion": "Francia",
+          "anio": "2020",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Charpentier",
+          "ubicacion": "Chailly-en-Brie, Francia",
+          "anio": "2021",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Ya en contacto con Stora, con poca actividad y respuesta. Acordar con Adam Callan el mensaje antes de visitarles.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "ehs-techniques",
+      "nombre": "EHS Techniques",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Consultoría social y ambiental de proyectos renovables (Madrid y Barcelona); no es compradora de equipos.",
+      "contactos": [
+        {
+          "nombre": "Ruth López Verdura",
+          "puesto": "Responsable de Relacionamiento Social",
+          "telefono": "91 852 66 96",
+          "email": "ruth.lopez@ehstechniques.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mié. 30/09, 09:30–10:30"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "nijhuis-saur-industries",
+      "nombre": "Nijhuis Saur Industries",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "209B",
+      "nota_stand": "",
+      "perfil": "Tecnología de tratamiento de aguas, digestato y biogás (desulfuración, ByoPast, ByoFlex). Sin sede en España; centros en Francia, Reino Unido e Irlanda y Países Bajos.",
+      "contactos": [
+        {
+          "nombre": "Marie Esteve",
+          "puesto": "Global Industry Leader, Waste to Energy y Biogas",
+          "telefono": "+33 6 62 30 03 52",
+          "email": "marie.esteve@nijhuisindustries.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Oril-Leader",
+          "ubicacion": "Yelyzavetivka, Ucrania",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Digestor agrícola (ByoFlex)",
+          "ubicacion": "Véneto, Italia",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Aviko Rixona (tratamiento anaerobio)",
+          "ubicacion": "Oostrum, Países Bajos",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": true,
+      "cita": "Martes 29 o miércoles 30/09 · Stand 209B · Marie Esteve · +33 6 62 30 03 52 · Pasar por el stand cuando queramos y fijar un momento.",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "north-tec-biogas",
+      "nombre": "North Tec Biogas",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "326A",
+      "nota_stand": "Pabellón alemán",
+      "perfil": "Empresa alemana de tecnología de biogás: agitadores, control y modernización de plantas.",
+      "contactos": [
+        {
+          "nombre": "Marten Clausen",
+          "puesto": "Head of Sales Europa",
+          "telefono": "+49 176 64987568",
+          "email": "maclausen@north-tec.de",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Niels Hardtmann",
+          "puesto": "Field Sales",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Futterkamp",
+          "ubicacion": "Alemania",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Biogas Sindal",
+          "ubicacion": "Dinamarca",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Tværmose",
+          "ubicacion": "Dinamarca",
+          "anio": "2022",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Thöringswerder",
+          "ubicacion": "Alemania",
+          "anio": "2022",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Empresa alemana: coordinar con Adam Callan antes de abordarlos.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "omex-environmental",
+      "nombre": "OMEX Environmental",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "217B",
+      "nota_stand": "",
+      "perfil": "División Environmental de OMEX (dirigirse a ella, no a fertilizantes). El contacto de Stora ya les ha construido varias plantas y puja por un proyecto en el Reino Unido para ellos.",
+      "contactos": [
+        {
+          "nombre": "Philip Sheppardson",
+          "puesto": "Operations Director",
+          "telefono": "+44 7436 137907",
+          "email": "philips@omex.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "nahtec",
+      "nombre": "Nahtec",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "256",
+      "nota_stand": "",
+      "perfil": "Empresa austriaca, EPC llave en mano de plantas de biogás agrícola y de biometano a nivel internacional.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Carrión de Calatrava",
+          "ubicacion": "Ciudad Real",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Gönen (6.000 kW)",
+          "ubicacion": "Turquía",
+          "anio": "",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Dragoni",
+          "ubicacion": "Italia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "agrikomp",
+      "nombre": "Agrikomp",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "253",
+      "nota_stand": "Compartido con The Waste Transformers y Promak",
+      "perfil": "Fabricante alemán de plantas de biogás llave en mano (Merkendorf, Baviera): más de 1.000 plantas y 400 MWel instalados. En España opera a través de Promak Selling Solutions.",
+      "contactos": [
+        {
+          "nombre": "Thomas Dreisbach",
+          "puesto": "Sales Manager",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Carles Gómez",
+          "puesto": "Promak, representante en España",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "anaergia",
+      "nombre": "Anaergia",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "216",
+      "nota_stand": "",
+      "perfil": "Tecnología e infraestructura de biogás y biometano a partir de residuos orgánicos (digestores Triton™); más de 1.000 proyectos. Oficinas europeas en Italia y Alemania.",
+      "contactos": [
+        {
+          "nombre": "Alessandro Massone",
+          "puesto": "Commercial Managing Director Europe",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Programa Norbiogás, más de 15 plantas (con Nortegas)",
+          "ubicacion": "España",
+          "anio": "2025",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Ora Biogas (con Tozzi Sud, Isolmec y BioHold)",
+          "ubicacion": "Basilicata, Italia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "bta-international",
+      "nombre": "BTA International",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "231A",
+      "nota_stand": "",
+      "perfil": "Pretratamiento húmedo-mecánico y digestión anaerobia de residuos orgánicos (BTA® Pulper); más de 55 plantas de referencia. Filial al 100 % de Agraferm desde 2017.",
+      "contactos": [
+        {
+          "nombre": "Stephan Schulte",
+          "puesto": "apoderado",
+          "telefono": "+49 151 64922812",
+          "email": "s.schulte@bta-international.de",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta de biorresiduos (35.000 t/año)",
+          "ubicacion": "Essonne, Francia",
+          "anio": "2025",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "bts-biogas",
+      "nombre": "BTS Biogas",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "292",
+      "nota_stand": "",
+      "perfil": "EPC italiano de plantas de biogás y biometano (agrícolas, agroindustriales y FORSU), con sede en Affi (Verona) y filiales en Francia, Reino Unido, Japón y EE. UU.",
+      "contactos": [
+        {
+          "nombre": "Tommaso Bazzaro",
+          "puesto": "Head of Sales",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Alessandro Giovagnini",
+          "puesto": "Head of EPC",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "bekon",
+      "nombre": "Bekon",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "276B",
+      "nota_stand": "Compartido con Backhus, BRT Hartner y Eggersmann",
+      "perfil": "Digestión anaerobia en seco (proceso BEKON, fermentadores tipo garaje); integrada en el grupo Eggersmann.",
+      "contactos": [
+        {
+          "nombre": "Xavier Bonilla",
+          "puesto": "Area Sales Manager, Eggersmann Spain",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Reconversión de planta",
+          "ubicacion": "Deiderode, Alemania",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "biogasmetano",
+      "nombre": "Biogasmetano",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "287",
+      "nota_stand": "Isla colectiva",
+      "perfil": "Fabricante italiano (Rovato, Brescia) de equipos de upgrading: secado y limpieza de biogás y antorchas de combustión.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "huning-anlagenbau",
+      "nombre": "Huning Anlagenbau",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "318G",
+      "nota_stand": "",
+      "perfil": "Empresa alemana (Melle) de instalaciones para plantas de biogás: sistemas de alimentación de sólidos, silos de lodos y digestato y sistemas de transporte.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Lagiewniki (suelo móvil de 51 m³)",
+          "ubicacion": "Polonia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "kanadevia-inova",
+      "nombre": "Kanadevia Inova",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "265A",
+      "nota_stand": "",
+      "perfil": "Tecnología de valorización de residuos y gas renovable (Zúrich; antes Hitachi Zosen Inova). Controla Schmack Biogas desde 2024 (sistema EUCO® Titan).",
+      "contactos": [
+        {
+          "nombre": "Daniele Masi",
+          "puesto": "Sales Manager, Kanadevia Inova Italia",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 15:30–16:20"
+        },
+        {
+          "nombre": "Daniel Dreier",
+          "puesto": "EVP Waste to X & Renewable Gas Plants",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Luca Lanfranchi",
+          "puesto": "",
+          "telefono": "",
+          "email": "srl_service@kanadevia-inova.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "La Calahorra (EUCO® Titan, con AGR Biogás)",
+          "ubicacion": "Granada",
+          "anio": "2025",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Dos plantas de biometano adquiridas",
+          "ubicacion": "Reino Unido",
+          "anio": "",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "prodeval",
+      "nombre": "Prodeval",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "293",
+      "nota_stand": "",
+      "perfil": "Upgrading de biogás por membranas (VALOPUR®) y recuperación de CO₂; más de 350 plantas de biometano en 10 países. Filial en Zaragoza desde 2023.",
+      "contactos": [
+        {
+          "nombre": "Nicolas Bruyas",
+          "puesto": "Director de Desarrollo Comercial, filial España",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "progeco",
+      "nombre": "Progeco",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "259B",
+      "nota_stand": "Compartido con Conveco y Conveco Iberia",
+      "perfil": "Equipos de combustión y tratamiento de biogás (antorchas, filtros, desulfuración y eliminación de siloxanos). Progeco S.r.l. fue absorbida por Conveco S.r.l. (Castrezzato, Brescia) en 2021.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "renovebio",
+      "nombre": "Renovebio",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "246B",
+      "nota_stand": "",
+      "perfil": "EPC italiano de plantas de biogás y biometano (Padua), del Renove Group.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Mozzecane (500 Smc/h)",
+          "ubicacion": "Verona, Italia",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Borgonovo Val Tidone (323 Smc/h)",
+          "ubicacion": "Piacenza, Italia",
+          "anio": "",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "suez-air-climate",
+      "nombre": "SUEZ Air & Climate",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "291",
+      "nota_stand": "",
+      "perfil": "Tratamiento y upgrading de biogás (desulfuración, siloxanos, membranas) y control de olores; equipo propio de unas 30 personas en España.",
+      "contactos": [
+        {
+          "nombre": "Carmen Jerez García",
+          "puesto": "Business Development Manager",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 15:30–16:20"
+        },
+        {
+          "nombre": "Paula López",
+          "puesto": "Gas Treatment Project Manager",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Arantxa Bomboí",
+          "puesto": "Business Development Manager",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta Elena (con Naturgy)",
+          "ubicacion": "Cerdanyola del Vallès, Barcelona",
+          "anio": "2021",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "sysadvance",
+      "nombre": "Sysadvance",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "212B",
+      "nota_stand": "",
+      "perfil": "Fabricante portugués de equipos de generación y purificación de gases y de upgrading de biogás a biometano (PSA y membranas).",
+      "contactos": [
+        {
+          "nombre": "Patrick Da Silva",
+          "puesto": "VP of Technology",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 15:30–16:20"
+        },
+        {
+          "nombre": "Davide Silva Miranda",
+          "puesto": "",
+          "telefono": "",
+          "email": "info@sysadvance.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Balticovo/Bovogás",
+          "ubicacion": "Letonia",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Dourogás",
+          "ubicacion": "Portugal",
+          "anio": "",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "the-waste-transformers",
+      "nombre": "The Waste Transformers",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "253",
+      "nota_stand": "Compartido con Agrikomp",
+      "perfil": "Fabricante neerlandés de biodigestores compactos contenedorizados para residuos de comida in situ.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Johan Cruijff ArenA",
+          "ubicacion": "Ámsterdam, Países Bajos",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Restaurante IKEA",
+          "ubicacion": "Haarlem, Países Bajos",
+          "anio": "2021",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Estación de clasificación de residuos",
+          "ubicacion": "Oporto, Portugal",
+          "anio": "2023",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "thoni",
+      "nombre": "Thöni",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "201",
+      "nota_stand": "",
+      "perfil": "Grupo industrial austriaco (Telfs); su división Sustainable Solutions diseña y construye plantas de biogás.",
+      "contactos": [
+        {
+          "nombre": "Reinhard Walk",
+          "puesto": "Ventas",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "upbiogas",
+      "nombre": "Upbiogas",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "279",
+      "nota_stand": "",
+      "perfil": "Fabricante español de gasómetros de doble membrana, balsas, depósitos y decantadores para plantas de biogás.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "weltec-biopower",
+      "nombre": "WELTEC Biopower",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "276A",
+      "nota_stand": "",
+      "perfil": "Fabricante alemán de digestores modulares de acero inoxidable atornillado, con alcance EPC llave en mano; presente en más de 25 países.",
+      "contactos": [
+        {
+          "nombre": "Mark Kornweibel",
+          "puesto": "representante de ventas en España, Naturtech",
+          "telefono": "",
+          "email": "m.kornweibel@weltec-biopower.net",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Alain Priser",
+          "puesto": "ventas internacional",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Colmenar Viejo (tres digestores)",
+          "ubicacion": "Madrid",
+          "anio": "2026",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Torre Santamaría",
+          "ubicacion": "Vallfogona de Balaguer, Lleida",
+          "anio": "2022",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "waga-energy",
+      "nombre": "Waga Energy",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "274",
+      "nota_stand": "",
+      "perfil": "Tecnología WAGABOX® de purificación de biogás de vertedero para inyección de biometano a red (Francia, cotizada en Euronext).",
+      "contactos": [
+        {
+          "nombre": "Margarita Cabrer Herrera",
+          "puesto": "Business Development España",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Can Mata, primera WAGABOX de España",
+          "ubicacion": "Els Hostalets de Pierola, Barcelona",
+          "anio": "2023",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Ecocentral (gasoducto de biometano a Enagás)",
+          "ubicacion": "Alhendín, Granada",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "veolia",
+      "nombre": "Veolia",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Tecnólogo y operador de digestión anaerobia y upgrading con tecnología propia (Memthane, Sulfothane, MemGas) para residuos industriales y EDAR.",
+      "contactos": [
+        {
+          "nombre": "Irene García Delgado",
+          "puesto": "Directora de Biosólidos",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 12:40–13:40"
+        },
+        {
+          "nombre": "Daniel Tugues",
+          "puesto": "Country Director, Veolia España",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta de biometano en instalaciones de Gunvor (32 GWh/año)",
+          "ubicacion": "Palos de la Frontera, Huelva",
+          "anio": "2025",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "acciona",
+      "nombre": "ACCIONA",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Operador de EDAR con aprovechamiento de biogás. Adjudicataria en julio de 2026 de la explotación de la EDAR Arroyo Culebro (Madrid, 44,7 M€), con aprovechamiento de biogás e hidrógeno a partir de biogás.",
+      "contactos": [
+        {
+          "nombre": "Alberto López Esteban",
+          "puesto": "Gerente de Compras Estratégicas, Agua",
+          "telefono": "",
+          "email": "alberto.lopez.esteban@acciona.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Luis Bandrés",
+          "puesto": "Category Manager de equipos mecánicos estáticos, Compras",
+          "telefono": "+34 91 663 28 50",
+          "email": "lbandres@acciona.com",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Fernando Miragaya García",
+          "puesto": "Circularidad y Gases Renovables",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Olalla Paz López",
+          "puesto": "",
+          "telefono": "",
+          "email": "mpaz@acciona.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "EDAR Arroyo Culebro (explotación)",
+          "ubicacion": "Madrid",
+          "anio": "2026",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Compras: el interlocutor es Luis Bandrés, Category Manager de equipos mecánicos estáticos (incluye tanques). Vicente propuso reunión el 01/10.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "fcc-medio-ambiente-y-aqualia",
+      "nombre": "FCC Medio Ambiente y Aqualia",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Construye y explota plantas de biometanización de residuos urbanos (Madrid y Gipuzkoa); Aqualia desarrolla biometano en EDAR.",
+      "contactos": [
+        {
+          "nombre": "Minerva Pomeda",
+          "puesto": "FCC Infraestructuras",
+          "telefono": "",
+          "email": "minerva.pomeda@fcc.es",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Aránzazu Alonso Guerra",
+          "puesto": "Directora de la planta de Las Dehesas",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Raúl Rivera Martínez",
+          "puesto": "Desarrollo de Negocio, Delegación CAM",
+          "telefono": "+34 913 595 400",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Biometanización Las Dehesas",
+          "ubicacion": "Valdemingómez, Madrid",
+          "anio": "",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "CMG-2 (con GHK y Nortegas)",
+          "ubicacion": "Zubieta, Gipuzkoa",
+          "anio": "2026",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "SMART Green Gas (piloto, Aqualia)",
+          "ubicacion": "EDAR de Jerez, Cádiz",
+          "anio": "2016",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "agf-ingenieria-de-procesos",
+      "nombre": "AGF Ingeniería de Procesos",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería extremeña (Badajoz) de biogás y biometano con centro de I+D propio; diseña, construye y opera plantas llave en mano. Según el CRM, ejecuta la mayoría de sus tanques en hormigón (8 m de altura y 20 a 26 m de diámetro).",
+      "contactos": [
+        {
+          "nombre": "Germán Horcajo",
+          "puesto": "",
+          "telefono": "924 011 668",
+          "email": "g.horcajo@agfprocesos.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Biogasnalia",
+          "ubicacion": "Villalonquéjar, Burgos",
+          "anio": "2017",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "UNUE (con Enagás y Suma Capital)",
+          "ubicacion": "Burgos",
+          "anio": "2021",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Biometagas La Galera",
+          "ubicacion": "Tarragona",
+          "anio": "2020",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Dos plantas nuevas de biogás y biometano",
+          "ubicacion": "",
+          "anio": "2026",
+          "estado": "En construcción"
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "inderen",
+      "nombre": "INDEREN",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Empresa de Silla (Valencia) de montaje mecánico, tuberías, instalaciones de gas, electricidad y SCADA en plantas de biogás, sobre todo en Francia y como subcontratista.",
+      "contactos": [
+        {
+          "nombre": "José Javier Martínez",
+          "puesto": "",
+          "telefono": "961 242 232",
+          "email": "jj.martinez@inderen.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Belinchón (para Ecobiogas)",
+          "ubicacion": "Cuenca",
+          "anio": "2022",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Almazán (para Redexis)",
+          "ubicacion": "Soria",
+          "anio": "2024",
+          "estado": ""
+        },
+        {
+          "nombre": "Guijuelo (para BIOVEC)",
+          "ubicacion": "Salamanca",
+          "anio": "2025",
+          "estado": ""
+        },
+        {
+          "nombre": "Lerín (para Etxe Holz)",
+          "ubicacion": "Navarra",
+          "anio": "2025",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "certis",
+      "nombre": "CERTIS (obra civil de Catalana de Biogás)",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Constructora catalana que hará la obra civil de la nueva planta de biometano de Catalana de Biogás Iberia (dos digestores de Ø30 × 8 m y un postdigestor de Ø35 × 8 m). Estaba en copia en la consulta de Jordi Huguet.",
+      "contactos": [
+        {
+          "nombre": "Sandra Jericó",
+          "puesto": "",
+          "telefono": "sandra.j@certis.cat",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": "sandra.j@certis.cat"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Nueva planta de biometano de Catalana de Biogás",
+          "ubicacion": "Cataluña",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "sitra",
+      "nombre": "Sitra (Grupo Gimeno)",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "235",
+      "nota_stand": "",
+      "perfil": "Ingeniería y EPC de agua industrial y bioenergía (Castellón, Valencia y Madrid); desarrolladora y operadora en Montes de Toledo y Llutxent.",
+      "contactos": [
+        {
+          "nombre": "Manuel Avilés",
+          "puesto": "Responsable de Compras",
+          "telefono": "+34 662 924 071",
+          "email": "maviles@sitra.es",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Daniel Trigo",
+          "puesto": "",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Javier Donato",
+          "puesto": "Director de SITRA Agua Industrial y Bioenergía",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Biometano Montes de Toledo",
+          "ubicacion": "Noez, Toledo",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Llutxent (Abonos Orgánicos Montagut)",
+          "ubicacion": "Valencia",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Torrefarrera (con Naturgy y Compost Segrià)",
+          "ubicacion": "Lleida",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Manuel Avilés (Responsable de Compras) pedirá presupuesto a Stora en los próximos proyectos.",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "sorain-cecchini-tecno-espana",
+      "nombre": "Sorain Cecchini Tecno España",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "264",
+      "nota_stand": "",
+      "perfil": "Ingeniería y EPC de plantas de tratamiento de residuos (Valencia). Sorain Biomethane presenta en el Congreso la biometanización de MOR en Ecocentral (Granada).",
+      "contactos": [
+        {
+          "nombre": "Manuel Williams",
+          "puesto": "Project Manager, Sorain Biomethane",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 12:40–13:40"
+        },
+        {
+          "nombre": "Marek Díaz Bernisz",
+          "puesto": "Técnico de Proyectos y Desarrollo",
+          "telefono": "963 203 844",
+          "email": "marek.diaz@sctecno.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Biometanización de MOR en Ecocentral",
+          "ubicacion": "Alhendín, Granada",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Línea Biomax/Biomatic (compostaje de FORSU)",
+          "ubicacion": "Guadassuar, Valencia",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Malagrotta 2 (grupo matriz)",
+          "ubicacion": "Roma, Italia",
+          "anio": "2008",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Planta de residuos urbanos (grupo matriz)",
+          "ubicacion": "Barcelona",
+          "anio": "2010",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 4,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "biovic-consulting",
+      "nombre": "Biovic Consulting",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería de biogás y biometano (Valencia), con la ingeniería de seis plantas, entre ellas Galivi, BioVO, Montes de Toledo y Llutxent.",
+      "contactos": [
+        {
+          "nombre": "Luis Puchades",
+          "puesto": "Director",
+          "telefono": "+34 961 003 286",
+          "email": "info@biovic-consulting.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Enrique Jordá",
+          "puesto": "Desarrollo",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "BioVO (upgrading de EDAR y FORM)",
+          "ubicacion": "Granollers, Barcelona",
+          "anio": "2023",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Montes de Toledo",
+          "ubicacion": "Noez, Toledo",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Llutxent",
+          "ubicacion": "Valencia",
+          "anio": "2024",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Galivi Solar",
+          "ubicacion": "Lorca, Murcia",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Vall d'Uixó y Utiel",
+          "ubicacion": "Castellón y Valencia",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "exceltic",
+      "nombre": "Exceltic",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería de plantas industriales y de biometano (Madrid). Prioridad A++ en el CRM del Congreso.",
+      "contactos": [
+        {
+          "nombre": "Ignacio Barberá Muñoz",
+          "puesto": "Director de Ingeniería de Plantas Industriales",
+          "telefono": "",
+          "email": "ignacio.barbera@exceltic.com",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 12:40–13:40"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "indetec",
+      "nombre": "Indetec (Grupo Vento)",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "223A",
+      "nota_stand": "",
+      "perfil": "Ingeniería del Grupo Vento (Paterna, Valencia): proyectos, viabilidad e ingeniería de detalle; Vento fabrica y monta calderería a medida.",
+      "contactos": [
+        {
+          "nombre": "Francisco José Belda Gil",
+          "puesto": "Jefe de Compras",
+          "telefono": "",
+          "email": "",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Toni González",
+          "puesto": "Director Comercial",
+          "telefono": "",
+          "email": "toni.gonzalez@grupovento.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "sener",
+      "nombre": "Sener",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería y EPC. Contrato de ingeniería con Ence Biogás para seis plantas de biometano (300 GWh/año).",
+      "contactos": [
+        {
+          "nombre": "Álvaro Lorente",
+          "puesto": "",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Seis plantas de Ence Biogás",
+          "ubicacion": "Aragón",
+          "anio": "2025–2026",
+          "estado": ""
+        },
+        {
+          "nombre": "Polán (Valpuren Bañuelo)",
+          "ubicacion": "Toledo",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Consuegra (Valpuren Comatur)",
+          "ubicacion": "Toledo",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Juneda",
+          "ubicacion": "Lleida",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 6,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "biovec-medioambiente",
+      "nombre": "BIOVEC Medioambiente",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería de Vila-real (Castellón), fundada en 2008, con más de 15 plantas de biogás: tramitación, diseño, ingeniería y dirección de obra.",
+      "contactos": [
+        {
+          "nombre": "Óscar Bartomeu Orozco",
+          "puesto": "Gerente",
+          "telefono": "629 171 448",
+          "email": "Bartomeu@biovec.net",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "BiogasVal (dos digestores de 5.300 m³)",
+          "ubicacion": "Valtierra, Navarra",
+          "anio": "2026",
+          "estado": "En construcción"
+        },
+        {
+          "nombre": "Vilagas Canet (25 GWh/año)",
+          "ubicacion": "Canet lo Roig, Castellón",
+          "anio": "2027",
+          "estado": "En desarrollo y planificación"
+        },
+        {
+          "nombre": "Biolvegas",
+          "ubicacion": "Ólvega, Soria",
+          "anio": "2023",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Prados Hondos",
+          "ubicacion": "Villanueva de Duero, Valladolid",
+          "anio": "2025",
+          "estado": ""
+        },
+        {
+          "nombre": "Biogás de Guijuelo",
+          "ubicacion": "Fuenterroble de Salvatierra, Salamanca",
+          "anio": "2025",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 5,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "ahidra-colsen-technologies",
+      "nombre": "Ahidra Colsen Technologies",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "270A",
+      "nota_stand": "",
+      "perfil": "Ingeniería y tecnólogo de proceso (Polinyà, Barcelona) en tratamiento de aguas, digestión anaerobia y digestato; el grupo neerlandés Colsen entró en su capital en 2018.",
+      "contactos": [
+        {
+          "nombre": "Lluís Balaguer",
+          "puesto": "Jefe de proyecto",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Martinho González",
+          "puesto": "",
+          "telefono": "",
+          "email": "martinho@ahira.com",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta de digestión de PreZero (DIGESTMIX®)",
+          "ubicacion": "Toledo",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "UASB Grifols",
+          "ubicacion": "Parets del Vallès, Barcelona",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Planta de codigestión Biogastur",
+          "ubicacion": "",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "inbiogas",
+      "nombre": "Inbiogas",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería de Gijón (2008): ingeniería, construcción y operación de instalaciones de biogás y biometano (desgasificación de vertederos, antorchas y upgrading). Según el CRM, utiliza tanques de polietileno sin presión.",
+      "contactos": [
+        {
+          "nombre": "Mª Jesús Álvarez Sierra",
+          "puesto": "",
+          "telefono": "985 175 950",
+          "email": "mjalvarez@inbiogas.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Línea de biogás para la I+D de FCC en Las Dehesas",
+          "ubicacion": "Madrid",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "ambisort",
+      "nombre": "Ambisort",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "224",
+      "nota_stand": "",
+      "perfil": "Ingeniería de Mataró (Barcelona) que diseña y construye plantas de tratamiento y reciclaje de residuos (Ambisort Circular). Respondió el 24/09: estarán en el Salón, stand 224.",
+      "contactos": [
+        {
+          "nombre": "Daniel Ayala",
+          "puesto": "Industrial Engineer",
+          "telefono": "+34 676 086 679 · Tel. +34 931 592 996",
+          "email": "dayala@ambisort.com",
+          "slot": "directo",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "En copia: amorte@ambisort.com y ayasells@ambisort.com"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": true,
+      "cita": "Martes 29 o miércoles 30/09 · Stand 224 · Daniel Ayala. Si no coincidimos, videoconferencia después de la feria.",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "kepler-ingenieria-y-ecogestion",
+      "nombre": "Kepler Ingeniería y Ecogestión",
+      "grupo": "D",
+      "subtipo": "Consultoría",
+      "stand": "250B",
+      "nota_stand": "",
+      "perfil": "Ingeniería y ecogestión (Burgos, con delegación en Madrid); desarrollo de proyectos de biogás, entre ellos Utrera con Naturgy.",
+      "contactos": [
+        {
+          "nombre": "Juanjo Linares Salinas",
+          "puesto": "Project Development Manager",
+          "telefono": "635 501 018",
+          "email": "juanjo.linares@kepler.es",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Cynthia Alcántara",
+          "puesto": "Directora de I+D+i",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Utrera (con Naturgy)",
+          "ubicacion": "Sevilla",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "enerlan-solutions",
+      "nombre": "Enerlan Solutions",
+      "grupo": "D",
+      "subtipo": "Consultoría",
+      "stand": "275",
+      "nota_stand": "",
+      "perfil": "Ingeniería básica y permisología (autorización ambiental integrada) de plantas de digestión anaerobia agroganadera (Cantabria).",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Fuenterroble de Salvatierra (para Sinia Renovables)",
+          "ubicacion": "Salamanca",
+          "anio": "2025",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "icoda",
+      "nombre": "iCODA",
+      "grupo": "D",
+      "subtipo": "Consultoría",
+      "stand": "247A",
+      "nota_stand": "",
+      "perfil": "Consultoría técnica de digestión anaerobia: ensayos BMP, ingeniería de proceso y auditoría de plantas.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "idp-ingenieria-y-arquitectura-iberia",
+      "nombre": "IDP Ingeniería y Arquitectura Iberia",
+      "grupo": "D",
+      "subtipo": "Consultoría",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería de medio ambiente y arquitectura; asistencia técnica y supervisión de obra en plantas de biometanización.",
+      "contactos": [],
+      "telefono_empresa": "937 256 253",
+      "proyectos": [
+        {
+          "nombre": "Can Barba (supervisión de obra y puesta en marcha)",
+          "ubicacion": "Terrassa, Barcelona",
+          "anio": "",
+          "estado": ""
+        },
+        {
+          "nombre": "Planta de materia orgánica de Valdemingómez (ingeniería)",
+          "ubicacion": "Madrid",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "aebig",
+      "nombre": "AEBIG",
+      "grupo": "E",
+      "subtipo": "Asociación",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Asociación Española del Biogás, fundada en 2009, con sede en Madrid; miembro fundador de la European Biogas Association.",
+      "contactos": [
+        {
+          "nombre": "Javier Rubio",
+          "puesto": "Director General",
+          "telefono": "611 03 89 48",
+          "email": "aebig@aebig.org",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Modera la mesa redonda mar. 29/09, 16:25–17:25"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "avebiom",
+      "nombre": "AVEBIOM",
+      "grupo": "E",
+      "subtipo": "Asociación",
+      "stand": "100",
+      "nota_stand": "Sala AVEBIOM · Organizador",
+      "perfil": "Asociación de la bioenergía en España (Valladolid); organizadora del Salón del Gas Renovable y del Congreso Internacional de Bioenergía. Miembro de la EBA desde 2024.",
+      "contactos": [
+        {
+          "nombre": "Javier Díaz",
+          "puesto": "Presidente",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Modera la mesa redonda mar. 29/09, 11:40–12:40"
+        },
+        {
+          "nombre": "David Marín",
+          "puesto": "Project Manager de Gases Renovables",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "mié. 30/09, 10:35–11:05"
+        }
+      ],
+      "telefono_empresa": "+34 975 10 20 20",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "sedigas",
+      "nombre": "Sedigas",
+      "grupo": "E",
+      "subtipo": "Asociación",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Asociación del sector gasista español, constituida en 1970; mantiene el portal gasrenovable.org.",
+      "contactos": [
+        {
+          "nombre": "Joan Batalla",
+          "puesto": "Presidente",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 10:25–11:35"
+        },
+        {
+          "nombre": "Naiara Ortiz de Mendíbil",
+          "puesto": "Secretaria General",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Mesa redonda mié. 30/09, 11:10–12:10"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "eba",
+      "nombre": "EBA",
+      "grupo": "E",
+      "subtipo": "Asociación",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "European Biogas Association; publica el informe estadístico anual del biogás y el biometano en Europa.",
+      "contactos": [
+        {
+          "nombre": "Grazia Vascello",
+          "puesto": "Policy Officer",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Ponente mar. 29/09, 09:50–10:20"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "idae",
+      "nombre": "IDAE",
+      "grupo": "E",
+      "subtipo": "Organismo público",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Organismo público dependiente del Gobierno de España; entidad colaboradora del Salón y del Congreso.",
+      "contactos": [],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "covap",
+      "nombre": "COVAP",
+      "grupo": "E",
+      "subtipo": "Cooperativa",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Cooperativa Ganadera del Valle de los Pedroches (Pozoblanco, Córdoba).",
+      "contactos": [],
+      "telefono_empresa": "957 77 38 88",
+      "proyectos": [
+        {
+          "nombre": "Planta de biogás (7 MW; con Genia Bioenergy)",
+          "ubicacion": "Pozoblanco, Córdoba",
+          "anio": "",
+          "estado": ""
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "appa-biogas",
+      "nombre": "APPA Biogás",
+      "grupo": "E",
+      "subtipo": "Asociación",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Asociación sectorial del biogás.",
+      "contactos": [
+        {
+          "nombre": "Laureano Parrilla",
+          "puesto": "Presidente",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "nota": "Modera la mesa redonda mié. 30/09, 11:10–12:10"
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "copiso-soria",
+      "nombre": "Copiso Soria",
+      "grupo": "E",
+      "subtipo": "Cooperativa",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Cooperativa agroganadera de Soria con producción porcina integrada; participó en LIFE Smart AgroMobility (biometano de purín como combustible vehicular).",
+      "contactos": [
+        {
+          "nombre": "Pascual López",
+          "puesto": "Director Gerente",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "975 23 36 21",
+      "proyectos": [
+        {
+          "nombre": "LIFE Smart AgroMobility (planta piloto)",
+          "ubicacion": "Sauquillo de Boñices, Soria",
+          "anio": "2023",
+          "estado": "Terminado"
+        }
+      ],
+      "proyectos_conocidos": 1,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "irta",
+      "nombre": "IRTA",
+      "grupo": "E",
+      "subtipo": "Centro de investigación",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Instituto público de investigación agroalimentaria de la Generalitat de Catalunya, con plantas de biogás experimentales.",
+      "contactos": [
+        {
+          "nombre": "August Bonmatí Blasi",
+          "puesto": "Jefe de Programa, planta de biogás de Mas Bové",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        },
+        {
+          "nombre": "Belén Fernández",
+          "puesto": "investigadora",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [
+        {
+          "nombre": "Planta de biogás de Mas Bové",
+          "ubicacion": "Constantí, Tarragona",
+          "anio": "2026",
+          "estado": "Terminado"
+        },
+        {
+          "nombre": "Planta de biogás de Monells",
+          "ubicacion": "Girona",
+          "anio": "",
+          "estado": "En desarrollo y planificación"
+        }
+      ],
+      "proyectos_conocidos": 2,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    }
+  ]
+}
