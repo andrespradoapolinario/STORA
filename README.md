@@ -14,7 +14,7 @@ Se ejecutan desde la raíz del repositorio, en este orden:
    python scripts/aplicar_entradas.py            # --simular para ver los cambios sin escribir nada
    ```
 
-   Se detiene ante cualquier conflicto (un dato ya existente con otro valor) sin aplicar ese parche. Si Andrés confirma el valor nuevo, se añade `"sustituir": true` a esa operación del parche y se vuelve a ejecutar.
+   Se detiene ante cualquier conflicto (un dato ya existente con otro valor) sin aplicar ese parche. Si Andrés confirma el valor nuevo, se añade `"sustituir": true` a esa operación del parche y se vuelve a ejecutar. Para completar el nombre de un contacto existente sin duplicarlo, el contacto del parche lleva `"nombre_anterior"` (apartado 7 de CLAUDE.md).
 
 2. **Validar**: comprueba los datos con las reglas del apartado 8 de CLAUDE.md. Los errores detienen la generación; los avisos solo señalan datos que conviene revisar.
 

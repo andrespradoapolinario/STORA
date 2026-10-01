@@ -120,6 +120,8 @@ Cada operación identifica la organización por `id` o, si Cowork no lo conoce, 
 ]
 ```
 
+Para completar el nombre de un contacto que ya existe (por ejemplo, «L. Nardelli» → «Lavinia Nardelli»), `anadir_contacto` admite `"nombre_anterior"`: el contacto se localiza por ese nombre y recibe el nuevo, sin duplicarse.
+
 ## 8. Validación (validar.py debe pasar antes de generar)
 
 - Ningún texto contiene los términos prohibidos del apartado 4 (expresión regular: `no localizad|no encontrad|sin verificar|fuente:`).
