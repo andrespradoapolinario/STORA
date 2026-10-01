@@ -33,7 +33,7 @@ Se ejecutan desde la raíz del repositorio, en este orden:
 ## Requisitos
 
 - Python 3.10 o posterior y `pip install -r requirements.txt`.
-- LibreOffice (para el PDF).
+- LibreOffice con Writer (para el PDF; en Debian o Ubuntu, paquete `libreoffice-writer`: sin él, la conversión falla con «source file could not be loaded»).
 - Fuente Calibri o, en su defecto, Carlito (equivalente métrico libre), para que el PDF reproduzca el Word.
 
 ## Estructura
