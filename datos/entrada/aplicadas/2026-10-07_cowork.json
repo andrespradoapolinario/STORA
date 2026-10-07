@@ -1,0 +1,8 @@
+[
+  {"accion": "anadir_contacto", "id": "enagas-renovable",
+   "contacto": {"nombre": "Guillermo Mazario Díaz", "puesto": "Compras", "telefono": "+34 606 708 394",
+                "email": "gmazario@enagasrenovable.es", "slot": "compras", "confirmado_feria": true, "interes": true}},
+  {"accion": "actualizar", "id": "enagas-renovable",
+   "campos": {"aviso": "Correo de seguimiento a Guillermo Mazario Díaz preparado el 07/10.",
+              "fuente_interna": "Guillermo Mazario Díaz: Salón del Gas Renovable 29-30/09/2026 (notas de Andrés, 07/10/2026)"}}
+]
