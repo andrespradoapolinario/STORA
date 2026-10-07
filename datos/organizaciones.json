@@ -175,6 +175,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Guillermo Mazario Díaz",
+          "puesto": "Compras",
+          "telefono": "+34 606 708 394",
+          "email": "gmazario@enagasrenovable.es",
+          "slot": "compras",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -202,9 +214,9 @@
       "uso_gfs": "No",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Correo de seguimiento a Guillermo Mazario Díaz preparado el 07/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Guillermo Mazario Díaz: Salón del Gas Renovable 29-30/09/2026 (notas de Andrés, 07/10/2026)"
     },
     {
       "id": "iam-carbonzero",
@@ -469,6 +481,42 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Andrea Esteban",
+          "puesto": "Comercial",
+          "telefono": "+34 683 433 978",
+          "email": "andrea.esteban@prezero.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Roberto Giralda",
+          "puesto": "Ingeniería",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Javier Cepeda",
+          "puesto": "Ingeniería",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -490,9 +538,9 @@
       "uso_gfs": "No",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Ingeniería propia; Roberto Giralda y Javier Cepeda son los ingenieros con los que hablar. Correo pendiente de enviar.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "cycle0",
@@ -538,6 +586,30 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Nerea Uriarte",
+          "puesto": "Procurement Manager",
+          "telefono": "+34 634 455 074",
+          "email": "nerea.uriarte@cycle0.com",
+          "slot": "compras",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Luis Santana",
+          "puesto": "Dpto. técnico y sales manager, Biogasclean",
+          "telefono": "+34 621 495 523",
+          "email": "lsantana@biogasclean.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -577,9 +649,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "ence-biogas",
@@ -601,6 +673,30 @@
           "interlocutor": false,
           "departamento": false,
           "nota": "Mesa redonda mar. 29/09, 16:25"
+        },
+        {
+          "nombre": "María Marco",
+          "puesto": "",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Miguel",
+          "puesto": "",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -642,7 +738,7 @@
       "cita": "",
       "aviso": "",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); apellido de Miguel no verificado"
     },
     {
       "id": "kambio",
@@ -702,7 +798,7 @@
           "nombre": "Jacobo Canseco",
           "puesto": "Head of Green Energy",
           "telefono": "900 101 311",
-          "email": "ventas@axpoiberia.es",
+          "email": "",
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,
@@ -717,6 +813,18 @@
           "email": "",
           "slot": "otros",
           "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Héctor Anda Hernández",
+          "puesto": "Senior Project Manager",
+          "telefono": "+34 686 367 492",
+          "email": "hector.andahernandez@axpo.com",
+          "slot": "otros",
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -748,9 +856,9 @@
       "uso_gfs": "No",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Oficina en Madrid; proyectos en Galicia, Cataluña, Cantabria, Aragón y Castilla y León (los de Castilla y León, más avanzados en permisos). Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "grupo-ham",
@@ -786,9 +894,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Trabaja con la ingeniería Apergas.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "verdalia-bioenergy",
@@ -815,13 +923,37 @@
           "nombre": "David García de Herreros",
           "puesto": "Director de Desarrollo de Proyectos",
           "telefono": "",
-          "email": "info@verdaliabio.com",
+          "email": "",
           "slot": "otros",
           "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
           "nota": "Stand 214"
+        },
+        {
+          "nombre": "Marcos Velázquez Aguado",
+          "puesto": "Procurement Manager",
+          "telefono": "+34 680 859 030",
+          "email": "marcos.velazquez@verdaliabio.com",
+          "slot": "compras",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Mar Navarro",
+          "puesto": "Compras de tanques",
+          "telefono": "",
+          "email": "",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -840,12 +972,12 @@
         }
       ],
       "proyectos_conocidos": 2,
-      "uso_gfs": null,
+      "uso_gfs": "No",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Trabajan con acero inoxidable y hormigón; conocen Schumann; ingeniería propia; 11 proyectos en Italia y 33 previstos en España (declarado por la empresa). Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); USO DE GFS «No» por declaración de la empresa (acero inoxidable y hormigón)"
     },
     {
       "id": "indox-renovables",
@@ -1065,9 +1197,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "Oportunidad abierta: Jordi Huguet (Cap d'Àrea de Construcció) pidió evaluar tres tanques (dos digestores de Ø30 × 8 m y un postdigestor de Ø35 × 8 m) para una planta en Cataluña; obra civil de CERTIS; el tecnólogo tiene reservas sobre el acero vitrificado. Videollamada propuesta para el jue. 01/10, 10:30, sin cerrar.",
+      "aviso": "Oportunidad abierta: Jordi Huguet (Cap d'Àrea de Construcció) pidió evaluar tres tanques (dos digestores de Ø30 × 8 m y un postdigestor de Ø35 × 8 m) para una planta en Cataluña; obra civil de CERTIS; el tecnólogo tiene reservas sobre el acero vitrificado. Llamada del 01/10: evalúan hormigón, prefabricado y GFS; objeción de precio y plazo; limitación de altura en Vic (Barcelona). Precio orientativo comunicado por Stora el 01/10 (ver registro interno). Stora envía referencias y oferta completa.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Llamada 01/10/2026 (notas de Andrés); precio orientativo indicado por Oliver (Stora): 150.000 € por tanque, sin techo ni aislamiento"
     },
     {
       "id": "agr-biogas",
@@ -1403,9 +1535,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Su tecnólogo es BTS Biogas, que hace la prescripción.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "bondalti-water-y-bondalti-biogas",
@@ -1463,6 +1595,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Luis Carlos Martínez",
+          "puesto": "Interlocutor objetivo",
+          "telefono": "",
+          "email": "",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -1484,9 +1628,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "No se logró reunión en el Salón; contactar con Luis Carlos Martínez a través de Esperanza Hernández. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "genia-bioenergy",
@@ -1513,9 +1657,21 @@
           "nombre": "Bernat Chuliá",
           "puesto": "Director de Proyectos y Desarrollo",
           "telefono": "963 636 147",
-          "email": "info@geniabioenergy.com",
+          "email": "",
           "slot": "otros",
           "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Stevan Amador",
+          "puesto": "Compras",
+          "telefono": "+34 634 223 160",
+          "email": "samador@geniaglobal.com",
+          "slot": "compras",
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -1556,12 +1712,12 @@
         }
       ],
       "proyectos_conocidos": 19,
-      "uso_gfs": null,
+      "uso_gfs": "Sí",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Han usado GFS de GLS.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "id-energy-group",
@@ -1657,10 +1813,10 @@
       "proyectos_conocidos": 20,
       "uso_gfs": null,
       "visita": true,
-      "cita": "Miércoles 30/09, 12:30–13:00 · Carlos Ruiz, Ángel de Prada y Jesús Mayoralas (convocatoria enviada por ID Energy). Invitados el CEO y el Director Técnico de Stora.",
-      "aviso": "Buenaventura Gómez derivó a Jovanny Mojica (Manager de Ingeniería) y a Ángel de Prada (nuevo Director).",
+      "cita": "Martes 06/10, 10:00 · Llamada (Teams)",
+      "aviso": "Buenaventura Gómez derivó a Jovanny Mojica (Manager de Ingeniería) y a Ángel de Prada (nuevo Director). Proyectos con Naturgy (unas 20 plantas) y con Moeve (en homologación de proveedores). Cotización: 20.000 m³ (2 × 10.000 o 4 × 5.000 m³). Respuesta enviada por correo el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); firma de correo de Carlos Ruiz 01/10"
     },
     {
       "id": "tonello-energy-spain",
@@ -1684,24 +1840,24 @@
           "nota": "Ponente mar. 29/09, 17:30–18:45"
         },
         {
-          "nombre": "L. Nardelli",
-          "puesto": "Tonello Energie, Italia",
+          "nombre": "Lavinia Nardelli",
+          "puesto": "Equipo técnico, Tonello Energie (Italia)",
           "telefono": "",
-          "email": "",
+          "email": "l.nardelli@tonello-energie.com",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
           "nota": "asiste a la reunión"
         },
         {
-          "nombre": "J. Fracaro",
-          "puesto": "Tonello Energie, Italia",
+          "nombre": "Jacopo Fracaro",
+          "puesto": "Equipo técnico, Tonello Energie (Italia)",
           "telefono": "",
-          "email": "",
+          "email": "j.fracaro@tonello-energie.com",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -1753,7 +1909,7 @@
       "cita": "Miércoles 30/09, 13:00 · Stand 294 · Karin Florencio Pérez y equipo técnico italiano",
       "aviso": "",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "vinci-energies-spain-y-methalac",
@@ -1787,6 +1943,30 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Sylvain Lozano",
+          "puesto": "Dirección de proyectos",
+          "telefono": "",
+          "email": "sylvain.lozano@vinci-energies.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "María Jacob Jareño",
+          "puesto": "Directora técnica",
+          "telefono": "",
+          "email": "maria.jacob@vinci-energies.es",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -1802,9 +1982,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "Méthalac ya está en contacto con Stora. Acordar el enfoque con Adam Callan antes de escribirle. Vinci Energies Spain se aborda directamente en el Salón.",
+      "aviso": "Méthalac ya está en contacto con Stora. Acordar el enfoque con Adam Callan antes de escribirle. Vinci Energies Spain se aborda directamente en el Salón. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "agraferm",
@@ -1817,11 +1997,11 @@
       "contactos": [
         {
           "nombre": "Stephan Schulte",
-          "puesto": "apoderado, BTA International",
+          "puesto": "Director de ventas y apoderado, BTA International",
           "telefono": "+49 151 64922812",
           "email": "s.schulte@bta-international.de",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -1862,12 +2042,12 @@
         }
       ],
       "proyectos_conocidos": 5,
-      "uso_gfs": null,
+      "uso_gfs": "Sí",
       "visita": false,
       "cita": "",
-      "aviso": "Empresa alemana: coordinar con Adam Callan antes de cualquier acercamiento.",
+      "aviso": "Empresa alemana: coordinar con Adam Callan antes de cualquier acercamiento. Stephan Schulte recibe la cotización inicial; proyectos en Portugal. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "biogest",
@@ -1897,6 +2077,18 @@
           "email": "",
           "slot": "compras",
           "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Adrian George",
+          "puesto": "Senior Purchasing Manager",
+          "telefono": "+40 748 266 138",
+          "email": "adrian.george@biogest.at",
+          "slot": "compras",
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -1942,7 +2134,7 @@
       "cita": "",
       "aviso": "",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "envitec-biogas",
@@ -1962,6 +2154,18 @@
           "confirmado_feria": true,
           "interes": true,
           "interlocutor": true,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Xabier Garatea",
+          "puesto": "Managing Director de la filial ibérica",
+          "telefono": "",
+          "email": "x.garatea@envitec-biogas.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
           "departamento": false,
           "nota": ""
         }
@@ -1991,9 +2195,9 @@
       "uso_gfs": "No",
       "visita": true,
       "cita": "Martes 29 o miércoles 30/09 · Stand 210 · Christian Ernst (Area Sales Manager) · +49 172 42 62 485 · «Always welcome on our booth».",
-      "aviso": "Christian Ernst respondió el 24/09: «you are always welcome on our booth». Visita confirmada al stand 210 (mar. 29 o mié. 30/09).",
+      "aviso": "Christian Ernst respondió el 24/09: «you are always welcome on our booth». Visita confirmada al stand 210 (mar. 29 o mié. 30/09). Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "planet-biogas-europe",
@@ -2018,11 +2222,11 @@
         },
         {
           "nombre": "Christof Boge",
-          "puesto": "PlanET",
+          "puesto": "Senior Sales Manager Europe",
           "telefono": "",
           "email": "C.Boge@planet-biogas.com",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -2078,9 +2282,9 @@
       "uso_gfs": null,
       "visita": true,
       "cita": "Martes 29/09, 14:30 · Stand 242 · Gunnar Marquardt",
-      "aviso": "Coordinar con Adam Callan antes de cualquier otro acercamiento: la matriz de Stora lleva el contacto directo con las empresas alemanas.",
+      "aviso": "Coordinar con Adam Callan antes de cualquier otro acercamiento: la matriz de Stora lleva el contacto directo con las empresas alemanas. Han trabajado con Schumann (no verificado). Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); trabajo con Schumann no verificado"
     },
     {
       "id": "bioconstruct",
@@ -2255,7 +2459,7 @@
           "telefono": "+49 176 64987568",
           "email": "maclausen@north-tec.de",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -2305,9 +2509,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "Empresa alemana: coordinar con Adam Callan antes de abordarlos.",
+      "aviso": "Empresa alemana: coordinar con Adam Callan antes de abordarlos. Proyecto para finales de 2027. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "omex-environmental",
@@ -2329,6 +2533,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Andrea Ferrer Moreno",
+          "puesto": "",
+          "telefono": "+34 634 791 850",
+          "email": "andreaf@omex.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -2337,9 +2553,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Buscan optimizar procesos.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "nahtec",
@@ -2479,11 +2695,11 @@
       "contactos": [
         {
           "nombre": "Stephan Schulte",
-          "puesto": "apoderado",
+          "puesto": "Director de ventas y apoderado",
           "telefono": "+49 151 64922812",
           "email": "s.schulte@bta-international.de",
           "slot": "otros",
-          "confirmado_feria": false,
+          "confirmado_feria": true,
           "interes": true,
           "interlocutor": false,
           "departamento": false,
@@ -2500,12 +2716,12 @@
         }
       ],
       "proyectos_conocidos": 1,
-      "uso_gfs": null,
+      "uso_gfs": "Sí",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Stephan Schulte recibe la cotización inicial; proyectos en Portugal. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "bts-biogas",
@@ -2539,6 +2755,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Matteo Trevisan",
+          "puesto": "Director técnico",
+          "telefono": "+39 346 845 5694",
+          "email": "m.trevisan@bts-biogas.com",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -2547,9 +2775,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Tecnólogo de Agua y Naturaleza; hace la prescripción. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "bekon",
@@ -2763,7 +2991,20 @@
       "stand": "246B",
       "nota_stand": "",
       "perfil": "EPC italiano de plantas de biogás y biometano (Padua), del Renove Group.",
-      "contactos": [],
+      "contactos": [
+        {
+          "nombre": "Roberto Barberio",
+          "puesto": "",
+          "telefono": "",
+          "email": "r.barberio@renovegroup.it",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
       "telefono_empresa": "",
       "proyectos": [
         {
@@ -2780,12 +3021,12 @@
         }
       ],
       "proyectos_conocidos": 2,
-      "uso_gfs": null,
+      "uso_gfs": "Sí",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Bio-EPC; han usado GFS de GLS. Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "suez-air-climate",
@@ -3448,9 +3689,105 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Llamada del 01/10 con Catalana de Biogás: evalúan hormigón, prefabricado y GFS; objeción de precio y plazo; limitación de altura en Vic (Barcelona). Precio orientativo comunicado por Stora el 01/10 (ver registro interno). Stora envía referencias y oferta completa.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Llamada 01/10/2026 (notas de Andrés); precio orientativo indicado por Oliver (Stora): 150.000 € por tanque, sin techo ni aislamiento"
+    },
+    {
+      "id": "botres-global",
+      "nombre": "Botres Global",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Empresa austriaca que construye plantas de biogás.",
+      "contactos": [
+        {
+          "nombre": "Hersson Villegas",
+          "puesto": "Mechanical and Electrical Engineer",
+          "telefono": "+43 660 5540377",
+          "email": "hersson.villegas@botres.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Piden cotización. Correo enviado el 01/10.",
+      "no_acude": false,
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
+    },
+    {
+      "id": "host-bioenergy",
+      "nombre": "HoSt Bioenergy",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "",
+      "contactos": [
+        {
+          "nombre": "Ángel Martínez",
+          "puesto": "",
+          "telefono": "642 131 689",
+          "email": "a.martinez@host-bioenergy.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Conocen Schumann; tanques industriales desde 10 m de altura. Correo enviado el 01/10.",
+      "no_acude": false,
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
+    },
+    {
+      "id": "jfa-technologies-tecon",
+      "nombre": "JFA Technologies / TECON",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Gasómetros de membrana.",
+      "contactos": [
+        {
+          "nombre": "Jesús Fraga",
+          "puesto": "",
+          "telefono": "+34 614 152 346",
+          "email": "jesus.fraga@jfa-tech.es",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "Posible colaboración. Correo pendiente de enviar.",
+      "no_acude": false,
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés)"
     },
     {
       "id": "sitra",
@@ -3462,7 +3799,7 @@
       "perfil": "Ingeniería y EPC de agua industrial y bioenergía (Castellón, Valencia y Madrid); desarrolladora y operadora en Montes de Toledo y Llutxent.",
       "contactos": [
         {
-          "nombre": "Manuel Avilés",
+          "nombre": "Manuel Avilés Martín",
           "puesto": "Responsable de Compras",
           "telefono": "+34 662 924 071",
           "email": "maviles@sitra.es",
@@ -3475,7 +3812,7 @@
         },
         {
           "nombre": "Daniel Trigo",
-          "puesto": "",
+          "puesto": "Cierres económicos",
           "telefono": "",
           "email": "",
           "slot": "otros",
@@ -3496,6 +3833,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Rodrigo Duque",
+          "puesto": "Responsable de ingeniería",
+          "telefono": "",
+          "email": "",
+          "slot": "tecnico",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": "prescribe"
         }
       ],
       "telefono_empresa": "",
@@ -3523,9 +3872,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "Manuel Avilés (Responsable de Compras) pedirá presupuesto a Stora en los próximos proyectos.",
+      "aviso": "Manuel Avilés (Responsable de Compras) pedirá presupuesto a Stora en los próximos proyectos. Conocen y valoran el GFS; obras paradas por licencias; quieren que montemos. Prescribe Rodrigo Duque (ingeniería). Correo enviado el 01/10.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); correo de Manuel Avilés Martín 22/09; en el Salón solo estuvo Daniel Trigo"
     },
     {
       "id": "sorain-cecchini-tecno-espana",
@@ -3899,6 +4248,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Enric Cacho",
+          "puesto": "Project Manager",
+          "telefono": "",
+          "email": "e.cacho@ahidra.com",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -3926,9 +4287,9 @@
       "uso_gfs": null,
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Proyectos en Zaragoza y Valladolid; conocen GLS.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); dominio corporativo ahidra.com (no verificado; martinho@ahira.com se mantiene sin cambios)"
     },
     {
       "id": "inbiogas",
@@ -4002,6 +4363,38 @@
       "fuente_interna": ""
     },
     {
+      "id": "apergas",
+      "nombre": "Apergas",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería que trabaja con Grupo HAM.",
+      "contactos": [
+        {
+          "nombre": "Jaume Vicens",
+          "puesto": "",
+          "telefono": "629 917 832",
+          "email": "jaumevicens@apergas.cat",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); contacto vía Grupo HAM; jaumavicens@apergas.cat rebotó"
+    },
+    {
       "id": "kepler-ingenieria-y-ecogestion",
       "nombre": "Kepler Ingeniería y Ecogestión",
       "grupo": "D",
@@ -4033,6 +4426,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Francisco Cuesta García",
+          "puesto": "Ingeniero de proyectos, oficina de Burgos",
+          "telefono": "+34 628 55 11 08",
+          "email": "francisco.cuesta@kepler.es",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -4045,12 +4450,12 @@
         }
       ],
       "proyectos_conocidos": 1,
-      "uso_gfs": null,
+      "uso_gfs": "Sí",
       "visita": false,
       "cita": "",
-      "aviso": "",
+      "aviso": "Respuesta enviada por correo el 01/10, con la indicación de Adam Callan: los serpentines de calefacción pueden ir por dentro o por fuera; por dentro es lo estándar.",
       "no_acude": false,
-      "fuente_interna": ""
+      "fuente_interna": "Salón del Gas Renovable 29-30/09/2026 (notas de Andrés); firma de correo de Francisco Cuesta García 01/10; prioridad 5 (escala de valoración pendiente de fijar con Stora)"
     },
     {
       "id": "enerlan-solutions",

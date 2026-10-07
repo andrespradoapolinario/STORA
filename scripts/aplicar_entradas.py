@@ -68,9 +68,9 @@ def buscar(datos, op):
     return org
 
 
-def fusionar(destino, nuevos, campos_validos, sustituir, desc, cambios):
+def fusionar(destino, nuevos, campos_validos, sustituir, desc, cambios, antes=None):
     """Rellena campos vacíos; un valor distinto sobre uno existente es conflicto."""
-    antes = len(cambios)
+    antes = len(cambios) if antes is None else antes
     for campo, valor in nuevos.items():
         if campo not in campos_validos:
             raise ErrorParche(f'{desc}: campo desconocido «{campo}».')
@@ -106,11 +106,24 @@ def op_anadir_contacto(datos, op, cambios):
     if c.get('slot', 'otros') not in SLOTS:
         pista = ' Para un interlocutor, use «interlocutor»: true.' if c.get('slot') == 'directo' else ''
         raise ErrorParche(f"slot «{c.get('slot')}» no válido ({', '.join(SLOTS)}).{pista}")
-    existente = next((x for x in org['contactos'] if x['nombre'].casefold() == c['nombre'].casefold()), None)
+    # «nombre_anterior» completa el nombre de un contacto existente («L. Nardelli» -> «Lavinia Nardelli»).
+    anterior = c.get('nombre_anterior')
+    clave = (anterior or c['nombre']).casefold()
+    existente = next((x for x in org['contactos'] if x['nombre'].casefold() == clave), None)
+    if anterior and existente is None:
+        raise ErrorParche(f"{org['nombre']}: no hay ningún contacto «{anterior}» cuyo nombre completar.")
+    if anterior and any(x is not existente and x['nombre'].casefold() == c['nombre'].casefold()
+                        for x in org['contactos']):
+        raise Conflicto(f"{org['nombre']}: ya existe otro contacto «{c['nombre']}»; "
+                        f"indique si «{anterior}» es la misma persona.")
     if existente:
-        resto = {k: v for k, v in c.items() if k != 'nombre'}
-        fusionar(existente, resto, CAMPOS_CONTACTO, op.get('sustituir'),
-                 f"{org['nombre']} · contacto {existente['nombre']}", cambios)
+        desc = f"{org['nombre']} · contacto {existente['nombre']}"
+        antes = len(cambios)
+        if existente['nombre'] != c['nombre']:
+            cambios.append(f"{desc} · nombre: {mostrar(existente['nombre'])} → {mostrar(c['nombre'])}")
+            existente['nombre'] = c['nombre']
+        resto = {k: v for k, v in c.items() if k not in ('nombre', 'nombre_anterior')}
+        fusionar(existente, resto, CAMPOS_CONTACTO, op.get('sustituir'), desc, cambios, antes)
         return
     for campo in c:
         if campo not in CAMPOS_CONTACTO:
