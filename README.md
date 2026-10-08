@@ -30,6 +30,16 @@ Se ejecutan desde la raíz del repositorio, en este orden:
 
    El PDF es el Word convertido con LibreOffice, así que ambos tienen el mismo contenido. Las líneas de NOTAS de cada ficha se ajustan para llenar la página sin desbordarla, y al final se comprueba que haya una ficha por página.
 
+## Estudios de feria
+
+Los estudios de feria (informes con proyectos, empresas objetivo y contactos) tienen sus datos en `datos/estudios/` y su propio generador:
+
+```
+python scripts/informe_dcw.py                 # Data Centre World Madrid 2026; --fecha AAAA-MM-DD para otra fecha
+```
+
+Comprueba los términos prohibidos del apartado 8 de CLAUDE.md y deja en `salidas/` el informe en Word y PDF, la hoja de contactos en Excel y un CSV listo para importar en Apollo.
+
 ## Requisitos
 
 - Python 3.10 o posterior y `pip install -r requirements.txt`.
@@ -42,12 +52,14 @@ Se ejecutan desde la raíz del repositorio, en este orden:
 datos/organizaciones.json      Fuente única de datos (esquema en el apartado 3 de CLAUDE.md).
 datos/entrada/                 Parches pendientes preparados por Cowork.
 datos/entrada/aplicadas/       Parches ya aplicados (historial; no se borran).
+datos/estudios/                Datos de los estudios de feria.
 scripts/aplicar_entradas.py    Aplica los parches.
 scripts/validar.py             Validación de datos y de paginación.
 scripts/generar.py             Punto de entrada de la generación.
 scripts/bloc_docx.py           Generador del bloc en Word.
 scripts/bloc_pdf.py            Generador del PDF y ajuste de las NOTAS.
 scripts/comun.py               Rutas y constantes del esquema.
+scripts/informe_dcw.py         Estudio de feria de Data Centre World Madrid 2026.
 scripts/plantilla_bloc/        Partes fijas del Word (estilos, pie, tema).
 salidas/                       Documentos generados. No se editan a mano.
 ```

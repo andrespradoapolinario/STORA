@@ -1,0 +1,2450 @@
+{
+  "estudio": {
+    "titulo": "Data Centre World Madrid 2026",
+    "subtitulo": "Estudio de feria: ingenierías, contratistas y proyectos que deciden los depósitos de los centros de datos",
+    "evento_linea": "IFEMA Madrid, pabellones 3 a 5 · 4 y 5 de noviembre de 2026",
+    "pie": "Estudio Data Centre World Madrid 2026 · Uso interno de Alliance Albors y Prado S.L.",
+    "archivo": "Estudio_Data_Centre_World_Madrid_2026",
+    "archivo_contactos": "Contactos_Data_Centre_World_Madrid_2026",
+    "fecha_datos": "08/10/2026"
+  },
+  "resumen": [
+    "Data Centre World Madrid es, sobre todo, una feria de fabricantes y operadores. Las ingenierías y los gestores de proyecto acuden como ponentes y visitantes, no como expositores: el lugar donde encontrarlos es el auditorio «Design, Build & Investment» y las sesiones técnicas, más que los stands.",
+    "Quien decide el depósito en un centro de datos hiperescala es una cadena: el propietario fija su estándar (en la práctica, FM Global y sus guías internas), la ingeniería de proyecto lo convierte en especificación, el contratista MEP o de PCI compra e instala, y el gestor de proyecto o de costes puede abrir la puerta a alternativas en la fase de ingeniería de valor. Stora debe entrar por la ingeniería de proyecto y homologarse con el contratista.",
+    "Los documentos oficiales de Aragón identifican a las ingenierías de los dos mayores clientes: AECOM Spain DCS firma la documentación del plan de interés general de Microsoft (La Muela, Villamayor de Gállego y Zaragoza) y Ove Arup & Partners la del plan de ampliación de AWS. AECOM dirige además el diseño de Nostrum Evergreen (Badajoz) e IDOM el de Nostrum GUA1 (Guadalajara).",
+    "En Madrid y Barcelona, JG Ingenieros es la ingeniería de instalaciones de referencia (Merlin Edged Getafe y Barcelona; los centros de datos suponen el 35-40 % de sus ventas). PGI, Deerns, RED Engineering, Black & White Engineering, Cundall, Haskoning, Aeon y Quark (Sener) completan el núcleo de ingenierías MEP y de misión crítica con equipo en España.",
+    "Entre los contratistas, Cobra ha firmado la compra de Aguilera Ingenieros (septiembre de 2026) y ofrece 10.000 M€ de capacidad en centros de datos; Mercury, CAP Ingelec, Itercon, Ferrovial y Dragados ejecutan obra para Equinix, Data4, AWS y Microsoft, y Jones Engineering, que instala la PCI con medios propios, opera desde Valencia.",
+    "La ventana comercial está abierta: el periodo 2026-2029 concentra más del 80 % del esfuerzo constructor previsto en Aragón; el proyecto Rhodes de QTS (Calatorao, hasta 13.471 M€) obtuvo el 30/09/2026 la aprobación de su urbanización, subestación y redes de agua; Microsoft inicia obras en 2026 y AWS tiene desbloqueado El Burgo de Ebro.",
+    "El real decreto en tramitación exigirá acreditar disponibilidad real de agua. Junto con la reserva de agua contra incendios que exigen el RIPCI, la UNE 23500 y FM Global, refuerza el papel del almacenamiento de agua en el proyecto. El campus de AWS en Zaragoza ya prevé reservorios de agua y caseta de bombeo de PCI.",
+    "Contactos: el plan gratuito de Apollo no permite la búsqueda ni el enriquecimiento por API, por lo que los correos y teléfonos personales no se han podido revelar desde aquí. Se entrega la lista de {n_contactos} personas en {n_empresas} empresas, con cargo, origen del dato y perfil de LinkedIn cuando consta, preparada para enriquecerla desde la interfaz de Apollo con los créditos disponibles."
+  ],
+  "feria": {
+    "datos": [
+      [
+        "Nombre",
+        "Data Centre World Madrid 2026, dentro de Tech Show Madrid (siete ferias simultáneas)"
+      ],
+      [
+        "Fechas y horario",
+        "4 y 5 de noviembre de 2026, de 10:00 a 19:00"
+      ],
+      [
+        "Lugar",
+        "IFEMA Madrid, pabellones 3 a 5 (en 2025 fueron los pabellones 7 a 9)"
+      ],
+      [
+        "Organizador",
+        "CloserStill Media"
+      ],
+      [
+        "Ferias simultáneas",
+        "Cloud & AI Infrastructure, Cyber Security World, Big Data & AI World y otras de Tech Show Madrid"
+      ],
+      [
+        "Dimensión 2026",
+        "Más de 160 expositores y más de 6.000 profesionales previstos en Data Centre World; Tech Show Madrid anuncia más de 500 empresas expositoras. En mayo de 2026 el espacio estaba reservado al 90 %."
+      ],
+      [
+        "Edición 2025",
+        "29 y 30 de octubre de 2025; más de 470 expositores y patrocinadores, unos 400 ponentes y más de 27.000 profesionales en el conjunto de Tech Show Madrid; pabellón 7 dedicado a Data Centre World con más de 150 expositores."
+      ],
+      [
+        "Auditorios relevantes",
+        "Design, Build & Investment Theater; Next-Gen Data Centers Theater; DCW Keynote Theatre; Edge, Data & AI Solutions Theater"
+      ],
+      [
+        "Pabellón propio",
+        "Daikin, Johnson Controls, Legrand, Mitsubishi Electric Europe y Schneider Electric; también Vertiv, Carrier, Midea Frigicoll, Prysmian, CommScope y Clivet."
+      ],
+      [
+        "Web oficial",
+        "www.techshowmadrid.es/data-centre-world (programa en /programa-data-centre-world)"
+      ]
+    ],
+    "programa": [
+      {
+        "ponente": "Aina Juliol",
+        "cargo": "Presidenta y consejera delegada",
+        "empresa": "PGI Engineering & Consulting (PGI Data Centers)",
+        "sesion": "Design, Build & Investment Theater",
+        "cuando": "5/11 (por confirmar), 12:00",
+        "interes": "Alto"
+      },
+      {
+        "ponente": "Rafael Hicar Armendariz",
+        "cargo": "Head of Data Centers Spain",
+        "empresa": "Ferrovial Construcción",
+        "sesion": "Retos del despliegue de centros de datos en España, del diseño a la entrega",
+        "cuando": "5/11 (por confirmar), 13:30",
+        "interes": "Alto"
+      },
+      {
+        "ponente": "Francisco Vicente Minguela y Alberto Martull",
+        "cargo": "Head of Data Centers Spain; Director de Corporate Capital Markets y Data Centers",
+        "empresa": "JLL",
+        "sesion": "Design, Build & Investment: alinear ejecución y capital",
+        "cuando": "5/11 (por confirmar), 11:30",
+        "interes": "Medio"
+      },
+      {
+        "ponente": "Elliot Zounon",
+        "cargo": "Director Data Center Solutions Iberia",
+        "empresa": "CBRE",
+        "sesion": "Mercado e inversión en centros de datos: de la demanda a la viabilidad",
+        "cuando": "5/11 (por confirmar), 10:30",
+        "interes": "Medio"
+      },
+      {
+        "ponente": "María del Mar Paños de Arriba",
+        "cargo": "Directora general de Industria, Competitividad y Transformación Digital",
+        "empresa": "Gobierno de Aragón",
+        "sesion": "Papel del sector público en las grandes infraestructuras digitales",
+        "cuando": "5/11 (por confirmar), 12:30",
+        "interes": "Medio"
+      },
+      {
+        "ponente": "Alan Abela",
+        "cargo": "Regional Engineering Manager (Italia y Suiza)",
+        "empresa": "Amazon Web Services",
+        "sesion": "Cargas de IA: potencia, refrigeración y resiliencia",
+        "cuando": "4/11 (por confirmar), 12:55",
+        "interes": "Alto"
+      },
+      {
+        "ponente": "Baltimore Aircoil",
+        "cargo": "",
+        "empresa": "Baltimore Aircoil",
+        "sesion": "Presentación de Baltimore Aircoil (fabricante de equipos de refrigeración evaporativa)",
+        "cuando": "15:30 en 2025; confirmar en 2026",
+        "interes": "Alto"
+      },
+      {
+        "ponente": "ASHRAE Spain Chapter",
+        "cargo": "Panel de control y monitorización",
+        "empresa": "ASHRAE",
+        "sesion": "Panel técnico",
+        "cuando": "",
+        "interes": "Medio"
+      },
+      {
+        "ponente": "Leonardo Martínez Alfonso",
+        "cargo": "Head of Engineering and Technology",
+        "empresa": "barpa (Argon Group)",
+        "sesion": "Potencia crítica; recintos modulares",
+        "cuando": "Edge, Data & AI Solutions Theater, 16:00",
+        "interes": "Bajo"
+      },
+      {
+        "ponente": "Alejandro Fuster",
+        "cargo": "Director técnico",
+        "empresa": "Spain DC (asociación)",
+        "sesion": "Red, flexibilidad y sostenibilidad",
+        "cuando": "",
+        "interes": "Medio"
+      },
+      {
+        "ponente": "Lorenzo Castillo y José Luis Herrero",
+        "cargo": "COO; CEO",
+        "empresa": "Templus; Walhalla",
+        "sesion": "Especialización de los centros de datos",
+        "cuando": "",
+        "interes": "Bajo"
+      }
+    ],
+    "programa_nota": "Programa publicado en techshowmadrid.es y consultado a través del buscador el 08/10/2026. Algunas páginas mezclan el programa de 2025 y el de 2026 y varias franjas figuran aún sin ponente; conviene confirmar día y hora en la web oficial la semana anterior.",
+    "ponentes_anteriores": [
+      {
+        "ponente": "Alex Ramos",
+        "cargo": "Vicepresidente y director general España",
+        "empresa": "Hill International",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Marta Serrano Pérez",
+        "cargo": "Arquitecta, dirección de proyectos; colíder del Comité de Data Centers de ASHRAE Spain",
+        "empresa": "JG Ingenieros",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Gabriel García",
+        "cargo": "Arquitecto, especialista en diseño computacional",
+        "empresa": "Haskoning",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Pedro Malheiro",
+        "cargo": "CEO",
+        "empresa": "LMSI Engineering (Portugal)",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Juan Ballester",
+        "cargo": "Data Center Operational Manager",
+        "empresa": "Itercon (Grupo Cyclus)",
+        "edicion": "DCW Madrid"
+      },
+      {
+        "ponente": "María Barrero",
+        "cargo": "Cofundadora; directora de arquitectura y desarrollo de negocio",
+        "empresa": "DConcept",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Borja Sánchez",
+        "cargo": "Construction Manager EMEA (campus de Madrid)",
+        "empresa": "Iron Mountain",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Alberto Petermann",
+        "cargo": "Head of Design & Delivery",
+        "empresa": "Start Campus",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Amparo García Puente",
+        "cargo": "Senior Development Manager",
+        "empresa": "CyrusOne",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Pedro Muñoz",
+        "cargo": "Operations Director Madrid",
+        "empresa": "Global Switch",
+        "edicion": "DCW Madrid 2025"
+      },
+      {
+        "ponente": "Eloy Madrid y Jorge Lis",
+        "cargo": "Director División Media Tensión España",
+        "empresa": "ABB",
+        "edicion": "DCW Madrid 2025"
+      }
+    ],
+    "expositores": [
+      [
+        "Cobra",
+        "Contratista EPC de centros de datos",
+        "Stand 7F76 o 5C01-5C03 según la fuente; confirmar"
+      ],
+      [
+        "DConcept",
+        "Ingeniería y arquitectura de centros de datos",
+        "5A02"
+      ],
+      [
+        "Neklan",
+        "Integrador de infraestructura crítica",
+        "7G44"
+      ],
+      [
+        "barpa (Argon Group)",
+        "Ingeniería de potencia crítica",
+        "5C72"
+      ],
+      [
+        "Q-Safety (Quirón Prevención)",
+        "Prevención y seguridad en obra",
+        "5C01"
+      ],
+      [
+        "LMSI Engineering",
+        "Ingeniería portuguesa de edificación y centros de datos",
+        "Edición 2025"
+      ],
+      [
+        "Haskoning",
+        "Ingeniería de misión crítica",
+        "Edición 2025"
+      ],
+      [
+        "Iberica Energy & Data Centers",
+        "Promotor",
+        "Edición 2025"
+      ],
+      [
+        "Iron Mountain Data Centers",
+        "Operador",
+        "Edición 2025"
+      ],
+      [
+        "NTT Global Data Centers",
+        "Operador",
+        "Edición 2025"
+      ],
+      [
+        "Sevilla Datacenter & Comvive",
+        "Operador",
+        "9B48"
+      ],
+      [
+        "AGR Integral Engineering Solutions",
+        "Ingeniería",
+        "Stand por confirmar"
+      ],
+      [
+        "Plataforma Tecnológica Española de la Construcción",
+        "Plataforma sectorial",
+        "9D63"
+      ],
+      [
+        "Ayesa",
+        "Ingeniería (en Big Data & AI World)",
+        "3K76"
+      ],
+      [
+        "Daikin, Carrier, Midea Frigicoll, Clivet, Vertiv",
+        "Climatización y potencia (influyen en el circuito de agua)",
+        "5G59, 5F21, 5G24, 5G70, 5E60"
+      ]
+    ],
+    "eventos_relacionados": [
+      [
+        "DCD>Connect Madrid 2024",
+        "21 y 22/05/2024",
+        "Panel de diseño con Eva Diego (Hyphen), Thomas De Colle (Data4) y Carlos Gallego Bernad (RED Engineering)."
+      ],
+      [
+        "DCD>Connect Madrid 2025",
+        "20 y 21/05/2025, Eurostars Madrid Tower",
+        "Ponentes de ingeniería: AECOM (Mechanical Lead Data Center), JG Ingenieros (MEP Technical Director), IDOM (Data Centers Director), Deerns (Sector Director Data Centres), Aeon, Quark, Arcadis, WSP."
+      ],
+      [
+        "DCD>Connect South Europe 2026",
+        "Mayo de 2026, Palacio Municipal IFEMA",
+        "Más de 2.500 asistentes; Data4, Google, Microsoft, Equinix, Nabiax, Itercon, Arcadis, PGI."
+      ],
+      [
+        "Grupo Vía, Construcción de Data Centers",
+        "Madrid 09/04/2025, 25/09/2025, 16/04/2026 y septiembre de 2026; Zaragoza 30/09/2025",
+        "Ponencias de Aguilera, AECOM, Arup, Arcadis, Drees & Sommer, Hyphen, JG Ingenieros, Torrella, Quark (Sener), Itercon, GSE."
+      ],
+      [
+        "INMODATA",
+        "2024 y 2026",
+        "IDOM, PGI Data Centers, Cottés (protección contra incendios), Walhalla, Digital Realty."
+      ],
+      [
+        "Encuentro MATCOAM y TATE",
+        "17/06/2026, sede del COAM",
+        "«Diseñando los centros de datos del futuro»; participó AECOM."
+      ],
+      [
+        "Congreso anual Spain DC",
+        "Madrid",
+        "Asistencia documentada de Hill International (dirección general y dirección de operaciones de data centers)."
+      ]
+    ],
+    "recomendaciones": [
+      "Reservar la mañana del jueves 05/11 (día por confirmar en el programa definitivo) en el auditorio Design, Build & Investment: CBRE (10:30), JLL (11:30), PGI (12:00), Gobierno de Aragón (12:30) y Ferrovial (13:30) concentran las decisiones de diseño, construcción e inversión.",
+      "Pedir cita previa por LinkedIn a Aina Juliol (PGI) y a Rafael Hicar (Ferrovial) para después de su intervención; ambos tienen equipos que especifican o compran instalaciones hidráulicas y de PCI.",
+      "Asistir a la sesión de AWS (12:55) y a la de Baltimore Aircoil: son las que tratan refrigeración y agua.",
+      "Visitar el stand de Cobra: es el contratista con mayor cartera en España y acaba de incorporar la ingeniería de Aguilera.",
+      "Llevar una ficha técnica de una página orientada a ingeniería: depósitos de acero vitrificado para reserva de PCI (conforme a UNE 23500 y a las exigencias de FM Global), agua bruta y de reposición de refrigeración, y aprovechamiento de pluviales; plazos de montaje y referencias."
+    ]
+  },
+  "mercado": {
+    "cifras": [
+      "Potencia TI instalada en España a finales de 2025: 439 MW (Spain DC), un 24 % más que en 2024. Escenario 2030: hasta 2.537 MW, condicionado por red, permisos y financiación.",
+      "Inversión prevista por Spain DC: 66.900 M€.",
+      "Madrid: 538 MW de capacidad de mercado (operativa, en construcción y en planificación) y más del 60 % de la potencia operativa del país; podría superar 1 GW en 2030.",
+      "Aragón: 33 % de la cartera de nuevos proyectos de la península (Madrid 24 %, Barcelona 8 %, según Colliers); unos 2.500 MW proyectados y unos 30 proyectos afectados por el nuevo real decreto.",
+      "Real decreto en tramitación urgente: exige acreditar disponibilidad real de agua y de red, cubrir el 80 % del consumo con renovables, fianzas y caducidad de permisos a los cinco años. Aragón y AWS han presentado alegaciones."
+    ],
+    "proyectos": [
+      {
+        "promotor": "Amazon Web Services",
+        "ubicacion": "Aragón: Villanueva de Gállego, El Burgo de Ebro, Huesca (Walqa), Zaragoza (Empresarium), La Puebla de Híjar",
+        "potencia": "+300 MW de ampliación",
+        "inversion": "Hasta 33.700 M€ (región España)",
+        "estado": "En operación y ampliación; PIGA de ampliación aprobado por partes (El Burgo de Ebro desbloqueado en junio de 2026)",
+        "agentes": "Ingeniería del PIGA: Ove Arup & Partners S.A.U. (Madrid). Construcción: Itercon (fases 2020-2024), Dragados (obra civil de Empresarium, 530 M€), Hormipresa (prefabricado de El Burgo).",
+        "interes": "Muy alto: Empresarium prevé reservorios de agua y caseta de bombeo de PCI; 114.971 m³ de agua al año."
+      },
+      {
+        "promotor": "Microsoft",
+        "ubicacion": "Aragón: La Muela, Villamayor de Gállego y Zaragoza",
+        "potencia": "Tres campus; edificios de centro de datos «doble»",
+        "inversion": "Más de 5.356 M€",
+        "estado": "En tramitación (PIGA «Región MSFT»); inicio de obras previsto en 2026",
+        "agentes": "Documentación del PIGA preparada por AECOM Spain DCS S.L.U. para Microsoft 7724 Spain S.L.U.",
+        "interes": "Muy alto: AECOM es la ingeniería que redacta los proyectos."
+      },
+      {
+        "promotor": "Microsoft (Madrid)",
+        "ubicacion": "Comunidad de Madrid",
+        "potencia": "",
+        "inversion": "",
+        "estado": "Adjudicado a Ferrovial (fecha del anuncio por confirmar)",
+        "agentes": "Ferrovial seleccionada por Microsoft para construir el centro de datos.",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "QTS (Blackstone), proyecto Rhodes",
+        "ubicacion": "Calatorao (Zaragoza)",
+        "potencia": "Hasta 430 MW TI (subestación de 650 MW)",
+        "inversion": "Hasta 13.471 M€",
+        "estado": "PIGA definitivo de urbanización, subestación y redes de agua y drenaje (30/09/2026); edificios en autorización ambiental integrada; primer edificio a finales de 2028",
+        "agentes": "Promotora Calanza Inmuebles; QTS como promotora delegada y operadora; contratistas locales para la preparación del terreno.",
+        "interes": "Muy alto: ocho edificios, obras hasta 2035."
+      },
+      {
+        "promotor": "Merlin Properties y Edged",
+        "ubicacion": "Getafe, Barcelona, Bilbao-Arasur, Zaragoza, Botorrita y Muel; Navalmoral de la Mata y Valdecaballeros (Extremadura); Lisboa",
+        "potencia": "Arasur hasta 6 edificios y unos 300 MW; Zaragoza 150 MW; Extremadura, campus de escala gigavatio",
+        "inversion": "",
+        "estado": "Getafe, Barcelona y Arasur DC3 en operación; Extremadura en autorización ambiental (obras desde otoño de 2026); Lisboa en construcción",
+        "agentes": "Getafe: JG Ingenieros y Torrella (diseño y dirección). Barcelona: Torrella (arquitectura y estructura) y JG Ingenieros (instalaciones). Arasur: LKS Krean (proyecto y dirección de obra).",
+        "interes": "Alto: Edged usa refrigeración sin agua en sala, pero la reserva de PCI sigue siendo necesaria."
+      },
+      {
+        "promotor": "ACS y Benbros",
+        "ubicacion": "La Puebla de Alfindén (Zaragoza)",
+        "potencia": "150 MW iniciales",
+        "inversion": "1.254 M€",
+        "estado": "PIGA en aprobación inicial; modificación para añadir proyectos eléctricos (09/2026)",
+        "agentes": "Redactores de volúmenes del PIGA: CADISA Sisener y AT Ingeniería.",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "ACS Digital & Energy",
+        "ubicacion": "Alcalá de Henares (Madrid)",
+        "potencia": "Más de 100 MW TI",
+        "inversion": "",
+        "estado": "En desarrollo",
+        "agentes": "Dragados",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Azora (Tillion)",
+        "ubicacion": "Villamayor de Gállego (Zaragoza)",
+        "potencia": "",
+        "inversion": "2.359,9 M€",
+        "estado": "En tramitación",
+        "agentes": "",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "SAMCA (Green IT Aragón)",
+        "ubicacion": "Luceni, Rueda de Jalón y Pedrola (Zaragoza)",
+        "potencia": "131 MW, ampliable a 300 MW",
+        "inversion": "2.627 M€",
+        "estado": "En tramitación; primera fase en 2028",
+        "agentes": "",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "Box2Bit",
+        "ubicacion": "Épila (Zaragoza)",
+        "potencia": "",
+        "inversion": "3.900 M€ (primera fase 1.125 M€, hasta 2029)",
+        "estado": "En desarrollo; pendiente de acceso a red",
+        "agentes": "",
+        "interes": "Bajo a corto plazo"
+      },
+      {
+        "promotor": "Meta (Zarza Networks S.L.)",
+        "ubicacion": "Talavera de la Reina (Toledo)",
+        "potencia": "",
+        "inversion": "750 a 1.000 M€",
+        "estado": "Reparcelación aprobada el 07/08/2026; pendiente de licencias de obra",
+        "agentes": "",
+        "interes": "Medio: la declaración ambiental impuso refrigeración por aire; la PCI sigue requiriendo reserva."
+      },
+      {
+        "promotor": "Iberdrola y Echelon",
+        "ubicacion": "Aceca, Toledo (Madrid Sur)",
+        "potencia": "144 MW (230 MW de acceso a red)",
+        "inversion": "Más de 2.000 M€ en la sociedad conjunta",
+        "estado": "En desarrollo; operación prevista en 2030",
+        "agentes": "Echelon asume planificación y diseño.",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "Nostrum Data Centers (IREN)",
+        "ubicacion": "Badajoz (Evergreen); Guadalajara (GUA1); además Cáceres, Pinto, Zamudio y Galicia",
+        "potencia": "Evergreen hasta 500 MW; GUA1 40 MWe; cartera de 500 MW TI más 300 MW",
+        "inversion": "Evergreen más de 1.900 M€; GUA1 1.000 M€",
+        "estado": "En tramitación; Evergreen operativo en 2031",
+        "agentes": "AECOM: diseño y dirección de obra de Evergreen. IDOM: diseño de GUA1. JLL: asesor de la cartera.",
+        "interes": "Muy alto"
+      },
+      {
+        "promotor": "Solaria y Datasection",
+        "ubicacion": "Puertollano (Ciudad Real)",
+        "potencia": "Hasta 200 MW; primera fase de 40 MW",
+        "inversion": "Más de 150 M€ en la primera fase",
+        "estado": "En desarrollo; primera fase a finales de 2027",
+        "agentes": "",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "Data4",
+        "ubicacion": "Alcobendas y San Agustín de Guadalix (Madrid)",
+        "potencia": "Campus de Alcobendas de 70 MW; contratos de 20 MW y 10 MW",
+        "inversion": "",
+        "estado": "En construcción por fases",
+        "agentes": "CAP Ingelec (llave en mano del DC03); Cobra (Alcobendas 20 MW y San Agustín 10 MW); Serveo (mantenimiento).",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Equinix",
+        "ubicacion": "Madrid (MD2, MD3x, MD4x, MD5) y Barcelona (BA2)",
+        "potencia": "",
+        "inversion": "",
+        "estado": "MD4x y MD5 inaugurados el 22/05/2026",
+        "agentes": "Mercury Engineering (MD2.4, MD3 y BA2); SANJOSE (prefabricado, subcontrata).",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Iron Mountain",
+        "ubicacion": "San Fernando de Henares (Madrid)",
+        "potencia": "79 MW TI en ocho instalaciones",
+        "inversion": "",
+        "estado": "En construcción desde marzo de 2025; finalización prevista en 2027",
+        "agentes": "",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Ferrovial (MAD01)",
+        "ubicacion": "Alcobendas (Madrid)",
+        "potencia": "Más de 100 MW; primera fase de 60 MW",
+        "inversion": "Más de 1.000 M€ (primera fase 153 M€)",
+        "estado": "En desarrollo",
+        "agentes": "Ferrovial Construcción y Powernet",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Hscale (MAD1)",
+        "ubicacion": "Madrid",
+        "potencia": "192 MW",
+        "inversion": "Contrato de más de 1.000 M$ con un hiperescalador",
+        "estado": "En desarrollo",
+        "agentes": "",
+        "interes": "Alto"
+      },
+      {
+        "promotor": "Digital Realty (MAD5)",
+        "ubicacion": "Julián Camarillo, Madrid",
+        "potencia": "20 a 24 MW",
+        "inversion": "Unos 300 M€ (más de 500 M€ en Madrid y Barcelona)",
+        "estado": "En desarrollo",
+        "agentes": "",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "Global Switch (Madrid 2)",
+        "ubicacion": "Madrid",
+        "potencia": "56 MW",
+        "inversion": "",
+        "estado": "En desarrollo; operación en 2029",
+        "agentes": "EIGO Construcciones",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "Prime Data Centers",
+        "ubicacion": "Alcobendas (Madrid)",
+        "potencia": "40 MW",
+        "inversion": "",
+        "estado": "En desarrollo",
+        "agentes": "",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "NTT",
+        "ubicacion": "Las Rozas (Madrid)",
+        "potencia": "10 MW",
+        "inversion": "",
+        "estado": "Adjudicado",
+        "agentes": "Cobra",
+        "interes": "Medio"
+      },
+      {
+        "promotor": "NxN Data Centers",
+        "ubicacion": "Valencia",
+        "potencia": "5 MW TI; 9.000 m²",
+        "inversion": "",
+        "estado": "En construcción",
+        "agentes": "Itercon",
+        "interes": "Bajo"
+      },
+      {
+        "promotor": "Start Campus",
+        "ubicacion": "Sines (Portugal)",
+        "potencia": "1,2 GW de campus; SIN02 de 180 MW",
+        "inversion": "",
+        "estado": "SIN01 en operación; SIN02 en construcción hasta 2027",
+        "agentes": "Jacobs (planificación y diseño del campus), AFA Consult (ingeniería), Engexpor (gestión de la construcción), Conduril, ACA, DST y Bysteel.",
+        "interes": "Medio: refrigeración con agua de mar."
+      }
+    ],
+    "proyectos_nota": "Las cifras proceden de prensa, notas de las empresas y boletines oficiales consultados hasta el 08/10/2026. Cuando las fuentes discrepan se recoge la cifra más reciente; las potencias y las fechas de entrada en servicio son las anunciadas por los promotores."
+  },
+  "decision": {
+    "parrafos": [
+      "En un centro de datos hay depósitos en tres sistemas: la reserva de agua contra incendios (rociadores, bocas de incendio e hidrantes), el agua de aportación y reposición de la refrigeración (torres o enfriadores evaporativos y adiabáticos) y, cada vez más, el aprovechamiento de pluviales y el agua tratada. Los grandes operadores imponen además el estándar de su aseguradora, en la práctica FM Global (hoja técnica DS 5-32), que se suma al RIPCI (RD 513/2017), a la UNE 23500 y al reglamento de seguridad contra incendios en establecimientos industriales.",
+      "El propietario (AWS, Microsoft, Google, Meta, QTS, Equinix, Data4) define el estándar y aprueba las desviaciones. La ingeniería de proyecto (AECOM, Arup, IDOM, JG Ingenieros, RED Engineering y otras) redacta la especificación: tipo de depósito, materiales, capacidad, normativa y fabricantes aceptados. Ese es el punto donde Stora debe quedar incluida, ya sea como fabricante nombrado o con una especificación de prestaciones que el acero vitrificado cumpla.",
+      "El contratista MEP o de protección contra incendios (Cobra, Mercury, CAP Ingelec, Jones Engineering, Itercon y los instaladores de PCI) compra el depósito y puede proponer alternativas equivalentes. El gestor de proyecto o de costes (Linesight, Turner & Townsend, JLL, Hill International, Mace) interviene en la ingeniería de valor y en la homologación de proveedores. La constructora general (Ferrovial, Dragados, Acciona) decide cuando contrata el paquete hidráulico completo.",
+      "Criterio comercial (supuesto propio): la vía más corta es doble y simultánea. Presentar a la ingeniería una ficha de especificación y una referencia comparable, y pedir al contratista MEP la inclusión en su lista de proveedores homologados, de modo que, cuando la especificación admita alternativas, Stora ya figure como equivalente aprobado."
+    ],
+    "normativa": [
+      [
+        "RIPCI (RD 513/2017)",
+        "Obliga a disponer de abastecimiento y reserva de agua suficientes para los sistemas de PCI."
+      ],
+      [
+        "UNE 23500",
+        "Cálculo y diseño de los sistemas de abastecimiento de agua contra incendios; versión de referencia de 2021."
+      ],
+      [
+        "Reglamento de seguridad contra incendios en establecimientos industriales",
+        "Aplicable a los centros de datos según su configuración."
+      ],
+      [
+        "FM Global DS 5-32",
+        "Reserva para mangueras de 250 gpm (unos 950 l/min) y autonomía de 60 minutos en centros de datos nuevos; exigida por los propietarios asegurados con FM."
+      ],
+      [
+        "NFPA 22",
+        "Referencia de depósitos de agua contra incendios en proyectos con estándar estadounidense."
+      ]
+    ]
+  },
+  "empresas": [
+    {
+      "id": "aecom",
+      "nombre": "AECOM",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño y dirección de obra",
+      "rol": "Redacta la documentación del PIGA de Microsoft en Aragón (AECOM Spain DCS S.L.U.) y dirige el diseño y la dirección de obra de Nostrum Evergreen (Badajoz).",
+      "dc": "Sí; equipo de centros de datos en España con responsable mecánico.",
+      "agua_pci": "Redacta los proyectos de urbanización y de edificación de los campus de Microsoft; cuenta con un responsable mecánico específico de centros de datos.",
+      "clientes": "Microsoft (Aragón), Nostrum Data Centers (Badajoz).",
+      "feria": "Ponente en DCD>Connect Madrid 2025 y en DCD Investment 2025; ponente en Grupo Vía (abril de 2026); encuentro MATCOAM y TATE (junio de 2026).",
+      "oficinas": "Madrid (AECOM Spain DCS S.L., C/ Alfonso XII, 62); red internacional del grupo, con Reino Unido y Alemania.",
+      "telefono": "915 487 790 (centralita según directorio; confirmar)",
+      "email": "",
+      "web": "aecom.com",
+      "motivo": "Es la ingeniería del cliente con mayor inversión en Aragón; entrar en su especificación abre los tres campus de Microsoft.",
+      "contactos": [
+        {
+          "nombre": "Adrián Rodríguez Sacramento",
+          "cargo": "Mechanical Lead Data Center",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Roberto Fernández",
+          "cargo": "Ingeniero industrial (COIIM 11.207), firmante del proyecto de edificación de Zaragoza del PIGA de Microsoft",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Documentación del PIGA «Región MSFT» (aragon.es)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "David Casero Migallón",
+          "cargo": "Ingeniero de Caminos (col. 17.050), autor de los proyectos de urbanización de La Muela y Villamayor de Gállego",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Documentación del PIGA «Región MSFT» (aragon.es)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Víctor Pérez",
+          "cargo": "Arquitecto (COAM 14.048), firmante de la memoria del PIGA de Microsoft",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Documentación del PIGA «Región MSFT» (aragon.es)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Ignacio Merello",
+          "cargo": "Program Design Manager y Senior Architect",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Grupo Vía (abril de 2026); informe MATCOAM y TATE",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Javier Camy",
+          "cargo": "Director general de AECOM en España (Managing Director Europe: España, Polonia e Italia)",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Web de AECOM; nota de prensa de Nostrum",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "arup",
+      "nombre": "Arup",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño y misión crítica",
+      "rol": "Ove Arup & Partners S.A.U. (Madrid) firma la documentación del PIGA de ampliación de AWS en Aragón (proyecto 303209-00).",
+      "dc": "Sí; división europea de centros de datos y tecnología.",
+      "agua_pci": "Sus ingenieros mecánicos de Madrid diseñan climatización, fontanería y protección contra incendios, incluidos centros de datos (oferta de empleo vigente).",
+      "clientes": "Amazon Web Services (Aragón).",
+      "feria": "Ponente en Grupo Vía (abril de 2026).",
+      "oficinas": "Madrid (sede en España, más de 460 profesionales); nueva oficina en Zaragoza desde octubre de 2026 para atender los centros de datos de Aragón; Dublín, Londres y Fráncfort.",
+      "telefono": "",
+      "email": "",
+      "web": "arup.com",
+      "motivo": "Ingeniería de AWS en Aragón y abre oficina en Zaragoza para este mercado; facturó 55,8 M€ en España en 2025 (+21 %).",
+      "contactos": [
+        {
+          "nombre": "Ramón Rodríguez",
+          "cargo": "Director general de Arup en España",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Prensa económica (resultados 2025)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Stephen Griffin",
+          "cargo": "Responsable de Data Centres and Technology en Europa",
+          "perfil": "B",
+          "ubicacion": "Dublín",
+          "origen": "Web de Arup",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Silja Reischmann",
+          "cargo": "Associate Director (centros de datos)",
+          "perfil": "B",
+          "ubicacion": "Fráncfort",
+          "origen": "Web de empleo de Arup",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "jg-ingenieros",
+      "nombre": "JG Ingenieros",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP",
+      "rol": "Ingeniería de instalaciones y dirección de obra de Merlin Edged en Getafe y Barcelona; más de 350 MW TI de experiencia.",
+      "dc": "Sí; los centros de datos suponen el 35-40 % de sus ventas.",
+      "agua_pci": "Diseña las instalaciones generales de los edificios (en Barcelona, Edged se reservó la parte crítica de electricidad y climatización); responsable MEP específico de centros de datos.",
+      "clientes": "Merlin Edged, Nabiax, Microsoft.",
+      "feria": "Ponente en DCW Madrid 2025 (Marta Serrano) y en DCD>Connect Madrid 2025 (Jaume Cera); Grupo Vía Zaragoza 2025.",
+      "oficinas": "Barcelona (sede), Madrid, Bilbao, Lleida, Málaga, Pamplona, San Sebastián, Sevilla, Tenerife, Valencia, Vigo y Zaragoza.",
+      "telefono": "Madrid +34 913 431 565 (Pº de la Habana, 200); Barcelona 936 004 900 (Comte d'Urgell, 240)",
+      "email": "barcelona@jgingenieros.es",
+      "web": "jgingenieros.es",
+      "motivo": "La ingeniería MEP española con más volumen en centros de datos; especifica directamente los sistemas hidráulicos.",
+      "contactos": [
+        {
+          "nombre": "Jaume Cera",
+          "cargo": "MEP Technical Director; Data Center MEP Leader",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025; web de JG",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Raúl Jovino Puig",
+          "cargo": "Director de proyectos MEP",
+          "perfil": "A",
+          "ubicacion": "Barcelona",
+          "origen": "Directorio de terceros",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Vicens García Carvajal",
+          "cargo": "Director corporativo de Edificación",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Grupo Vía Zaragoza 2025; LinkedIn",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Marta Serrano Pérez",
+          "cargo": "Arquitecta de dirección de proyectos; colíder del Comité de Data Centers de ASHRAE Spain",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Emilio González Gaya",
+          "cargo": "Director de desarrollo de negocio",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Web de JG",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "David López",
+          "cargo": "Director gerente",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "LinkedIn",
+          "linkedin": "es.linkedin.com/in/david-lopez-738916b7",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "pgi",
+      "nombre": "PGI Engineering & Consulting (PGI Data Centers)",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP y de centros de datos",
+      "rol": "Ingeniería con división propia de centros de datos; socio de Spain DC.",
+      "dc": "Sí; división PGI Data Centers.",
+      "agua_pci": "Diseño de instalaciones mecánicas y climatización de centros de datos (busca ingenieros mecánicos para Madrid).",
+      "clientes": "",
+      "feria": "Ponente en DCW Madrid 2026 (Aina Juliol, jueves 05/11, 12:00); DCD 2026; INMODATA 2026.",
+      "oficinas": "Barcelona y Madrid.",
+      "telefono": "",
+      "email": "",
+      "web": "pgiengineering.com",
+      "motivo": "Su presidenta interviene en la feria: oportunidad directa de reunión.",
+      "contactos": [
+        {
+          "nombre": "Xavier Domènech Cid",
+          "cargo": "Data Centers Managing Director",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Web de PGI (equipo)",
+          "linkedin": "linkedin.com/in/xavier-domènech-cid-05698463",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Aina Juliol",
+          "cargo": "Presidenta y consejera delegada",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2026",
+          "linkedin": "linkedin.com/in/aina-juliol-0a98746",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Miguel Pérez Márquez",
+          "cargo": "Director del departamento de Construction Management",
+          "perfil": "C",
+          "ubicacion": "Barcelona",
+          "origen": "LinkedIn",
+          "linkedin": "linkedin.com/in/miguelperezmarquez",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "idom",
+      "nombre": "IDOM",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño",
+      "rol": "Diseño de Nostrum GUA1 (Guadalajara, 40 MWe, 1.000 M€); servicios completos de consultoría, ingeniería y arquitectura de centros de datos.",
+      "dc": "Sí; dirección de centros de datos y enfoque modular para hiperescala.",
+      "agua_pci": "Incluye estudios de conservación de agua entre sus servicios; arquitectura, estructura e instalaciones del CPD1 de Cerdanyola.",
+      "clientes": "Nostrum Data Centers; Cerdanyola I; Docalia.",
+      "feria": "Ponente en DCD>Connect Madrid 2025 e INMODATA 2026.",
+      "oficinas": "Bilbao (sede), Madrid, Barcelona y unas treinta oficinas en el mundo.",
+      "telefono": "",
+      "email": "",
+      "web": "idom.com",
+      "motivo": "Diseña para Nostrum, el promotor con mayor cartera nueva fuera de Aragón.",
+      "contactos": [
+        {
+          "nombre": "Mikel Gotzon Lotina Pereda",
+          "cargo": "Director de Data Centers",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025; web de IDOM; INMODATA 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "deerns",
+      "nombre": "Deerns Spain",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP (building services)",
+      "rol": "Ingeniería de instalaciones neerlandesa con unidad de centros de datos en España.",
+      "dc": "Sí; unidad de data centres en España y división europea.",
+      "agua_pci": "Ingeniería de instalaciones (building services) de centros de datos.",
+      "clientes": "",
+      "feria": "Ponente en DCD>Connect Madrid 2025 (panel de diseño y construcción); evento propio «Diseño y construcción de Data Centres en la era de la IA».",
+      "oficinas": "España; Países Bajos y resto de Europa.",
+      "telefono": "",
+      "email": "",
+      "web": "deerns.com",
+      "motivo": "Equipo MEP dedicado a centros de datos en España, con director local.",
+      "contactos": [
+        {
+          "nombre": "Andrei Pawlaczyk",
+          "cargo": "Unit Director Data Centres (España)",
+          "perfil": "A",
+          "ubicacion": "España",
+          "origen": "Nota de prensa de Deerns (17/03/2025)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "David del Campo",
+          "cargo": "Project Engineer y BIM Manager (data centres)",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Web de Deerns (evento)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Raúl Peralta",
+          "cargo": "Lead Electrical Engineer (data centres)",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Web de Deerns (evento)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Ainara Gorriti",
+          "cargo": "Project Manager (data centres)",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Web de Deerns (evento)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Ricardo Fornari",
+          "cargo": "Division Director Data Centres",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Web de Deerns",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Christopher Leahy",
+          "cargo": "Sector Director Data Centres",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Web de Deerns",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Colin Wyatt",
+          "cargo": "Sector Director Data Centres",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "red-engineering",
+      "nombre": "RED Engineering (Tractebel, grupo ENGIE)",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP de centros de datos",
+      "rol": "Ingeniería especializada en centros de datos; desde Madrid diseña centros hiperescala de 170 MW con plantillas globales y adaptación local en Europa.",
+      "dc": "Sí; más de 200 centros de datos diseñados desde 2004.",
+      "agua_pci": "Ingeniería MEP completa; busca ingenieros mecánicos, eléctricos y de BMS para centros de datos en Madrid.",
+      "clientes": "",
+      "feria": "Ponente en DCD>Connect Madrid 2024 (Carlos Gallego Bernad); contactos habituales en Data Centre World.",
+      "oficinas": "Madrid (RED Engineering Tractebel Spain S.L.U., C/ Ribera del Loira, 28); Reino Unido, Irlanda y Bélgica.",
+      "telefono": "",
+      "email": "",
+      "web": "red-eng.com",
+      "motivo": "Su oficina de Madrid es un centro de diseño hiperescala para Europa: una especificación aceptada allí se replica en varios países.",
+      "contactos": [
+        {
+          "nombre": "Mike Swann",
+          "cargo": "Technical Director",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Contactos de RED para Data Centre World",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Carlos Gallego Bernad",
+          "cargo": "Ponente de diseño de centros de datos",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Hyphen, crónica de DCD>Connect Madrid 2024",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Phil Parkes",
+          "cargo": "Regional Director",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Contactos de RED para Data Centre World",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Peter Heppenstall",
+          "cargo": "Business Manager Data Centres (Tractebel)",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Web de Tractebel",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "black-white",
+      "nombre": "Black & White Engineering",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP de misión crítica",
+      "rol": "Ingeniería británica de misión crítica; abrió oficina en Madrid en 2026 para atender el crecimiento de centros de datos en el sur de Europa.",
+      "dc": "Sí; hiperescala y colocation en Europa, Oriente Medio, Australia y América.",
+      "agua_pci": "Equipo local de ingeniería civil, estructural, mecánica y eléctrica, además de gestión del diseño.",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Madrid; Reino Unido y otras sedes internacionales.",
+      "telefono": "",
+      "email": "",
+      "web": "bw-engineering.com",
+      "motivo": "Equipo recién implantado que está seleccionando proveedores y referencias locales.",
+      "contactos": [
+        {
+          "nombre": "Héctor Hernández Gutiérrez",
+          "cargo": "Area Director Spain; Uptime Institute Accredited Tier Designer",
+          "perfil": "A",
+          "ubicacion": "Madrid",
+          "origen": "Notas de prensa de la apertura de Madrid",
+          "linkedin": "linkedin.com/in/hectorhernandezgutierrez",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Marcos Uttley",
+          "cargo": "Regional Director Europe",
+          "perfil": "D",
+          "ubicacion": "Europa",
+          "origen": "Notas de prensa de la apertura de Madrid",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "cundall",
+      "nombre": "Cundall",
+      "prioridad": 1,
+      "categoria": "Ingeniería MEP",
+      "rol": "Ingeniería de instalaciones con sector de centros de datos y oficina en Madrid.",
+      "dc": "Sí; sector de centros de datos con responsable global.",
+      "agua_pci": "Ingeniería de instalaciones (building services) en Madrid; experiencia en CPD Tier IV.",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Madrid; Reino Unido y otras sedes.",
+      "telefono": "",
+      "email": "",
+      "web": "cundall.com",
+      "motivo": "Contacto de centros de datos en Madrid identificado en su propia web.",
+      "contactos": [
+        {
+          "nombre": "Ciarán Clancy",
+          "cargo": "Associate Director, Design Management (contacto de centros de datos en Madrid)",
+          "perfil": "A",
+          "ubicacion": "Madrid",
+          "origen": "Web de Cundall (sector data centres)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "César Paniagua Garrido",
+          "cargo": "Associate Director, building services Madrid",
+          "perfil": "A",
+          "ubicacion": "Madrid",
+          "origen": "Nota de prensa de Cundall",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Peter Liddle",
+          "cargo": "Partner; sector lead Data Centres",
+          "perfil": "B",
+          "ubicacion": "Europa",
+          "origen": "Web de Cundall",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "José Castilla",
+          "cargo": "Partner",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Web de Cundall",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "haskoning",
+      "nombre": "Haskoning",
+      "prioridad": 1,
+      "categoria": "Ingeniería de misión crítica",
+      "rol": "Unidad de negocio de instalaciones de misión crítica con equipo en España que atiende proyectos de España y Portugal.",
+      "dc": "Sí; Mission Critical Facilities.",
+      "agua_pci": "Grupo con larga trayectoria en ingeniería del agua; diseño y tramitación de centros de datos.",
+      "clientes": "",
+      "feria": "Participó en DCW Madrid 2025 (ponencia de diseño computacional).",
+      "oficinas": "Málaga (equipo de España); Países Bajos, Alemania y Polonia.",
+      "telefono": "",
+      "email": "",
+      "web": "haskoning.com",
+      "motivo": "Ya acude a la feria y combina misión crítica con ingeniería del agua.",
+      "contactos": [
+        {
+          "nombre": "Elena Sánchez Reyes",
+          "cargo": "Associate Director Mission Critical Facilities Spain",
+          "perfil": "A",
+          "ubicacion": "Málaga",
+          "origen": "Web de Haskoning (España)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Jorge Nogueira de Moura",
+          "cargo": "Director Business Unit Mission Critical Facilities (Alemania, Polonia y España)",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Web de Haskoning",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Javier Jiménez del Castillo",
+          "cargo": "Lead Architect y Lead Permitting Architect Spain",
+          "perfil": "B",
+          "ubicacion": "Málaga",
+          "origen": "Web de Haskoning",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Gabriel García",
+          "cargo": "Arquitecto, especialista en diseño computacional",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "aeon",
+      "nombre": "Aeon Ingeniería",
+      "prioridad": 1,
+      "categoria": "Ingeniería exclusiva de centros de datos",
+      "rol": "Ingeniería y arquitectura dedicada en exclusiva a centros de datos desde hace más de veinte años: diseño conceptual, ingeniería de detalle, dirección, puesta en marcha y certificación.",
+      "dc": "Sí; proyectos Tier III y Tier IV.",
+      "agua_pci": "Ingeniería de detalle completa de los sistemas del centro de datos.",
+      "clientes": "Entidades financieras, administración pública y grandes empresas.",
+      "feria": "Ponente en DCD>Connect Madrid 2025.",
+      "oficinas": "Madrid (C/ Corazón de María, 54).",
+      "telefono": "",
+      "email": "",
+      "web": "aeon.es",
+      "motivo": "Decisión técnica concentrada en el socio director.",
+      "contactos": [
+        {
+          "nombre": "Isidro Ramos",
+          "cargo": "Socio director; Uptime Institute Accredited Tier Designer",
+          "perfil": "A",
+          "ubicacion": "Madrid",
+          "origen": "Ponentes DCD>Connect Madrid 2025; perfil DCD",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "quark",
+      "nombre": "Quark (grupo Sener)",
+      "prioridad": 1,
+      "categoria": "Ingeniería y Construction Management de centros de datos",
+      "rol": "Consultora de ingeniería y arquitectura especializada en diseño y gestión de construcción de centros de datos.",
+      "dc": "Sí.",
+      "agua_pci": "Ingeniería de la infraestructura del centro de datos.",
+      "clientes": "",
+      "feria": "Ponente en DCD>Connect Madrid 2025 y 2026; Grupo Vía (septiembre de 2026).",
+      "oficinas": "",
+      "telefono": "",
+      "email": "",
+      "web": "",
+      "motivo": "Director de ingeniería muy presente en los foros del sector.",
+      "contactos": [
+        {
+          "nombre": "Francesc Galobardes",
+          "cargo": "Engineering Director",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025 y 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "jacobs",
+      "nombre": "Jacobs",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño y misión crítica",
+      "rol": "Planificación y primera fase de diseño del campus de Start Campus en Sines (1,2 GW).",
+      "dc": "Sí; más de 3.600 MW entregados.",
+      "agua_pci": "Ingeniería completa de campus.",
+      "clientes": "Start Campus.",
+      "feria": "",
+      "oficinas": "Madrid (Jacobs Engineering España S.L., Pº de la Castellana, 184); Reino Unido y Alemania.",
+      "telefono": "",
+      "email": "",
+      "web": "jacobs.com",
+      "motivo": "Diseñador del mayor campus de la península (Portugal).",
+      "contactos": []
+    },
+    {
+      "id": "wsp",
+      "nombre": "WSP Spain",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño",
+      "rol": "Equipo de centros de datos y misión crítica en Madrid; está reforzando el área con jefes de proyecto y responsables de diseño.",
+      "dc": "Sí; Data Centers y Mission Critical Facilities.",
+      "agua_pci": "Coordina equipos multidisciplinares de arquitectura, estructuras e instalaciones MEP.",
+      "clientes": "",
+      "feria": "Ponentes en DCD>Connect Madrid 2025.",
+      "oficinas": "Madrid; Reino Unido.",
+      "telefono": "",
+      "email": "",
+      "web": "wsp.com",
+      "motivo": "Equipo en crecimiento con responsable de diseño de centros de datos.",
+      "contactos": [
+        {
+          "nombre": "Begoña Arana Ferrándiz",
+          "cargo": "Program Leader",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Eva Fuertes González",
+          "cargo": "Lead Architect",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "David Higgins",
+          "cargo": "Data Centers Director EMEA y APAC",
+          "perfil": "B",
+          "ubicacion": "Reino Unido",
+          "origen": "Web de WSP",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Manuel Pérez",
+          "cargo": "Director general de WSP en España",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Prensa (2024)",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "aguilera",
+      "nombre": "Aguilera Ingenieros (grupo Cobra desde 2026)",
+      "prioridad": 1,
+      "categoria": "Ingeniería de diseño y dirección técnica",
+      "rol": "Diseña, construye y dirige técnicamente centros de datos; trabaja en hiperescala desde 2021. Cobra ha firmado su compra en septiembre de 2026.",
+      "dc": "Sí; según la empresa, diseñó el primer CPD Tier IV de Europa (2014).",
+      "agua_pci": "Proyectos completos de centros de datos e infraestructura crítica.",
+      "clientes": "Hiperescala (sin nombres públicos).",
+      "feria": "Ponente en Grupo Vía (Madrid, 2025 y abril de 2026).",
+      "oficinas": "Madrid.",
+      "telefono": "",
+      "email": "",
+      "web": "aguilera-ingenieros.com",
+      "motivo": "Ahora es la ingeniería interna del mayor contratista de centros de datos del país.",
+      "contactos": [
+        {
+          "nombre": "Alberto García Ramos",
+          "cargo": "Socio",
+          "perfil": "B",
+          "ubicacion": "Madrid",
+          "origen": "Grupo Vía (Madrid 2025); LinkedIn de la empresa",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "torrella",
+      "nombre": "Torrella Ingeniería y Arquitectura",
+      "prioridad": 1,
+      "categoria": "Arquitectura e ingeniería",
+      "rol": "Arquitectura, estructuras y dirección de obra de Merlin Edged en Barcelona y Getafe, y del campus de Lisboa.",
+      "dc": "Sí.",
+      "agua_pci": "En Merlin Edged las instalaciones las hizo JG Ingenieros; Torrella coordina el proyecto y tiene dirección de instalaciones propia.",
+      "clientes": "Merlin Properties y Edged.",
+      "feria": "Ponente en Grupo Vía (Barcelona y Madrid, 2025).",
+      "oficinas": "Barcelona y Madrid (Área Centro).",
+      "telefono": "",
+      "email": "",
+      "web": "torrellaingenieria.com",
+      "motivo": "Coordinador de proyecto en la cartera de Merlin.",
+      "contactos": [
+        {
+          "nombre": "Samuel Saiz Poyatos",
+          "cargo": "Director de instalaciones",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Directorio de terceros",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Luis Manuel Sagredo Santamaría",
+          "cargo": "Director técnico Área Centro",
+          "perfil": "B",
+          "ubicacion": "Madrid",
+          "origen": "Web de Torrella; Grupo Vía",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Goretti Torrella",
+          "cargo": "Consejera delegada",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Entrevista (agosto de 2026); LinkedIn",
+          "linkedin": "linkedin.com/in/torrellagoretti",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "lks-krean",
+      "nombre": "LKS Krean",
+      "prioridad": 1,
+      "categoria": "Ingeniería y arquitectura",
+      "rol": "Proyecto y dirección de obra del primer centro de datos de Merlin Edged en Arasur (Álava), campus ampliable a seis edificios y unos 300 MW.",
+      "dc": "Sí.",
+      "agua_pci": "Proyecto completo del edificio.",
+      "clientes": "Merlin Properties y Edged.",
+      "feria": "",
+      "oficinas": "Arrasate-Mondragón (Gipuzkoa).",
+      "telefono": "",
+      "email": "",
+      "web": "krean.com",
+      "motivo": "Candidata natural para la ampliación de Arasur (dos edificios de 150 MW en 2030-2031).",
+      "contactos": []
+    },
+    {
+      "id": "cottes",
+      "nombre": "Cottés (grupo Attlon)",
+      "prioridad": 1,
+      "categoria": "Ingeniería e instalación de protección contra incendios",
+      "rol": "Ingeniería, instalación y mantenimiento de sistemas de PCI y evacuación de humos, con área específica de centros de datos.",
+      "dc": "Sí; amplió su departamento de ingeniería de PCI para centros de datos.",
+      "agua_pci": "Especialista en PCI: ingeniería contra incendios, detección temprana y extinción.",
+      "clientes": "",
+      "feria": "INMODATA 2024 (ponencia sobre PCI en centros de datos).",
+      "oficinas": "Madrid (C/ Zorrilla, 21, según agregador); A Coruña; Valencia.",
+      "telefono": "",
+      "email": "",
+      "web": "cottesgroup.com",
+      "motivo": "Diseña y compra la reserva de agua de PCI en los proyectos que ejecuta.",
+      "contactos": [
+        {
+          "nombre": "Miguel Ángel Izquierdo",
+          "cargo": "Data Center Area Manager (después Senior Product Manager)",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Web de Cottés",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "ayesa",
+      "nombre": "Ayesa Ingeniería (con CORE)",
+      "prioridad": 1,
+      "categoria": "Ingeniería y gestión integrada de proyectos",
+      "rol": "Ingeniería que trabaja para AWS y Google Cloud; compró en 2025 CORE, gestora de proyectos con metodología Lean, para crecer en centros de datos.",
+      "dc": "Sí.",
+      "agua_pci": "Ingeniería y dirección integrada de proyectos.",
+      "clientes": "AWS, Google Cloud.",
+      "feria": "Expositor en Tech Show Madrid (Big Data & AI World, stand 3K76).",
+      "oficinas": "Sevilla (sede) y Madrid (CORE).",
+      "telefono": "",
+      "email": "",
+      "web": "ayesa.com",
+      "motivo": "Doble papel: ingeniería y gestión de proyecto para hiperescaladores.",
+      "contactos": [
+        {
+          "nombre": "Miguel Tapia",
+          "cargo": "CEO de CORE",
+          "perfil": "C",
+          "ubicacion": "Madrid",
+          "origen": "Nota de prensa de Ayesa",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Rosalío Alonso",
+          "cargo": "Director de operaciones de Ayesa",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Nota de prensa de Ayesa",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "cadisa-at",
+      "nombre": "CADISA Sisener y AT Ingeniería",
+      "prioridad": 1,
+      "categoria": "Ingenierías aragonesas",
+      "rol": "Figuran como redactoras de volúmenes del PIGA del campus de ACS y Benbros en La Puebla de Alfindén.",
+      "dc": "Sí (proyecto de ACS).",
+      "agua_pci": "Proyectos de infraestructura del campus.",
+      "clientes": "ACS (ACS DC Infra La Puebla).",
+      "feria": "",
+      "oficinas": "Aragón.",
+      "telefono": "",
+      "email": "",
+      "web": "",
+      "motivo": "Ingeniería local con proyectos en curso en Zaragoza.",
+      "contactos": [
+        {
+          "nombre": "Juan Manuel Bernad Morcate",
+          "cargo": "Ingeniero de Caminos, firmante del PIGA de La Puebla de Alfindén",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Documentación del PIGA de ACS (aragon.es)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "idp",
+      "nombre": "IDP Ingeniería",
+      "prioridad": 1,
+      "categoria": "Ingeniería de instalaciones",
+      "rol": "Proyectos de centros de datos con PCI, climatización de precisión y estudios CFD; proyecto hiperescala de 38,4 MW (12 salas).",
+      "dc": "Sí.",
+      "agua_pci": "Incluye expresamente la PCI en sus proyectos.",
+      "clientes": "Centros de datos en San Fernando de Henares.",
+      "feria": "",
+      "oficinas": "",
+      "telefono": "",
+      "email": "",
+      "web": "idp.es",
+      "motivo": "Proyecta la PCI de centros de datos.",
+      "contactos": []
+    },
+    {
+      "id": "lmsi",
+      "nombre": "LMSI Engineering",
+      "prioridad": 1,
+      "categoria": "Ingeniería (Portugal)",
+      "rol": "Ingeniería portuguesa del ciclo de vida del edificio con actividad en centros de datos.",
+      "dc": "Sí.",
+      "agua_pci": "",
+      "clientes": "",
+      "feria": "Expositor y ponente en DCW Madrid 2025 (DCW Keynote Theatre).",
+      "oficinas": "Portugal.",
+      "telefono": "",
+      "email": "",
+      "web": "",
+      "motivo": "Vía de entrada al mercado portugués.",
+      "contactos": [
+        {
+          "nombre": "Pedro Malheiro",
+          "cargo": "CEO",
+          "perfil": "D",
+          "ubicacion": "Portugal",
+          "origen": "Programa DCW Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "dconcept",
+      "nombre": "DConcept",
+      "prioridad": 1,
+      "categoria": "Ingeniería y arquitectura de centros de datos",
+      "rol": "Firma de diseño de centros de datos; su cofundador dirige el área de ingeniería.",
+      "dc": "Sí.",
+      "agua_pci": "",
+      "clientes": "",
+      "feria": "Expositor en DCW Madrid (stand 5A02) y ponente en 2025.",
+      "oficinas": "Madrid.",
+      "telefono": "",
+      "email": "",
+      "web": "",
+      "motivo": "Expositor de la propia feria: visita directa al stand.",
+      "contactos": [
+        {
+          "nombre": "María Barrero",
+          "cargo": "Cofundadora; directora de arquitectura y desarrollo de negocio",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2025",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "cobra",
+      "nombre": "Cobra (grupo Vinci)",
+      "prioridad": 2,
+      "categoria": "Contratista EPC y MEP",
+      "rol": "Uno de los mayores constructores de centros de datos de Europa; ofrece 10.000 M€ de capacidad; 1.200 M€ adjudicados en el primer semestre de 2026.",
+      "dc": "Sí; compró Cad&Lan (2025) y Aguilera Ingenieros (2026).",
+      "agua_pci": "Contratista integral de obra e instalaciones de centros de datos.",
+      "clientes": "Data4 (Alcobendas 20 MW y San Agustín de Guadalix 10 MW), NTT (Las Rozas 10 MW).",
+      "feria": "Expositor en DCW Madrid 2026.",
+      "oficinas": "Madrid; Portugal y resto de Europa.",
+      "telefono": "",
+      "email": "",
+      "web": "grupocobra.com",
+      "motivo": "Compra los depósitos en sus proyectos y negocia contratos de varios miles de millones en España y Portugal.",
+      "contactos": [
+        {
+          "nombre": "José María Castillo",
+          "cargo": "Consejero delegado",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Prensa económica (septiembre de 2026)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "mercury",
+      "nombre": "Mercury Engineering",
+      "prioridad": 2,
+      "categoria": "Contratista MEP",
+      "rol": "Contratista irlandés de centros de datos; obras para Equinix en Madrid (MD2.4, MD3) y Barcelona (BA2); proyectos activos en Madrid y Zaragoza.",
+      "dc": "Sí.",
+      "agua_pci": "Su filial española incluye servicios mecánicos, eléctricos y de protección contra incendios.",
+      "clientes": "Equinix.",
+      "feria": "",
+      "oficinas": "Alcobendas (Madrid); sede en Irlanda; obras recientes en Fráncfort y París.",
+      "telefono": "",
+      "email": "",
+      "web": "mercuryeng.com",
+      "motivo": "Contratista MEP con PCI propia y cartera activa en Aragón.",
+      "contactos": [
+        {
+          "nombre": "Alan Clinton",
+          "cargo": "Managing Director, Data Centres & Building Services (grupo)",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Web de Mercury",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "cap-ingelec",
+      "nombre": "CAP Ingelec (CAP DC España)",
+      "prioridad": 2,
+      "categoria": "Contratista EPC llave en mano",
+      "rol": "Contratista llave en mano del tercer edificio (DC03) del campus de Data4 en Alcobendas; busca directores de proyecto para Madrid y Zaragoza.",
+      "dc": "Sí.",
+      "agua_pci": "Edificación e infraestructura técnica completa.",
+      "clientes": "Data4.",
+      "feria": "",
+      "oficinas": "Madrid; obra en Zaragoza; sede del grupo en Francia.",
+      "telefono": "",
+      "email": "",
+      "web": "capingelec.com",
+      "motivo": "Compra la infraestructura técnica completa en llave en mano.",
+      "contactos": [
+        {
+          "nombre": "Antonio Ríos Suanzes",
+          "cargo": "Director general de CAP DC España",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Web de CAP Ingelec",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Alberto Torres Caballero",
+          "cargo": "Director de proyecto",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Directorio sectorial",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Jorge Ceinos Moreno",
+          "cargo": "Business Development Manager, área de centros de datos",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Entrevista en DCD",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "itercon",
+      "nombre": "Itercon (Grupo Cyclus)",
+      "prioridad": 2,
+      "categoria": "Diseño y construcción",
+      "rol": "Construyó fases de AWS en Villanueva de Gállego y Huesca (2020-2024); renovación del centro de datos de la ESA; NxN en Valencia.",
+      "dc": "Sí; proyectos en España, Portugal, Colombia, Alemania y Rumanía.",
+      "agua_pci": "Edificio e instalaciones de las salas.",
+      "clientes": "AWS, ESA, NxN.",
+      "feria": "Ponente en DCW Madrid; DCD 2026; Grupo Vía (septiembre de 2026).",
+      "oficinas": "Comunidad Valenciana (Elche) y Madrid.",
+      "telefono": "",
+      "email": "",
+      "web": "itercon.com",
+      "motivo": "Contratista recurrente de AWS en Aragón.",
+      "contactos": [
+        {
+          "nombre": "Julio Lavado Rodríguez",
+          "cargo": "Director de proyectos de centros de datos",
+          "perfil": "B",
+          "ubicacion": "Elche",
+          "origen": "Directorio de terceros; DCD 2026",
+          "linkedin": "linkedin.com/in/juliolavado",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Juan Ballester",
+          "cargo": "Data Center Operational Manager",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Eduardo Baeza García",
+          "cargo": "Project Manager de centros de datos",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Directorio de terceros",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Alejandro Gallego",
+          "cargo": "Director general",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Prensa (NxN, febrero de 2026)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "jones",
+      "nombre": "Jones Engineering Group",
+      "prioridad": 2,
+      "categoria": "Contratista MEP",
+      "rol": "Contratista multidisciplinar de instalaciones; unas 1.800 personas en proyectos de centros de datos y más de 1.550 MW; socio de Spain DC.",
+      "dc": "Sí.",
+      "agua_pci": "Ejecuta electricidad, mecánica y protección contra incendios con medios propios.",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Valencia (C/ Poeta Querol, 9, 1.º 1.ª); Irlanda, Reino Unido y países nórdicos.",
+      "telefono": "",
+      "email": "",
+      "web": "joneseng.com",
+      "motivo": "Instala PCI propia en centros de datos.",
+      "contactos": [
+        {
+          "nombre": "Juan M. Perpiñá",
+          "cargo": "Responsable de la oficina de España",
+          "perfil": "D",
+          "ubicacion": "Valencia",
+          "origen": "Directorio sectorial",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "carbonell-figueras",
+      "nombre": "Carbonell Figueras",
+      "prioridad": 2,
+      "categoria": "Contratista general e instalaciones",
+      "rol": "Contratista general internacional de centros de datos con unidad específica; miembro de Spain DC.",
+      "dc": "Sí; Lurín (Perú, 20 MW).",
+      "agua_pci": "Gestión MEP de proyectos de centros de datos.",
+      "clientes": "Merlin Edged (ficha de Arasur).",
+      "feria": "",
+      "oficinas": "Tarragona (C/ Mallorca, 22) y Madrid.",
+      "telefono": "",
+      "email": "weare@carbonellfigueras.com",
+      "web": "carbonellfigueras.com",
+      "motivo": "Jefe de proyecto MEP específico de centros de datos.",
+      "contactos": [
+        {
+          "nombre": "Andrés Campos Alvarado",
+          "cargo": "Senior Project Manager MEP, Data Center",
+          "perfil": "A",
+          "ubicacion": "",
+          "origen": "Directorio de terceros",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Alfonso Idoate",
+          "cargo": "Director general",
+          "perfil": "D",
+          "ubicacion": "Tarragona",
+          "origen": "Directorio de terceros",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "pefipresa",
+      "nombre": "Pefipresa (grupo Minimax)",
+      "prioridad": 2,
+      "categoria": "Instalador de protección contra incendios",
+      "rol": "Instalador y mantenedor de PCI con más de 50 años en España; sistemas de extinción para salas de racks y CPD desarrollados con Minimax.",
+      "dc": "Sí (salas técnicas y CPD).",
+      "agua_pci": "Instalador de sistemas de PCI, incluidos los de agua.",
+      "clientes": "",
+      "feria": "Jornada de Cepreven sobre PCI en centros de datos.",
+      "oficinas": "Madrid y delegaciones en España.",
+      "telefono": "",
+      "email": "",
+      "web": "pefipresa.com",
+      "motivo": "Comprador directo de depósitos de PCI.",
+      "contactos": []
+    },
+    {
+      "id": "jll",
+      "nombre": "JLL",
+      "prioridad": 3,
+      "categoria": "Gestión de proyectos y asesoría",
+      "rol": "Asesor de la cartera de Nostrum Data Centers (seis campus, 500 MW TI más 300 MW); responsable de proyectos de centros de datos para el sur de Europa en Madrid.",
+      "dc": "Sí.",
+      "agua_pci": "Gestión de proyecto y procurement.",
+      "clientes": "Nostrum Data Centers.",
+      "feria": "Ponentes en DCW Madrid 2026 (jueves 05/11, 11:30).",
+      "oficinas": "Madrid y Barcelona.",
+      "telefono": "",
+      "email": "",
+      "web": "jll.com",
+      "motivo": "Interviene en la selección de proveedores de la cartera de Nostrum.",
+      "contactos": [
+        {
+          "nombre": "Luigi Passariello",
+          "cargo": "Data Centre Projects Lead, sur de Europa",
+          "perfil": "C",
+          "ubicacion": "Madrid",
+          "origen": "Nota de prensa de JLL (2023)",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        },
+        {
+          "nombre": "Francisco Vicente Minguela",
+          "cargo": "Head of Data Centers Spain",
+          "perfil": "B",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Alberto Martull",
+          "cargo": "Director de Corporate Capital Markets y Data Centers",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "linesight",
+      "nombre": "Linesight",
+      "prioridad": 3,
+      "categoria": "Gestión de proyectos y costes",
+      "rol": "Gestión de un campus de varios edificios en Madrid (cliente confidencial); busca jefes de proyecto y planificadores de centros de datos en Madrid.",
+      "dc": "Sí; especialista en programas hiperescala.",
+      "agua_pci": "Procurement, costes e ingeniería de valor.",
+      "clientes": "Confidencial (campus hiperescala en Madrid).",
+      "feria": "",
+      "oficinas": "Madrid (Torre Europa); Irlanda y Reino Unido.",
+      "telefono": "",
+      "email": "",
+      "web": "linesight.com",
+      "motivo": "Gestiona compras de un hiperescalador en Madrid.",
+      "contactos": [
+        {
+          "nombre": "Paul Brady",
+          "cargo": "Senior Director Europe (España, Madrid)",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Web de Linesight (contacto Madrid)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Keith Greenwood",
+          "cargo": "Project Director",
+          "perfil": "C",
+          "ubicacion": "Madrid",
+          "origen": "Web de Linesight (contacto Madrid)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Robert Farrell",
+          "cargo": "Director of Risk and Scheduling, Europe",
+          "perfil": "C",
+          "ubicacion": "Madrid",
+          "origen": "LinkedIn",
+          "linkedin": "linkedin.com/in/robert-farrell-8b38a4b1",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "turner-townsend",
+      "nombre": "Turner & Townsend",
+      "prioridad": 3,
+      "categoria": "Gestión de proyectos y costes",
+      "rol": "En España desde 2010 con especialidad en centros de datos; busca MEP Design Manager, Cost Manager y Lead Scheduler para centros de datos en Madrid.",
+      "dc": "Sí.",
+      "agua_pci": "Gestión del diseño MEP y de costes.",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Madrid (Pº de la Castellana); Reino Unido y resto de Europa.",
+      "telefono": "",
+      "email": "",
+      "web": "turnerandtownsend.com",
+      "motivo": "Su figura de MEP Design Manager revisa especificaciones y alternativas.",
+      "contactos": [
+        {
+          "nombre": "Lisa Duignan",
+          "cargo": "Data Centres Sector Lead, Europe",
+          "perfil": "C",
+          "ubicacion": "Europa",
+          "origen": "Web de Turner & Townsend",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Niall O'Reilly",
+          "cargo": "Datacenter Lead for Europe",
+          "perfil": "C",
+          "ubicacion": "Europa",
+          "origen": "Prensa sectorial",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Gerald Madondo",
+          "cargo": "Country Director",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Web de Turner & Townsend",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "hill",
+      "nombre": "Hill International Spain",
+      "prioridad": 3,
+      "categoria": "Gestión de proyectos",
+      "rol": "Gestión de proyectos con dirección específica de centros de datos en España.",
+      "dc": "Sí.",
+      "agua_pci": "Gestión de proyecto y supervisión de compras.",
+      "clientes": "",
+      "feria": "Ponente en DCW Madrid 2025; Congreso Spain DC.",
+      "oficinas": "Madrid (C/ Miguel Ángel, 11, 1.ª planta).",
+      "telefono": "",
+      "email": "",
+      "web": "hillintl.com",
+      "motivo": "Director de operaciones de centros de datos identificado y asistencia habitual a ferias.",
+      "contactos": [
+        {
+          "nombre": "Víctor Krzyżaniak Martínez",
+          "cargo": "Director de operaciones de Data Centers",
+          "perfil": "C",
+          "ubicacion": "Madrid",
+          "origen": "LinkedIn de la empresa; directorio de Hill",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "Alex Ramos",
+          "cargo": "Vicepresidente y director general España; responsable del sector de centros de datos en Europa",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Programa DCW Madrid 2025; LinkedIn",
+          "linkedin": "linkedin.com/in/aramosthomson",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "mace",
+      "nombre": "Mace",
+      "prioridad": 3,
+      "categoria": "Gestión de proyectos y construcción",
+      "rol": "Busca un Senior Project Manager para un gran proyecto de centro de datos en España (septiembre de 2026).",
+      "dc": "Sí; división de centros de datos en Europa.",
+      "agua_pci": "Gestión de entrega, desde preconstrucción hasta cierre.",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Madrid; Reino Unido.",
+      "telefono": "",
+      "email": "",
+      "web": "macegroup.com",
+      "motivo": "Proyecto nuevo en España en fase de lanzamiento.",
+      "contactos": [
+        {
+          "nombre": "Paul Connolly",
+          "cargo": "Responsable de la división de centros de datos",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Prensa sectorial (2026)",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "cbre",
+      "nombre": "CBRE",
+      "prioridad": 3,
+      "categoria": "Asesoría y gestión de proyectos",
+      "rol": "Data Center Solutions para España y Portugal; socio de AQ Compute en Barcelona (50 MW).",
+      "dc": "Sí.",
+      "agua_pci": "Gestión de proyecto y facility management.",
+      "clientes": "AQ Compute.",
+      "feria": "Ponente en DCW Madrid 2026 (jueves 05/11, 10:30).",
+      "oficinas": "Madrid y Barcelona.",
+      "telefono": "",
+      "email": "",
+      "web": "cbre.es",
+      "motivo": "Contacto en la feria con visión de toda la cartera de promotores.",
+      "contactos": [
+        {
+          "nombre": "Elliot Zounon",
+          "cargo": "Director Data Center Solutions Iberia",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Programa DCW Madrid 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "arcadis",
+      "nombre": "Arcadis",
+      "prioridad": 3,
+      "categoria": "Diseño, gestión de proyectos y costes",
+      "rol": "Más de 280 proyectos de centros de datos ganados en un año en el mundo; responsable global de soluciones de centros de datos presente en Madrid.",
+      "dc": "Sí.",
+      "agua_pci": "Gestión de proyecto y costes; diseño.",
+      "clientes": "",
+      "feria": "Ponente en DCD>Connect Madrid 2025 y 2026; Grupo Vía (abril de 2026).",
+      "oficinas": "Madrid (C/ Orense).",
+      "telefono": "",
+      "email": "",
+      "web": "arcadis.com",
+      "motivo": "",
+      "contactos": [
+        {
+          "nombre": "Christian Goldsmith",
+          "cargo": "Data Centers Global Solutions Lead",
+          "perfil": "C",
+          "ubicacion": "",
+          "origen": "Ponentes DCD>Connect Madrid 2025 y 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "ferrovial",
+      "nombre": "Ferrovial Construcción (con Powernet)",
+      "prioridad": 4,
+      "categoria": "Constructora con división de centros de datos",
+      "rol": "Seleccionada por Microsoft para construir un centro de datos en Madrid; ha construido para Microsoft y Telefónica; promotora de MAD01 (Alcobendas). Compró Powernet (diseño, operación y mantenimiento de centros de datos) en octubre de 2025.",
+      "dc": "Sí; dirección de centros de datos en España.",
+      "agua_pci": "Contrata los paquetes de instalaciones.",
+      "clientes": "Microsoft, Telefónica.",
+      "feria": "Ponente en DCW Madrid 2026 (jueves 05/11, 13:30).",
+      "oficinas": "Madrid; Powernet en Madrid, Barcelona y A Coruña.",
+      "telefono": "",
+      "email": "",
+      "web": "ferrovial.com",
+      "motivo": "Constructora de Microsoft con ponente en la feria.",
+      "contactos": [
+        {
+          "nombre": "Rafael Hicar Armendariz",
+          "cargo": "Head of Data Centers Spain",
+          "perfil": "B",
+          "ubicacion": "Madrid",
+          "origen": "Programa DCW Madrid 2026",
+          "linkedin": "",
+          "certeza": "Verificado"
+        },
+        {
+          "nombre": "José Gabriel Lao",
+          "cargo": "Director general de Powernet",
+          "perfil": "D",
+          "ubicacion": "Madrid",
+          "origen": "Nota de prensa de Ferrovial",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "dragados",
+      "nombre": "Dragados (grupo ACS)",
+      "prioridad": 4,
+      "categoria": "Constructora con actividad en centros de datos",
+      "rol": "Obra civil del campus de AWS junto a Empresarium (530 M€); campus de Alcalá de Henares de ACS Digital & Energy (más de 100 MW TI); compró Fleischmann (Chile).",
+      "dc": "Sí.",
+      "agua_pci": "Obra civil del campus de AWS en Zaragoza, cuyo proyecto incluye reservorios de agua y caseta de bombeo de PCI.",
+      "clientes": "AWS; ACS Digital & Energy.",
+      "feria": "",
+      "oficinas": "Madrid; Turner y Dornan (grupo ACS) en Europa.",
+      "telefono": "",
+      "email": "",
+      "web": "dragados.com",
+      "motivo": "Ejecuta la obra civil de un campus de AWS con reservorios de agua previstos.",
+      "contactos": [
+        {
+          "nombre": "Santiago García Salvador",
+          "cargo": "Consejero delegado",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Nota de prensa de Dragados",
+          "linkedin": "",
+          "certeza": "Verificado"
+        }
+      ]
+    },
+    {
+      "id": "acciona",
+      "nombre": "Acciona",
+      "prioridad": 4,
+      "categoria": "Constructora y promotora",
+      "rol": "Acciona Data Centers (120 MW de iniciativas, 60 MW en desarrollo).",
+      "dc": "Sí (promoción).",
+      "agua_pci": "",
+      "clientes": "",
+      "feria": "",
+      "oficinas": "Madrid.",
+      "telefono": "",
+      "email": "",
+      "web": "acciona.com",
+      "motivo": "",
+      "contactos": [
+        {
+          "nombre": "José Damián Sáez",
+          "cargo": "Director de Construcción España y Portugal",
+          "perfil": "D",
+          "ubicacion": "",
+          "origen": "Prensa económica (2025)",
+          "linkedin": "",
+          "certeza": "Por confirmar"
+        }
+      ]
+    }
+  ],
+  "operadores": [
+    [
+      "Amazon Web Services",
+      "Alan Abela",
+      "Regional Engineering Manager (Italia y Suiza)",
+      "Ponente DCW Madrid 2026"
+    ],
+    [
+      "Amazon Web Services",
+      "David Blázquez",
+      "Relaciones institucionales España y Portugal",
+      "Prensa"
+    ],
+    [
+      "Microsoft",
+      "Andrea Sánchez-Horneros",
+      "Principal, Data Center Development",
+      "DCD 2026"
+    ],
+    [
+      "Google",
+      "Paul Henry",
+      "Data center construction and delivery",
+      "DCD 2026"
+    ],
+    [
+      "Data4",
+      "Thomas de Colle",
+      "Head of Design & Construction, South Europe",
+      "DCD 2024 y 2026"
+    ],
+    [
+      "Data4",
+      "Juan Carlos Vaamonde",
+      "Group Operations Director y Country Manager Spain",
+      "Web de CAP Ingelec"
+    ],
+    [
+      "Equinix",
+      "Nerea Costas",
+      "Senior Construction Manager",
+      "DCD 2026"
+    ],
+    [
+      "Nabiax",
+      "Antonio Tabasco",
+      "Head of Engineering & Construction",
+      "DCD 2026"
+    ],
+    [
+      "Iron Mountain",
+      "Borja Sánchez",
+      "Construction Manager EMEA (campus de Madrid)",
+      "DCW Madrid 2025"
+    ],
+    [
+      "Start Campus",
+      "Alberto Petermann",
+      "Head of Design & Delivery",
+      "DCW Madrid 2025; DCD 2025"
+    ],
+    [
+      "Global Switch",
+      "Marcos Portela",
+      "Project Manager",
+      "DCD 2025"
+    ],
+    [
+      "Global Switch",
+      "Pedro Muñoz",
+      "Operations Director Madrid",
+      "DCW Madrid 2025"
+    ],
+    [
+      "CyrusOne",
+      "Amparo García Puente",
+      "Senior Development Manager",
+      "DCW Madrid 2025"
+    ],
+    [
+      "Prime Data Centers",
+      "Michael Wall",
+      "Desarrollo y construcción, Europa",
+      "Directorio sectorial"
+    ]
+  ],
+  "plan": [
+    "Antes de la feria (semana del 12/10): enriquecer en la interfaz de Apollo los {n_ab_p1} contactos de perfil A y B de las empresas de prioridad 1 y 2 (en la hoja «Para Apollo», valores P1-A, P1-B, P2-A y P2-B de la columna «Prioridad Stora»), con revelado de correo y de teléfono directo; quedan 180 créditos de correo y 160 de teléfono hasta el 21/10.",
+    "Semana del 19/10: primer correo a las ingenierías de prioridad 1 con la ficha técnica y propuesta de reunión en la feria; mensaje por LinkedIn a quienes no tengan correo.",
+    "Semana del 26/10: llamada de seguimiento a las centralitas disponibles (JG Ingenieros, AECOM) y cierre de agenda para el 04 y 05/11.",
+    "En la feria: auditorio Design, Build & Investment el jueves 05/11 por la mañana; stand de Cobra; sesiones de AWS y Baltimore Aircoil.",
+    "Después de la feria: solicitar a Cobra, Mercury, CAP Ingelec, Jones Engineering e Itercon la inclusión de Stora en su lista de proveedores homologados de depósitos de PCI y agua.",
+    "Seguimiento documental: la documentación de los PIGA (aragon.es) y de los procedimientos ambientales identifica a las ingenierías redactoras; conviene revisarla cada vez que se publique un proyecto nuevo (Rhodes, SAMCA, Azora, Box2Bit)."
+  ],
+  "metodologia": [
+    "Periodo de consulta: hasta el 08/10/2026. Se han consultado el programa y las fichas de expositores de techshowmadrid.es a través del buscador (el acceso directo a la web está restringido en el entorno de trabajo), las agendas de DCD>Connect Madrid 2024, 2025 y 2026, las jornadas de Grupo Vía, la documentación de los planes de interés general publicada por el Gobierno de Aragón, notas de prensa de las empresas y prensa económica y sectorial.",
+    "Apollo: la cuenta está en el plan gratuito, que no permite la búsqueda de personas ni el enriquecimiento por API. No se ha consumido ningún crédito. Los créditos disponibles (180 de correo y 160 de teléfono directo, hasta el 21/10) pueden usarse desde la interfaz web de Apollo importando la hoja «Para Apollo».",
+    "Grado de certeza de cada contacto: «Verificado» cuando el nombre y el cargo constan en un documento oficial, en el programa de un evento, en la web de la empresa o en una nota de prensa; «Por confirmar» cuando proceden de directorios de terceros, de LinkedIn o de fuentes con más de un año. Las valoraciones de interés comercial son criterio propio.",
+    "No se incluyen correos personales ni teléfonos que no consten en fuentes públicas. Los correos generales se mantienen hasta disponer de uno personal.",
+    "Perfiles de contacto: A, ingeniería MEP, mecánica, PCI o diseño de centros de datos (prioritario); B, responsable de centros de datos o de misión crítica; C, gestión de proyecto, compras o procurement; D, dirección general o de oficina.",
+    "El capítulo 4 describe la práctica habitual del sector en la elección de depósitos; es un análisis propio, no procede de un documento concreto."
+  ],
+  "fuentes": [
+    [
+      "Tech Show Madrid: Data Centre World Madrid",
+      "https://www.techshowmadrid.es/en/data-centre-world"
+    ],
+    [
+      "Programa de Data Centre World Madrid",
+      "https://www.techshowmadrid.es/programa-data-centre-world"
+    ],
+    [
+      "Listado de expositores de Tech Show Madrid",
+      "https://www.techshowmadrid.es/expositores"
+    ],
+    [
+      "Ponencia de Haskoning en DCW Madrid",
+      "https://www.techshowmadrid.es/en/tech-show-madrid/ponencia-haskoning"
+    ],
+    [
+      "Ponencia de Itercon en DCW Madrid",
+      "https://www.techshowmadrid.es/en/tech-show-madrid/ponencia-itercon-grupo-cyclus"
+    ],
+    [
+      "Baxtel: Data Centre World Madrid 2026",
+      "https://baxtel.com/events/data-centre-world-madrid-2026"
+    ],
+    [
+      "Ponentes de DCD>Connect Madrid 2025",
+      "https://www.datacenterdynamics.com/en/dcdconnect-live/madrid/2025/speakers/"
+    ],
+    [
+      "Agenda de DCD>Connect South Europe 2026",
+      "https://www.datacenterdynamics.com/es/dcd-connect-live/south-europe/2026/agenda/"
+    ],
+    [
+      "Grupo Vía: Construcción de Data Centers, Madrid 2026",
+      "https://grupovia.net/eventos/data-center/madrid/2026/construccion-data-centers-madrid/"
+    ],
+    [
+      "Commtech: crónica Grupo Vía, septiembre de 2026",
+      "https://commtech.es/2026/09/28/grupo-via-construccion-de-data-centers-madrid/"
+    ],
+    [
+      "Gobierno de Aragón: PIGA Región MSFT (Microsoft)",
+      "https://www.aragon.es/-/piga-microsoft"
+    ],
+    [
+      "Gobierno de Aragón: PIGA Expansión de la Región AWS",
+      "https://www.aragon.es/-/expansion-aws-aragon"
+    ],
+    [
+      "PIGA AWS, tomo VIII, plan de etapas",
+      "https://www.aragon.es/documents/d/guest/tomo-viii-plan-de-etapas-pdf"
+    ],
+    [
+      "Gobierno de Aragón: Proyecto Rhodes",
+      "https://www.aragon.es/-/proyecto-rhodes"
+    ],
+    [
+      "Gobierno de Aragón: PIGA ACS (modificación)",
+      "https://www.aragon.es/-/piga-acs-modificacion%201"
+    ],
+    [
+      "Hoy Aragón: treinta proyectos de centros de datos en juego",
+      "https://www.hoyaragon.es/aragon/proyectos-centros-datos-aragon-decreto-estatal/20260830135051143995.html"
+    ],
+    [
+      "El Español: 6.000 millones en Aragón a la espera de obras",
+      "https://www.elespanol.com/aragon/actualidad/20261005/cerca-millones-invertidos-centros-datos-aragon-esperan-rampa-salida-obras/1003744406849_0.html"
+    ],
+    [
+      "El Español: Blackstone tiene vía libre en Calatorao",
+      "https://www.elespanol.com/aragon/actualidad/20260930/blackstone-via-libre-construir-centro-datos-calatorao-invertira-millones/1003744402781_0.html"
+    ],
+    [
+      "DCD: Itercon colabora en la ampliación de AWS en Aragón",
+      "https://www.datacenterdynamics.com/es/noticias/itercon-colabora-en-el-proyecto-de-ampliacion-de-los-data-centers-de-aws-en-aragon/"
+    ],
+    [
+      "El Economista: el nuevo centro de AWS en Zaragoza",
+      "https://www.eleconomista.es/tecnologia/noticias/13959900/06/26/el-nuevo-centro-de-datos-de-amazon-web-services-en-zaragoza-empleara-a-150-personas.html"
+    ],
+    [
+      "JG Ingenieros: Getafe Data Center",
+      "https://www.jgingenieros.es/en/portfolio/getafe-data-center/"
+    ],
+    [
+      "Torrella: Data Center Merlin",
+      "https://www.torrellaingenieria.com/data-center-merlin/"
+    ],
+    [
+      "Krean: centro de datos Merlin Edged en Arasur",
+      "https://www.krean.com/en/projects/data-processing-centre-merlin-properties-edged"
+    ],
+    [
+      "AECOM: nombramiento para el centro de datos de Nostrum",
+      "https://aecom.com/press-releases/aecom-appointed-to-deliver-nostrum-groups-data-centre-in-southwest-spain/"
+    ],
+    [
+      "IDOM: sector de centros de datos",
+      "https://idom.com/en/sector/data-centers"
+    ],
+    [
+      "Arup facturó 55,8 M€ en España y abrirá oficina en Zaragoza",
+      "https://www.bolsamania.com/noticias/empresas/economia--arup-facturo-558-millones-de-euros-en-espana-en-2025-un-21-mas-y-abrira-una-nueva-oficina-en-zaragoza--23038928.html"
+    ],
+    [
+      "Deerns: nombramientos en centros de datos",
+      "https://www.deerns.com/news/deerns-announces-key-appointments-for-data-centres-and-real-estate/"
+    ],
+    [
+      "Deerns: diseño y construcción en la era de la IA",
+      "https://www.deerns.com/es/events/diseno-y-construccion-de-data-centres-en-la-era-de-la-ia/"
+    ],
+    [
+      "Black & White Engineering abre oficina en Madrid",
+      "https://datacentre.solutions/news/22879-black-white-engineering-opens-madrid-office-to-expand-european-data-centre-business"
+    ],
+    [
+      "Cundall: sector de centros de datos",
+      "https://www.cundall.com/sectors/data-centres"
+    ],
+    [
+      "Haskoning: España",
+      "https://www.haskoning.com/en/countries/spain"
+    ],
+    [
+      "RED Engineering: contacto",
+      "https://www.red-eng.com/contact-us"
+    ],
+    [
+      "ENGIE: Mechanical Design Engineer (Data Centres), Madrid",
+      "https://jobs.engie.com/job/Mechanical-Design-Engineer-%28Data-Centres%29-Madrid/59541-en_US/"
+    ],
+    [
+      "Cottés: PCI en centros de datos",
+      "https://www.cottesgroup.com/sectores/proteccion-contra-incendios-data-center"
+    ],
+    [
+      "Ayesa compra CORE",
+      "https://www.ayesa.com/prensa/ayesa-engineering-ingenieria-refuerza-su-apuesta-por-los-data-centres-y-la-gestion-integrada-de-proyectos-con-la-compra-de-core/"
+    ],
+    [
+      "El Economista: Cobra compra Aguilera",
+      "https://www.eleconomista.es/infraestructuras-servicios/noticias/14015686/09/26/cobra-lanza-una-ofensiva-de-10000-millones-en-data-centers-y-se-refuerza-con-la-compra-de-aguilera.html"
+    ],
+    [
+      "Mercury amplía su actividad en España",
+      "https://www.mercuryeng.com/2026/08/31/mercury-scales-data-centre-delivery-in-spain/"
+    ],
+    [
+      "CAP Ingelec: Data4 Madrid",
+      "https://www.capingelec.com/en/references/data-4-madrid-2/"
+    ],
+    [
+      "Ferrovial compra Powernet",
+      "https://newsroom.ferrovial.com/es/notas-prensa/ferrovial-refuerza-el-area-de-construccion-de-data-centers-con-la-compra-de-powernet/"
+    ],
+    [
+      "DCD: Ferrovial construirá un centro de datos de Microsoft en Madrid",
+      "https://www.datacenterdynamics.com/en/news/ferrovial-to-construct-microsoft-data-center-in-madrid-spain/"
+    ],
+    [
+      "Jones Engineering: Europa",
+      "https://joneseng.com/contact/europe-nordic/"
+    ],
+    [
+      "Linesight: Madrid",
+      "https://www.linesight.com/contact-us/europe/madrid/"
+    ],
+    [
+      "Turner & Townsend: España",
+      "https://www.turnerandtownsend.com/locations/spain/"
+    ],
+    [
+      "Hill International: 25 años en España",
+      "https://www.hillintl.com/articles/celebrating-25-years-of-excellence-hill-internationals-journey-in-spain/"
+    ],
+    [
+      "JLL asesorará a Nostrum Data Centers",
+      "https://www.jll.com/es-es/newsroom/jll-asesorara-a-nostrum-data-centers"
+    ],
+    [
+      "Jacobs: centros de datos",
+      "https://www.jacobs.com/industries/data-centers"
+    ],
+    [
+      "Engexpor: primer edificio de Sines DC",
+      "https://engexpor.com/en/?p=21338"
+    ],
+    [
+      "FM Global DS 5-32 Data Centers",
+      "https://www.fm.com/FMAApi/data/ApprovalStandardsDownload?itemId=%7B2D62FBAB-83CA-4B26-A447-72D7EF6D574D%7D&isGated=false"
+    ],
+    [
+      "Techshowmadrid: Spain DC prevé 66.900 M€",
+      "https://www.techshowmadrid.es/noticias/informe-centro-datos-2026"
+    ]
+  ],
+  "otras": [
+    [
+      "Kirby Group Engineering",
+      "Contratista MEP irlandés de centros de datos (Italia, Suecia, Irlanda); sin obra documentada en España."
+    ],
+    [
+      "Winthrop Technologies",
+      "Centros de datos llave en mano en nueve países europeos; en proceso de venta."
+    ],
+    [
+      "Dornan (Turner, grupo ACS)",
+      "Contratista mecánico, eléctrico y de climatización de centros de datos en Europa; acceso a través del grupo ACS."
+    ],
+    [
+      "Eiffage Energía",
+      "Obras del CPD global de Metro de Madrid (unos 14 M€)."
+    ],
+    [
+      "GSE",
+      "Diseño y construcción; ponente en Grupo Vía (septiembre de 2026)."
+    ],
+    [
+      "Neklan",
+      "Integrador de infraestructura crítica; expositor en DCW Madrid (7G44)."
+    ],
+    [
+      "EIGO Construcciones",
+      "Contratista de Global Switch Madrid 2 (56 MW, 2029)."
+    ],
+    [
+      "Grupo SANJOSE",
+      "Estructura prefabricada para Equinix en Alcobendas, como subcontrata de Mercury."
+    ],
+    [
+      "Johnson Controls",
+      "Detección y alarma de incendios para centros de datos; delegaciones en Madrid y Zaragoza; expositor en el pabellón de DCW."
+    ],
+    [
+      "Drees & Sommer",
+      "Gestión de proyectos; Pilar Pinel, directora general en España, ponente en Grupo Vía (abril de 2026)."
+    ],
+    [
+      "Engexpor y AFA Consult",
+      "Gestión de la construcción e ingeniería en Sines (Portugal)."
+    ]
+  ]
+}
