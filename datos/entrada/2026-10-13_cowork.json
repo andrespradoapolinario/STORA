@@ -1,0 +1,138 @@
+[
+  {"accion": "anadir_contacto", "id": "id-energy-group", "sustituir": true,
+   "contacto": {"nombre": "Carlos Ruiz", "puesto": "Senior Mechanical Engineer", "telefono": "+34 682 515 212", "email": "carlos.ruiz@idenergy.group", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "id-energy-group", "sustituir": true,
+   "contacto": {"nombre": "Ángel de Prada", "email": "angel.deprada@idenergy.group", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "id-energy-group", "sustituir": true,
+   "contacto": {"nombre": "Jesús Mayoralas", "email": "jesus.mayoralas@idenergy.group", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "id-energy-group", "sustituir": true,
+   "contacto": {"nombre": "Virginia Gómez", "email": "virginia.gomez@idenergy.group", "slot": "otros", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "anadir_contacto", "id": "tonello-energy-spain", "sustituir": true,
+   "contacto": {"nombre": "Karin Florencio", "telefono": "+34 608 807 602", "email": "k.florencio@tonelloenergy.es", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "tonello-energy-spain", "sustituir": true,
+   "contacto": {"nombre": "Lavinia Nardelli", "puesto": "Equipo técnico", "email": "l.nardelli@tonello-energie.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "tonello-energy-spain", "sustituir": true,
+   "contacto": {"nombre": "Jacopo Fracaro", "puesto": "Equipo técnico", "email": "j.fracaro@tonello-energie.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "id": "tonello-energy-spain", "sustituir": true,
+   "contacto": {"nombre": "Sergio Lozano Escalada", "puesto": "Development Engineer", "telefono": "+34 919 342 317", "email": "s.lozanoescalada@tonelloenergy.es", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Kepler Ingeniería y Ecogestión", "sustituir": true,
+   "contacto": {"nombre": "Francisco Cuesta García", "puesto": "Ingeniero de proyectos (oficina de Burgos)", "telefono": "+34 628 551 108", "email": "francisco.cuesta@kepler.es", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "Kepler Ingeniería y Ecogestión", "sustituir": true,
+   "contacto": {"nombre": "Juanjo Linares", "puesto": "Director de Desarrollo de Proyectos", "email": "j.linares@kepler.es", "slot": "tecnico", "interes": true}},
+  {"accion": "actualizar", "nombre": "Kepler Ingeniería y Ecogestión", "campos": {"uso_gfs": "Sí"}},
+
+  {"accion": "anadir_contacto", "nombre": "Sitra", "sustituir": true,
+   "contacto": {"nombre": "Manuel Avilés Martín", "puesto": "Responsable de Compras", "telefono": "+34 662 924 071", "email": "maviles@sitra.es", "slot": "compras", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "Sitra", "sustituir": true,
+   "contacto": {"nombre": "Rodrigo Duque Hebrero", "puesto": "Responsable de Ingeniería", "telefono": "+34 689 067 622", "email": "rduque@sitra.es", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "Sitra", "sustituir": true,
+   "contacto": {"nombre": "Daniel Trigo", "puesto": "Cierres económicos", "slot": "otros", "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Genia Bioenergy", "sustituir": true,
+   "contacto": {"nombre": "Stevan Amador", "puesto": "Compras", "telefono": "+34 634 223 160", "email": "samador@geniaglobal.com", "slot": "compras", "confirmado_feria": true, "interes": true}},
+  {"accion": "actualizar", "nombre": "Genia Bioenergy", "campos": {"uso_gfs": "Sí"}},
+
+  {"accion": "anadir_contacto", "nombre": "Verdalia Bioenergy", "sustituir": true,
+   "contacto": {"nombre": "Marcos Velázquez Aguado", "puesto": "Procurement Manager", "telefono": "+34 680 859 030", "email": "marcos.velazquez@verdaliabio.com", "slot": "compras", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "Verdalia Bioenergy", "sustituir": true,
+   "contacto": {"nombre": "Mar Navarro", "puesto": "Compras (tanques)", "slot": "compras", "confirmado_feria": false, "interes": true}},
+  {"accion": "actualizar", "nombre": "Verdalia Bioenergy", "campos": {"uso_gfs": "No"}},
+
+  {"accion": "anadir_contacto", "nombre": "Vinci Energies", "sustituir": true,
+   "contacto": {"nombre": "Sylvain Lozano", "puesto": "Dirección de proyectos", "email": "sylvain.lozano@vinci-energies.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "Vinci Energies", "sustituir": true,
+   "contacto": {"nombre": "María Jacob Jareño", "puesto": "Directora técnica", "email": "maria.jacob@vinci-energies.es", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Axpo Iberia", "sustituir": true,
+   "contacto": {"nombre": "Héctor Anda Hernández", "puesto": "Senior Project Manager", "telefono": "+34 686 367 492", "email": "hector.andahernandez@axpo.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Ahidra Colsen Technologies", "sustituir": true,
+   "contacto": {"nombre": "Enric Cacho", "puesto": "Project Manager", "telefono": "+34 651 549 377", "email": "e.cacho@ahidra.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Agraferm", "sustituir": true,
+   "contacto": {"nombre": "Stephan Schulte", "puesto": "Director de ventas", "telefono": "+49 151 64922812", "email": "s.schulte@bta-international.de", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "actualizar", "nombre": "Agraferm", "campos": {"uso_gfs": "Sí"}},
+
+  {"accion": "anadir_contacto", "nombre": "Biogest", "sustituir": true,
+   "contacto": {"nombre": "Adrian George", "puesto": "Senior Purchasing Manager", "telefono": "+40 748 266 138", "email": "adrian.george@biogest.at", "slot": "compras", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "PlanET Biogas", "sustituir": true,
+   "contacto": {"nombre": "Gunnar Marquardt", "email": "g.marquardt@planet-biogas.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "PlanET Biogas", "sustituir": true,
+   "contacto": {"nombre": "Christof Boge", "puesto": "Senior Sales Manager Europe", "email": "c.boge@planet-biogas.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "North Tec Biogas", "sustituir": true,
+   "contacto": {"nombre": "Marten Clausen", "puesto": "Head of Sales Europe", "telefono": "+49 176 64987568", "email": "maclausen@north-tec.de", "slot": "otros", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "PreZero", "sustituir": true,
+   "contacto": {"nombre": "Andrea Esteban", "puesto": "Comercial", "telefono": "+34 683 433 978", "email": "andrea.esteban@prezero.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "PreZero", "sustituir": true,
+   "contacto": {"nombre": "Roberto Giralda", "puesto": "Ingeniería", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "PreZero", "sustituir": true,
+   "contacto": {"nombre": "Javier Cepeda", "puesto": "Ingeniería", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "OMEX Environmental", "sustituir": true,
+   "contacto": {"nombre": "Andrea Ferrer Moreno", "telefono": "+34 634 791 850", "email": "andreaf@omex.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "BTS Biogas", "sustituir": true,
+   "contacto": {"nombre": "Matteo Trevisan", "puesto": "Director técnico", "telefono": "+39 346 845 5694", "email": "m.trevisan@bts-biogas.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "EnviTec Biogas", "sustituir": true,
+   "contacto": {"nombre": "Xabier Garatea", "puesto": "Managing Director de la filial ibérica", "email": "x.garatea@envitec-biogas.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Bondalti Water", "sustituir": true,
+   "contacto": {"nombre": "Esperanza Hernández", "puesto": "Directora comercial", "email": "ehernandez@bondaltiwater.com", "slot": "otros", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "IAM Carbonzero", "sustituir": true,
+   "contacto": {"nombre": "Ciro García Armesto", "puesto": "Director técnico (CTO)", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+  {"accion": "anadir_contacto", "nombre": "IAM Carbonzero", "sustituir": true,
+   "contacto": {"nombre": "Juan Romero Blanco", "puesto": "Responsable de construcción", "email": "j.romero@iamcarboncero.com", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "anadir_contacto", "nombre": "Catalana de Biogás Iberia", "sustituir": true,
+   "contacto": {"nombre": "Jordi Huguet", "puesto": "Cap d'Àrea de Construcció", "telefono": "+34 679 962 836", "email": "jhuguet@catalanadebiogas.com", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "nueva", "organizacion": {
+    "id": "apergas", "nombre": "Apergas", "grupo": "C", "subtipo": "Ingeniería",
+    "stand": "", "nota_stand": "",
+    "perfil": "Ingeniería con la que trabaja Grupo HAM (Barcelona).",
+    "contactos": [{"nombre": "Jaume Vicens", "puesto": "", "telefono": "+34 629 917 832", "email": "jaumevicens@apergas.cat", "slot": "otros", "confirmado_feria": false, "interes": true}],
+    "proyectos": [], "uso_gfs": null, "visita": false, "cita": "", "aviso": "", "no_acude": false,
+    "fuente_interna": "Grupo HAM en el Salón del Gas, 29/09/2026; correo de 29/09/2026"}},
+
+  {"accion": "nueva", "organizacion": {
+    "id": "botres-global", "nombre": "Botres Global", "grupo": "B", "subtipo": "EPC",
+    "stand": "", "nota_stand": "",
+    "perfil": "Empresa austriaca que construye plantas de biogás.",
+    "contactos": [{"nombre": "Hersson Villegas", "puesto": "Ingeniero mecánico y eléctrico", "telefono": "+43 660 5540377", "email": "hersson.villegas@botres.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}],
+    "proyectos": [], "uso_gfs": null, "visita": false, "cita": "", "aviso": "", "no_acude": false,
+    "fuente_interna": "Salón del Gas Renovable, 29-30/09/2026; notas de Andrés Prado"}},
+
+  {"accion": "nueva", "organizacion": {
+    "id": "cycle0", "nombre": "CycleØ", "grupo": "A", "subtipo": "Promotora",
+    "stand": "", "nota_stand": "",
+    "perfil": "Promotor y operador de biometano; Biogasclean pertenece al grupo.",
+    "contactos": [
+      {"nombre": "Nerea Uriarte", "puesto": "Procurement Manager", "telefono": "+34 634 455 074", "email": "nerea.uriarte@cycle0.com", "slot": "compras", "confirmado_feria": true, "interes": true},
+      {"nombre": "Luis Santana", "puesto": "Departamento técnico y ventas (Biogasclean)", "telefono": "+34 621 495 523", "email": "lsantana@biogasclean.com", "slot": "tecnico", "confirmado_feria": true, "interes": true}
+    ],
+    "proyectos": [], "uso_gfs": null, "visita": false, "cita": "", "aviso": "", "no_acude": false,
+    "fuente_interna": "Salón del Gas Renovable, 29/09/2026; notas de Andrés Prado"}},
+
+  {"accion": "nueva", "organizacion": {
+    "id": "host-bioenergy", "nombre": "HoSt Bioenergy", "grupo": "B", "subtipo": "EPC",
+    "stand": "", "nota_stand": "",
+    "perfil": "Tecnólogo y constructor de plantas de biogás (Países Bajos).",
+    "contactos": [{"nombre": "Ángel Martínez", "puesto": "", "telefono": "+34 642 131 689", "email": "a.martinez@host-bioenergy.com", "slot": "otros", "confirmado_feria": true, "interes": true}],
+    "proyectos": [], "uso_gfs": null, "visita": false, "cita": "", "aviso": "", "no_acude": false,
+    "fuente_interna": "Salón del Gas Renovable, 29-30/09/2026; perfiles de empresa de la Universidad de Twente y twente.com, consulta 13/10/2026"}},
+
+  {"accion": "nueva", "organizacion": {
+    "id": "renove-group", "nombre": "Renove Group", "grupo": "B", "subtipo": "EPC",
+    "stand": "", "nota_stand": "",
+    "perfil": "EPC de biogás.",
+    "contactos": [{"nombre": "Roberto Barberio", "puesto": "", "telefono": "", "email": "r.barberio@renovegroup.it", "slot": "otros", "confirmado_feria": true, "interes": true}],
+    "proyectos": [], "uso_gfs": "Sí", "visita": false, "cita": "", "aviso": "", "no_acude": false,
+    "fuente_interna": "Salón del Gas Renovable, 29-30/09/2026; notas de Andrés Prado (han usado acero vitrificado de GLS)"}}
+]
