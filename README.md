@@ -16,6 +16,8 @@ Se ejecutan desde la raíz del repositorio, en este orden:
 
    Se detiene ante cualquier conflicto (un dato ya existente con otro valor) sin aplicar ese parche. Si Andrés confirma el valor nuevo, se añade `"sustituir": true` a esa operación del parche y se vuelve a ejecutar. Para completar el nombre de un contacto existente sin duplicarlo, el contacto del parche lleva `"nombre_anterior"` (apartado 7 de CLAUDE.md).
 
+   También son conflicto un contacto nuevo que se parece a uno existente de la misma organización (mismo correo, o un nombre contenido en el otro, como «Juanjo Linares» y «Juanjo Linares Salinas») y una organización «nueva» con un contacto cuyo correo ya figura en otra organización. Si Andrés confirma que no es un duplicado, se añade `"no_es_duplicado": true` a esa operación. Un valor vacío o `false` del parche nunca borra un dato existente, aunque la operación lleve `"sustituir": true`, y los cambios que solo afectan a mayúsculas no se aplican.
+
 2. **Validar**: comprueba los datos con las reglas del apartado 8 de CLAUDE.md. Los errores detienen la generación; los avisos solo señalan datos que conviene revisar.
 
    ```
