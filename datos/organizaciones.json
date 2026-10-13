@@ -228,8 +228,8 @@
       "perfil": "Desarrollador técnico integral del fondo Bioenergy Agro Iberia FCR (gestora: Abante; promotor: Mapfre). Diecinueve plantas del primer fondo entran en producción en 2027 y hay 20 proyectos adicionales identificados.",
       "contactos": [
         {
-          "nombre": "Ciro García",
-          "puesto": "IAM Carbonzero",
+          "nombre": "Ciro García Armesto",
+          "puesto": "Director técnico (CTO)",
           "telefono": "",
           "email": "ciro.garcia@iamcarbonzero.com",
           "slot": "otros",
@@ -245,6 +245,18 @@
           "telefono": "",
           "email": "hablamos@iamcarbonzero.com",
           "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Juan Romero Blanco",
+          "puesto": "Responsable de construcción",
+          "telefono": "",
+          "email": "j.romero@iamcarbonzero.com",
+          "slot": "tecnico",
           "confirmado_feria": false,
           "interes": true,
           "interlocutor": false,
@@ -1787,6 +1799,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": ""
+        },
+        {
+          "nombre": "Virginia Gómez",
+          "puesto": "",
+          "telefono": "",
+          "email": "virginia.gomez@idenergy.group",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -1874,6 +1898,18 @@
           "interlocutor": false,
           "departamento": false,
           "nota": "asiste a la reunión"
+        },
+        {
+          "nombre": "Sergio Lozano Escalada",
+          "puesto": "Development Engineer",
+          "telefono": "+34 919 342 317",
+          "email": "s.lozanoescalada@tonelloenergy.es",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
         }
       ],
       "telefono_empresa": "",
@@ -3732,7 +3768,7 @@
       "subtipo": "EPC",
       "stand": "",
       "nota_stand": "",
-      "perfil": "",
+      "perfil": "Tecnólogo y constructor de plantas de biogás (Países Bajos).",
       "contactos": [
         {
           "nombre": "Ángel Martínez",
@@ -3835,10 +3871,10 @@
           "nota": ""
         },
         {
-          "nombre": "Rodrigo Duque",
+          "nombre": "Rodrigo Duque Hebrero",
           "puesto": "Responsable de ingeniería",
-          "telefono": "",
-          "email": "",
+          "telefono": "+34 689 067 622",
+          "email": "rduque@sitra.es",
           "slot": "tecnico",
           "confirmado_feria": false,
           "interes": true,
@@ -4252,7 +4288,7 @@
         {
           "nombre": "Enric Cacho",
           "puesto": "Project Manager",
-          "telefono": "",
+          "telefono": "+34 651 549 377",
           "email": "e.cacho@ahidra.com",
           "slot": "otros",
           "confirmado_feria": true,
@@ -4405,9 +4441,9 @@
       "contactos": [
         {
           "nombre": "Juanjo Linares Salinas",
-          "puesto": "Project Development Manager",
+          "puesto": "Director de Desarrollo de Proyectos",
           "telefono": "635 501 018",
-          "email": "juanjo.linares@kepler.es",
+          "email": "j.linares@kepler.es",
           "slot": "otros",
           "confirmado_feria": false,
           "interes": true,

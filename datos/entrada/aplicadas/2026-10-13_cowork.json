@@ -1,0 +1,24 @@
+[
+  {"accion": "anadir_contacto", "id": "id-energy-group",
+   "contacto": {"nombre": "Virginia Gómez", "email": "virginia.gomez@idenergy.group", "slot": "otros", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "anadir_contacto", "id": "tonello-energy-spain",
+   "contacto": {"nombre": "Sergio Lozano Escalada", "puesto": "Development Engineer", "telefono": "+34 919 342 317", "email": "s.lozanoescalada@tonelloenergy.es", "slot": "tecnico", "confirmado_feria": true, "interes": true}},
+
+  {"accion": "anadir_contacto", "id": "kepler-ingenieria-y-ecogestion", "sustituir": true,
+   "contacto": {"nombre": "Juanjo Linares Salinas", "puesto": "Director de Desarrollo de Proyectos", "email": "j.linares@kepler.es"}},
+
+  {"accion": "anadir_contacto", "id": "sitra",
+   "contacto": {"nombre": "Rodrigo Duque Hebrero", "nombre_anterior": "Rodrigo Duque", "telefono": "+34 689 067 622", "email": "rduque@sitra.es"}},
+
+  {"accion": "anadir_contacto", "id": "ahidra-colsen-technologies",
+   "contacto": {"nombre": "Enric Cacho", "telefono": "+34 651 549 377"}},
+
+  {"accion": "anadir_contacto", "id": "iam-carbonzero", "sustituir": true,
+   "contacto": {"nombre": "Ciro García Armesto", "nombre_anterior": "Ciro García", "puesto": "Director técnico (CTO)"}},
+  {"accion": "anadir_contacto", "id": "iam-carbonzero",
+   "contacto": {"nombre": "Juan Romero Blanco", "puesto": "Responsable de construcción", "email": "j.romero@iamcarbonzero.com", "slot": "tecnico", "confirmado_feria": false, "interes": true}},
+
+  {"accion": "actualizar", "id": "host-bioenergy",
+   "campos": {"perfil": "Tecnólogo y constructor de plantas de biogás (Países Bajos)."}}
+]

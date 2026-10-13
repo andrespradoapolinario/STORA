@@ -5,18 +5,32 @@ Uso:
     python scripts/aplicar_entradas.py --simular   muestra los cambios sin escribir nada
 
 Formato de parche: apartado 7 de CLAUDE.md. Los parches se procesan por orden
-de nombre. Cada parche se aplica entero o no se aplica: ante un conflicto
-(un dato ya existente con otro valor) o un error, el script se detiene sin
-modificar nada de ese parche ni de los siguientes.
+de nombre. Cada parche se aplica entero o no se aplica: si alguna operación da
+conflicto (un dato ya existente con otro valor) o error, el script se detiene
+sin modificar nada de ese parche ni de los siguientes. El informe recoge todos
+los conflictos y errores del parche, no solo el primero, e indica siempre qué
+operaciones llevan "no_es_duplicado".
 
 Si Andrés confirma que el valor nuevo debe sustituir al existente, basta con
 añadir "sustituir": true a esa operación del parche y volver a ejecutar.
+
+Protecciones frente a duplicados y pérdidas de datos:
+- Un contacto nuevo cuyo nombre se parece al de uno existente de la misma
+  organización (mismo correo, o un nombre contenido en el otro) es conflicto.
+- Una organización «nueva» con un contacto cuyo correo ya figura en otra
+  organización es conflicto.
+  En ambos casos, si Andrés confirma que no es un duplicado, se añade
+  "no_es_duplicado": true a la operación.
+- Un valor vacío o false del parche nunca borra un dato existente.
+- Los cambios que solo afectan a mayúsculas no se aplican.
 """
 import argparse
 import copy
 import json
+import re
 import shutil
 import sys
+import unicodedata
 
 import validar
 from comun import (APLICADAS, CAMPOS_CONTACTO, CAMPOS_ORGANIZACION, CAMPOS_PROYECTO, CONTACTO_POR_DEFECTO,
@@ -45,6 +59,33 @@ def mostrar(valor):
     if isinstance(valor, bool):
         return 'sí' if valor else 'no'
     return f'«{valor}»'
+
+
+def palabras(nombre):
+    """«Ángel de Prada» -> ['angel', 'de', 'prada']: minúsculas, sin tildes ni puntuación."""
+    base = unicodedata.normalize('NFKD', nombre).encode('ascii', 'ignore').decode().casefold()
+    return re.findall(r'[a-z0-9]+', base)
+
+
+def nombre_contenido(a, b):
+    """True si un nombre está contenido en el otro («Juanjo Linares» en «Juanjo Linares Salinas»).
+
+    Una inicial vale por la palabra que empieza por ella («L. Nardelli» en «Lavinia Nardelli»).
+    """
+    corto, largo = sorted((palabras(a), palabras(b)), key=len)
+    if not corto:
+        return False
+    libres = list(largo)
+    for p in corto:
+        k = next((i for i, q in enumerate(libres) if q == p or (len(p) == 1 and q.startswith(p))), None)
+        if k is None:
+            return False
+        del libres[k]
+    return True
+
+
+def mismo_correo(a, b):
+    return bool(a) and bool(b) and a.casefold() == b.casefold()
 
 
 def buscar(datos, op):
@@ -76,6 +117,14 @@ def fusionar(destino, nuevos, campos_validos, sustituir, desc, cambios, antes=No
             raise ErrorParche(f'{desc}: campo desconocido «{campo}».')
         actual = destino.get(campo)
         if actual == valor:
+            continue
+        if vacio(valor):
+            # Un valor vacío o false del parche nunca borra un dato existente.
+            if not vacio(actual):
+                cambios.append(f'{desc} · {campo}: se conserva {mostrar(actual)} (el parche lo trae vacío).')
+            continue
+        if isinstance(actual, str) and isinstance(valor, str) and actual.casefold() == valor.casefold():
+            cambios.append(f'{desc} · {campo}: solo cambian mayúsculas; se conserva {mostrar(actual)}.')
             continue
         if not vacio(actual) and not sustituir:
             raise Conflicto(f'{desc}: «{campo}» ya vale {mostrar(actual)} y el parche propone {mostrar(valor)}.')
@@ -119,7 +168,7 @@ def op_anadir_contacto(datos, op, cambios):
     if existente:
         desc = f"{org['nombre']} · contacto {existente['nombre']}"
         antes = len(cambios)
-        if existente['nombre'] != c['nombre']:
+        if existente['nombre'].casefold() != c['nombre'].casefold():
             cambios.append(f"{desc} · nombre: {mostrar(existente['nombre'])} → {mostrar(c['nombre'])}")
             existente['nombre'] = c['nombre']
         resto = {k: v for k, v in c.items() if k not in ('nombre', 'nombre_anterior')}
@@ -128,6 +177,17 @@ def op_anadir_contacto(datos, op, cambios):
     for campo in c:
         if campo not in CAMPOS_CONTACTO:
             raise ErrorParche(f'contacto {c["nombre"]}: campo desconocido «{campo}».')
+    if not op.get('no_es_duplicado'):
+        parecidos = []
+        for x in org['contactos']:
+            if mismo_correo(x.get('email'), c.get('email')):
+                parecidos.append(f"«{x['nombre']}» (mismo correo)")
+            elif nombre_contenido(x['nombre'], c['nombre']):
+                parecidos.append(f"«{x['nombre']}» (nombre parecido)")
+        if parecidos:
+            raise Conflicto(f"{org['nombre']}: «{c['nombre']}» puede ser {' o '.join(parecidos)}. "
+                            'Si es la misma persona, use su nombre exacto o «nombre_anterior»; '
+                            'si es otra, añada "no_es_duplicado": true a la operación.')
     nuevo = {'nombre': c['nombre'], **{k: c.get(k, v) for k, v in CONTACTO_POR_DEFECTO.items()}}
     org['contactos'].append(nuevo)
     cambios.append(f"{org['nombre']}: nuevo contacto {nuevo['nombre']} ({SLOTS[nuevo['slot']]}"
@@ -176,6 +236,15 @@ def op_nueva(datos, op, cambios):
     oid = o.get('id') or crear_id(o['nombre'])
     if any(x['id'] == oid for x in orgs) or any(x['nombre'].casefold() == o['nombre'].casefold() for x in orgs):
         raise Conflicto(f"ya existe una organización con id «{oid}» o nombre «{o['nombre']}».")
+    if not op.get('no_es_duplicado'):
+        for c in o.get('contactos') or []:
+            for x in orgs:
+                y = next((y for y in x['contactos'] if mismo_correo(y.get('email'), c.get('email'))), None)
+                if y:
+                    raise Conflicto(f"{o['nombre']}: el correo «{c['email']}» de {c.get('nombre', '')} ya figura "
+                                    f"en {x['nombre']} (id «{x['id']}», contacto {y['nombre']}). "
+                                    'Si es la misma organización, use anadir_contacto con ese id; '
+                                    'si no, añada "no_es_duplicado": true a la operación.')
     nueva = {'id': oid, 'nombre': o['nombre'], 'grupo': o['grupo']}
     for campo, defecto in VALORES_POR_DEFECTO.items():
         nueva[campo] = copy.deepcopy(o.get(campo, defecto))
@@ -200,19 +269,51 @@ OPERACIONES = {'actualizar': op_actualizar, 'anadir_contacto': op_anadir_contact
 
 
 def aplicar_parche(datos, operaciones):
-    """Aplica un parche sobre una copia. Devuelve (datos_nuevos, cambios)."""
+    """Aplica un parche sobre una copia, sin detenerse en la primera operación que falla.
+
+    Devuelve (datos_nuevos, informe). El informe es la lista ordenada de
+    (tipo, texto), con tipo «cambio», «CONFLICTO» o «ERROR». Una operación que
+    falla no deja ningún cambio, y las siguientes se evalúan sin ella.
+    """
     if not isinstance(operaciones, list):
         raise ErrorParche('el parche debe ser una lista de operaciones.')
     nuevos = copy.deepcopy(datos)
-    cambios = []
+    informe = []
     for n, op in enumerate(operaciones, 1):
         if not isinstance(op, dict) or op.get('accion') not in ACCIONES:
-            raise ErrorParche(f"operación {n}: «accion» debe ser una de {', '.join(ACCIONES)}.")
+            informe.append(('ERROR', f"operación {n}: «accion» debe ser una de {', '.join(ACCIONES)}."))
+            continue
+        prueba, cambios = copy.deepcopy(nuevos), []
         try:
-            OPERACIONES[op['accion']](nuevos, op, cambios)
-        except (Conflicto, ErrorParche) as exc:
-            raise type(exc)(f'operación {n} ({op["accion"]}): {exc}') from None
-    return nuevos, cambios
+            OPERACIONES[op['accion']](prueba, op, cambios)
+        except Conflicto as exc:
+            informe.append(('CONFLICTO', f'operación {n} ({op["accion"]}): {exc}'))
+        except ErrorParche as exc:
+            informe.append(('ERROR', f'operación {n} ({op["accion"]}): {exc}'))
+        else:
+            nuevos = prueba
+            informe += [('cambio', c) for c in cambios]
+    return nuevos, informe
+
+
+def marcadas_no_duplicado(operaciones):
+    """Línea del informe con las operaciones que llevan «no_es_duplicado»."""
+    if not isinstance(operaciones, list):
+        return None
+    marcadas = []
+    for n, op in enumerate(operaciones, 1):
+        if not isinstance(op, dict) or not op.get('no_es_duplicado'):
+            continue
+        ref = op.get('id') or op.get('nombre') or ''
+        if op.get('accion') == 'nueva':
+            ref = f"nueva «{(op.get('organizacion') or {}).get('nombre', '')}»"
+        elif isinstance(op.get('contacto'), dict):
+            ref = f"{ref} · {op['contacto'].get('nombre', '')}"
+        marcadas.append(f'{n} ({ref})')
+    if not marcadas:
+        return 'Ninguna operación lleva «no_es_duplicado».'
+    cuales = f'operación {marcadas[0]}' if len(marcadas) == 1 else f"operaciones {', '.join(marcadas)}"
+    return f'Llevan «no_es_duplicado» (confirmado por Andrés): {cuales}.'
 
 
 def destino_libre(nombre):
@@ -235,32 +336,50 @@ def main():
     datos = cargar()
     errores_previos = set(validar.validar(datos)[0])
     aplicados = 0
-    for ruta in parches:
+    for i, ruta in enumerate(parches):
         print(f'\n== {ruta.name}')
         try:
             with open(ruta, encoding='utf-8') as f:
                 operaciones = json.load(f)
-            nuevos, cambios = aplicar_parche(datos, operaciones)
+            marca = marcadas_no_duplicado(operaciones)
+            if marca:
+                print(f'  {marca}')
+            nuevos, informe = aplicar_parche(datos, operaciones)
         except json.JSONDecodeError as exc:
             print(f'ERROR      JSON no válido: {exc}')
             print('Parche no aplicado. Proceso detenido.')
             return 1
-        except Conflicto as exc:
-            print(f'CONFLICTO  {exc}')
-            print('Parche no aplicado. Proceso detenido: confirme qué valor debe quedar.')
-            return 2
         except ErrorParche as exc:
             print(f'ERROR      {exc}')
             print('Parche no aplicado. Proceso detenido.')
             return 1
-        errores_nuevos = [e for e in validar.validar(nuevos)[0] if e not in errores_previos]
-        if errores_nuevos:
-            for e in errores_nuevos:
-                print(f'ERROR      {e}')
-            print('Parche no aplicado: el resultado no supera la validación. Proceso detenido.')
-            return 1
-        for c in cambios or ['Sin cambios: todos los datos ya constaban.']:
-            print(f'  · {c}')
+        for tipo, texto in informe:
+            print(f'  · {texto}' if tipo == 'cambio' else f'{tipo:<10} {texto}')
+        if not informe:
+            print('  · Sin cambios: todos los datos ya constaban.')
+        conflictos = sum(tipo == 'CONFLICTO' for tipo, _ in informe)
+        errores = sum(tipo == 'ERROR' for tipo, _ in informe)
+        for e in validar.validar(nuevos)[0]:
+            if e not in errores_previos:
+                print(f'ERROR      validación del resultado: {e}')
+                errores += 1
+        if conflictos or errores:
+            partes = [f'{conflictos} conflicto(s)'] if conflictos else []
+            partes += [f'{errores} error(es)'] if errores else []
+            if conflictos and errores:
+                pasos = 'Corrija los errores y confirme con Andrés los conflictos'
+            elif conflictos:
+                pasos = 'Confirme con Andrés qué valor debe quedar en cada conflicto'
+            else:
+                pasos = 'Corrija los errores'
+            print(f"\nParche no aplicado: {' y '.join(partes)}. {pasos} antes de volver a ejecutar.")
+            if len(parches) > i + 1:
+                print(f'No se han procesado los parches siguientes ({len(parches) - i - 1}).')
+            if args.simular:
+                print('Simulación: no se ha modificado ningún archivo.')
+            else:
+                print('Proceso detenido: no se ha modificado ningún archivo.')
+            return 1 if errores else 2
         if args.simular:
             datos = nuevos
             continue

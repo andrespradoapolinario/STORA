@@ -122,6 +122,19 @@ Cada operación identifica la organización por `id` o, si Cowork no lo conoce, 
 
 Para completar el nombre de un contacto que ya existe (por ejemplo, «L. Nardelli» → «Lavinia Nardelli»), `anadir_contacto` admite `"nombre_anterior"`: el contacto se localiza por ese nombre y recibe el nuevo, sin duplicarse.
 
+`"sustituir": true` solo se usa para cambiar a propósito un valor existente, y la operación solo trae los campos que cambian. Sin esa marca, un valor distinto del existente es conflicto. En cualquier caso, un valor vacío o `false` del parche nunca borra un dato existente (vaciar un campo requiere instrucción expresa de Andrés) y los cambios que solo afectan a mayúsculas no se aplican.
+
+```json
+{"accion": "anadir_contacto", "id": "kepler-ingenieria-y-ecogestion", "sustituir": true,
+ "contacto": {"nombre": "Juanjo Linares Salinas", "email": "j.linares@kepler.es"}}
+```
+
+Son conflicto, para no crear duplicados, un contacto nuevo que se parece a uno existente de la misma organización (mismo correo, o un nombre contenido en el otro, como «Juanjo Linares» y «Juanjo Linares Salinas») y una organización «nueva» con un contacto cuyo correo ya figura en otra organización. `"no_es_duplicado": true` en la operación permite seguir, y solo se añade cuando Andrés confirma que no es un duplicado. El informe de `aplicar_entradas.py` indica siempre qué operaciones llevan esa marca.
+
+```json
+{"accion": "anadir_contacto", "id": "...", "no_es_duplicado": true, "contacto": {"nombre": "...", ...}}
+```
+
 ## 8. Validación (validar.py debe pasar antes de generar)
 
 - Ningún texto contiene los términos prohibidos del apartado 4 (expresión regular: `no localizad|no encontrad|sin verificar|fuente:`).
