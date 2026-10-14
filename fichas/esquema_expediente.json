@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "esquema_expediente.json",
   "title": "Expedientes de las fichas maestras",
-  "description": "expedientes.json: un expediente por empresa, con el id de organizaciones.json como clave. Las fechas van en formato ISO (AAAA-MM-DD) y los id de las entradas los asigna fichas.py. La definición «entradas» describe el archivo que prepara Cowork para el comando «añadir».",
+  "description": "expedientes.json: un expediente por empresa, con el id de organizaciones.json como clave (o, en las empresas dadas de alta fuera de él, el id formado a partir de su nombre). Las fechas van en formato ISO (AAAA-MM-DD) y los id de las entradas los asigna fichas.py. La definición «entradas» describe el archivo que prepara Cowork para el comando «añadir».",
   "type": "object",
   "required": ["version", "empresas"],
   "additionalProperties": false,
@@ -19,18 +19,24 @@
     "lista_textos": {"type": "array", "items": {"$ref": "#/$defs/texto"}},
     "medida": {"type": ["number", "null"], "exclusiveMinimum": 0},
     "id_empresa": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+    "tipo": {"enum": ["A", "B", "C", "D", "E"]},
 
     "expediente": {
       "type": "object",
-      "required": ["id", "nombres_alternativos", "situacion_actual", "lo_que_sabemos", "proyectos", "tanques",
-                   "cotizaciones", "competencia", "pendientes", "cronologia", "documentos"],
+      "required": ["id", "nombres_alternativos", "situacion_actual", "lo_que_sabemos", "proyectos", "relaciones",
+                   "tanques", "cotizaciones", "competencia", "pendientes", "cronologia", "documentos"],
       "additionalProperties": false,
       "properties": {
         "id": {"$ref": "#/$defs/id_empresa"},
+        "nombre": {"$ref": "#/$defs/texto"},
+        "tipo": {"$ref": "#/$defs/tipo"},
+        "fuera_de_organizaciones": {"const": true},
+        "contactos": {"type": "array", "items": {"$ref": "#/$defs/contacto"}},
         "nombres_alternativos": {"$ref": "#/$defs/lista_textos"},
         "situacion_actual": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/situacion_actual"}]},
         "lo_que_sabemos": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/lo_que_sabemos"}, {"required": ["id"]}]}},
         "proyectos": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/proyecto"}, {"required": ["id"]}]}},
+        "relaciones": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/relacion"}, {"required": ["id"]}]}},
         "tanques": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/tanque"}, {"required": ["id"]}]}},
         "cotizaciones": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/cotizacion"}, {"required": ["id"]}]}},
         "competencia": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/competencia"}, {"required": ["id"]}]}},
@@ -72,6 +78,30 @@
         "situacion": {"$ref": "#/$defs/texto_opcional"},
         "fuente": {"$ref": "#/$defs/texto"},
         "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "relacion": {
+      "type": "object",
+      "required": ["organizacion", "papel", "fuente", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^rel-\\d{4,}$"},
+        "organizacion": {"$ref": "#/$defs/texto"},
+        "papel": {"enum": ["socio", "cliente", "EPC", "ingeniería", "tecnólogo", "proveedor", "accionista", "otro"]},
+        "texto": {"$ref": "#/$defs/texto_opcional"},
+        "fuente": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "contacto": {
+      "type": "object",
+      "required": ["nombre"],
+      "additionalProperties": false,
+      "properties": {
+        "nombre": {"$ref": "#/$defs/texto"},
+        "cargo": {"$ref": "#/$defs/texto_opcional"},
+        "correo": {"$ref": "#/$defs/texto_opcional"},
+        "telefono": {"$ref": "#/$defs/texto_opcional"}
       }
     },
     "tanque": {
@@ -157,29 +187,41 @@
     },
     "documento": {
       "type": "object",
-      "required": ["fecha", "nombre"],
+      "required": ["fecha", "nombre", "ruta"],
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^doc-\\d{4,}$"},
         "fecha": {"$ref": "#/$defs/fecha"},
         "nombre": {"$ref": "#/$defs/texto"},
-        "ruta": {"$ref": "#/$defs/texto_opcional"}
+        "ruta": {"$ref": "#/$defs/texto"}
       }
     },
 
     "entradas": {
-      "description": "Archivo de entradas para «añadir»: una lista de bloques, uno por empresa. Las entradas nuevas van sin id.",
+      "description": "Archivo de entradas para «añadir»: una lista de bloques, uno por empresa. Cada bloque lleva «empresa» (empresa con expediente) o «alta» (empresa nueva fuera de organizaciones.json). Las entradas nuevas van sin id.",
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["empresa"],
         "additionalProperties": false,
         "properties": {
           "empresa": {"$ref": "#/$defs/texto"},
+          "alta": {
+            "type": "object",
+            "required": ["nombre", "tipo"],
+            "additionalProperties": false,
+            "properties": {
+              "nombre": {"$ref": "#/$defs/texto"},
+              "tipo": {"$ref": "#/$defs/tipo"},
+              "contactos": {"type": "array", "items": {"$ref": "#/$defs/contacto"}}
+            }
+          },
+          "no_es_duplicado": {"const": true, "description": "Solo cuando Andrés confirma que el alta no es una empresa ya existente con un nombre parecido."},
+          "contactos": {"type": "array", "items": {"$ref": "#/$defs/contacto"}},
           "nombres_alternativos": {"$ref": "#/$defs/lista_textos"},
           "situacion_actual": {"$ref": "#/$defs/situacion_actual"},
           "lo_que_sabemos": {"type": "array", "items": {"$ref": "#/$defs/lo_que_sabemos"}},
           "proyectos": {"type": "array", "items": {"$ref": "#/$defs/proyecto"}},
+          "relaciones": {"type": "array", "items": {"$ref": "#/$defs/relacion"}},
           "tanques": {"type": "array", "items": {"$ref": "#/$defs/tanque"}},
           "cotizaciones": {"type": "array", "items": {"$ref": "#/$defs/cotizacion"}},
           "competencia": {"type": "array", "items": {"$ref": "#/$defs/competencia"}},

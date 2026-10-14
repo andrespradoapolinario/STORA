@@ -51,6 +51,24 @@
           "fecha": "2026-10-05"
         }
       ],
+      "relaciones": [
+        {
+          "id": "rel-0001",
+          "organizacion": "Fondo Inversor Ficticio",
+          "papel": "accionista",
+          "texto": "Participa en las dos plantas.",
+          "fuente": "Notas de Andrés",
+          "fecha": "2026-10-05"
+        },
+        {
+          "id": "rel-0002",
+          "organizacion": "Ingeniería Modelo Norte",
+          "papel": "ingeniería",
+          "texto": "Ingeniería de detalle de la planta norte.",
+          "fuente": "Reunión en la feria ficticia",
+          "fecha": "2026-09-30"
+        }
+      ],
       "tanques": [
         {
           "id": "tan-0001",
@@ -206,6 +224,7 @@
       "situacion_actual": null,
       "lo_que_sabemos": [],
       "proyectos": [],
+      "relaciones": [],
       "tanques": [],
       "cotizaciones": [],
       "competencia": [],
@@ -250,6 +269,7 @@
         }
       ],
       "proyectos": [],
+      "relaciones": [],
       "tanques": [],
       "cotizaciones": [],
       "competencia": [],
@@ -266,6 +286,7 @@
       },
       "lo_que_sabemos": [],
       "proyectos": [],
+      "relaciones": [],
       "tanques": [],
       "cotizaciones": [],
       "competencia": [],
@@ -279,11 +300,96 @@
       "situacion_actual": null,
       "lo_que_sabemos": [],
       "proyectos": [],
+      "relaciones": [],
       "tanques": [],
       "cotizaciones": [],
       "competencia": [],
       "pendientes": [],
       "cronologia": [],
+      "documentos": []
+    },
+    "depositos-imaginarios-del-levante": {
+      "id": "depositos-imaginarios-del-levante",
+      "nombre": "Depósitos Imaginarios del Levante",
+      "tipo": "B",
+      "fuera_de_organizaciones": true,
+      "contactos": [
+        {
+          "nombre": "Elena Ficticia Mora",
+          "cargo": "Directora Técnica",
+          "correo": "elena.ficticia@depositos-imaginarios.example",
+          "telefono": "+34 600 000 601"
+        },
+        {
+          "nombre": "Ofertas (Dpto.)",
+          "correo": "ofertas@depositos-imaginarios.example"
+        }
+      ],
+      "nombres_alternativos": [
+        "DIL Tanques"
+      ],
+      "situacion_actual": {
+        "texto": "Lead nuevo de la feria ficticia. Piden precio orientativo de dos tanques de agua para una obra en la costa.",
+        "fecha": "2026-10-11"
+      },
+      "lo_que_sabemos": [],
+      "proyectos": [],
+      "relaciones": [
+        {
+          "id": "rel-0001",
+          "organizacion": "Montajes Ejemplo",
+          "papel": "socio",
+          "texto": "Montan juntos en las obras de la costa.",
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        },
+        {
+          "id": "rel-0002",
+          "organizacion": "Constructora Inventada del Sur",
+          "papel": "cliente",
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        }
+      ],
+      "tanques": [
+        {
+          "id": "tan-0001",
+          "proyecto": "Obra de la costa",
+          "uso": "Agua contra incendios",
+          "cantidad": 2,
+          "volumen_m3": 1200,
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        }
+      ],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [
+        {
+          "id": "pen-0001",
+          "accion": "Enviar precio orientativo de los dos tanques",
+          "de_quien": "nosotros",
+          "fecha_limite": "2026-10-18",
+          "estado": "abierto"
+        }
+      ],
+      "cronologia": [
+        {
+          "id": "cro-0001",
+          "fecha": "2026-10-11",
+          "hora": "10:05",
+          "tipo": "correo_recibido",
+          "participantes": [
+            "Elena Ficticia Mora"
+          ],
+          "resumen": "Piden precio orientativo de dos tanques de 1.200 m³ para agua contra incendios.",
+          "origen": "automatico",
+          "fuente": {
+            "tipo": "gmail",
+            "ref": "19a1b2c3d4e5f604"
+          }
+        }
+      ],
       "documentos": []
     }
   }

@@ -5,8 +5,9 @@ Uso:
 
 Crea en CARPETA (por defecto, la de este archivo) Seguimiento_Clientes_Stora.xlsx
 y Stora_Exhibition_Lead_Tracker.xlsx con las empresas de
-organizaciones_prueba_2026-10-13.json, más una empresa del panel y otra del
-tracker que no corresponden a ninguna organización. La fila de cabecera no está
+organizaciones_prueba_2026-10-13.json y la que entradas_prueba.json da de alta
+fuera de él, más una empresa del panel y otra del tracker que no corresponden a
+ninguna. La fila de cabecera no está
 en la primera fila, para comprobar que se localiza por su texto.
 """
 import datetime
@@ -31,6 +32,8 @@ FILAS_PANEL = {
     'EPC': [
         ('Montajes Ejemplo, S.L.', 'Tarifa solicitada', datetime.datetime(2026, 10, 15), 'Andrea Supuesta Ruiz',
          '', '', ''),
+        ('Depositos Imaginarios del Levante S.L.', 'Primer contacto', datetime.datetime(2026, 10, 18),
+         'Elena Ficticia Mora', '', '', 'Lead nuevo, fuera de organizaciones.json'),
     ],
     'INGENIERÍAS Y CONSULTORÍAS': [
         ('INGENIERIA MODELO NORTE', 'Seguimiento', None, '', '', '', ''),
@@ -41,13 +44,12 @@ FILAS_PANEL = {
     ],
 }
 CABECERA_TRACKER = ('Rating', 'Company', 'Exhibition / Event', 'Contact', 'Opportunity', 'Stage')
-FILAS_TRACKER = [
-    ('★★★', 'Meseta Bio', 'Feria ficticia de pruebas', 'Lucía Ejemplo Sanz', 'Digestores planta norte',
-     'Quotation'),
-    ('★★', 'Grupo Montajes Ejemplo', 'Feria ficticia de pruebas', 'Andrea Supuesta Ruiz', 'Tarifa EPC',
-     'Contacted'),
-    ('★', 'Consultora Imaginaria', 'Feria ficticia de pruebas', '', '', 'Lead'),
-    ('★★', SIN_ASOCIAR_TRACKER, 'Feria ficticia de pruebas', '', '', 'Lead'),
+FILAS_TRACKER = [  # Rating: entero de 1 a 5 (5 es la máxima), vacío en los leads nuevos
+    (5, 'Meseta Bio', 'Feria ficticia de pruebas', 'Lucía Ejemplo Sanz', 'Digestores planta norte', 'Quotation'),
+    (4, 'Grupo Montajes Ejemplo', 'Feria ficticia de pruebas', 'Andrea Supuesta Ruiz', 'Tarifa EPC', 'Contacted'),
+    (2, 'Consultora Imaginaria', 'Feria ficticia de pruebas', '', '', 'Lead'),
+    (None, 'DIL Tanques', 'Feria ficticia de pruebas', 'Elena Ficticia Mora', 'Tanques de agua', 'Lead'),
+    (3, SIN_ASOCIAR_TRACKER, 'Feria ficticia de pruebas', '', '', 'Lead'),
 ]
 
 

@@ -28,6 +28,7 @@ COMPLETA = 'biometano-meseta-ficticia'
 EPC = 'montajes-ejemplo'
 CONSULTORA = 'consultora-imaginaria'
 VACIA = 'cooperativa-agraria-inventada'
+ALTA = 'depositos-imaginarios-del-levante'   # dada de alta fuera de organizaciones.json
 FECHA = '2026-10-14'
 
 SIN_LIBREOFFICE = not any(shutil.which(n) for n in ('soffice', 'libreoffice')) and not any(
@@ -110,9 +111,10 @@ def test_validador_coincide_con_jsonschema():
     e['tanques'][0]['volumen_m3'] = -5
     del e['pendientes'][0]['estado']
     e['campo_nuevo'] = 1
+    malo['empresas'][ALTA]['relaciones'][0]['papel'] = 'amigo'
     errores = fichas.errores_esquema(malo)
-    assert len(errores) == 6, errores
-    assert len(list(validador.iter_errors(malo))) == 6
+    assert len(errores) == 7, errores
+    assert len(list(validador.iter_errors(malo))) == 7
 
 
 def test_reglas_que_el_esquema_no_expresa():
@@ -122,7 +124,11 @@ def test_reglas_que_el_esquema_no_expresa():
     e['cronologia'][1]['fuente'] = {'tipo': 'gmail'}
     e['lo_que_sabemos'][1]['id'] = 'sab-0001'
     exp['empresas']['otra'] = dict(e, id='distinta')
+    del exp['empresas'][ALTA]['contactos']
+    exp['empresas'][VACIA]['nombre'] = 'Cooperativa Agraria Inventada'
     errores = '\n'.join(fichas.errores_expedientes(exp))
+    assert f'empresas.{ALTA}: falta «contactos» (empresa dada de alta fuera de organizaciones.json)' in errores
+    assert f'empresas.{VACIA}: «nombre» solo corresponde a las empresas dadas de alta' in errores
     assert 'un pendiente cerrado necesita «fecha_cierre»' in errores
     assert 'necesita «fuente.ref»' in errores
     assert 'id repetido «sab-0001»' in errores
@@ -130,10 +136,12 @@ def test_reglas_que_el_esquema_no_expresa():
 
 
 
-def test_ejemplo_de_las_instrucciones_es_valido():
+def test_ejemplos_de_las_instrucciones_son_validos():
     instrucciones = (AQUI.parent / 'INSTRUCCIONES_FICHAS.md').read_text(encoding='utf-8')
-    ejemplo = json.loads(re.search(r'```json\n(.*?)```', instrucciones, re.S).group(1))
-    assert fichas.errores_esquema(ejemplo, {'$ref': '#/$defs/entradas'}, 'entradas') == []
+    ejemplos = re.findall(r'```json\n(.*?)```', instrucciones, re.S)
+    assert len(ejemplos) >= 2
+    for ejemplo in ejemplos:
+        assert fichas.errores_esquema(json.loads(ejemplo), {'$ref': '#/$defs/entradas'}, 'entradas') == []
     assert fichas.errores_esquema(leer(ENTRADAS), {'$ref': '#/$defs/entradas'}, 'entradas') == []
 
 
@@ -147,6 +155,7 @@ def test_inicializar_dos_veces_no_duplica(tmp_path):
     exp = leer(ruta)
     assert list(exp['empresas']) == [o['id'] for o in fichas.cargar_organizaciones(ORGS)]
     assert exp['empresas'][VACIA] == fichas.expediente_vacio(VACIA)
+    assert exp['empresas'][VACIA]['relaciones'] == []
     antes = huella_archivo(ruta)
     codigo, informe = ejecutar(fichas.inicializar, ORGS, ruta)
     assert codigo == 0
@@ -188,7 +197,8 @@ def test_duplicado_por_referencia_de_gmail_se_omite(tmp_path):
     }])
     codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
     assert codigo == 0
-    assert 'duplicada de cro-0002 (misma referencia de Gmail 19a1b2c3d4e5f601)' in informe
+    assert 'duplicada de cro-0002 «02/10/2026 · Correo recibido: Envía las dimensiones' in informe
+    assert '(misma referencia de Gmail 19a1b2c3d4e5f601).' in informe
     assert 'Sin cambios' in informe
     assert huella_archivo(ruta) == antes
 
@@ -207,7 +217,7 @@ def test_duplicado_por_fecha_tipo_y_resumen_se_omite_y_lo_nuevo_se_anade(tmp_pat
     }])
     codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
     assert codigo == 0, informe
-    assert 'duplicada de cro-0003 (misma fecha, tipo y resumen)' in informe
+    assert 'duplicada de cro-0003 «05/10/2026 · Llamada' in informe and '(misma fecha, tipo y resumen).' in informe
     cronologia = leer(ruta)['empresas'][COMPLETA]['cronologia']
     assert [x['id'] for x in cronologia] == ['cro-0001', 'cro-0002', 'cro-0003', 'cro-0004', 'cro-0005']
     assert cronologia[-1]['tipo'] == 'whatsapp'
@@ -232,23 +242,89 @@ def test_intento_de_modificar_una_entrada_existente_es_conflicto(tmp_path):
     ruta = expediente_de_prueba(tmp_path)
     antes = huella_archivo(ruta)
     exp = leer(ruta)['empresas'][COMPLETA]
-    cotizacion = dict(exp['cotizaciones'][0], estado='Aceptada')
-    sabido = {k: v for k, v in exp['lo_que_sabemos'][1].items() if k != 'id'}
     entradas = escribir(tmp_path / 'entradas.json', [{
         'empresa': COMPLETA,
-        'cotizaciones': [cotizacion],
-        'lo_que_sabemos': [dict(sabido, naturaleza='dato')],
-        'pendientes': [{'accion': 'Enviar planos de implantación', 'de_quien': 'cliente', 'estado': 'cerrado',
-                        'fecha_cierre': '2026-10-13'}],
+        'cotizaciones': [dict(exp['cotizaciones'][0], estado='Aceptada')],
+        'relaciones': [dict(exp['relaciones'][0], texto='Otro texto.')],
     }])
     codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
     assert codigo == 2
     assert 'intento de modificar la entrada cot-0001 (cambia estado)' in informe
-    assert 'intento de modificar la entrada sab-0002' in informe and '(cambia naturaleza)' in informe
-    assert ('pen-0003 «Enviar planos de implantación» sigue abierto. '
-            'Para cerrarlo, use «cerrar_pendientes»') in informe
-    assert informe.count('CONFLICTO') == 3
+    assert 'intento de modificar la entrada rel-0001 (cambia texto)' in informe
+    assert informe.count('CONFLICTO') == 2
     assert huella_archivo(ruta) == antes
+
+
+DUPLICADOS = {  # lista: (duplicado de la primera entrada, con otros datos; entrada que no es duplicada)
+    'lo_que_sabemos': ({'texto': 'LA PLANTA NORTE tratará 60.000 t/año de purines y estiércoles',
+                        'naturaleza': 'estimacion', 'fuente': 'Otra', 'fecha': '2026-10-13'},
+                       {'texto': 'Otro dato.', 'naturaleza': 'dato', 'fuente': 'Otra', 'fecha': '2026-10-13'}),
+    'competencia': ({'texto': 'Comparan con tanques de hormigon de un constructor local, piden argumentos de '
+                              'plazo de montaje', 'fuente': 'Otra', 'fecha': '2026-10-13'},
+                    {'texto': 'Otra objeción.', 'fuente': 'Otra', 'fecha': '2026-10-13'}),
+    'proyectos': ({'nombre': 'planta ficticia norte', 'ubicacion': 'BURGOS', 'situacion': 'En obra.',
+                   'fuente': 'Otra', 'fecha': '2026-10-13'},
+                  {'nombre': 'Planta Ficticia Norte', 'ubicacion': 'Palencia', 'fuente': 'Otra',
+                   'fecha': '2026-10-13'}),
+    'relaciones': ({'organizacion': 'Fondo inversor ficticio', 'papel': 'accionista', 'texto': 'Mayoritario.',
+                    'fuente': 'Otra', 'fecha': '2026-10-13'},
+                   {'organizacion': 'Fondo Inversor Ficticio', 'papel': 'socio', 'fuente': 'Otra',
+                    'fecha': '2026-10-13'}),
+    'tanques': ({'proyecto': 'Planta Ficticia Norte', 'uso': 'Digestor', 'cantidad': 2, 'diametro_m': 24.36,
+                 'altura_m': 12.6, 'volumen_m3': 5900, 'fuente': 'Otra', 'fecha': '2026-10-13'},
+                {'proyecto': 'Planta Ficticia Norte', 'uso': 'Digestor', 'cantidad': 2, 'diametro_m': 24.36,
+                 'altura_m': 14, 'fuente': 'Otra', 'fecha': '2026-10-13'}),
+    'cotizaciones': ({'fecha': '2026-10-08', 'descripcion': 'Dos digestores de 5.870 m³ con techo de doble membrana',
+                      'estado': 'Aceptada', 'importe_eur': 400000, 'fuente': 'Otra'},
+                     {'fecha': '2026-10-13', 'descripcion': 'Dos digestores de 5.870 m³ con techo de doble membrana',
+                      'estado': 'Revisada', 'fuente': 'Otra'}),
+    'pendientes': ({'accion': 'enviar referencias de digestores con doble membrana', 'de_quien': 'Stora',
+                    'estado': 'abierto'},
+                   {'accion': 'Enviar planos de implantación revisados', 'de_quien': 'cliente', 'estado': 'abierto'}),
+    'documentos': ({'fecha': '2026-10-13', 'nombre': 'Otro nombre',
+                    'ruta': 'DOCUMENTOS\\Biometano Meseta Ficticia\\Oferta_prueba_2026-10-08.pdf'},
+                   {'fecha': '2026-10-08', 'nombre': 'Oferta de prueba digestores planta norte',
+                    'ruta': 'DOCUMENTOS\\Biometano Meseta Ficticia\\Oferta_prueba_2026-10-08_v2.pdf'}),
+}
+
+
+def test_criterios_de_duplicado(tmp_path):
+    ruta = expediente_de_prueba(tmp_path)
+    antes = leer(ruta)['empresas'][COMPLETA]
+    entradas = escribir(tmp_path / 'entradas.json', [
+        {'empresa': COMPLETA, **{lista: list(par) for lista, par in DUPLICADOS.items()}}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
+    assert codigo == 0, informe
+    despues = leer(ruta)['empresas'][COMPLETA]
+    for lista, (duplicado, nuevo) in DUPLICADOS.items():
+        assert despues[lista][:len(antes[lista])] == antes[lista], lista   # lo existente no cambia
+        assert despues[lista][len(antes[lista]):] == [dict(nuevo, id=despues[lista][-1]['id'])], lista
+    assert informe.count('OMITIDA') == len(DUPLICADOS)
+    for motivo in ('mismo texto', 'mismo nombre y ubicación', 'misma organización y papel',
+                   'mismo proyecto, uso, cantidad, diámetro y altura', 'misma fecha y descripción',
+                   'misma acción, que sigue abierta', 'misma ruta'):
+        assert f'({motivo}).' in informe, motivo
+    assert 'cot-0001 «Dos digestores de 5.870 m³ con techo de doble membrana» (misma fecha y descripción). ' \
+           'Difiere en estado, importe_eur; la entrada existente no se modifica.' in informe
+
+
+def test_pendiente_igual_a_uno_cerrado_se_admite(tmp_path):
+    ruta = expediente_de_prueba(tmp_path)
+    accion = {'accion': 'Enviar referencias de digestores con doble membrana', 'de_quien': 'nosotros',
+              'estado': 'abierto'}
+    entradas = escribir(tmp_path / 'entradas.json', [{'empresa': COMPLETA, 'pendientes': [accion]}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
+    assert codigo == 0 and 'duplicada de pen-0001' in informe and 'Sin cambios' in informe
+    escribir(entradas, [{'empresa': COMPLETA, 'cerrar_pendientes': [{'id': 'pen-0001', 'fecha_cierre': '2026-10-13'}],
+                         'pendientes': [dict(accion, estado='cerrado', fecha_cierre='2026-10-13')]}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
+    assert codigo == 0 and 'Para cerrar el pendiente abierto, use «cerrar_pendientes».' in informe
+    escribir(entradas, [{'empresa': COMPLETA, 'pendientes': [accion]}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
+    assert codigo == 0 and 'pendientes: pen-0004' in informe
+    pendientes = leer(ruta)['empresas'][COMPLETA]['pendientes']
+    assert [(x['id'], x['estado']) for x in pendientes] == [
+        ('pen-0001', 'cerrado'), ('pen-0002', 'abierto'), ('pen-0003', 'abierto'), ('pen-0004', 'abierto')]
 
 
 def test_id_inventado_y_formato_incorrecto_son_errores(tmp_path):
@@ -311,6 +387,125 @@ def test_situacion_actual_y_nombres_alternativos(tmp_path):
     assert 'la situación actual registrada (13/10/2026) es posterior a la propuesta (01/10/2026)' in informe
 
 
+# --- Empresas fuera de organizaciones.json ---------------------------------------
+
+def alta(nombre, tipo='B', **bloque):
+    return {'alta': {'nombre': nombre, 'tipo': tipo}, **bloque}
+
+
+def test_alta_crea_el_expediente(tmp_path):
+    e = leer(EXPEDIENTES)['empresas'][ALTA]
+    assert ALTA == fichas.crear_id('Depósitos Imaginarios del Levante')
+    assert {k: e[k] for k in ('id', 'nombre', 'tipo', 'fuera_de_organizaciones')} == {
+        'id': ALTA, 'nombre': 'Depósitos Imaginarios del Levante', 'tipo': 'B', 'fuera_de_organizaciones': True}
+    assert [c['nombre'] for c in e['contactos']] == ['Elena Ficticia Mora', 'Ofertas (Dpto.)']
+    assert e['nombres_alternativos'] == ['DIL Tanques'] and len(e['relaciones']) == 2
+    # Repetir el alta no es un conflicto: se omite y el resto del bloque se aplica a la empresa.
+    ruta = expediente_de_prueba(tmp_path)
+    entradas = escribir(tmp_path / 'entradas.json', [alta('Depósitos Imaginarios del Levante', competencia=[
+        {'texto': 'Comparan con depósitos de poliéster.', 'fuente': 'Correo', 'fecha': '2026-10-13'}])])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 0, informe
+    assert f'ya estaba dada de alta como «{ALTA}»' in informe
+    assert leer(ruta)['empresas'][ALTA]['competencia'][0]['id'] == 'com-0001'
+
+
+@pytest.mark.parametrize('bloque, mensaje', [
+    (alta('Montajes Ejemplo'),
+     'el id «montajes-ejemplo» o el nombre ya corresponden a «montajes-ejemplo» (organizaciones.json)'),
+    (alta('MONTAJES EJEMPLO, S.L.'), 'ya corresponden a «montajes-ejemplo» (organizaciones.json)'),
+    (alta('Ingeniería Modelo Norte'), 'ya corresponden a «ingenieria-modelo-norte» (organizaciones.json)'),
+    (alta('Meseta Bio'), 'ya corresponden a «biometano-meseta-ficticia» (organizaciones.json)'),
+    (alta('Depositos Imaginarios del Levante', tipo='C'), f'ya corresponden a «{ALTA}» (expediente)'),
+    (alta('Tanques Nuevos Inventados', nombres_alternativos=['Grupo Montajes Ejemplo']),
+     'el nombre alternativo «Grupo Montajes Ejemplo» ya identifica a «montajes-ejemplo»'),
+    (alta('Modelo Norte'), 'el nombre se parece al de «ingenieria-modelo-norte» (organizaciones.json)'),
+    (alta('Depósitos Imaginarios del Levante Sur'),
+     f'el nombre se parece al de «{ALTA}» (expediente). Si es la misma empresa, use un bloque «empresa»'),
+])
+def test_alta_que_coincide_con_otra_empresa_es_conflicto(tmp_path, bloque, mensaje):
+    ruta = expediente_de_prueba(tmp_path)
+    antes = huella_archivo(ruta)
+    entradas = escribir(tmp_path / 'entradas.json', [bloque])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 2, informe
+    assert mensaje in informe
+    assert huella_archivo(ruta) == antes
+
+
+def test_alta_con_nombre_parecido_confirmada_por_andres(tmp_path):
+    ruta = expediente_de_prueba(tmp_path)
+    entradas = escribir(tmp_path / 'entradas.json', [dict(alta('Modelo Norte', tipo='C'), no_es_duplicado=True)])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 0, informe
+    assert 'Llevan «no_es_duplicado» (confirmado por Andrés): bloque 1 (alta «Modelo Norte»).' in informe
+    assert leer(ruta)['empresas']['modelo-norte']['fuera_de_organizaciones'] is True
+
+
+def test_alta_sin_organizaciones_o_con_empresa_es_error(tmp_path):
+    ruta = expediente_de_prueba(tmp_path)
+    antes = huella_archivo(ruta)
+    entradas = escribir(tmp_path / 'entradas.json', [alta('Tanques Nuevos Inventados')])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas)
+    assert codigo == 1 and 'el alta necesita --organizaciones' in informe
+    escribir(entradas, [dict(alta('Tanques Nuevos Inventados'), empresa=COMPLETA)])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 1 and 'debe llevar «empresa» (empresa con expediente) o «alta»' in informe
+    assert huella_archivo(ruta) == antes
+
+
+def test_contactos_de_las_altas(tmp_path):
+    ruta = expediente_de_prueba(tmp_path)
+    existentes = leer(ruta)['empresas'][ALTA]['contactos']
+    entradas = escribir(tmp_path / 'entradas.json', [{'empresa': 'DIL Tanques', 'contactos': [
+        {'nombre': 'Elena F. Mora', 'cargo': 'Gerente', 'correo': 'ELENA.FICTICIA@depositos-imaginarios.example'},
+        {'nombre': 'elena ficticia mora', 'telefono': '+34 600 000 699'},
+        {'nombre': 'Jorge Supuesto Vidal', 'cargo': 'Compras',
+         'correo': 'jorge.supuesto@depositos-imaginarios.example'},
+    ]}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 0, informe
+    assert ('«Elena F. Mora» duplicado de «Elena Ficticia Mora» (mismo correo). Difiere en cargo, nombre, '
+            'telefono; el contacto existente no se modifica.') in informe
+    assert '«elena ficticia mora» duplicado de «Elena Ficticia Mora» (mismo nombre)' in informe
+    contactos = leer(ruta)['empresas'][ALTA]['contactos']
+    assert contactos[:2] == existentes                       # nunca se modifican ni se borran
+    assert contactos[2] == {'nombre': 'Jorge Supuesto Vidal', 'cargo': 'Compras',
+                            'correo': 'jorge.supuesto@depositos-imaginarios.example'}
+    # Los contactos de las empresas de organizaciones.json no van al expediente.
+    escribir(entradas, [{'empresa': COMPLETA, 'contactos': [{'nombre': 'Persona Nueva'}]}])
+    codigo, informe = ejecutar(fichas.anadir, ruta, entradas, ruta_org=ORGS)
+    assert codigo == 1 and 'los contactos de las empresas de organizaciones.json se mantienen allí' in informe
+
+
+def test_validar_avisa_si_un_alta_aparece_en_organizaciones(tmp_path):
+    exp = expediente_de_prueba(tmp_path)
+    datos = leer(ORGS)
+    nueva = dict(datos['organizaciones'][-1], id='depositos-levante', nombre='Depósitos Imaginarios del Levante, S.L.')
+    datos['organizaciones'].append(nueva)
+    orgs = escribir(tmp_path / 'organizaciones.json', datos)
+    codigo, informe = ejecutar(fichas.validar, exp, orgs)
+    assert codigo == 0
+    assert (f'«Depósitos Imaginarios del Levante» ({ALTA}), dada de alta fuera de organizaciones.json, aparece '
+            'ahora en organizaciones.json como «Depósitos Imaginarios del Levante, S.L.» (depositos-levante): '
+            'hay que migrar su expediente.') in informe
+    assert 'depositos-levante» (Depósitos Imaginarios del Levante, S.L.) no tiene expediente' not in informe
+    # inicializar no crea un segundo expediente para la misma empresa.
+    codigo, informe = ejecutar(fichas.inicializar, orgs, exp)
+    assert codigo == 0 and 'hay que migrar su expediente' in informe
+    assert '0 expedientes creados · 5 ya existían · 1 pendientes de migrar · 6 en expedientes.json' in informe
+    assert 'depositos-levante' not in leer(exp)['empresas']
+
+
+def test_expediente_anterior_sin_relaciones_se_completa(tmp_path):
+    exp = leer(EXPEDIENTES)
+    for e in exp['empresas'].values():
+        del e['relaciones']
+    ruta = escribir(tmp_path / 'expedientes.json', exp)
+    cargado, errores = fichas.cargar_expedientes(ruta)
+    assert errores == [] and cargado['empresas'][VACIA]['relaciones'] == []
+
+
 def test_copia_de_seguridad_antes_de_escribir(tmp_path):
     ruta = expediente_de_prueba(tmp_path)
     original = ruta.read_bytes()
@@ -342,7 +537,7 @@ def test_panel_y_tracker_con_cabecera_localizada_por_su_texto(tmp_path):
     assert meseta['fila'] == 4 and meseta['estado'] == 'Oferta enviada'
     assert fichas.fecha_es(meseta['fecha']) == '20/10/2026'
     filas, _ = fichas.leer_tracker(tracker)
-    assert [f['rating'] for f in filas] == ['★★★', '★★', '★', '★★']
+    assert [f['rating'] for f in filas] == [5, 4, 2, None, 3]
 
 
 def test_asociacion_de_nombres():
@@ -354,6 +549,8 @@ def test_asociacion_de_nombres():
         'Ingeniería Modelo Norte grupo Modelo': 'ingenieria-modelo-norte',
         'Meseta Bio': COMPLETA,                                       # nombre alternativo
         'Grupo Montajes Ejemplo S.A.': EPC,
+        'Depositos Imaginarios del Levante S.L.': ALTA,               # nombre de un alta
+        'DIL Tanques': ALTA,
     }
     for nombre, oid in casos.items():
         assert asociador.buscar(nombre) == (oid, ''), nombre
@@ -361,8 +558,21 @@ def test_asociacion_de_nombres():
 
 
 def test_valoracion():
-    assert [fichas.rango_valoracion(v) for v in ('★★★', 4, '4,5', 'Hot', 'B', '', None, 'otra')] == \
-        [3, 4, 4.5, 3, 2, None, None, None]
+    assert [fichas.rango_valoracion(v) for v in (5, 1.0, '3', None, '', '★★★', 'Hot', 'B', 'otra')] == \
+        [5, 1, 3, None, None, 3, 3, 2, None]
+    assert [fichas.en_escala(v) for v in (1, 5, 3.0, '4', 0, 6, 4.5, '★★★', True)] == \
+        [True, True, True, True, False, False, False, False, False]
+    assert fichas.texto_valoracion(4.0) == '4' and fichas.texto_valoracion(None) == ''
+
+
+def test_valoracion_fuera_de_escala_es_aviso(tmp_path):
+    exp = leer(EXPEDIENTES)
+    filas = [{'nombre': 'Meseta Bio', 'rating': '★★★', 'hoja': 'Lead Overview', 'fila': 3},
+             {'nombre': 'Consultora Imaginaria', 'rating': 7, 'hoja': 'Lead Overview', 'fila': 4}]
+    datos, _, avisos = fichas.cruzar(exp, fichas.cargar_organizaciones(ORGS), filas_tracker=filas)
+    assert 'Tracker, hoja «Lead Overview», fila 3: valoración «★★★» fuera de la escala de 1 a 5.' in avisos
+    assert 'Tracker, hoja «Lead Overview», fila 4: valoración «7» fuera de la escala de 1 a 5.' in avisos
+    assert {d['id']: d['valoracion'] for d in datos}[COMPLETA] == '★★★'
 
 
 def test_validar_lista_los_nombres_sin_correspondencia(tmp_path):
@@ -372,7 +582,7 @@ def test_validar_lista_los_nombres_sin_correspondencia(tmp_path):
     assert codigo == 0
     assert (f'AVISO      Panel, hoja «PROMOTORES», fila 5: «{datos_prueba.SIN_ASOCIAR_PANEL}» '
             'no se puede asociar a ninguna empresa') in informe
-    assert f'Tracker, hoja «Lead Overview», fila 6: «{datos_prueba.SIN_ASOCIAR_TRACKER}»' in informe
+    assert f'Tracker, hoja «Lead Overview», fila 7: «{datos_prueba.SIN_ASOCIAR_TRACKER}»' in informe
     assert informe.count('no se puede asociar') == 2
 
 
@@ -409,7 +619,7 @@ def test_solo_se_regeneran_las_que_cambian(tmp_path):
     huellas = {p.name: huella_archivo(p) for p in carpeta.iterdir()}
 
     codigo, informe = generar(exp, salida, panel, tracker)
-    assert codigo == 0 and 'Fichas: 0 regenerada(s), 5 sin cambios' in informe
+    assert codigo == 0 and 'Fichas: 0 regenerada(s), 6 sin cambios' in informe
     assert {p.name: huella_archivo(p) for p in carpeta.iterdir()} == huellas
 
     entradas = escribir(tmp_path / 'entradas.json', [{
@@ -419,7 +629,7 @@ def test_solo_se_regeneran_las_que_cambian(tmp_path):
     }])
     assert ejecutar(fichas.anadir, exp, entradas)[0] == 0
     codigo, informe = generar(exp, salida, panel, tracker)
-    assert codigo == 0 and 'Fichas: 1 regenerada(s), 4 sin cambios' in informe and f'Regeneradas: {EPC}.' in informe
+    assert codigo == 0 and 'Fichas: 1 regenerada(s), 5 sin cambios' in informe and f'Regeneradas: {EPC}.' in informe
     cambiadas = {n for n, h in huellas.items() if huella_archivo(carpeta / n) != h}
     assert cambiadas == {f'Ficha_{EPC}.docx', f'Ficha_{EPC}.pdf'}
     nuevo = leer(salida / fichas.ESTADO)
@@ -431,7 +641,7 @@ def test_solo_se_regeneran_las_que_cambian(tmp_path):
     codigo, informe = generar(exp, salida, panel, tracker)
     assert f'Regeneradas: {VACIA}.' in informe
     codigo, informe = generar(exp, salida, panel, tracker, todas=True)
-    assert codigo == 0 and 'Fichas: 5 regenerada(s), 0 sin cambios' in informe
+    assert codigo == 0 and 'Fichas: 6 regenerada(s), 0 sin cambios' in informe
 
 
 @con_libreoffice
@@ -457,9 +667,10 @@ def test_ficha_completa_con_todas_las_secciones_en_orden(generado):
     ruta = generado.fichas / f'Ficha_{COMPLETA}.docx'
     assert secciones(ruta) == list(SECCIONES)
     t = texto(ruta)
-    for esperado in ('FICHA MAESTRA', 'Biometano Meseta Ficticia', 'Grupo A · Promotora', '★★★',
-                     'Oferta enviada', '20/10/2026', '14/10/2026', 'Copia de organizaciones.json del 13/10/2026',
-                     'Interlocutor', 'ESTIMACIÓN', 'SUPUESTO', '412.500 €', '5.870', '24,36', 'AUTOMÁTICA', '19a1b2c3d4e5f601'):
+    for esperado in ('FICHA MAESTRA', 'Biometano Meseta Ficticia', 'Grupo A · Promotora', 'VALORACIÓN5',
+                     'CON QUIÉN TRABAJA', 'Fondo Inversor Ficticio', ' — Accionista', 'Oferta enviada',
+                     '20/10/2026', '14/10/2026', 'Copia de organizaciones.json del 13/10/2026', 'Interlocutor',
+                     'ESTIMACIÓN', 'SUPUESTO', '412.500 €', '5.870', '24,36', 'AUTOMÁTICA', '19a1b2c3d4e5f601'):
         assert esperado in t, esperado
     # Cronología de la más reciente a la más antigua; solo las entradas automáticas, marcadas.
     xml = documento(ruta)
@@ -480,6 +691,24 @@ def test_las_secciones_vacias_se_omiten(generado):
         t = texto(docx).casefold()
         for marcador in ('sin datos', 'n/d', 'no localizad', 'no encontrad', 'sin verificar', 'none'):
             assert marcador not in t, (docx.name, marcador)
+
+
+@con_libreoffice
+def test_ficha_de_una_empresa_dada_de_alta(generado):
+    docx = generado.fichas / f'Ficha_{ALTA}.docx'
+    assert secciones(docx) == ['SITUACIÓN ACTUAL', 'CONTACTOS', 'PERFIL Y PROYECTOS', 'TANQUES',
+                               'PENDIENTES ABIERTOS', 'CRONOLOGÍA', 'DOCUMENTOS Y FUENTES', 'NOTAS DE REUNIÓN']
+    t = texto(docx)
+    for esperado in ('Depósitos Imaginarios del Levante', 'Grupo B · EPC', 'Empresa fuera de organizaciones.json',
+                     'Elena Ficticia Mora', 'Directora Técnica', 'elena.ficticia@depositos-imaginarios.example',
+                     '+34 600 000 601', 'Ofertas (Dpto.)', 'CON QUIÉN TRABAJA', 'Montajes Ejemplo', ' — Socio',
+                     'Primer contacto', '18/10/2026'):
+        assert esperado in t, esperado
+    # Sin perfil ni uso de GFS (dependen de organizaciones.json) y sin valoración (lead sin valorar).
+    rotulos = re.findall(r'<w:t[^>]*>([^<]*)</w:t>', documento(docx))
+    for ausente in ('PERFIL', 'PROYECTOS', 'USO DE GFS', 'VALORACIÓN', 'Copia de organizaciones.json'):
+        assert not any(r.startswith(ausente) and r != 'PERFIL Y PROYECTOS' for r in rotulos), ausente
+    assert fichas.problemas_paginacion(docx.with_suffix('.pdf'))[1] == []
 
 
 @con_libreoffice
@@ -515,7 +744,7 @@ def test_cada_ficha_empieza_en_pagina_nueva_y_no_se_desborda(generado):
     for pdf in generado.fichas.glob('*.pdf'):
         assert fichas.problemas_paginacion(pdf)[1] == [], pdf.name
     codigo, informe = ejecutar(fichas.validar, generado.exp, ORGS, salida=generado.salida)
-    assert codigo == 0 and '5 fichas generadas comprobadas · 0 errores' in informe
+    assert codigo == 0 and '6 fichas generadas comprobadas · 0 errores' in informe
 
 
 @con_libreoffice
@@ -571,8 +800,10 @@ def test_indice_ordenado_por_valoracion_y_ultima_interaccion(generado):
     t = texto(docx)
     for titulo in ('EMPRESA', 'TIPO', 'VALORACIÓN', 'ESTADO', 'ÚLTIMA INTERACCIÓN', 'PENDIENTES'):
         assert titulo in t
+    # 5, 4 y 2; sin valoración, por la última interacción (el alta, 11/10) y después por nombre.
     nombres = ['Biometano Meseta Ficticia', 'Montajes Ejemplo', 'Consultora Imaginaria',
-               'Cooperativa Agraria Inventada', 'Ingeniería Modelo Norte (grupo Modelo)']
+               'Depósitos Imaginarios del Levante', 'Cooperativa Agraria Inventada',
+               'Ingeniería Modelo Norte (grupo Modelo)']
     posiciones = [t.index(n) for n in nombres]
     assert posiciones == sorted(posiciones)
     with zipfile.ZipFile(docx) as z:
@@ -584,7 +815,7 @@ def test_orden_del_indice_sin_valoracion_por_ultima_interaccion():
     exp = leer(EXPEDIENTES)
     datos, _, _ = fichas.cruzar(exp, fichas.cargar_organizaciones(ORGS))
     assert [d['id'] for d in fichas.orden_indice(datos)] == [
-        EPC, COMPLETA, CONSULTORA, VACIA, 'ingenieria-modelo-norte']
+        ALTA, EPC, COMPLETA, CONSULTORA, VACIA, 'ingenieria-modelo-norte']
 
 
 def test_formatos_de_fecha_y_numero():

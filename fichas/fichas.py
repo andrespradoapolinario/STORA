@@ -13,7 +13,9 @@ Formato de entradas.json, procedimiento y conflictos: INSTRUCCIONES_FICHAS.md.
 El expediente solo guarda lo que no está en otra fuente: el perfil y los
 contactos se leen de organizaciones.json, el estado y el próximo compromiso del
 panel de seguimiento y la valoración del tracker de la feria. El panel y el
-tracker solo se leen; nunca se escriben.
+tracker solo se leen; nunca se escriben. Las empresas que no están en
+organizaciones.json se dan de alta en el expediente con su nombre, tipo y
+contactos (fuera_de_organizaciones).
 
 El módulo es autónomo (no importa nada de scripts/) para que funcione copiado
 fuera del repositorio. Necesita Python 3.10 o posterior, openpyxl y
@@ -52,28 +54,39 @@ GRUPOS = {
     'E': 'Cooperativas y asociaciones',
 }
 SUBTIPOS_ORGANIZACION = ('Asociación', 'Organismo público', 'Centro de investigación')
+# Etiqueta de la ficha para las empresas dadas de alta fuera de organizaciones.json.
+TIPO_SINGULAR = {'A': 'Promotora', 'B': 'EPC', 'C': 'Ingeniería', 'D': 'Consultoría',
+                 'E': 'Cooperativa o asociación'}
 
 # Listas del expediente y prefijo de los id que les asigna el script.
 LISTAS = {
-    'lo_que_sabemos': 'sab', 'proyectos': 'pro', 'tanques': 'tan', 'cotizaciones': 'cot',
+    'lo_que_sabemos': 'sab', 'proyectos': 'pro', 'relaciones': 'rel', 'tanques': 'tan', 'cotizaciones': 'cot',
     'competencia': 'com', 'pendientes': 'pen', 'cronologia': 'cro', 'documentos': 'doc',
 }
 CAMPOS_TANQUE = ('proyecto', 'uso', 'cantidad', 'diametro_m', 'altura_m', 'volumen_m3', 'techo',
                  'aislamiento', 'otros')
-# Duplicados: dos entradas con los mismos campos de clave son la misma, y la
-# nueva se omite. Si además difieren en un campo de contenido, la nueva es un
-# intento de modificar la existente (conflicto). La cronología sigue su propia
-# regla (misma referencia de Gmail, o misma fecha, tipo y resumen) y una entrada
-# repetida se omite siempre.
+# Duplicados: una entrada nueva con los mismos campos de clave (normalizados)
+# que una existente no se añade y se lista en el informe, aunque difiera en
+# otros campos. Los pendientes solo se comparan con los que siguen abiertos.
+# La cronología tiene su propia regla: misma referencia de Gmail, o misma
+# fecha, tipo y resumen.
 CLAVES = {
-    'lo_que_sabemos': (('texto',), ('naturaleza',)),
-    'proyectos': (('nombre', 'situacion'), ('ubicacion',)),
-    'tanques': (CAMPOS_TANQUE, ()),
-    'cotizaciones': (('fecha', 'descripcion'), ('estado', 'importe_eur')),
-    'competencia': (('texto',), ()),
-    'pendientes': (('accion', 'de_quien'), ('fecha_limite',)),
-    'documentos': (('nombre', 'fecha'), ('ruta',)),
+    'lo_que_sabemos': (('texto',), 'mismo texto'),
+    'competencia': (('texto',), 'mismo texto'),
+    'proyectos': (('nombre', 'ubicacion'), 'mismo nombre y ubicación'),
+    'relaciones': (('organizacion', 'papel'), 'misma organización y papel'),
+    'tanques': (('proyecto', 'uso', 'cantidad', 'diametro_m', 'altura_m'),
+                'mismo proyecto, uso, cantidad, diámetro y altura'),
+    'cotizaciones': (('fecha', 'descripcion'), 'misma fecha y descripción'),
+    'pendientes': (('accion',), 'misma acción, que sigue abierta'),
+    'documentos': (('ruta',), 'misma ruta'),
 }
+# Campos que no se señalan como diferencia de un duplicado.
+SIN_COMPARAR = ('id', 'fuente', 'fecha')
+# Campos propios de las empresas dadas de alta fuera de organizaciones.json.
+CAMPOS_ALTA = ('nombre', 'tipo', 'contactos')
+PAPELES = {'socio': 'Socio', 'cliente': 'Cliente', 'EPC': 'EPC', 'ingeniería': 'Ingeniería',
+           'tecnólogo': 'Tecnólogo', 'proveedor': 'Proveedor', 'accionista': 'Accionista', 'otro': 'Otro'}
 
 TIPOS = {
     'correo_recibido': 'Correo recibido', 'correo_enviado': 'Correo enviado', 'reunion': 'Reunión',
@@ -92,8 +105,10 @@ HOJAS_TRACKER = ('Lead Overview',)
 COLUMNAS_TRACKER = {'rating': 'Rating', 'nombre': 'Company', 'evento': 'Exhibition / Event',
                     'contacto': 'Contact', 'oportunidad': 'Opportunity', 'fase': 'Stage'}
 FILAS_BUSQUEDA_CABECERA = 30
-# Valoraciones en texto que se reconocen para ordenar (mayor = mejor). Los
-# números y las estrellas (★) se ordenan por su valor.
+# Valoración del tracker: número entero de 1 a 5 (5 es la máxima); vacía en los
+# leads nuevos. Por tolerancia se reconocen también las estrellas (★) y estas
+# palabras (mayor = mejor).
+ESCALA_VALORACION = range(1, 6)
 PALABRAS_VALORACION = {
     'hot': 3, 'caliente': 3, 'alta': 3, 'alto': 3, 'high': 3, 'a': 3,
     'warm': 2, 'templado': 2, 'templada': 2, 'media': 2, 'medio': 2, 'medium': 2, 'b': 2,
@@ -290,7 +305,7 @@ def errores_esquema(valor, sub=None, ruta='expedientes'):
         tipos = [tipos] if isinstance(tipos, str) else tipos
         if not any(_es_tipo(valor, t) for t in tipos):
             return errores + [f'{ruta}: debe ser {" o ".join(NOMBRES_TIPO[t] for t in tipos)}.']
-    if 'const' in sub and valor != sub['const']:
+    if 'const' in sub and (valor != sub['const'] or type(valor) is not type(sub['const'])):
         errores.append(f'{ruta}: debe valer {json.dumps(sub["const"])}.')
     if 'enum' in sub and valor not in sub['enum']:
         errores.append(f'{ruta}: «{valor}» no es un valor admitido ({", ".join(map(str, sub["enum"]))}).')
@@ -351,6 +366,13 @@ def errores_expedientes(exp):
             errores.append(f'empresas.{clave}: clave no válida (minúsculas, números y guiones).')
         if e['id'] != clave:
             errores.append(f'empresas.{clave}: el id «{e["id"]}» no coincide con la clave.')
+        propios = [c for c in CAMPOS_ALTA if c in e]
+        if e.get('fuera_de_organizaciones'):
+            errores += [f'empresas.{clave}: falta «{c}» (empresa dada de alta fuera de organizaciones.json).'
+                        for c in CAMPOS_ALTA if c not in e]
+        elif propios:
+            errores.append(f'empresas.{clave}: {", ".join(f"«{c}»" for c in propios)} solo corresponde a las '
+                           'empresas dadas de alta fuera de organizaciones.json.')
         for lista in LISTAS:
             vistos = set()
             for entrada in e[lista]:
@@ -362,19 +384,40 @@ def errores_expedientes(exp):
 
 
 def cargar_expedientes(ruta):
-    """(expedientes, errores)."""
+    """(expedientes, errores).
+
+    Los expedientes creados antes de que existiera la lista «relaciones» la
+    reciben vacía; se guarda con la siguiente escritura.
+    """
     try:
         exp = leer_json(ruta)
     except OSError as exc:
         return None, [f'No se puede leer {Path(ruta).name}: {exc}']
     except json.JSONDecodeError as exc:
         return None, [f'{Path(ruta).name}: JSON no válido ({exc}).']
+    for e in (exp.get('empresas') or {}).values() if isinstance(exp, dict) else ():
+        if isinstance(e, dict):
+            e.setdefault('relaciones', [])
     return exp, errores_expedientes(exp)
 
 
 def expediente_vacio(oid):
     return {'id': oid, 'nombres_alternativos': [], 'situacion_actual': None,
             **{lista: [] for lista in LISTAS}}
+
+
+def expediente_alta(oid, alta):
+    """Expediente de una empresa que no está en organizaciones.json."""
+    return {'id': oid, 'nombre': alta['nombre'].strip(), 'tipo': alta['tipo'], 'fuera_de_organizaciones': True,
+            'contactos': [], 'nombres_alternativos': [], 'situacion_actual': None,
+            **{lista: [] for lista in LISTAS}}
+
+
+def organizacion_de_alta(e):
+    """Datos de una empresa dada de alta, con la forma de organizaciones.json, para la ficha."""
+    return {'id': e['id'], 'nombre': e['nombre'], 'grupo': e['tipo'], 'subtipo': TIPO_SINGULAR[e['tipo']],
+            'contactos': [{'nombre': c['nombre'], 'puesto': c.get('cargo', ''), 'email': c.get('correo', ''),
+                           'telefono': c.get('telefono', '')} for c in e['contactos']]}
 
 
 # --- Asociación de nombres -----------------------------------------------------
@@ -386,17 +429,43 @@ class Asociador:
 
     def __init__(self, orgs, empresas):
         self.ids = {o['id'] for o in orgs} | set(empresas)
-        self.nombres, self.alternativos = {}, {}
+        self.nombres, self.alternativos, self.palabras = {}, {}, []
         for o in orgs:
-            for v in variantes_nombre(o.get('nombre', '')):
-                self.nombres.setdefault(v, set()).add(o['id'])
+            self.anadir_nombre(o['id'], o.get('nombre', ''))
         for oid, e in empresas.items():
+            if e.get('fuera_de_organizaciones'):
+                self.anadir_nombre(oid, e.get('nombre', ''))
             for nombre in e.get('nombres_alternativos', []):
                 self.anadir_alternativo(oid, nombre)
+
+    def anadir_nombre(self, oid, nombre):
+        """Nombre de organizaciones.json o de una empresa dada de alta."""
+        self.ids.add(oid)
+        for v in variantes_nombre(nombre):
+            self.nombres.setdefault(v, set()).add(oid)
+            self.palabras.append((oid, frozenset(v.split())))
 
     def anadir_alternativo(self, oid, nombre):
         for v in variantes_nombre(nombre):
             self.alternativos.setdefault(v, set()).add(oid)
+            self.palabras.append((oid, frozenset(v.split())))
+
+    def parecidos(self, nombre):
+        """Id de las empresas cuyo nombre contiene el dado o está contenido en él, palabra a palabra
+        («JFA Technologies» y «JFA Technologies / TECON»)."""
+        ids = set()
+        for v in variantes_nombre(str(nombre)):
+            palabras = set(v.split())
+            ids |= {oid for oid, otras in self.palabras if palabras <= otras or otras <= palabras}
+        return ids
+
+    def coincidencias(self, nombre):
+        """Todos los id con los que coincide el nombre, por id, nombre o nombre alternativo."""
+        texto = str(nombre).strip()
+        ids = {c for c in (texto, texto.lower(), crear_id(texto)) if c in self.ids}
+        for v in variantes_nombre(texto):
+            ids |= self.nombres.get(v, set()) | self.alternativos.get(v, set())
+        return ids
 
     def buscar(self, nombre):
         """(id, '') si el nombre corresponde a una sola empresa; (None, motivo) si no."""
@@ -433,20 +502,50 @@ def inicializar(ruta_org, ruta_exp, informe=print):
             return 1
     else:
         exp = {'version': VERSION, 'empresas': {}}
-    nuevas = [o['id'] for o in orgs if o['id'] not in exp['empresas']]
+    pendientes_migrar = migraciones(exp, orgs)
+    for m in pendientes_migrar.values():
+        informe(f'AVISO      {m}')
+    existentes = sum(1 for o in orgs if o['id'] in exp['empresas'])
+    nuevas = [o['id'] for o in orgs if o['id'] not in exp['empresas'] and o['id'] not in pendientes_migrar]
     for oid in nuevas:
         exp['empresas'][oid] = expediente_vacio(oid)
     ids = {o['id'] for o in orgs}
-    for oid in exp['empresas']:
-        if oid not in ids:
+    for oid, e in exp['empresas'].items():
+        if oid not in ids and not e.get('fuera_de_organizaciones'):
             informe(f'AVISO      expediente «{oid}» sin correspondencia en {Path(ruta_org).name}.')
     if nuevas:
         if ruta_exp.exists():
             informe(f'Copia de seguridad: {copia_seguridad(ruta_exp)}')
         escribir_json(exp, ruta_exp)
+    altas = sum(1 for e in exp['empresas'].values() if e.get('fuera_de_organizaciones'))
+    sin_crear = len(orgs) - existentes - len(nuevas)
     informe(f'{len(orgs)} organizaciones en {Path(ruta_org).name} · {len(nuevas)} expedientes creados · '
-            f'{len(orgs) - len(nuevas)} ya existían · {len(exp["empresas"])} en {ruta_exp.name}.')
+            f'{existentes} ya existían' + (f' · {sin_crear} pendientes de migrar' if sin_crear else '')
+            + f' · {len(exp["empresas"])} en {ruta_exp.name}'
+            + (f' ({altas} dadas de alta fuera de organizaciones.json).' if altas else '.'))
     return 0
+
+
+def migraciones(exp, orgs):
+    """Empresas dadas de alta fuera de organizaciones.json que ya aparecen en él.
+
+    Devuelve {id en organizaciones.json: aviso}. Se comparan el id, el nombre
+    y los nombres alternativos.
+    """
+    asociador = Asociador(orgs, {})
+    nombres = {o['id']: o.get('nombre', o['id']) for o in orgs}
+    avisos = {}
+    for fid, e in exp['empresas'].items():
+        if not e.get('fuera_de_organizaciones'):
+            continue
+        ids = {fid} & set(nombres)
+        for nombre in [e.get('nombre', ''), *e.get('nombres_alternativos', [])]:
+            ids |= asociador.coincidencias(nombre)
+        for oid in sorted(ids):
+            avisos[oid] = (f'«{e.get("nombre", fid)}» ({fid}), dada de alta fuera de organizaciones.json, aparece '
+                           f'ahora en organizaciones.json como «{nombres[oid]}» ({oid}): '
+                           'hay que migrar su expediente.')
+    return avisos
 
 
 # --- añadir --------------------------------------------------------------------
@@ -483,12 +582,21 @@ def buscar_duplicada(existentes, lista, entrada):
             if (x['fecha'], x['tipo'], normalizar(x['resumen'])) == clave:
                 return x, 'misma fecha, tipo y resumen'
         return None, ''
-    campos = CLAVES[lista][0]
+    campos, motivo = CLAVES[lista]
+    if lista == 'pendientes':
+        existentes = [x for x in existentes if x['estado'] == 'abierto']
     clave = tuple(comparable(entrada.get(c)) for c in campos)
     for x in existentes:
         if tuple(comparable(x.get(c)) for c in campos) == clave:
-            return x, f'coincide en {", ".join(campos)}'
+            return x, motivo
     return None, ''
+
+
+def nota_diferencias(existente, nueva):
+    """« Difiere en …» cuando el duplicado trae otros valores; la entrada existente no cambia."""
+    campos = sorted((set(existente) | set(nueva)) - set(SIN_COMPARAR))
+    cambios = diferencias(existente, nueva, campos)
+    return f' Difiere en {", ".join(cambios)}; la entrada existente no se modifica.' if cambios else ''
 
 
 def siguiente_id(existentes, prefijo):
@@ -499,6 +607,8 @@ def siguiente_id(existentes, prefijo):
 def describir(lista, x):
     if lista == 'cronologia':
         texto = f'{fecha_es(x["fecha"])} · {TIPOS[x["tipo"]]}: {x["resumen"]}'
+    elif lista == 'relaciones':
+        texto = f'{x["organizacion"]} ({x["papel"]})'
     else:
         campo = next(c for c in ('texto', 'nombre', 'descripcion', 'accion', 'proyecto', 'uso', 'fuente')
                      if x.get(c))
@@ -529,21 +639,79 @@ def anadir_entrada(e, lista, entrada, ref, informe):
         return
     existente, motivo = buscar_duplicada(e[lista], lista, entrada)
     if existente:
-        if lista == 'pendientes' and entrada['estado'] == 'cerrado' and existente['estado'] == 'abierto':
-            informe.append(('CONFLICTO', f'{desc}: {existente["id"]} «{describir(lista, existente)}» sigue abierto. '
-                                         'Para cerrarlo, use «cerrar_pendientes».'))
-            return
-        cambios = diferencias(existente, entrada, CLAVES.get(lista, ((), ()))[1])
-        if cambios:
-            informe.append(('CONFLICTO', f'{desc}: intento de modificar la entrada {existente["id"]} '
-                                         f'«{describir(lista, existente)}» (cambia {", ".join(cambios)}). '
-                                         'Las entradas existentes no se modifican.'))
-        else:
-            informe.append(('omitida', f'{desc}: duplicada de {existente["id"]} ({motivo}).'))
+        nota = nota_diferencias(existente, entrada)
+        if lista == 'pendientes' and entrada['estado'] == 'cerrado':
+            nota = ' Para cerrar el pendiente abierto, use «cerrar_pendientes».'
+        informe.append(('omitida', f'{desc}: duplicada de {existente["id"]} «{describir(lista, existente)}» '
+                                   f'({motivo}).{nota}'))
         return
     nueva = {'id': siguiente_id(e[lista], LISTAS[lista]), **entrada}
     e[lista].append(nueva)
     informe.append(('añadida', f'{desc}: {nueva["id"]} «{describir(lista, nueva)}».'))
+
+
+def anadir_contacto(e, contacto, ref, informe):
+    """Contacto de una empresa dada de alta. Duplicado: mismo correo o mismo nombre normalizado."""
+    desc = f'{ref} · contactos'
+    correo = contacto.get('correo', '').strip().casefold()
+    for x in e['contactos']:
+        if correo and x.get('correo', '').strip().casefold() == correo:
+            motivo = 'mismo correo'
+        elif normalizar(x['nombre']) == normalizar(contacto['nombre']):
+            motivo = 'mismo nombre'
+        else:
+            continue
+        cambios = diferencias(x, contacto, sorted(set(x) | set(contacto)))
+        nota = f' Difiere en {", ".join(cambios)}; el contacto existente no se modifica.' if cambios else ''
+        informe.append(('omitida', f'{desc}: «{contacto["nombre"]}» duplicado de «{x["nombre"]}» '
+                                   f'({motivo}).{nota}'))
+        return
+    e['contactos'].append({k: v.strip() for k, v in contacto.items()})
+    informe.append(('añadida', f'{desc}: «{contacto["nombre"].strip()}».'))
+
+
+def dar_de_alta(empresas, alta, orgs, asociador, n, informe, no_es_duplicado=False):
+    """Crea el expediente de una empresa que no está en organizaciones.json.
+
+    Devuelve su id, o None si hay un conflicto o un error. Volver a dar de alta
+    la misma empresa (mismo nombre y tipo) no es un conflicto: se omite. Un
+    nombre contenido en el de otra empresa, o que lo contiene, es conflicto
+    salvo que el bloque lleve "no_es_duplicado" (confirmado por Andrés).
+    """
+    desc = f'bloque {n} · alta «{alta["nombre"]}»'
+    if not orgs:
+        informe.append(('ERROR', f'{desc}: el alta necesita --organizaciones para comprobar que la empresa '
+                                 'no está ya en organizaciones.json.'))
+        return None
+    oid = crear_id(alta['nombre'])
+    if not oid:
+        informe.append(('ERROR', f'{desc}: el nombre no permite formar un id.'))
+        return None
+    existente = empresas.get(oid)
+    if existente and existente.get('fuera_de_organizaciones') and existente['tipo'] == alta['tipo'] \
+            and normalizar(existente['nombre']) == normalizar(alta['nombre']):
+        informe.append(('omitida', f'{desc}: ya estaba dada de alta como «{oid}».'))
+        return oid
+    ids_org = {o['id'] for o in orgs}
+    otros = asociador.coincidencias(alta['nombre'])  # incluye el id formado a partir del nombre
+    if otros:
+        donde = '; '.join(f'«{x}»' + (' (organizaciones.json)' if x in ids_org else ' (expediente)')
+                          for x in sorted(otros))
+        informe.append(('CONFLICTO', f'{desc}: el id «{oid}» o el nombre ya corresponden a {donde}.'))
+        return None
+    parecidos = asociador.parecidos(alta['nombre'])
+    if parecidos and not no_es_duplicado:
+        donde = '; '.join(f'«{x}»' + (' (organizaciones.json)' if x in ids_org else ' (expediente)')
+                          for x in sorted(parecidos))
+        informe.append(('CONFLICTO', f'{desc}: el nombre se parece al de {donde}. Si es la misma empresa, use un '
+                                     'bloque «empresa» con su id; si es otra, añada "no_es_duplicado": true '
+                                     'al bloque.'))
+        return None
+    empresas[oid] = expediente_alta(oid, alta)
+    asociador.anadir_nombre(oid, alta['nombre'])
+    informe.append(('cambio', f'{desc}: nuevo expediente «{oid}» (grupo {alta["tipo"]}), '
+                              'fuera de organizaciones.json.'))
+    return oid
 
 
 def cerrar_pendiente(e, cierre, ref, informe):
@@ -592,16 +760,33 @@ def aplicar(exp, bloques, orgs=()):
     asociador = Asociador(orgs, nuevo['empresas'])
     nombres = {o['id']: o.get('nombre', o['id']) for o in orgs}
     for n, bloque in enumerate(bloques, 1):
-        oid, motivo = asociador.buscar(bloque['empresa'])
-        if oid is None:
-            informe.append(('CONFLICTO', f'bloque {n}: {motivo}'))
+        if ('alta' in bloque) == ('empresa' in bloque):
+            informe.append(('ERROR', f'bloque {n}: debe llevar «empresa» (empresa con expediente) o «alta» '
+                                     '(empresa nueva fuera de organizaciones.json), y solo uno de los dos.'))
             continue
-        if oid not in nuevo['empresas']:
-            informe.append(('CONFLICTO', f'bloque {n}: «{bloque["empresa"]}» ({oid}) no tiene expediente. '
-                                         'Ejecute «inicializar» con el organizaciones.json actual.'))
-            continue
+        if 'alta' in bloque:
+            oid = dar_de_alta(nuevo['empresas'], bloque['alta'], orgs, asociador, n, informe,
+                              bloque.get('no_es_duplicado', False))
+            if oid is None:
+                continue
+        else:
+            oid, motivo = asociador.buscar(bloque['empresa'])
+            if oid is None:
+                informe.append(('CONFLICTO', f'bloque {n}: {motivo}'))
+                continue
+            if oid not in nuevo['empresas']:
+                informe.append(('CONFLICTO', f'bloque {n}: «{bloque["empresa"]}» ({oid}) no tiene expediente. '
+                                             'Ejecute «inicializar» con el organizaciones.json actual.'))
+                continue
         e = nuevo['empresas'][oid]
-        ref = f'{nombres[oid]} [{oid}]' if oid in nombres else oid
+        nombre = nombres.get(oid) or e.get('nombre')
+        ref = f'{nombre} [{oid}]' if nombre else oid
+        contactos = bloque.get('alta', {}).get('contactos', []) + bloque.get('contactos', [])
+        if contactos and not e.get('fuera_de_organizaciones'):
+            informe.append(('ERROR', f'{ref}: los contactos de las empresas de organizaciones.json se mantienen '
+                                     'allí (parche «anadir_contacto» del bloc), no en el expediente.'))
+        for contacto in contactos if e.get('fuera_de_organizaciones') else ():
+            anadir_contacto(e, contacto, ref, informe)
         for nombre in bloque.get('nombres_alternativos', []):
             otro, _ = asociador.buscar(nombre)
             if otro == oid:
@@ -660,6 +845,10 @@ def anadir(ruta_exp, ruta_entradas, simular=False, ruta_org=None, informe=print)
     if not any(t in ('CONFLICTO', 'ERROR') for t, _ in incidencias):
         incidencias += [('ERROR', f'resultado: {m}') for m in errores_expedientes(nuevo)]
     informe(f'== {Path(ruta_entradas).name} → {ruta_exp.name}')
+    marcados = [f'{n} (alta «{b["alta"]["nombre"]}»)' if 'alta' in b else f'{n} ({b.get("empresa", "")})'
+                for n, b in enumerate(bloques, 1) if b.get('no_es_duplicado')]
+    informe('  Llevan «no_es_duplicado» (confirmado por Andrés): bloque ' + ', bloque '.join(marcados) + '.'
+            if marcados else '  Ningún bloque lleva «no_es_duplicado».')
     for tipo, texto in incidencias:
         if tipo in ('añadida', 'cambio'):
             informe(f'  · {texto}')
@@ -779,6 +968,15 @@ def rango_valoracion(valor):
         return PALABRAS_VALORACION.get(normalizar(texto))
 
 
+def en_escala(valor):
+    """True si la valoración es un entero de 1 a 5 (también escrito como texto)."""
+    try:
+        numero = float(str(valor).strip().replace(',', '.')) if not isinstance(valor, bool) else None
+    except ValueError:
+        return False
+    return numero is not None and numero.is_integer() and int(numero) in ESCALA_VALORACION
+
+
 def texto_valoracion(valor):
     if isinstance(valor, float) and valor.is_integer():
         valor = int(valor)
@@ -790,19 +988,24 @@ def cruzar(exp, orgs, filas_panel=(), filas_tracker=()):
 
     Devuelve (fichas, huerfanos, avisos): fichas es la lista de diccionarios con
     los datos de cada ficha, en el orden del expediente; huerfanos, los id del
-    expediente sin organización; avisos, los nombres sin asociar y las empresas
-    con varias filas en el panel.
+    expediente sin organización (salvo las empresas dadas de alta fuera de
+    organizaciones.json, que toman sus datos del expediente); avisos, los
+    nombres sin asociar, las empresas con varias filas en el panel, las
+    valoraciones fuera de la escala 1-5 y las altas que hay que migrar.
     """
     asociador = Asociador(orgs, exp['empresas'])
     panel, sin_panel = agrupar(filas_panel, asociador, 'Panel')
     tracker, sin_tracker = agrupar(filas_tracker, asociador, 'Tracker')
     por_id = {o['id']: o for o in orgs}
     fichas, huerfanos, avisos = [], [], sin_panel + sin_tracker
+    avisos += [f'Tracker, hoja «{f["hoja"]}», fila {f["fila"]}: valoración «{f["rating"]}» fuera de la escala '
+               'de 1 a 5.' for f in filas_tracker if not vacio(f['rating']) and not en_escala(f['rating'])]
+    avisos += list(migraciones(exp, orgs).values())
     for oid in list(panel) + list(tracker):
         if oid not in exp['empresas']:
             avisos.append(f'«{oid}» aparece en el panel o en el tracker pero no tiene expediente.')
     for oid, e in exp['empresas'].items():
-        org = por_id.get(oid)
+        org = organizacion_de_alta(e) if e.get('fuera_de_organizaciones') else por_id.get(oid)
         if org is None:
             huerfanos.append(oid)
             continue
@@ -815,7 +1018,7 @@ def cruzar(exp, orgs, filas_panel=(), filas_tracker=()):
         mejor = max(valoraciones, key=lambda v: (rango_valoracion(v) is not None, rango_valoracion(v) or 0),
                     default=None)
         fichas.append({
-            'id': oid, 'org': org, 'exp': e,
+            'id': oid, 'org': org, 'exp': e, 'fuera': bool(e.get('fuera_de_organizaciones')),
             'estado': '' if fila.get('estado') is None else str(fila['estado']).strip(),
             'proximo': fecha_es(fila.get('fecha')),
             'valoracion': texto_valoracion(mejor),
@@ -1082,7 +1285,8 @@ def seccion_situacion(e):
             + tabla([ANCHO], [fila([caja])]))
 
 
-def seccion_contactos(org, fecha_org):
+def seccion_contactos(org, fecha_org, fuera=False):
+    """Contactos de organizaciones.json o, en las empresas dadas de alta fuera de él, del expediente."""
     contactos = orden_prioridad(org.get('contactos') or [])
     if not contactos and not org.get('telefono_empresa'):
         return ''
@@ -1096,7 +1300,9 @@ def seccion_contactos(org, fecha_org):
     if org.get('telefono_empresa'):
         etiqueta = 'Tel. organización' if org.get('subtipo') in SUBTIPOS_ORGANIZACION else 'Tel. empresa'
         filas.append([p(etiqueta, R_GRIS), '', '', p(org['telefono_empresa'])])
-    return (titulo_seccion('CONTACTOS', f'Copia de organizaciones.json del {fecha_es(fecha_org)}')
+    origen = 'Empresa fuera de organizaciones.json' if fuera else \
+        f'Copia de organizaciones.json del {fecha_es(fecha_org)}'
+    return (titulo_seccion('CONTACTOS', origen)
             + tabla_datos([2400, 2466, 3100, 1900], ['PERSONA', 'CARGO', 'CORREO', 'TELÉFONO'], filas))
 
 
@@ -1113,6 +1319,15 @@ def parrafo_proyecto(pr):
     return parrafo(runs, ppr(tabs=(('left', 180),), sangria=180))
 
 
+def parrafo_relacion(r):
+    """«Organización — Papel · texto», con la fuente y la fecha debajo."""
+    runs = run('•', R_TEXTO) + TAB + run(r['organizacion'], R_NEGRITA) + run(f' — {PAPELES[r["papel"]]}')
+    if r.get('texto'):
+        runs += run(f' · {r["texto"]}')
+    return (parrafo(runs, ppr(tabs=(('left', 180),), sangria=180))
+            + parrafo(run(fuente_y_fecha(r), R_GRIS), '<w:ind w:left="180"/>'))
+
+
 def seccion_perfil(org, e):
     filas = []
     if org.get('perfil'):
@@ -1124,9 +1339,9 @@ def seccion_perfil(org, e):
         xml += p(f'Proyectos conocidos: {conocidos}', R_GRIS)
     if xml:
         filas.append(('PROYECTOS', xml))
-    trabaja = org.get('trabaja_con')
-    if trabaja:
-        filas.append(('CON QUIÉN TRABAJA', p(', '.join(trabaja) if isinstance(trabaja, list) else trabaja)))
+    if e['relaciones']:
+        filas.append(('CON QUIÉN TRABAJA', ''.join(parrafo_relacion(r) for r in sorted(
+            e['relaciones'], key=lambda r: (normalizar(r['organizacion']), list(PAPELES).index(r['papel']))))))
     if org.get('uso_gfs') in ('Sí', 'No'):
         filas.append(('USO DE GFS', p(org['uso_gfs'], R_NEGRITA)))
     xml = tabla([1900, ANCHO - 1900], [fila([celda(p(etq, R_ETIQUETA), INFERIOR, mar=(70, 0, 70, 100)),
@@ -1293,7 +1508,7 @@ def cuerpo_ficha(d, fecha_gen, fecha_org):
     return ''.join((
         cabecera_ficha(d, fecha_gen),
         seccion_situacion(e),
-        seccion_contactos(org, fecha_org),
+        seccion_contactos(org, fecha_org, d['fuera']),
         seccion_perfil(org, e),
         seccion_lo_que_sabemos(e),
         seccion_tanques(e),
@@ -1588,8 +1803,9 @@ def validar(ruta_exp, ruta_org, ruta_panel=None, ruta_tracker=None, salida=None,
         n = len(exp['empresas'])
         _, huerfanos, avisos_cruce = cruzar(exp, orgs, filas_panel, filas_tracker)
         errores += [f'expediente «{oid}» sin correspondencia en {Path(ruta_org).name}.' for oid in huerfanos]
+        por_migrar = migraciones(exp, orgs)
         avisos += [f'«{o["id"]}» ({o.get("nombre", "")}) no tiene expediente: ejecute «inicializar».'
-                   for o in orgs if o['id'] not in exp['empresas']]
+                   for o in orgs if o['id'] not in exp['empresas'] and o['id'] not in por_migrar]
         avisos += avisos_cruce
     carpeta = Path(salida or Path(ruta_exp).parent) / CARPETA_FICHAS
     pdfs = sorted(carpeta.glob('Ficha_*.pdf')) if carpeta.is_dir() else []
