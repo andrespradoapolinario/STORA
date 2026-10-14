@@ -1,0 +1,172 @@
+{
+  "evento": {
+    "nombre": "Feria ficticia de pruebas",
+    "pie": "Feria ficticia de pruebas",
+    "leyenda_indice": "Datos inventados para las pruebas de las fichas maestras.",
+    "archivo_bloc": "Bloc_Pruebas"
+  },
+  "organizaciones": [
+    {
+      "id": "biometano-meseta-ficticia",
+      "nombre": "Biometano Meseta Ficticia",
+      "grupo": "A",
+      "subtipo": "Promotora",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Promotora inventada de plantas de biometano en la meseta norte, con tres proyectos en tramitación.",
+      "contactos": [
+        {
+          "nombre": "Lucía Ejemplo Sanz",
+          "puesto": "Directora de Proyectos",
+          "telefono": "+34 600 000 101",
+          "email": "lucia.ejemplo@meseta-ficticia.example",
+          "slot": "tecnico",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": true,
+          "departamento": false,
+          "nota": ""
+        },
+        {
+          "nombre": "Mario Prueba Gil",
+          "puesto": "Responsable de Compras",
+          "telefono": "",
+          "email": "mario.prueba@meseta-ficticia.example",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": "Ponente en la mesa redonda de la feria ficticia"
+        }
+      ],
+      "telefono_empresa": "+34 900 000 100",
+      "proyectos": [
+        {"nombre": "Planta Ficticia Norte", "ubicacion": "Burgos", "anio": "2027", "estado": "En desarrollo y planificación"},
+        {"nombre": "Planta Ficticia Sur", "ubicacion": "Segovia", "anio": "", "estado": ""}
+      ],
+      "proyectos_conocidos": 3,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "montajes-ejemplo",
+      "nombre": "Montajes Ejemplo",
+      "grupo": "B",
+      "subtipo": "EPC",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "EPC inventada de montaje de digestores y gasómetros.",
+      "contactos": [
+        {
+          "nombre": "Andrea Supuesta Ruiz",
+          "puesto": "Jefa de Oferta",
+          "telefono": "+34 600 000 201",
+          "email": "andrea.supuesta@montajes-ejemplo.example",
+          "slot": "otros",
+          "confirmado_feria": true,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": "No",
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "ingenieria-modelo-norte",
+      "nombre": "Ingeniería Modelo Norte (grupo Modelo)",
+      "grupo": "C",
+      "subtipo": "Ingeniería",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Ingeniería inventada de procesos de digestión anaerobia.",
+      "contactos": [],
+      "telefono_empresa": "+34 900 000 300",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "consultora-imaginaria",
+      "nombre": "Consultora Imaginaria",
+      "grupo": "D",
+      "subtipo": "Consultoría",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Consultoría inventada de tramitación ambiental.",
+      "contactos": [
+        {
+          "nombre": "Compras (Dpto.)",
+          "puesto": "",
+          "telefono": "",
+          "email": "compras@consultora-imaginaria.example",
+          "slot": "compras",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": true,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    },
+    {
+      "id": "cooperativa-agraria-inventada",
+      "nombre": "Cooperativa Agraria Inventada",
+      "grupo": "E",
+      "subtipo": "Cooperativa",
+      "stand": "",
+      "nota_stand": "",
+      "perfil": "Cooperativa inventada con interés en el tratamiento de purines.",
+      "contactos": [
+        {
+          "nombre": "Pablo Inventado López",
+          "puesto": "Gerente",
+          "telefono": "+34 600 000 501",
+          "email": "pablo.inventado@cooperativa-inventada.example",
+          "slot": "otros",
+          "confirmado_feria": false,
+          "interes": true,
+          "interlocutor": false,
+          "departamento": false,
+          "nota": ""
+        }
+      ],
+      "telefono_empresa": "",
+      "proyectos": [],
+      "proyectos_conocidos": null,
+      "uso_gfs": null,
+      "visita": false,
+      "cita": "",
+      "aviso": "",
+      "no_acude": false,
+      "fuente_interna": ""
+    }
+  ]
+}

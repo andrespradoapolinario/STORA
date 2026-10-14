@@ -1,0 +1,396 @@
+{
+  "version": 1,
+  "empresas": {
+    "biometano-meseta-ficticia": {
+      "id": "biometano-meseta-ficticia",
+      "nombres_alternativos": [
+        "Meseta Bio"
+      ],
+      "situacion_actual": {
+        "texto": "Oferta de dos digestores enviada el 08/10 y en revisión por la dirección de proyectos. La planta norte es prioritaria: quieren cerrar proveedor de tanques antes de fin de año. Pendiente de confirmar si el gasómetro va integrado en el digestor.",
+        "fecha": "2026-10-12"
+      },
+      "lo_que_sabemos": [
+        {
+          "id": "sab-0001",
+          "texto": "La planta norte tratará 60.000 t/año de purines y estiércoles.",
+          "naturaleza": "dato",
+          "fuente": "Reunión en la feria ficticia",
+          "fecha": "2026-09-30"
+        },
+        {
+          "id": "sab-0002",
+          "texto": "Presupuesto de tanques en torno a un millón de euros para las dos plantas.",
+          "naturaleza": "estimacion",
+          "fuente": "Llamada con Lucía Ejemplo",
+          "fecha": "2026-10-05"
+        },
+        {
+          "id": "sab-0003",
+          "texto": "La decisión final depende del fondo inversor del grupo.",
+          "naturaleza": "supuesto",
+          "fuente": "Notas de Andrés",
+          "fecha": "2026-10-05"
+        }
+      ],
+      "proyectos": [
+        {
+          "id": "pro-0001",
+          "nombre": "Planta Ficticia Norte",
+          "ubicacion": "Burgos",
+          "situacion": "Licencia ambiental concedida; ingeniería de detalle en curso.",
+          "fuente": "Reunión en la feria ficticia",
+          "fecha": "2026-09-30"
+        },
+        {
+          "id": "pro-0002",
+          "nombre": "Planta Ficticia Sur",
+          "ubicacion": "Segovia",
+          "situacion": "En tramitación ambiental.",
+          "fuente": "Llamada con Lucía Ejemplo",
+          "fecha": "2026-10-05"
+        }
+      ],
+      "relaciones": [
+        {
+          "id": "rel-0001",
+          "organizacion": "Fondo Inversor Ficticio",
+          "papel": "accionista",
+          "texto": "Participa en las dos plantas.",
+          "fuente": "Notas de Andrés",
+          "fecha": "2026-10-05"
+        },
+        {
+          "id": "rel-0002",
+          "organizacion": "Ingeniería Modelo Norte",
+          "papel": "ingeniería",
+          "texto": "Ingeniería de detalle de la planta norte.",
+          "fuente": "Reunión en la feria ficticia",
+          "fecha": "2026-09-30"
+        }
+      ],
+      "tanques": [
+        {
+          "id": "tan-0001",
+          "proyecto": "Planta Ficticia Norte",
+          "uso": "Digestor",
+          "cantidad": 2,
+          "diametro_m": 24.36,
+          "altura_m": 12.6,
+          "volumen_m3": 5870,
+          "techo": "Doble membrana",
+          "aislamiento": "Lana de roca 100 mm",
+          "fuente": "Correo de Lucía Ejemplo",
+          "fecha": "2026-10-02"
+        },
+        {
+          "id": "tan-0002",
+          "proyecto": "Planta Ficticia Norte",
+          "uso": "Postdigestor",
+          "cantidad": 1,
+          "volumen_m3": 6000,
+          "otros": "Agitadores laterales",
+          "fuente": "Correo de Lucía Ejemplo",
+          "fecha": "2026-10-02"
+        }
+      ],
+      "cotizaciones": [
+        {
+          "id": "cot-0001",
+          "fecha": "2026-10-08",
+          "descripcion": "Dos digestores de 5.870 m³ con techo de doble membrana",
+          "estado": "Enviada",
+          "importe_eur": 412500,
+          "fuente": "Oferta Stora de prueba"
+        }
+      ],
+      "competencia": [
+        {
+          "id": "com-0001",
+          "texto": "Comparan con tanques de hormigón de un constructor local; piden argumentos de plazo de montaje.",
+          "fuente": "Reunión en la feria ficticia",
+          "fecha": "2026-09-30"
+        }
+      ],
+      "pendientes": [
+        {
+          "id": "pen-0001",
+          "accion": "Enviar referencias de digestores con doble membrana",
+          "de_quien": "nosotros",
+          "fecha_limite": "2026-10-16",
+          "estado": "abierto"
+        },
+        {
+          "id": "pen-0002",
+          "accion": "Confirmar plazo de fabricación de la chapa",
+          "de_quien": "Stora",
+          "fecha_limite": "2026-10-20",
+          "estado": "abierto"
+        },
+        {
+          "id": "pen-0003",
+          "accion": "Enviar planos de implantación",
+          "de_quien": "cliente",
+          "estado": "abierto"
+        }
+      ],
+      "cronologia": [
+        {
+          "id": "cro-0001",
+          "fecha": "2026-09-30",
+          "hora": "12:30",
+          "tipo": "reunion",
+          "participantes": [
+            "Lucía Ejemplo Sanz",
+            "Andrés Prado"
+          ],
+          "resumen": "Reunión en el stand. Presentan dos plantas y piden oferta para los digestores de la planta norte.",
+          "datos_clave": [
+            "60.000 t/año de purines y estiércoles",
+            "Dos digestores y un postdigestor"
+          ],
+          "acuerdos": [
+            "Enviar oferta en dos semanas"
+          ],
+          "origen": "manual",
+          "fuente": {
+            "tipo": "foto_nota",
+            "ref": "Foto de la libreta, 30/09"
+          }
+        },
+        {
+          "id": "cro-0002",
+          "fecha": "2026-10-02",
+          "hora": "09:14",
+          "tipo": "correo_recibido",
+          "participantes": [
+            "Lucía Ejemplo Sanz"
+          ],
+          "resumen": "Envía las dimensiones de los digestores y del postdigestor.",
+          "datos_clave": [
+            "Diámetro 24,36 m y altura 12,6 m"
+          ],
+          "origen": "automatico",
+          "fuente": {
+            "tipo": "gmail",
+            "ref": "19a1b2c3d4e5f601"
+          }
+        },
+        {
+          "id": "cro-0003",
+          "fecha": "2026-10-05",
+          "hora": "17:00",
+          "tipo": "llamada",
+          "participantes": [
+            "Lucía Ejemplo Sanz",
+            "Andrés Prado"
+          ],
+          "resumen": "Llamada de seguimiento: la planta sur va más retrasada.",
+          "origen": "manual",
+          "fuente": {
+            "tipo": "conversacion"
+          }
+        },
+        {
+          "id": "cro-0004",
+          "fecha": "2026-10-08",
+          "hora": "11:40",
+          "tipo": "correo_enviado",
+          "participantes": [
+            "Lucía Ejemplo Sanz"
+          ],
+          "resumen": "Envío de la oferta de dos digestores.",
+          "origen": "automatico",
+          "fuente": {
+            "tipo": "gmail",
+            "ref": "19a1b2c3d4e5f602"
+          }
+        }
+      ],
+      "documentos": [
+        {
+          "id": "doc-0001",
+          "fecha": "2026-10-08",
+          "nombre": "Oferta de prueba digestores planta norte",
+          "ruta": "DOCUMENTOS\\Biometano Meseta Ficticia\\Oferta_prueba_2026-10-08.pdf"
+        }
+      ]
+    },
+    "montajes-ejemplo": {
+      "id": "montajes-ejemplo",
+      "nombres_alternativos": [
+        "Grupo Montajes Ejemplo"
+      ],
+      "situacion_actual": null,
+      "lo_que_sabemos": [],
+      "proyectos": [],
+      "relaciones": [],
+      "tanques": [],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [
+        {
+          "id": "pen-0001",
+          "accion": "Responder con tarifa orientativa",
+          "de_quien": "nosotros",
+          "fecha_limite": "2026-10-15",
+          "estado": "abierto"
+        }
+      ],
+      "cronologia": [
+        {
+          "id": "cro-0001",
+          "fecha": "2026-10-09",
+          "tipo": "correo_recibido",
+          "participantes": [
+            "Andrea Supuesta Ruiz"
+          ],
+          "resumen": "Pide tarifa orientativa de tanques para una oferta de EPC.",
+          "origen": "automatico",
+          "fuente": {
+            "tipo": "gmail",
+            "ref": "19a1b2c3d4e5f603"
+          }
+        }
+      ],
+      "documentos": []
+    },
+    "ingenieria-modelo-norte": {
+      "id": "ingenieria-modelo-norte",
+      "nombres_alternativos": [],
+      "situacion_actual": null,
+      "lo_que_sabemos": [
+        {
+          "id": "sab-0001",
+          "texto": "Prescriben tanques de acero en sus proyectos de purines.",
+          "naturaleza": "dato",
+          "fuente": "Web de la empresa ficticia",
+          "fecha": "2026-10-01"
+        }
+      ],
+      "proyectos": [],
+      "relaciones": [],
+      "tanques": [],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [],
+      "cronologia": [],
+      "documentos": []
+    },
+    "consultora-imaginaria": {
+      "id": "consultora-imaginaria",
+      "nombres_alternativos": [],
+      "situacion_actual": {
+        "texto": "Primer contacto pendiente.",
+        "fecha": "2026-10-10"
+      },
+      "lo_que_sabemos": [],
+      "proyectos": [],
+      "relaciones": [],
+      "tanques": [],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [],
+      "cronologia": [],
+      "documentos": []
+    },
+    "cooperativa-agraria-inventada": {
+      "id": "cooperativa-agraria-inventada",
+      "nombres_alternativos": [],
+      "situacion_actual": null,
+      "lo_que_sabemos": [],
+      "proyectos": [],
+      "relaciones": [],
+      "tanques": [],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [],
+      "cronologia": [],
+      "documentos": []
+    },
+    "depositos-imaginarios-del-levante": {
+      "id": "depositos-imaginarios-del-levante",
+      "nombre": "Depósitos Imaginarios del Levante",
+      "tipo": "B",
+      "fuera_de_organizaciones": true,
+      "contactos": [
+        {
+          "nombre": "Elena Ficticia Mora",
+          "cargo": "Directora Técnica",
+          "correo": "elena.ficticia@depositos-imaginarios.example",
+          "telefono": "+34 600 000 601"
+        },
+        {
+          "nombre": "Ofertas (Dpto.)",
+          "correo": "ofertas@depositos-imaginarios.example"
+        }
+      ],
+      "nombres_alternativos": [
+        "DIL Tanques"
+      ],
+      "situacion_actual": {
+        "texto": "Lead nuevo de la feria ficticia. Piden precio orientativo de dos tanques de agua para una obra en la costa.",
+        "fecha": "2026-10-11"
+      },
+      "lo_que_sabemos": [],
+      "proyectos": [],
+      "relaciones": [
+        {
+          "id": "rel-0001",
+          "organizacion": "Montajes Ejemplo",
+          "papel": "socio",
+          "texto": "Montan juntos en las obras de la costa.",
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        },
+        {
+          "id": "rel-0002",
+          "organizacion": "Constructora Inventada del Sur",
+          "papel": "cliente",
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        }
+      ],
+      "tanques": [
+        {
+          "id": "tan-0001",
+          "proyecto": "Obra de la costa",
+          "uso": "Agua contra incendios",
+          "cantidad": 2,
+          "volumen_m3": 1200,
+          "fuente": "Correo de Elena Ficticia",
+          "fecha": "2026-10-11"
+        }
+      ],
+      "cotizaciones": [],
+      "competencia": [],
+      "pendientes": [
+        {
+          "id": "pen-0001",
+          "accion": "Enviar precio orientativo de los dos tanques",
+          "de_quien": "nosotros",
+          "fecha_limite": "2026-10-18",
+          "estado": "abierto"
+        }
+      ],
+      "cronologia": [
+        {
+          "id": "cro-0001",
+          "fecha": "2026-10-11",
+          "hora": "10:05",
+          "tipo": "correo_recibido",
+          "participantes": [
+            "Elena Ficticia Mora"
+          ],
+          "resumen": "Piden precio orientativo de dos tanques de 1.200 m³ para agua contra incendios.",
+          "origen": "automatico",
+          "fuente": {
+            "tipo": "gmail",
+            "ref": "19a1b2c3d4e5f604"
+          }
+        }
+      ],
+      "documentos": []
+    }
+  }
+}
