@@ -34,7 +34,7 @@ Se ejecutan desde la raíz del repositorio, en este orden:
 
 ## Requisitos
 
-- Python 3.10 o posterior y `pip install -r requirements.txt`.
+- Python 3.10 o posterior y `pip install -r requirements.txt` (`openpyxl` solo lo usan las fichas maestras). Para las pruebas, además, `pip install pytest`.
 - LibreOffice con Writer (para el PDF; en Debian o Ubuntu, paquete `libreoffice-writer`: sin él, la conversión falla con «source file could not be loaded»).
 - Fuente Calibri o, en su defecto, Carlito (equivalente métrico libre), para que el PDF reproduzca el Word.
 
@@ -52,4 +52,13 @@ scripts/bloc_pdf.py            Generador del PDF y ajuste de las NOTAS.
 scripts/comun.py               Rutas y constantes del esquema.
 scripts/plantilla_bloc/        Partes fijas del Word (estilos, pie, tema).
 salidas/                       Documentos generados. No se editan a mano.
+fichas/                        Módulo de fichas maestras (expedientes por empresa).
+```
+
+## Fichas maestras
+
+`fichas/fichas.py` mantiene un expediente por empresa y genera una ficha maestra en Word y PDF para cada una, más un índice. Los expedientes reales no entran en el repositorio. Uso, formato de entradas y conflictos: [fichas/INSTRUCCIONES_FICHAS.md](fichas/INSTRUCCIONES_FICHAS.md); reglas: apartado 10 de CLAUDE.md.
+
+```
+python -m pytest fichas/pruebas -q      # pruebas, solo con empresas inventadas
 ```

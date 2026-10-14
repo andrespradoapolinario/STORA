@@ -18,6 +18,7 @@ datos/entrada/                 Actualizaciones pendientes (parches JSON) prepara
 datos/entrada/aplicadas/       Parches ya aplicados (no se borran: son el historial).
 scripts/                       Generadores (PDF, Word) y validar.py.
 salidas/                       Documentos generados. No se editan a mano.
+fichas/                        Módulo de fichas maestras (apartado 10). Sin datos reales.
 CLAUDE.md                      Este archivo.
 ```
 
@@ -148,3 +149,15 @@ Son conflicto, para no crear duplicados, un contacto nuevo que se parece a uno e
 - No borrar organizaciones, contactos ni proyectos sin instrucción expresa.
 - Commits pequeños y descriptivos, en español.
 - Ante una instrucción ambigua, preguntar antes de asumir.
+
+## 10. Fichas maestras
+
+Módulo en `fichas/`: un expediente por empresa (`expedientes.json`, con el id de `organizaciones.json` como clave) y, para cada empresa, una ficha maestra en Word y PDF con todo lo acumulado (situación actual, contactos, perfil y proyectos, lo que sabemos, tanques, cotizaciones, pendientes, competencia, cronología, documentos y página de notas de reunión), más un índice. Uso, formato de entradas y conflictos: `fichas/INSTRUCCIONES_FICHAS.md`.
+
+- **Los expedientes reales no entran nunca en el repositorio.** Contienen precios y condiciones internas y están en el ordenador de Andrés (`C:\Users\Vicente Prado\Desktop\ANDRES\SEGUIMIENTO DE CLIENTES - PANEL\FICHAS MAESTRAS\`). Tampoco las fichas generadas, el índice, `estado_fichas.json`, las copias de seguridad, los archivos de entradas ni el panel o el tracker. El `.gitignore` los excluye; no se fuerza su inclusión.
+- Cowork alimenta los expedientes y ejecuta el módulo en su contenedor: trae los archivos del ordenador de Andrés, aplica las entradas, genera y los devuelve. Code mantiene el código, el esquema, las pruebas y las instrucciones.
+- El expediente no duplica fuentes: el perfil y los contactos se leen de `organizaciones.json`; el estado y el próximo compromiso, del panel; la valoración, del tracker. No guarda fases. El panel y el tracker solo se leen.
+- `añadir` solo añade (salvo cerrar pendientes, reescribir la situación actual y añadir nombres alternativos). Con cualquier conflicto o error no aplica nada; los conflictos se muestran a Andrés y no se resuelven por cuenta propia.
+- Las reglas del apartado 4 valen también para el expediente: no inventar, vacío es vacío, y distinguir dato, estimación y supuesto (`naturaleza` en «lo que sabemos»).
+- Pruebas solo con empresas inventadas, en `fichas/pruebas/` (`python -m pytest fichas/pruebas -q`).
+- `fichas/` es autónomo (no importa nada de `scripts/`) para que funcione copiado fuera del repositorio. Los cambios en el módulo no tocan el bloc ni sus generadores.
