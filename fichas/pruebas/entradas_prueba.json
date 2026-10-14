@@ -1,0 +1,91 @@
+[
+  {
+    "empresa": "biometano-meseta-ficticia",
+    "nombres_alternativos": ["Meseta Bio"],
+    "situacion_actual": {
+      "texto": "Oferta de dos digestores enviada el 08/10 y en revisión por la dirección de proyectos. La planta norte es prioritaria: quieren cerrar proveedor de tanques antes de fin de año. Pendiente de confirmar si el gasómetro va integrado en el digestor.",
+      "fecha": "2026-10-12"
+    },
+    "lo_que_sabemos": [
+      {"texto": "La planta norte tratará 60.000 t/año de purines y estiércoles.", "naturaleza": "dato",
+       "fuente": "Reunión en la feria ficticia", "fecha": "2026-09-30"},
+      {"texto": "Presupuesto de tanques en torno a un millón de euros para las dos plantas.", "naturaleza": "estimacion",
+       "fuente": "Llamada con Lucía Ejemplo", "fecha": "2026-10-05"},
+      {"texto": "La decisión final depende del fondo inversor del grupo.", "naturaleza": "supuesto",
+       "fuente": "Notas de Andrés", "fecha": "2026-10-05"}
+    ],
+    "proyectos": [
+      {"nombre": "Planta Ficticia Norte", "ubicacion": "Burgos", "situacion": "Licencia ambiental concedida; ingeniería de detalle en curso.",
+       "fuente": "Reunión en la feria ficticia", "fecha": "2026-09-30"},
+      {"nombre": "Planta Ficticia Sur", "ubicacion": "Segovia", "situacion": "En tramitación ambiental.",
+       "fuente": "Llamada con Lucía Ejemplo", "fecha": "2026-10-05"}
+    ],
+    "tanques": [
+      {"proyecto": "Planta Ficticia Norte", "uso": "Digestor", "cantidad": 2, "diametro_m": 24.36, "altura_m": 12.6,
+       "volumen_m3": 5870, "techo": "Doble membrana", "aislamiento": "Lana de roca 100 mm",
+       "fuente": "Correo de Lucía Ejemplo", "fecha": "2026-10-02"},
+      {"proyecto": "Planta Ficticia Norte", "uso": "Postdigestor", "cantidad": 1, "volumen_m3": 6000,
+       "otros": "Agitadores laterales", "fuente": "Correo de Lucía Ejemplo", "fecha": "2026-10-02"}
+    ],
+    "cotizaciones": [
+      {"fecha": "2026-10-08", "descripcion": "Dos digestores de 5.870 m³ con techo de doble membrana",
+       "estado": "Enviada", "importe_eur": 412500, "fuente": "Oferta Stora de prueba"}
+    ],
+    "competencia": [
+      {"texto": "Comparan con tanques de hormigón de un constructor local; piden argumentos de plazo de montaje.",
+       "fuente": "Reunión en la feria ficticia", "fecha": "2026-09-30"}
+    ],
+    "pendientes": [
+      {"accion": "Enviar referencias de digestores con doble membrana", "de_quien": "nosotros",
+       "fecha_limite": "2026-10-16", "estado": "abierto"},
+      {"accion": "Confirmar plazo de fabricación de la chapa", "de_quien": "Stora",
+       "fecha_limite": "2026-10-20", "estado": "abierto"},
+      {"accion": "Enviar planos de implantación", "de_quien": "cliente", "estado": "abierto"}
+    ],
+    "cronologia": [
+      {"fecha": "2026-09-30", "hora": "12:30", "tipo": "reunion", "participantes": ["Lucía Ejemplo Sanz", "Andrés Prado"],
+       "resumen": "Reunión en el stand. Presentan dos plantas y piden oferta para los digestores de la planta norte.",
+       "datos_clave": ["60.000 t/año de purines y estiércoles", "Dos digestores y un postdigestor"],
+       "acuerdos": ["Enviar oferta en dos semanas"], "origen": "manual",
+       "fuente": {"tipo": "foto_nota", "ref": "Foto de la libreta, 30/09"}},
+      {"fecha": "2026-10-02", "hora": "09:14", "tipo": "correo_recibido", "participantes": ["Lucía Ejemplo Sanz"],
+       "resumen": "Envía las dimensiones de los digestores y del postdigestor.",
+       "datos_clave": ["Diámetro 24,36 m y altura 12,6 m"], "origen": "automatico",
+       "fuente": {"tipo": "gmail", "ref": "19a1b2c3d4e5f601"}},
+      {"fecha": "2026-10-05", "hora": "17:00", "tipo": "llamada", "participantes": ["Lucía Ejemplo Sanz", "Andrés Prado"],
+       "resumen": "Llamada de seguimiento: la planta sur va más retrasada.", "origen": "manual",
+       "fuente": {"tipo": "conversacion"}},
+      {"fecha": "2026-10-08", "hora": "11:40", "tipo": "correo_enviado", "participantes": ["Lucía Ejemplo Sanz"],
+       "resumen": "Envío de la oferta de dos digestores.", "origen": "automatico",
+       "fuente": {"tipo": "gmail", "ref": "19a1b2c3d4e5f602"}}
+    ],
+    "documentos": [
+      {"fecha": "2026-10-08", "nombre": "Oferta de prueba digestores planta norte",
+       "ruta": "DOCUMENTOS\\Biometano Meseta Ficticia\\Oferta_prueba_2026-10-08.pdf"}
+    ]
+  },
+  {
+    "empresa": "Montajes Ejemplo",
+    "nombres_alternativos": ["Grupo Montajes Ejemplo"],
+    "cronologia": [
+      {"fecha": "2026-10-09", "tipo": "correo_recibido", "participantes": ["Andrea Supuesta Ruiz"],
+       "resumen": "Pide tarifa orientativa de tanques para una oferta de EPC.", "origen": "automatico",
+       "fuente": {"tipo": "gmail", "ref": "19a1b2c3d4e5f603"}}
+    ],
+    "pendientes": [
+      {"accion": "Responder con tarifa orientativa", "de_quien": "nosotros", "fecha_limite": "2026-10-15",
+       "estado": "abierto"}
+    ]
+  },
+  {
+    "empresa": "ingenieria-modelo-norte",
+    "lo_que_sabemos": [
+      {"texto": "Prescriben tanques de acero en sus proyectos de purines.", "naturaleza": "dato",
+       "fuente": "Web de la empresa ficticia", "fecha": "2026-10-01"}
+    ]
+  },
+  {
+    "empresa": "consultora-imaginaria",
+    "situacion_actual": {"texto": "Primer contacto pendiente.", "fecha": "2026-10-10"}
+  }
+]
