@@ -1,3 +1,22 @@
 __pycache__/
+.pytest_cache/
 *.pyc
 *.json.tmp
+
+# Fichas maestras: los expedientes reales y todo lo que se genera con ellos
+# contienen precios y condiciones internas, así que nunca entran en el
+# repositorio (CLAUDE.md, apartado 10). Solo se versionan los datos inventados
+# de fichas/pruebas/.
+expedientes*.json
+estado_fichas.json
+entradas*.json
+copias_seguridad/
+Ficha_*.docx
+Ficha_*.pdf
+Indice_Fichas_Maestras.*
+Seguimiento_Clientes_Stora*.xlsx
+Stora_Exhibition_Lead_Tracker*.xlsx
+!fichas/pruebas/**
+# La excepción anterior no alcanza a los archivos compilados de Python.
+fichas/pruebas/**/__pycache__/
+fichas/pruebas/**/*.pyc

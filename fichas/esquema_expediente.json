@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "esquema_expediente.json",
+  "title": "Expedientes de las fichas maestras",
+  "description": "expedientes.json: un expediente por empresa, con el id de organizaciones.json como clave. Las fechas van en formato ISO (AAAA-MM-DD) y los id de las entradas los asigna fichas.py. La definición «entradas» describe el archivo que prepara Cowork para el comando «añadir».",
+  "type": "object",
+  "required": ["version", "empresas"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "empresas": {"type": "object", "additionalProperties": {"$ref": "#/$defs/expediente"}}
+  },
+  "$defs": {
+    "texto": {"type": "string", "minLength": 1},
+    "texto_opcional": {"type": "string"},
+    "fecha": {"type": "string", "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "fecha_opcional": {"type": ["string", "null"], "format": "date", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "hora_opcional": {"type": ["string", "null"], "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$"},
+    "lista_textos": {"type": "array", "items": {"$ref": "#/$defs/texto"}},
+    "medida": {"type": ["number", "null"], "exclusiveMinimum": 0},
+    "id_empresa": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+
+    "expediente": {
+      "type": "object",
+      "required": ["id", "nombres_alternativos", "situacion_actual", "lo_que_sabemos", "proyectos", "tanques",
+                   "cotizaciones", "competencia", "pendientes", "cronologia", "documentos"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/id_empresa"},
+        "nombres_alternativos": {"$ref": "#/$defs/lista_textos"},
+        "situacion_actual": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/situacion_actual"}]},
+        "lo_que_sabemos": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/lo_que_sabemos"}, {"required": ["id"]}]}},
+        "proyectos": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/proyecto"}, {"required": ["id"]}]}},
+        "tanques": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/tanque"}, {"required": ["id"]}]}},
+        "cotizaciones": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/cotizacion"}, {"required": ["id"]}]}},
+        "competencia": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/competencia"}, {"required": ["id"]}]}},
+        "pendientes": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/pendiente"}, {"required": ["id"]}]}},
+        "cronologia": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/cronologia"}, {"required": ["id"]}]}},
+        "documentos": {"type": "array", "items": {"allOf": [{"$ref": "#/$defs/documento"}, {"required": ["id"]}]}}
+      }
+    },
+
+    "situacion_actual": {
+      "type": "object",
+      "required": ["texto", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "texto": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "lo_que_sabemos": {
+      "type": "object",
+      "required": ["texto", "naturaleza", "fuente", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^sab-\\d{4,}$"},
+        "texto": {"$ref": "#/$defs/texto"},
+        "naturaleza": {"enum": ["dato", "estimacion", "supuesto"]},
+        "fuente": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "proyecto": {
+      "type": "object",
+      "required": ["nombre", "fuente", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^pro-\\d{4,}$"},
+        "nombre": {"$ref": "#/$defs/texto"},
+        "ubicacion": {"$ref": "#/$defs/texto_opcional"},
+        "situacion": {"$ref": "#/$defs/texto_opcional"},
+        "fuente": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "tanque": {
+      "type": "object",
+      "required": ["fuente", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^tan-\\d{4,}$"},
+        "proyecto": {"$ref": "#/$defs/texto_opcional"},
+        "uso": {"$ref": "#/$defs/texto_opcional"},
+        "cantidad": {"type": ["integer", "null"], "minimum": 1},
+        "diametro_m": {"$ref": "#/$defs/medida"},
+        "altura_m": {"$ref": "#/$defs/medida"},
+        "volumen_m3": {"$ref": "#/$defs/medida"},
+        "techo": {"$ref": "#/$defs/texto_opcional"},
+        "aislamiento": {"$ref": "#/$defs/texto_opcional"},
+        "otros": {"$ref": "#/$defs/texto_opcional"},
+        "fuente": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "cotizacion": {
+      "type": "object",
+      "required": ["fecha", "descripcion", "estado", "fuente"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^cot-\\d{4,}$"},
+        "fecha": {"$ref": "#/$defs/fecha"},
+        "descripcion": {"$ref": "#/$defs/texto"},
+        "estado": {"$ref": "#/$defs/texto"},
+        "importe_eur": {"type": ["number", "null"], "minimum": 0},
+        "fuente": {"$ref": "#/$defs/texto"}
+      }
+    },
+    "competencia": {
+      "type": "object",
+      "required": ["texto", "fuente", "fecha"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^com-\\d{4,}$"},
+        "texto": {"$ref": "#/$defs/texto"},
+        "fuente": {"$ref": "#/$defs/texto"},
+        "fecha": {"$ref": "#/$defs/fecha"}
+      }
+    },
+    "pendiente": {
+      "type": "object",
+      "required": ["accion", "de_quien", "estado"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^pen-\\d{4,}$"},
+        "accion": {"$ref": "#/$defs/texto"},
+        "de_quien": {"enum": ["nosotros", "Stora", "cliente"]},
+        "fecha_limite": {"$ref": "#/$defs/fecha_opcional"},
+        "estado": {"enum": ["abierto", "cerrado"]},
+        "fecha_cierre": {"$ref": "#/$defs/fecha_opcional"}
+      }
+    },
+    "cronologia": {
+      "type": "object",
+      "required": ["fecha", "tipo", "resumen", "origen", "fuente"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^cro-\\d{4,}$"},
+        "fecha": {"$ref": "#/$defs/fecha"},
+        "hora": {"$ref": "#/$defs/hora_opcional"},
+        "tipo": {"enum": ["correo_recibido", "correo_enviado", "reunion", "llamada", "nota", "whatsapp", "documento"]},
+        "participantes": {"$ref": "#/$defs/lista_textos"},
+        "resumen": {"$ref": "#/$defs/texto"},
+        "datos_clave": {"$ref": "#/$defs/lista_textos"},
+        "acuerdos": {"$ref": "#/$defs/lista_textos"},
+        "origen": {"enum": ["automatico", "manual"]},
+        "fuente": {
+          "type": "object",
+          "required": ["tipo"],
+          "additionalProperties": false,
+          "properties": {
+            "tipo": {"enum": ["gmail", "conversacion", "foto_nota", "documento"]},
+            "ref": {"$ref": "#/$defs/texto_opcional"}
+          }
+        }
+      }
+    },
+    "documento": {
+      "type": "object",
+      "required": ["fecha", "nombre"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^doc-\\d{4,}$"},
+        "fecha": {"$ref": "#/$defs/fecha"},
+        "nombre": {"$ref": "#/$defs/texto"},
+        "ruta": {"$ref": "#/$defs/texto_opcional"}
+      }
+    },
+
+    "entradas": {
+      "description": "Archivo de entradas para «añadir»: una lista de bloques, uno por empresa. Las entradas nuevas van sin id.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["empresa"],
+        "additionalProperties": false,
+        "properties": {
+          "empresa": {"$ref": "#/$defs/texto"},
+          "nombres_alternativos": {"$ref": "#/$defs/lista_textos"},
+          "situacion_actual": {"$ref": "#/$defs/situacion_actual"},
+          "lo_que_sabemos": {"type": "array", "items": {"$ref": "#/$defs/lo_que_sabemos"}},
+          "proyectos": {"type": "array", "items": {"$ref": "#/$defs/proyecto"}},
+          "tanques": {"type": "array", "items": {"$ref": "#/$defs/tanque"}},
+          "cotizaciones": {"type": "array", "items": {"$ref": "#/$defs/cotizacion"}},
+          "competencia": {"type": "array", "items": {"$ref": "#/$defs/competencia"}},
+          "pendientes": {"type": "array", "items": {"$ref": "#/$defs/pendiente"}},
+          "cronologia": {"type": "array", "items": {"$ref": "#/$defs/cronologia"}},
+          "documentos": {"type": "array", "items": {"$ref": "#/$defs/documento"}},
+          "cerrar_pendientes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["fecha_cierre"],
+              "additionalProperties": false,
+              "properties": {
+                "id": {"type": "string", "pattern": "^pen-\\d{4,}$"},
+                "accion": {"$ref": "#/$defs/texto"},
+                "fecha_cierre": {"$ref": "#/$defs/fecha"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
