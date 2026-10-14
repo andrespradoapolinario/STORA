@@ -57,7 +57,7 @@ fichas/                        Módulo de fichas maestras (expedientes por empre
 
 ## Fichas maestras
 
-`fichas/fichas.py` mantiene un expediente por empresa y genera una ficha maestra en Word y PDF para cada una, más un índice. Los expedientes reales no entran en el repositorio. Uso, formato de entradas y conflictos: [fichas/INSTRUCCIONES_FICHAS.md](fichas/INSTRUCCIONES_FICHAS.md); reglas: apartado 10 de CLAUDE.md.
+`fichas/fichas.py` mantiene un expediente por empresa y genera una ficha maestra en Word y PDF para cada una, más un índice. Los expedientes reales no entran en el repositorio: están en el ordenador de Andrés, en `FICHAS MAESTRAS\`, y el módulo se copia en su subcarpeta `_motor_fichas\`. Uso, formato de entradas y conflictos: [fichas/INSTRUCCIONES_FICHAS.md](fichas/INSTRUCCIONES_FICHAS.md); reglas: apartado 10 de CLAUDE.md.
 
 ```
 python -m pytest fichas/pruebas -q      # pruebas, solo con empresas inventadas
