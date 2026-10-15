@@ -4,6 +4,7 @@
 
 Las pruebas de generación necesitan LibreOffice y pdfplumber.
 """
+import datetime
 import hashlib
 import json
 import re
@@ -74,7 +75,8 @@ def leer(ruta):
 
 
 def generar(exp, salida, panel, tracker, **kw):
-    return ejecutar(fichas.generar, exp, salida, ORGS, panel, tracker, fecha=FECHA, **kw)
+    kw.setdefault('fecha', FECHA)
+    return ejecutar(fichas.generar, exp, salida, ORGS, panel, tracker, **kw)
 
 
 @pytest.fixture(scope='module')
@@ -624,8 +626,8 @@ def test_solo_se_regeneran_las_que_cambian(tmp_path):
 
     entradas = escribir(tmp_path / 'entradas.json', [{
         'empresa': EPC,
-        'cronologia': [{'fecha': '2026-10-13', 'tipo': 'correo_enviado', 'resumen': 'Envío de la tarifa.',
-                        'origen': 'automatico', 'fuente': {'tipo': 'gmail', 'ref': '19a1b2c3d4e5f6ff'}}],
+        'competencia': [{'texto': 'Piden comparar con un depósito de poliéster.', 'fuente': 'Correo',
+                         'fecha': '2026-10-13'}],
     }])
     assert ejecutar(fichas.anadir, exp, entradas)[0] == 0
     codigo, informe = generar(exp, salida, panel, tracker)
@@ -644,6 +646,63 @@ def test_solo_se_regeneran_las_que_cambian(tmp_path):
     assert codigo == 0 and 'Fichas: 6 regenerada(s), 0 sin cambios' in informe
 
 
+def test_fecha_vencida_es_anterior_al_dia_de_generacion():
+    casos = [(datetime.datetime(2026, 10, 14, 18, 0), True), (datetime.date(2026, 10, 14), True),
+             ('2026-10-14', True), (' 2026-10-14 ', True),
+             (datetime.datetime(2026, 10, 15), False),             # el mismo día no está vencida
+             (datetime.date(2026, 10, 16), False), ('2026-10-20', False),
+             (None, False), ('', False), ('la semana próxima', False)]
+    for valor, esperado in casos:
+        assert fichas.fecha_vencida(valor, '2026-10-15') is esperado, valor
+    assert fichas.fecha_vencida(datetime.date(2026, 10, 14), datetime.date(2026, 10, 15)) is True
+
+
+def test_la_fecha_vencida_se_compara_con_hoy_si_no_se_indica_otro_dia():
+    hoy = datetime.date.today()
+    filas = [{'nombre': nombre, 'estado': 'Seguimiento', 'fecha': fecha, 'hoja': 'EPC', 'fila': n}
+             for n, (nombre, fecha) in enumerate((
+                 ('Montajes Ejemplo', hoy - datetime.timedelta(days=1)),
+                 ('Consultora Imaginaria', hoy),
+                 ('Biometano Meseta Ficticia', hoy + datetime.timedelta(days=1)),
+                 ('Cooperativa Agraria Inventada', None)), 4)]
+    datos, _, _ = fichas.cruzar(leer(EXPEDIENTES), fichas.cargar_organizaciones(ORGS), filas)
+    assert {d['id']: d['vencido'] for d in datos if d['id'] in (EPC, CONSULTORA, COMPLETA, VACIA)} == {
+        EPC: True, CONSULTORA: False, COMPLETA: False, VACIA: False}
+
+
+@con_libreoffice
+def test_fecha_vencida_en_la_ficha_y_en_el_indice(generado):
+    alta = texto(generado.fichas / f'Ficha_{ALTA}.docx')                    # fecha del panel: 12/10
+    assert 'FECHA VENCIDA12/10/2026' in alta and 'PRÓXIMO COMPROMISO' not in alta
+    meseta = texto(generado.fichas / f'Ficha_{COMPLETA}.docx')              # fecha del panel: 20/10
+    assert 'PRÓXIMO COMPROMISO20/10/2026' in meseta and 'FECHA VENCIDA' not in meseta
+    indice = texto(generado.salida / 'Indice_Fichas_Maestras.docx')
+    assert 'Vencida: 12/10/2026' in indice and 'Próximo: 20/10/2026' in indice
+    assert 'Próximo: 12/10/2026' not in indice and 'Vencida: 20/10/2026' not in indice
+
+
+@con_libreoffice
+def test_la_ficha_se_regenera_el_dia_en_que_la_fecha_vence(tmp_path):
+    exp = expediente_de_prueba(tmp_path)
+    panel, tracker = datos_prueba.crear(tmp_path)
+    salida = tmp_path / 'salida'
+    carpeta = salida / fichas.CARPETA_FICHAS
+    assert generar(exp, salida, panel, tracker, fecha='2026-10-14')[0] == 0
+    assert 'PRÓXIMO COMPROMISO15/10/2026' in texto(carpeta / f'Ficha_{EPC}.docx')
+    # El mismo día de la fecha no está vencida: no hay nada que regenerar.
+    codigo, informe = generar(exp, salida, panel, tracker, fecha='2026-10-15')
+    assert codigo == 0 and 'Fichas: 0 regenerada(s), 6 sin cambios' in informe
+    # Al día siguiente vence la fecha del 15/10 y solo cambia esa ficha.
+    codigo, informe = generar(exp, salida, panel, tracker, fecha='2026-10-16')
+    assert codigo == 0 and 'Fichas: 1 regenerada(s), 5 sin cambios' in informe
+    assert f'Regeneradas: {EPC}.' in informe
+    t = texto(carpeta / f'Ficha_{EPC}.docx')
+    assert 'FECHA VENCIDA15/10/2026' in t and 'PRÓXIMO COMPROMISO' not in t and 'FICHA GENERADA16/10/2026' in t
+    # Mientras siga vencida no se vuelve a regenerar.
+    codigo, informe = generar(exp, salida, panel, tracker, fecha='2026-10-17')
+    assert 'Fichas: 0 regenerada(s), 6 sin cambios' in informe
+
+
 @con_libreoffice
 def test_no_escribe_en_el_panel_ni_en_el_tracker(generado, tmp_path):
     antes = huella_archivo(generado.panel), huella_archivo(generado.tracker)
@@ -652,8 +711,9 @@ def test_no_escribe_en_el_panel_ni_en_el_tracker(generado, tmp_path):
 
 
 SECCIONES = ('SITUACIÓN ACTUAL', 'CONTACTOS', 'PERFIL Y PROYECTOS', 'LO QUE SABEMOS', 'TANQUES', 'COTIZACIONES',
-             'PENDIENTES ABIERTOS', 'COMPETENCIA Y OBJECIONES', 'CRONOLOGÍA', 'DOCUMENTOS Y FUENTES',
-             'NOTAS DE REUNIÓN')
+             'PENDIENTES ABIERTOS', 'COMPETENCIA Y OBJECIONES', 'NOTAS DE REUNIÓN')
+# La cronología y los documentos se guardan en el expediente, pero la ficha no los imprime.
+RETIRADO = ('CRONOLOG', 'DOCUMENTOS', 'REFERENCIAS DE LA', 'AUTOMÁTICA')
 
 
 def secciones(ruta_docx):
@@ -669,15 +729,63 @@ def test_ficha_completa_con_todas_las_secciones_en_orden(generado):
     t = texto(ruta)
     for esperado in ('FICHA MAESTRA', 'Biometano Meseta Ficticia', 'Grupo A · Promotora', 'VALORACIÓN5',
                      'CON QUIÉN TRABAJA', 'Fondo Inversor Ficticio', ' — Accionista', 'Oferta enviada',
-                     '20/10/2026', '14/10/2026', 'Copia de organizaciones.json del 13/10/2026', 'Interlocutor',
-                     'ESTIMACIÓN', 'SUPUESTO', '412.500 €', '5.870', '24,36', 'AUTOMÁTICA', '19a1b2c3d4e5f601'):
+                     'PRÓXIMO COMPROMISO20/10/2026', 'FICHA GENERADA14/10/2026',
+                     'Copia de organizaciones.json del 13/10/2026', 'Interlocutor', '(estimación)', '(supuesto)',
+                     '412.500 €', '5.870', '24,36'):
         assert esperado in t, esperado
-    # Cronología de la más reciente a la más antigua; solo las entradas automáticas, marcadas.
-    xml = documento(ruta)
-    cronologia = xml[xml.index('CRONOLOGÍA'):xml.index('DOCUMENTOS Y FUENTES')]
-    fechas = re.findall(r'\d{2}/\d{2}/2026', cronologia)
-    assert fechas == ['08/10/2026', '05/10/2026', '02/10/2026', '30/09/2026']
-    assert cronologia.count('AUTOMÁTICA') == 2
+    assert 'FECHA VENCIDA' not in t
+
+
+@con_libreoffice
+def test_la_ficha_no_contiene_cronologia_ni_documentos(generado):
+    for docx in generado.fichas.glob('*.docx'):
+        t = texto(docx)
+        for retirado in RETIRADO:
+            assert retirado not in t.upper(), (docx.name, retirado)
+    # Sus datos siguen en el expediente y no se pierden: ni su texto ni su referencia de Gmail se imprimen.
+    t = texto(generado.fichas / f'Ficha_{COMPLETA}.docx')
+    for dato in ('Envía las dimensiones de los digestores', '19a1b2c3d4e5f601', 'Oferta de prueba digestores',
+                 'Reunión en el stand', 'Foto de la libreta'):
+        assert dato not in t, dato
+    cronologia = leer(generado.exp)['empresas'][COMPLETA]['cronologia']
+    assert len(cronologia) == 4 and leer(generado.exp)['empresas'][COMPLETA]['documentos']
+    # El índice sigue mostrando la última interacción.
+    assert '08/10/2026Correo enviado' in texto(generado.salida / 'Indice_Fichas_Maestras.docx')
+
+
+def entradas_de_saber(*pares):
+    return {'lo_que_sabemos': [{'id': f'sab-{n:04d}', 'texto': texto_, 'naturaleza': naturaleza,
+                                'fuente': 'Fuente que no se imprime', 'fecha': fecha}
+                               for n, (texto_, naturaleza, fecha) in enumerate(pares, 1)]}
+
+
+def test_lo_que_sabemos_es_una_lista_de_vinetas_ordenada():
+    e = entradas_de_saber(
+        ('Supuesto antiguo.', 'supuesto', '2026-09-01'), ('Dato antiguo.', 'dato', '2026-09-02'),
+        ('Estimación reciente.', 'estimacion', '2026-10-09'), ('Dato reciente.\n  con salto', 'dato', '2026-10-08'),
+        ('Supuesto reciente.', 'supuesto', '2026-10-10'), ('Estimación antigua.', 'estimacion', '2026-09-03'))
+    xml = fichas.seccion_lo_que_sabemos(e)
+    assert '<w:tbl>' not in xml
+    lineas = [''.join(re.findall(r'<w:t[^>]*>([^<]*)</w:t>', parrafo)) for parrafo in xml.split('</w:p>')[1:-1]]
+    assert lineas == ['•Dato reciente. con salto', '•Dato antiguo.',
+                      '•Estimación reciente. (estimación)', '•Estimación antigua. (estimación)',
+                      '•Supuesto reciente. (supuesto)', '•Supuesto antiguo. (supuesto)']
+    assert xml.count('w:color w:val="595959"') == 4          # solo las marcas, en gris
+    for retirado in ('DATO', 'ESTIMACIÓN', 'SUPUESTO', 'Fuente que no se imprime', '09/2026', '10/2026'):
+        assert retirado not in xml
+    assert fichas.seccion_lo_que_sabemos({'lo_que_sabemos': []}) == ''
+
+
+@con_libreoffice
+def test_lo_que_sabemos_de_la_ficha_no_usa_tabla(generado):
+    xml = documento(generado.fichas / f'Ficha_{COMPLETA}.docx')
+    inicio = xml.rindex('<w:p>', 0, xml.index('LO QUE SABEMOS'))     # desde el párrafo del título
+    seccion = xml[inicio:xml.index('TANQUES', inicio)]
+    assert '<w:tbl>' not in seccion and '<w:tc>' not in seccion
+    t = ''.join(re.findall(r'<w:t[^>]*>([^<]*)</w:t>', seccion))
+    assert t == ('LO QUE SABEMOS•La planta norte tratará 60.000 t/año de purines y estiércoles.'
+                 '•Presupuesto de tanques en torno a un millón de euros para las dos plantas. (estimación)'
+                 '•La decisión final depende del fondo inversor del grupo. (supuesto)')
 
 
 @con_libreoffice
@@ -685,8 +793,7 @@ def test_las_secciones_vacias_se_omiten(generado):
     ruta = generado.fichas / f'Ficha_{CONSULTORA}.docx'
     assert secciones(ruta) == ['SITUACIÓN ACTUAL', 'CONTACTOS', 'PERFIL Y PROYECTOS', 'NOTAS DE REUNIÓN']
     ruta = generado.fichas / f'Ficha_{EPC}.docx'
-    assert secciones(ruta) == ['CONTACTOS', 'PERFIL Y PROYECTOS', 'PENDIENTES ABIERTOS', 'CRONOLOGÍA',
-                               'DOCUMENTOS Y FUENTES', 'NOTAS DE REUNIÓN']
+    assert secciones(ruta) == ['CONTACTOS', 'PERFIL Y PROYECTOS', 'PENDIENTES ABIERTOS', 'NOTAS DE REUNIÓN']
     for docx in generado.fichas.glob('*.docx'):
         t = texto(docx).casefold()
         for marcador in ('sin datos', 'n/d', 'no localizad', 'no encontrad', 'sin verificar', 'none'):
@@ -697,12 +804,12 @@ def test_las_secciones_vacias_se_omiten(generado):
 def test_ficha_de_una_empresa_dada_de_alta(generado):
     docx = generado.fichas / f'Ficha_{ALTA}.docx'
     assert secciones(docx) == ['SITUACIÓN ACTUAL', 'CONTACTOS', 'PERFIL Y PROYECTOS', 'TANQUES',
-                               'PENDIENTES ABIERTOS', 'CRONOLOGÍA', 'DOCUMENTOS Y FUENTES', 'NOTAS DE REUNIÓN']
+                               'PENDIENTES ABIERTOS', 'NOTAS DE REUNIÓN']
     t = texto(docx)
     for esperado in ('Depósitos Imaginarios del Levante', 'Grupo B · EPC', 'Empresa fuera de organizaciones.json',
                      'Elena Ficticia Mora', 'Directora Técnica', 'elena.ficticia@depositos-imaginarios.example',
                      '+34 600 000 601', 'Ofertas (Dpto.)', 'CON QUIÉN TRABAJA', 'Montajes Ejemplo', ' — Socio',
-                     'Primer contacto', '18/10/2026'):
+                     'Primer contacto', 'FECHA VENCIDA12/10/2026', '18/10/2026'):
         assert esperado in t, esperado
     # Sin perfil ni uso de GFS (dependen de organizaciones.json) y sin valoración (lead sin valorar).
     rotulos = re.findall(r'<w:t[^>]*>([^<]*)</w:t>', documento(docx))
@@ -762,9 +869,8 @@ def test_una_pagina_de_notas_desbordada_se_detecta(generado, tmp_path, monkeypat
 def test_textos_de_los_datos_no_se_confunden_con_cabeceras(tmp_path):
     exp = leer(EXPEDIENTES)
     e = exp['empresas'][COMPLETA]
-    e['cronologia'] = [{'id': f'cro-{n:04d}', 'fecha': '2026-10-01', 'tipo': 'nota', 'origen': 'manual',
-                        'resumen': 'NOTAS DE REUNIÓN pasadas a la FICHA MAESTRA.\n' * 3,
-                        'fuente': {'tipo': 'conversacion'}} for n in range(1, 41)]
+    e['competencia'] = [{'id': f'com-{n:04d}', 'fecha': '2026-10-01', 'fuente': 'Reunión',
+                         'texto': 'NOTAS DE REUNIÓN pasadas a la FICHA MAESTRA.\n' * 3} for n in range(1, 41)]
     datos, _, _ = fichas.cruzar(exp, fichas.cargar_organizaciones(ORGS))
     d = next(x for x in datos if x['id'] == COMPLETA)
     docx = fichas.escribir_ficha(d, tmp_path / f'Ficha_{COMPLETA}.docx', FECHA, '2026-10-13')

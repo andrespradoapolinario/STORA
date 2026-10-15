@@ -1,6 +1,6 @@
 # Fichas maestras: instrucciones para Cowork
 
-El módulo mantiene un expediente por empresa (`expedientes.json`) y genera, para cada una, una ficha maestra en Word y en PDF con toda la información acumulada: situación actual, contactos, perfil y proyectos, con quién trabaja, lo que sabemos, tanques, cotizaciones, pendientes, competencia, cronología completa, documentos y una página final para tomar notas en la reunión.
+El módulo mantiene un expediente por empresa (`expedientes.json`) y genera, para cada una, una ficha maestra en Word y en PDF con la información acumulada: situación actual, contactos, perfil y proyectos, con quién trabaja, lo que sabemos, tanques, cotizaciones, pendientes, competencia y una página final para tomar notas en la reunión. La cronología y los documentos se guardan en el expediente, pero la ficha no los imprime (apartado 8).
 
 El expediente solo guarda lo que no está en otra fuente:
 
@@ -11,7 +11,7 @@ El expediente solo guarda lo que no está en otra fuente:
 | Valoración | Tracker `Stora_Exhibition_Lead_Tracker.xlsx` | No |
 | Fases | — | No |
 | Nombre, tipo y contactos de las empresas que no están en `organizaciones.json` | Alta en el expediente (apartado 5) | Sí |
-| Todo lo demás | Correos, reuniones, llamadas, notas, documentos | Sí |
+| Todo lo demás | Correos, reuniones, llamadas, notas, documentos | Sí (la cronología y los documentos no se imprimen en la ficha) |
 
 **Los expedientes reales, las fichas generadas y las copias de seguridad contienen precios y condiciones internas: nunca se suben al repositorio** (el `.gitignore` los excluye). Las fichas son de uso interno y no se envían a terceros.
 
@@ -68,7 +68,7 @@ Los comandos se ejecutan desde la carpeta `FICHAS MAESTRAS` copiada al contenedo
 
    `anadir` (sin eñe) es equivalente. Pase siempre `--organizaciones`: permite identificar la empresa por su nombre en `organizaciones.json` y es obligatorio para dar de alta empresas.
 
-5. **Generar** las fichas y el índice. Solo se regeneran las empresas cuyo contenido ha cambiado (expediente, datos de `organizaciones.json`, estado y próximo compromiso del panel o valoración del tracker), o cuya ficha falta en `fichas/`. Con `--todas` se regeneran todas. Si cambia el programa o la plantilla, se regeneran todas automáticamente.
+5. **Generar** las fichas y el índice. Solo se regeneran las empresas cuyo contenido ha cambiado (expediente, datos de `organizaciones.json`, estado y próximo compromiso del panel o valoración del tracker), o cuya ficha falta en `fichas/`. Con `--todas` se regeneran todas. Si cambia el programa o la plantilla, se regeneran todas automáticamente. Una ficha también se regenera el día en que vence la fecha de su próximo compromiso (apartado 7), sin necesidad de ningún otro cambio.
 
    ```
    python _motor_fichas/fichas.py generar expedientes.json . --organizaciones ORG --panel PANEL --tracker TRACKER
@@ -238,6 +238,7 @@ Tras resolver los conflictos, corrija `entradas.json` (quite las entradas que no
 ## 7. Panel y tracker
 
 - **Panel** `Seguimiento_Clientes_Stora.xlsx`: hojas PROMOTORES, EPC, INGENIERÍAS Y CONSULTORÍAS y OTROS; columnas Empresa, Estado, Fecha (próximo compromiso), Contacto, Teléfono, Email y Notas. La ficha usa Estado y Fecha.
+- **Fecha vencida**: si la fecha del panel es anterior al día de generación (hoy, o el indicado con `--fecha`), la cabecera de la ficha dice «FECHA VENCIDA» en lugar de «PRÓXIMO COMPROMISO» y el índice dice «Vencida: dd/mm/aaaa» en lugar de «Próximo: dd/mm/aaaa». El mismo día de la fecha no está vencida. Una fecha que no se reconoce como tal se imprime tal cual y nunca se marca como vencida.
 - **Tracker** `Stora_Exhibition_Lead_Tracker.xlsx`: hoja «Lead Overview», columnas Rating, Company, Exhibition / Event, Contact, Opportunity y Stage. La ficha usa Rating como valoración; si la empresa tiene varias filas, la mejor.
 - **Valoración**: número entero del 1 al 5; 5 es la máxima. En los leads nuevos puede estar vacía: entonces la ficha no la imprime y la empresa va al final del índice. Por tolerancia se ordenan también estrellas (`★★★`) y las palabras Hot/Warm/Cold, Alta/Media/Baja y A/B/C; `validar` avisa de cualquier valor fuera de la escala de 1 a 5.
 - La fila de cabecera se busca por su texto en las 30 primeras filas de cada hoja (un título encima no molesta). Una columna cuyo título empieza por el nombre esperado también vale («Fecha (próximo compromiso)»).
@@ -246,9 +247,11 @@ Tras resolver los conflictos, corrija `entradas.json` (quite las entradas que no
 
 ## 8. Qué contiene cada ficha
 
-Una ficha por empresa (A4 vertical, estilo del bloc, pie con «Uso interno» y número de página), con este orden: cabecera (nombre, tipo, valoración, estado, próximo compromiso y fecha de generación); situación actual; contactos (de `organizaciones.json`, con la fecha de la copia, o del expediente en las empresas dadas de alta); perfil, proyectos y uso de GFS de `organizaciones.json`, con quién trabaja (lista `relaciones`) y los proyectos del expediente; lo que sabemos, con la naturaleza de cada punto; tanques; cotizaciones; pendientes abiertos; competencia y objeciones; cronología completa, de la más reciente a la más antigua, con las entradas automáticas marcadas; documentos y fuentes; y, en página propia, la hoja de notas de reunión.
+Una ficha por empresa (A4 vertical, estilo del bloc, pie con «Uso interno» y número de página), con este orden: cabecera (nombre, tipo, valoración, estado, próximo compromiso o fecha vencida y fecha de generación); situación actual; contactos (de `organizaciones.json`, con la fecha de la copia, o del expediente en las empresas dadas de alta); perfil, proyectos y uso de GFS de `organizaciones.json`, con quién trabaja (lista `relaciones`) y los proyectos del expediente; lo que sabemos; tanques; cotizaciones; pendientes abiertos; competencia y objeciones; y, en página propia, la hoja de notas de reunión.
 
-Las secciones sin datos no se imprimen.
+- **Lo que sabemos** es una lista de viñetas, sin tabla y sin la fuente ni la fecha de cada punto (siguen en el expediente). Primero van los datos, después las estimaciones y al final los supuestos; dentro de cada grupo, del más reciente al más antiguo. Detrás de cada estimación o supuesto va, en gris, «(estimación)» o «(supuesto)»; los datos no llevan marca.
+- **Cronología y documentos**: la ficha no imprime la cronología ni los documentos, ni las referencias de Gmail. Los datos siguen en el expediente (`añadir` no cambia) y el índice sigue mostrando la última interacción. Como la huella de la ficha incluye todo el expediente, una ficha se regenera aunque solo cambie la cronología o los documentos; es inocuo.
+- Las secciones sin datos no se imprimen.
 
 El índice `Indice_Fichas_Maestras` lista empresa (con enlace a su PDF en `fichas/`), tipo, valoración, estado, última interacción (fecha y tipo) y número de pendientes abiertos, ordenado por valoración (de 5 a 1; sin valoración, al final) y, después, por la fecha de la última interacción.
 

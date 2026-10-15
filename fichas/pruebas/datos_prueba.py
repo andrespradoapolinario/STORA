@@ -32,7 +32,7 @@ FILAS_PANEL = {
     'EPC': [
         ('Montajes Ejemplo, S.L.', 'Tarifa solicitada', datetime.datetime(2026, 10, 15), 'Andrea Supuesta Ruiz',
          '', '', ''),
-        ('Depositos Imaginarios del Levante S.L.', 'Primer contacto', datetime.datetime(2026, 10, 18),
+        ('Depositos Imaginarios del Levante S.L.', 'Primer contacto', datetime.datetime(2026, 10, 12),
          'Elena Ficticia Mora', '', '', 'Lead nuevo, fuera de organizaciones.json'),
     ],
     'INGENIERÍAS Y CONSULTORÍAS': [

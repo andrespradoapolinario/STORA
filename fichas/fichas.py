@@ -92,7 +92,6 @@ TIPOS = {
     'correo_recibido': 'Correo recibido', 'correo_enviado': 'Correo enviado', 'reunion': 'Reunión',
     'llamada': 'Llamada', 'nota': 'Nota', 'whatsapp': 'WhatsApp', 'documento': 'Documento',
 }
-FUENTES = {'gmail': 'Gmail', 'conversacion': 'Conversación', 'foto_nota': 'Foto de nota', 'documento': 'Documento'}
 NATURALEZAS = {'dato': 'DATO', 'estimacion': 'ESTIMACIÓN', 'supuesto': 'SUPUESTO'}
 DE_QUIEN = {'nosotros': 'Nosotros', 'Stora': 'Stora', 'cliente': 'Cliente'}
 
@@ -183,6 +182,17 @@ def fecha_es(valor):
     if fecha_valida(valor):
         return datetime.date.fromisoformat(valor).strftime('%d/%m/%Y')
     return '' if valor is None else str(valor).strip()
+
+
+def fecha_vencida(valor, hoy):
+    """True si la fecha del próximo compromiso es anterior al día de generación (`hoy`, ISO o fecha)."""
+    if isinstance(valor, datetime.datetime):
+        valor = valor.date()
+    if isinstance(valor, str) and fecha_valida(valor.strip()):
+        valor = datetime.date.fromisoformat(valor.strip())
+    if isinstance(hoy, str):
+        hoy = datetime.date.fromisoformat(hoy)
+    return isinstance(valor, datetime.date) and valor < hoy
 
 
 def numero_es(valor):
@@ -983,7 +993,7 @@ def texto_valoracion(valor):
     return '' if valor is None else str(valor).strip()
 
 
-def cruzar(exp, orgs, filas_panel=(), filas_tracker=()):
+def cruzar(exp, orgs, filas_panel=(), filas_tracker=(), hoy=None):
     """Reúne para cada expediente los datos de organizaciones.json, el panel y el tracker.
 
     Devuelve (fichas, huerfanos, avisos): fichas es la lista de diccionarios con
@@ -992,7 +1002,10 @@ def cruzar(exp, orgs, filas_panel=(), filas_tracker=()):
     organizaciones.json, que toman sus datos del expediente); avisos, los
     nombres sin asociar, las empresas con varias filas en el panel, las
     valoraciones fuera de la escala 1-5 y las altas que hay que migrar.
+    `hoy` es el día de generación (por defecto, hoy): una fecha del panel
+    anterior a él marca la ficha como vencida.
     """
+    hoy = hoy or datetime.date.today()
     asociador = Asociador(orgs, exp['empresas'])
     panel, sin_panel = agrupar(filas_panel, asociador, 'Panel')
     tracker, sin_tracker = agrupar(filas_tracker, asociador, 'Tracker')
@@ -1021,6 +1034,7 @@ def cruzar(exp, orgs, filas_panel=(), filas_tracker=()):
             'id': oid, 'org': org, 'exp': e, 'fuera': bool(e.get('fuera_de_organizaciones')),
             'estado': '' if fila.get('estado') is None else str(fila['estado']).strip(),
             'proximo': fecha_es(fila.get('fecha')),
+            'vencido': fecha_vencida(fila.get('fecha'), hoy),
             'valoracion': texto_valoracion(mejor),
             'rango': rango_valoracion(mejor),
         })
@@ -1101,10 +1115,6 @@ def p(texto='', props=R_TEXTO, **kw):
 def parrafos(texto, props=R_TEXTO):
     """Un párrafo por línea del texto."""
     return ''.join(p(linea.strip(), props) for linea in str(texto).splitlines() if linea.strip())
-
-
-def vineta(texto, props=R_TEXTO):
-    return parrafo(run('•', props) + TAB + run(texto, props), ppr(tabs=(('left', 180),), sangria=180))
 
 
 def separador(alto):
@@ -1268,7 +1278,8 @@ def cabecera_ficha(d, fecha_gen):
         celdas.append(celda(derecha, mar=(80, 100, 80, 160), relleno='f1f1f1', valign='center'))
         columnas = [900, ANCHO - 900 - 2400, 2400]
     datos = [(etq, valor, ancho) for etq, valor, ancho in
-             (('ESTADO', d['estado'], 4000), ('PRÓXIMO COMPROMISO', d['proximo'], 2400),
+             (('ESTADO', d['estado'], 4000),
+              ('FECHA VENCIDA' if d.get('vencido') else 'PRÓXIMO COMPROMISO', d['proximo'], 2400),
               ('FICHA GENERADA', fecha_es(fecha_gen), 2000)) if valor]
     tira = [celda(p(etq, R_ETIQUETA) + p(valor, R_NEGRITA), (None, None, NEGRO, None), mar=(60, 100, 80, 100))
             for etq, valor, _ in datos]
@@ -1357,14 +1368,20 @@ def seccion_perfil(org, e):
 
 
 def seccion_lo_que_sabemos(e):
+    """Lista de viñetas, sin tabla: primero los datos, después las estimaciones y al final los supuestos
+    (cada grupo, del más reciente al más antiguo). Solo se marcan, en gris, las estimaciones y los supuestos;
+    la fuente y la fecha quedan en el expediente."""
     if not e['lo_que_sabemos']:
         return ''
     orden = list(NATURALEZAS)
     entradas = sorted(recientes_primero(e['lo_que_sabemos']), key=lambda x: orden.index(x['naturaleza']))
-    filas = [fila([celda(p(NATURALEZAS[x['naturaleza']], R_ETIQUETA), INFERIOR, mar=(60, 0, 60, 100)),
-                   celda(parrafos(x['texto']) + p(fuente_y_fecha(x), R_GRIS), INFERIOR, mar=(60, 100, 60, 0))])
-             for x in entradas]
-    return titulo_seccion('LO QUE SABEMOS') + tabla([1500, ANCHO - 1500], filas)
+    lineas = []
+    for x in entradas:
+        cuerpo = run('•', R_TEXTO) + TAB + run(' '.join(str(x['texto']).split()), R_TEXTO)
+        if x['naturaleza'] != 'dato':
+            cuerpo += run(f' ({NATURALEZAS[x["naturaleza"]].lower()})', R_GRIS)
+        lineas.append(parrafo(cuerpo, ppr(tabs=(('left', 180),), sangria=180)))
+    return titulo_seccion('LO QUE SABEMOS') + ''.join(lineas)
 
 
 COLUMNAS_TANQUES = (  # campo, título, ancho relativo, centrada
@@ -1432,44 +1449,6 @@ def orden_cronologia(entradas):
     return sorted(entradas, key=lambda x: (x['fecha'], x.get('hora') or '', x['id']), reverse=True)
 
 
-def seccion_cronologia(e):
-    if not e['cronologia']:
-        return ''
-    filas = []
-    for x in orden_cronologia(e['cronologia']):
-        izquierda = p(fecha_es(x['fecha']), R_NEGRITA)
-        if x.get('hora'):
-            izquierda += p(x['hora'])
-        izquierda += p(TIPOS[x['tipo']])
-        if x['origen'] == 'automatico':
-            izquierda += p('AUTOMÁTICA', R_ETIQUETA, antes=40)
-        derecha = ''
-        if x.get('participantes'):
-            derecha += p('Participantes: ' + ', '.join(x['participantes']), R_GRIS)
-        derecha += parrafos(x['resumen'])
-        for titulo, campo in (('Datos clave', 'datos_clave'), ('Acuerdos', 'acuerdos')):
-            if x.get(campo):
-                derecha += p(titulo.upper(), R_ETIQUETA, antes=60) + ''.join(vineta(t) for t in x[campo])
-        filas.append(fila([celda(izquierda, INFERIOR, mar=(70, 0, 70, 100)),
-                           celda(derecha, INFERIOR, mar=(70, 100, 70, 0))]))
-    return titulo_seccion('CRONOLOGÍA') + tabla([1700, ANCHO - 1700], filas)
-
-
-def seccion_documentos(e):
-    xml = ''
-    if e['documentos']:
-        filas = [[p(fecha_es(x['fecha'])), p(x['nombre']), p(x.get('ruta', ''), R_GRIS)]
-                 for x in recientes_primero(e['documentos'])]
-        xml += subtitulo('DOCUMENTOS') + tabla_datos([1150, 3800, 4916], ['FECHA', 'DOCUMENTO', 'RUTA'], filas)
-    con_ref = [x for x in orden_cronologia(e['cronologia']) if x['fuente'].get('ref', '').strip()]
-    if con_ref:
-        filas = [[p(fecha_es(x['fecha'])), p(TIPOS[x['tipo']]), p(FUENTES[x['fuente']['tipo']]),
-                  p(x['fuente']['ref'], R_GRIS)] for x in con_ref]
-        xml += subtitulo('REFERENCIAS DE LA CRONOLOGÍA') + tabla_datos(
-            [1150, 1900, 1600, 5216], ['FECHA', 'ENTRADA', 'FUENTE', 'REFERENCIA'], filas)
-    return titulo_seccion('DOCUMENTOS Y FUENTES') + xml if xml else ''
-
-
 def recuadros(titulos, renglones):
     """Uno o dos recuadros (lado a lado) con su título y renglones para escribir."""
     if len(titulos) == 1:
@@ -1515,8 +1494,6 @@ def cuerpo_ficha(d, fecha_gen, fecha_org):
         seccion_cotizaciones(e),
         seccion_pendientes(e),
         seccion_competencia(e),
-        seccion_cronologia(e),
-        seccion_documentos(e),
         pagina_notas(org),
     ))
 
@@ -1562,7 +1539,8 @@ def escribir_indice(fichas, ruta, fecha_gen):
         tipo = ' · '.join(t for t in (org.get('grupo'), org.get('subtipo')) if t)
         filas.append([
             parrafo(nombre), p(tipo), p(d['valoracion'], jc='center'),
-            p(d['estado']) + (p(f'Próximo: {d["proximo"]}', R_GRIS) if d['proximo'] else ''),
+            p(d['estado']) + (p(f'{"Vencida" if d.get("vencido") else "Próximo"}: {d["proximo"]}', R_GRIS)
+                              if d['proximo'] else ''),
             (p(fecha_es(ultima['fecha'])) + p(TIPOS[ultima['tipo']], R_GRIS)) if ultima else '',
             p(str(abiertos), jc='center'),
         ])
@@ -1687,7 +1665,7 @@ def huella_formato():
 
 def huella(d, formato):
     contenido = {'formato': formato, 'organizacion': d['org'], 'expediente': d['exp'], 'estado': d['estado'],
-                 'proximo': d['proximo'], 'valoracion': d['valoracion']}
+                 'proximo': d['proximo'], 'vencido': d.get('vencido', False), 'valoracion': d['valoracion']}
     return hashlib.sha256(json.dumps(contenido, sort_keys=True, ensure_ascii=False, default=str)
                           .encode('utf-8')).hexdigest()
 
@@ -1718,7 +1696,7 @@ def generar(ruta_exp, salida, ruta_org, ruta_panel, ruta_tracker, todas=False, f
         informe(f'ERROR      {exc}')
         return 1
     fecha_org = fecha_organizaciones(ruta_org, fecha_org)
-    fichas, huerfanos, avisos = cruzar(exp, orgs, filas_panel, filas_tracker)
+    fichas, huerfanos, avisos = cruzar(exp, orgs, filas_panel, filas_tracker, fecha)
     avisos = avisos_panel + avisos_tracker + avisos
     for oid in huerfanos:
         informe(f'AVISO      expediente «{oid}» sin correspondencia en {Path(ruta_org).name}: no se genera su ficha.')
